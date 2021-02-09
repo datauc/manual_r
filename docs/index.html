@@ -1,0 +1,1795 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Manual básico de R</title>
+  <meta name="description" content="Manual básico de R" />
+  <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Manual básico de R" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Manual básico de R" />
+  
+  
+  
+
+<meta name="author" content="Bastián Olea Herrera" />
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+
+<link rel="next" href="visualización-de-datos-con-r-y-ggplot2.html"/>
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
+<link href="libs/anchor-sections-1.0/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0/anchor-sections.js"></script>
+
+
+
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Manejo de datos con R</a><ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#importación-de-datos"><i class="fa fa-check"></i><b>1.1</b> Importación de datos</a><ul>
+<li class="chapter" data-level="1.1.0.1" data-path="index.html"><a href="index.html#importar-archivos-desde-internet"><i class="fa fa-check"></i><b>1.1.0.1</b> Importar archivos desde internet</a></li>
+<li class="chapter" data-level="1.1.0.2" data-path="index.html"><a href="index.html#importar-archivos-csv"><i class="fa fa-check"></i><b>1.1.0.2</b> Importar archivos csv</a></li>
+<li class="chapter" data-level="1.1.0.3" data-path="index.html"><a href="index.html#importar-datos-desde-excel"><i class="fa fa-check"></i><b>1.1.0.3</b> Importar datos desde Excel</a></li>
+<li class="chapter" data-level="1.1.0.4" data-path="index.html"><a href="index.html#importar-tabla-pivotada-de-excel"><i class="fa fa-check"></i><b>1.1.0.4</b> Importar tabla pivotada de Excel</a></li>
+<li class="chapter" data-level="1.1.0.5" data-path="index.html"><a href="index.html#importar-otros-archivos-con-formato-de-tabla"><i class="fa fa-check"></i><b>1.1.0.5</b> Importar otros archivos con formato de tabla</a></li>
+<li class="chapter" data-level="1.1.0.6" data-path="index.html"><a href="index.html#importar-tablas-desde-pdf"><i class="fa fa-check"></i><b>1.1.0.6</b> Importar tablas desde PDF</a></li>
+<li class="chapter" data-level="1.1.0.7" data-path="index.html"><a href="index.html#combinar-bases-de-datos"><i class="fa fa-check"></i><b>1.1.0.7</b> Combinar bases de datos</a></li>
+<li class="chapter" data-level="1.1.0.8" data-path="index.html"><a href="index.html#conectar-a-base-de-datos"><i class="fa fa-check"></i><b>1.1.0.8</b> Conectar a base de datos</a></li>
+<li class="chapter" data-level="1.1.0.9" data-path="index.html"><a href="index.html#aplicar-factor-de-expansión"><i class="fa fa-check"></i><b>1.1.0.9</b> Aplicar factor de expansión</a></li>
+</ul></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#codificación"><i class="fa fa-check"></i><b>1.2</b> Codificación</a><ul>
+<li class="chapter" data-level="1.2.0.1" data-path="index.html"><a href="index.html#importar-datos-desde-vectores"><i class="fa fa-check"></i><b>1.2.0.1</b> Importar datos desde vectores</a></li>
+<li class="chapter" data-level="1.2.0.2" data-path="index.html"><a href="index.html#escribir-dataframe"><i class="fa fa-check"></i><b>1.2.0.2</b> Escribir dataframe</a></li>
+<li class="chapter" data-level="1.2.0.3" data-path="index.html"><a href="index.html#crear-vector-y-matriz-de-datos"><i class="fa fa-check"></i><b>1.2.0.3</b> Crear vector y matriz de datos</a></li>
+<li class="chapter" data-level="1.2.0.4" data-path="index.html"><a href="index.html#repetir-un-valor"><i class="fa fa-check"></i><b>1.2.0.4</b> Repetir un valor</a></li>
+<li class="chapter" data-level="1.2.0.5" data-path="index.html"><a href="index.html#crear-sequencia-de-números"><i class="fa fa-check"></i><b>1.2.0.5</b> Crear sequencia de números</a></li>
+<li class="chapter" data-level="1.2.0.6" data-path="index.html"><a href="index.html#crear-data-frame-a-partir-de-vectores"><i class="fa fa-check"></i><b>1.2.0.6</b> Crear data frame a partir de vectores</a></li>
+<li class="chapter" data-level="1.2.0.7" data-path="index.html"><a href="index.html#crear-listas"><i class="fa fa-check"></i><b>1.2.0.7</b> Crear listas</a></li>
+<li class="chapter" data-level="1.2.0.8" data-path="index.html"><a href="index.html#añadir-casos-manualmente"><i class="fa fa-check"></i><b>1.2.0.8</b> Añadir casos manualmente</a></li>
+<li class="chapter" data-level="1.2.0.9" data-path="index.html"><a href="index.html#crear-vector-de-nombres"><i class="fa fa-check"></i><b>1.2.0.9</b> Crear vector de nombres</a></li>
+<li class="chapter" data-level="1.2.0.10" data-path="index.html"><a href="index.html#añadir-vector-a-una-matriz"><i class="fa fa-check"></i><b>1.2.0.10</b> Añadir vector a una matriz</a></li>
+<li class="chapter" data-level="1.2.0.11" data-path="index.html"><a href="index.html#contar-hacia-abajo"><i class="fa fa-check"></i><b>1.2.0.11</b> Contar hacia abajo</a></li>
+<li class="chapter" data-level="1.2.0.12" data-path="index.html"><a href="index.html#usar-output-como-texto-de-vector"><i class="fa fa-check"></i><b>1.2.0.12</b> Usar output como texto de vector</a></li>
+</ul></li>
+<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#limpieza-de-datos"><i class="fa fa-check"></i><b>1.3</b> Limpieza de datos</a><ul>
+<li class="chapter" data-level="1.3.0.1" data-path="index.html"><a href="index.html#seleccionar-variables"><i class="fa fa-check"></i><b>1.3.0.1</b> Seleccionar variables</a></li>
+<li class="chapter" data-level="1.3.0.2" data-path="index.html"><a href="index.html#reordenar-columnas"><i class="fa fa-check"></i><b>1.3.0.2</b> Reordenar columnas</a></li>
+<li class="chapter" data-level="1.3.0.3" data-path="index.html"><a href="index.html#ordenar-datos"><i class="fa fa-check"></i><b>1.3.0.3</b> Ordenar datos</a></li>
+<li class="chapter" data-level="1.3.0.4" data-path="index.html"><a href="index.html#cambiar-tipo-de-datos"><i class="fa fa-check"></i><b>1.3.0.4</b> Cambiar tipo de datos</a></li>
+<li class="chapter" data-level="1.3.0.5" data-path="index.html"><a href="index.html#filtrar-datos"><i class="fa fa-check"></i><b>1.3.0.5</b> Filtrar datos</a></li>
+<li class="chapter" data-level="1.3.0.6" data-path="index.html"><a href="index.html#convertir-datos-a-tibble"><i class="fa fa-check"></i><b>1.3.0.6</b> Convertir datos a tibble</a></li>
+<li class="chapter" data-level="1.3.0.7" data-path="index.html"><a href="index.html#cortar-datos-o-eliminar-filas"><i class="fa fa-check"></i><b>1.3.0.7</b> Cortar datos o eliminar filas</a></li>
+<li class="chapter" data-level="1.3.0.8" data-path="index.html"><a href="index.html#eliminar-más-de-una-palabra-a-la-vez"><i class="fa fa-check"></i><b>1.3.0.8</b> Eliminar más de una palabra a la vez</a></li>
+<li class="chapter" data-level="1.3.0.9" data-path="index.html"><a href="index.html#reemplazar-más-de-una-palabra-a-la-vez"><i class="fa fa-check"></i><b>1.3.0.9</b> Reemplazar más de una palabra a la vez</a></li>
+<li class="chapter" data-level="1.3.0.10" data-path="index.html"><a href="index.html#eliminar-caracteres-especiales-de-un-texto"><i class="fa fa-check"></i><b>1.3.0.10</b> Eliminar caracteres especiales de un texto</a></li>
+<li class="chapter" data-level="1.3.0.11" data-path="index.html"><a href="index.html#filtrar-columnas-en-base-a-condición"><i class="fa fa-check"></i><b>1.3.0.11</b> Filtrar columnas en base a condición</a></li>
+<li class="chapter" data-level="1.3.0.12" data-path="index.html"><a href="index.html#limpiar-números"><i class="fa fa-check"></i><b>1.3.0.12</b> Limpiar números</a></li>
+<li class="chapter" data-level="1.3.0.13" data-path="index.html"><a href="index.html#reemplazar-datos-perdidos"><i class="fa fa-check"></i><b>1.3.0.13</b> Reemplazar datos perdidos</a></li>
+<li class="chapter" data-level="1.3.0.14" data-path="index.html"><a href="index.html#convertir-texto-vacío-a-missing"><i class="fa fa-check"></i><b>1.3.0.14</b> Convertir texto vacío a missing</a></li>
+<li class="chapter" data-level="1.3.0.15" data-path="index.html"><a href="index.html#recodificar-a-missing"><i class="fa fa-check"></i><b>1.3.0.15</b> Recodificar a missing</a></li>
+<li class="chapter" data-level="1.3.0.16" data-path="index.html"><a href="index.html#datos-perdidos"><i class="fa fa-check"></i><b>1.3.0.16</b> Datos perdidos</a></li>
+<li class="chapter" data-level="1.3.0.17" data-path="index.html"><a href="index.html#filtrar-datos-perdidos"><i class="fa fa-check"></i><b>1.3.0.17</b> Filtrar datos perdidos</a></li>
+<li class="chapter" data-level="1.3.0.18" data-path="index.html"><a href="index.html#filtrar-datos-perdidos-en-varias-columnas"><i class="fa fa-check"></i><b>1.3.0.18</b> Filtrar datos perdidos en varias columnas</a></li>
+<li class="chapter" data-level="1.3.0.19" data-path="index.html"><a href="index.html#limpiar-nombres-de-variables"><i class="fa fa-check"></i><b>1.3.0.19</b> Limpiar nombres de variables</a></li>
+<li class="chapter" data-level="1.3.0.20" data-path="index.html"><a href="index.html#ordenar-columnas-alfabéticamente"><i class="fa fa-check"></i><b>1.3.0.20</b> Ordenar columnas alfabéticamente</a></li>
+<li class="chapter" data-level="1.3.0.21" data-path="index.html"><a href="index.html#renombrar-todas-las-columnas"><i class="fa fa-check"></i><b>1.3.0.21</b> Renombrar todas las columnas</a></li>
+<li class="chapter" data-level="1.3.0.22" data-path="index.html"><a href="index.html#renombrar-columnas-con-base"><i class="fa fa-check"></i><b>1.3.0.22</b> Renombrar columnas con base</a></li>
+<li class="chapter" data-level="1.3.0.23" data-path="index.html"><a href="index.html#renombrar-variables-o-columnas"><i class="fa fa-check"></i><b>1.3.0.23</b> Renombrar variables o columnas</a></li>
+<li class="chapter" data-level="1.3.0.24" data-path="index.html"><a href="index.html#añadir-sufijo-a-nombres-de-columnas"><i class="fa fa-check"></i><b>1.3.0.24</b> Añadir sufijo a nombres de columnas</a></li>
+<li class="chapter" data-level="1.3.0.25" data-path="index.html"><a href="index.html#eliminar-un-término-en-el-título-de-variables"><i class="fa fa-check"></i><b>1.3.0.25</b> Eliminar un término en el título de variables</a></li>
+<li class="chapter" data-level="1.3.0.26" data-path="index.html"><a href="index.html#rellenar-casos"><i class="fa fa-check"></i><b>1.3.0.26</b> Rellenar casos</a></li>
+<li class="chapter" data-level="1.3.0.27" data-path="index.html"><a href="index.html#convertir-fechas-de-excel"><i class="fa fa-check"></i><b>1.3.0.27</b> Convertir fechas de Excel</a></li>
+<li class="chapter" data-level="1.3.0.28" data-path="index.html"><a href="index.html#eliminar-una-categoría"><i class="fa fa-check"></i><b>1.3.0.28</b> Eliminar una categoría</a></li>
+<li class="chapter" data-level="1.3.0.29" data-path="index.html"><a href="index.html#añadir-identificadores-o-folio"><i class="fa fa-check"></i><b>1.3.0.29</b> Añadir identificadores o folio</a></li>
+<li class="chapter" data-level="1.3.0.30" data-path="index.html"><a href="index.html#remover-texto-de-una-categoría"><i class="fa fa-check"></i><b>1.3.0.30</b> Remover texto de una categoría</a></li>
+<li class="chapter" data-level="1.3.0.31" data-path="index.html"><a href="index.html#borrar-espacios-antes-y-después"><i class="fa fa-check"></i><b>1.3.0.31</b> Borrar espacios antes y después</a></li>
+<li class="chapter" data-level="1.3.0.32" data-path="index.html"><a href="index.html#agregar-caracteres-antes-o-después"><i class="fa fa-check"></i><b>1.3.0.32</b> Agregar caracteres antes o después</a></li>
+<li class="chapter" data-level="1.3.0.33" data-path="index.html"><a href="index.html#detectar-patrones-en-texto"><i class="fa fa-check"></i><b>1.3.0.33</b> Detectar patrones en texto</a></li>
+<li class="chapter" data-level="1.3.0.34" data-path="index.html"><a href="index.html#buscar-y-reemplazar-valores"><i class="fa fa-check"></i><b>1.3.0.34</b> Buscar y reemplazar valores</a></li>
+<li class="chapter" data-level="1.3.0.35" data-path="index.html"><a href="index.html#filtrar-outliers"><i class="fa fa-check"></i><b>1.3.0.35</b> Filtrar outliers</a></li>
+<li class="chapter" data-level="1.3.0.36" data-path="index.html"><a href="index.html#convertir-valores-a-mayúsculas-o-minúsculas"><i class="fa fa-check"></i><b>1.3.0.36</b> Convertir valores a mayúsculas o minúsculas:</a></li>
+<li class="chapter" data-level="1.3.0.37" data-path="index.html"><a href="index.html#borrar-prefijo-de-variables"><i class="fa fa-check"></i><b>1.3.0.37</b> Borrar prefijo de variables</a></li>
+<li class="chapter" data-level="1.3.0.38" data-path="index.html"><a href="index.html#rellenar-las-fechas-en-una-serie-de-tiempo"><i class="fa fa-check"></i><b>1.3.0.38</b> Rellenar las fechas en una serie de tiempo</a></li>
+<li class="chapter" data-level="1.3.0.39" data-path="index.html"><a href="index.html#ejemplos-de-regex-en-r"><i class="fa fa-check"></i><b>1.3.0.39</b> Ejemplos de Regex en R</a></li>
+<li class="chapter" data-level="1.3.0.40" data-path="index.html"><a href="index.html#fechas"><i class="fa fa-check"></i><b>1.3.0.40</b> Fechas</a></li>
+<li class="chapter" data-level="1.3.0.41" data-path="index.html"><a href="index.html#agrupar-datos"><i class="fa fa-check"></i><b>1.3.0.41</b> Agrupar datos</a></li>
+<li class="chapter" data-level="1.3.0.42" data-path="index.html"><a href="index.html#crear-variables"><i class="fa fa-check"></i><b>1.3.0.42</b> Crear variables</a></li>
+<li class="chapter" data-level="1.3.0.43" data-path="index.html"><a href="index.html#crear-variable-categórica"><i class="fa fa-check"></i><b>1.3.0.43</b> Crear variable categórica</a></li>
+</ul></li>
+<li class="chapter" data-level="1.4" data-path="index.html"><a href="index.html#recodificación-de-datos"><i class="fa fa-check"></i><b>1.4</b> Recodificación de datos</a><ul>
+<li class="chapter" data-level="1.4.0.1" data-path="index.html"><a href="index.html#recodificar-variables"><i class="fa fa-check"></i><b>1.4.0.1</b> Recodificar variables</a></li>
+<li class="chapter" data-level="1.4.0.2" data-path="index.html"><a href="index.html#crear-una-variable-a-partir-de-operaciones"><i class="fa fa-check"></i><b>1.4.0.2</b> Crear una variable a partir de operaciones</a></li>
+<li class="chapter" data-level="1.4.0.3" data-path="index.html"><a href="index.html#recodificar-con-base"><i class="fa fa-check"></i><b>1.4.0.3</b> Recodificar con base</a></li>
+<li class="chapter" data-level="1.4.0.4" data-path="index.html"><a href="index.html#crear-variable-desde-condicional"><i class="fa fa-check"></i><b>1.4.0.4</b> Crear variable desde condicional</a></li>
+<li class="chapter" data-level="1.4.0.5" data-path="index.html"><a href="index.html#recodificación-según-condiciones"><i class="fa fa-check"></i><b>1.4.0.5</b> Recodificación según condiciones</a></li>
+<li class="chapter" data-level="1.4.0.6" data-path="index.html"><a href="index.html#convertir-caracter-a-factor"><i class="fa fa-check"></i><b>1.4.0.6</b> Convertir caracter a factor</a></li>
+<li class="chapter" data-level="1.4.0.7" data-path="index.html"><a href="index.html#etiquetar-variables"><i class="fa fa-check"></i><b>1.4.0.7</b> Etiquetar variables</a></li>
+<li class="chapter" data-level="1.4.0.8" data-path="index.html"><a href="index.html#manipulación-de-objetos-con-base"><i class="fa fa-check"></i><b>1.4.0.8</b> Manipulación de objetos con base</a></li>
+<li class="chapter" data-level="1.4.0.9" data-path="index.html"><a href="index.html#crear-variable-de-interacción"><i class="fa fa-check"></i><b>1.4.0.9</b> Crear variable de interacción</a></li>
+<li class="chapter" data-level="1.4.0.10" data-path="index.html"><a href="index.html#recodificar-meses-a-texto"><i class="fa fa-check"></i><b>1.4.0.10</b> Recodificar meses a texto</a></li>
+<li class="chapter" data-level="1.4.0.11" data-path="index.html"><a href="index.html#calcular-promedio-móvil"><i class="fa fa-check"></i><b>1.4.0.11</b> Calcular promedio móvil</a></li>
+<li class="chapter" data-level="1.4.0.12" data-path="index.html"><a href="index.html#aplicar-mutate-a-varias-columnas"><i class="fa fa-check"></i><b>1.4.0.12</b> Aplicar mutate a varias columnas</a></li>
+<li class="chapter" data-level="1.4.0.13" data-path="index.html"><a href="index.html#convertir-a-logaritmos"><i class="fa fa-check"></i><b>1.4.0.13</b> Convertir a logaritmos</a></li>
+<li class="chapter" data-level="1.4.0.14" data-path="index.html"><a href="index.html#crear-categoría-otros"><i class="fa fa-check"></i><b>1.4.0.14</b> Crear categoría “otros”</a></li>
+<li class="chapter" data-level="1.4.0.15" data-path="index.html"><a href="index.html#combinar-categorías"><i class="fa fa-check"></i><b>1.4.0.15</b> Combinar categorías</a></li>
+<li class="chapter" data-level="1.4.0.16" data-path="index.html"><a href="index.html#dicotomizar-la-variable-de-respuesta"><i class="fa fa-check"></i><b>1.4.0.16</b> Dicotomizar la variable de respuesta:</a></li>
+<li class="chapter" data-level="1.4.0.17" data-path="index.html"><a href="index.html#recodificar-categoría-si-coincide-con-texto"><i class="fa fa-check"></i><b>1.4.0.17</b> Recodificar categoría si coincide con texto</a></li>
+<li class="chapter" data-level="1.4.0.18" data-path="index.html"><a href="index.html#reemplazar-un-valor-por-otro"><i class="fa fa-check"></i><b>1.4.0.18</b> Reemplazar un valor por otro</a></li>
+<li class="chapter" data-level="1.4.0.19" data-path="index.html"><a href="index.html#crear-columna-que-sea-la-diferencia-entre-los-valores-de-otra"><i class="fa fa-check"></i><b>1.4.0.19</b> Crear columna que sea la diferencia entre los valores de otra</a></li>
+<li class="chapter" data-level="1.4.0.20" data-path="index.html"><a href="index.html#renombrar-categorías"><i class="fa fa-check"></i><b>1.4.0.20</b> Renombrar categorías</a></li>
+<li class="chapter" data-level="1.4.0.21" data-path="index.html"><a href="index.html#añadir-columna-con-porcentaje"><i class="fa fa-check"></i><b>1.4.0.21</b> Añadir columna con porcentaje</a></li>
+<li class="chapter" data-level="1.4.0.22" data-path="index.html"><a href="index.html#añadir-columna-con-promedio"><i class="fa fa-check"></i><b>1.4.0.22</b> Añadir columna con promedio</a></li>
+<li class="chapter" data-level="1.4.0.23" data-path="index.html"><a href="index.html#calcular-tasa"><i class="fa fa-check"></i><b>1.4.0.23</b> Calcular tasa</a></li>
+<li class="chapter" data-level="1.4.0.24" data-path="index.html"><a href="index.html#dicotomizar-variables"><i class="fa fa-check"></i><b>1.4.0.24</b> Dicotomizar variables</a></li>
+<li class="chapter" data-level="1.4.0.25" data-path="index.html"><a href="index.html#cortar-una-variable-continua-a-factores"><i class="fa fa-check"></i><b>1.4.0.25</b> Cortar una variable continua a factores</a></li>
+<li class="chapter" data-level="1.4.0.26" data-path="index.html"><a href="index.html#reordenar-factores"><i class="fa fa-check"></i><b>1.4.0.26</b> Reordenar factores</a></li>
+<li class="chapter" data-level="1.4.0.27" data-path="index.html"><a href="index.html#crear-columna-que-tenga-los-valores-de-una-categoría-de-una-columna-en-formato-long"><i class="fa fa-check"></i><b>1.4.0.27</b> Crear columna que tenga los valores de una categoría de una columna en formato long</a></li>
+</ul></li>
+<li class="chapter" data-level="1.5" data-path="index.html"><a href="index.html#estructura-de-datos"><i class="fa fa-check"></i><b>1.5</b> Estructura de datos</a><ul>
+<li class="chapter" data-level="1.5.0.1" data-path="index.html"><a href="index.html#desordenar-una-base"><i class="fa fa-check"></i><b>1.5.0.1</b> Desordenar una base</a></li>
+<li class="chapter" data-level="1.5.0.2" data-path="index.html"><a href="index.html#convertir-a-tidy"><i class="fa fa-check"></i><b>1.5.0.2</b> Convertir a tidy</a></li>
+<li class="chapter" data-level="1.5.0.3" data-path="index.html"><a href="index.html#tidyr-1.0"><i class="fa fa-check"></i><b>1.5.0.3</b> Tidyr 1.0</a></li>
+<li class="chapter" data-level="1.5.0.4" data-path="index.html"><a href="index.html#trasponer-data-frame"><i class="fa fa-check"></i><b>1.5.0.4</b> Trasponer data frame</a></li>
+<li class="chapter" data-level="1.5.0.5" data-path="index.html"><a href="index.html#unir-dos-columnas"><i class="fa fa-check"></i><b>1.5.0.5</b> Unir dos columnas</a></li>
+<li class="chapter" data-level="1.5.0.6" data-path="index.html"><a href="index.html#separar-dos-columnas"><i class="fa fa-check"></i><b>1.5.0.6</b> Separar dos columnas</a></li>
+<li class="chapter" data-level="1.5.0.7" data-path="index.html"><a href="index.html#convertir-a-wide"><i class="fa fa-check"></i><b>1.5.0.7</b> Convertir a wide</a></li>
+<li class="chapter" data-level="1.5.0.8" data-path="index.html"><a href="index.html#anidar-datos"><i class="fa fa-check"></i><b>1.5.0.8</b> Anidar datos</a></li>
+</ul></li>
+<li class="chapter" data-level="1.6" data-path="index.html"><a href="index.html#exportación-de-datos"><i class="fa fa-check"></i><b>1.6</b> Exportación de datos</a><ul>
+<li class="chapter" data-level="1.6.0.1" data-path="index.html"><a href="index.html#exportar-tablas"><i class="fa fa-check"></i><b>1.6.0.1</b> Exportar tablas</a></li>
+<li class="chapter" data-level="1.6.0.2" data-path="index.html"><a href="index.html#exportar-a-excel"><i class="fa fa-check"></i><b>1.6.0.2</b> Exportar a Excel</a></li>
+<li class="chapter" data-level="1.6.0.3" data-path="index.html"><a href="index.html#exportar-data-frame"><i class="fa fa-check"></i><b>1.6.0.3</b> Exportar data frame</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html"><i class="fa fa-check"></i><b>2</b> Visualización de datos con R y ggplot2</a><ul>
+<li class="chapter" data-level="2.1" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#tipos-de-gráfico"><i class="fa fa-check"></i><b>2.1</b> Tipos de gráfico</a><ul>
+<li class="chapter" data-level="2.1.0.1" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#barras"><i class="fa fa-check"></i><b>2.1.0.1</b> Barras</a></li>
+<li class="chapter" data-level="2.1.0.2" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#dispersión"><i class="fa fa-check"></i><b>2.1.0.2</b> Dispersión</a></li>
+<li class="chapter" data-level="2.1.0.3" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#torta"><i class="fa fa-check"></i><b>2.1.0.3</b> Torta</a></li>
+<li class="chapter" data-level="2.1.0.4" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#densidad"><i class="fa fa-check"></i><b>2.1.0.4</b> Densidad</a></li>
+<li class="chapter" data-level="2.1.0.5" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#boxplot"><i class="fa fa-check"></i><b>2.1.0.5</b> Boxplot</a></li>
+<li class="chapter" data-level="2.1.0.6" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#curvas-y-modelos-lineales"><i class="fa fa-check"></i><b>2.1.0.6</b> Curvas y modelos lineales</a></li>
+<li class="chapter" data-level="2.1.0.7" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#barras-redondeadas"><i class="fa fa-check"></i><b>2.1.0.7</b> Barras redondeadas</a></li>
+<li class="chapter" data-level="2.1.0.8" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#nubes-de-palabras"><i class="fa fa-check"></i><b>2.1.0.8</b> Nubes de palabras</a></li>
+<li class="chapter" data-level="2.1.0.9" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#convertir-a-3d"><i class="fa fa-check"></i><b>2.1.0.9</b> Convertir a 3D</a></li>
+<li class="chapter" data-level="2.1.0.10" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#estadísticas-en-gráficos"><i class="fa fa-check"></i><b>2.1.0.10</b> Estadísticas en gráficos</a></li>
+<li class="chapter" data-level="2.1.0.11" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#crestas"><i class="fa fa-check"></i><b>2.1.0.11</b> Crestas</a></li>
+<li class="chapter" data-level="2.1.0.12" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#enjambre"><i class="fa fa-check"></i><b>2.1.0.12</b> Enjambre</a></li>
+<li class="chapter" data-level="2.1.0.13" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#violín"><i class="fa fa-check"></i><b>2.1.0.13</b> Violín</a></li>
+<li class="chapter" data-level="2.1.0.14" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#líneas"><i class="fa fa-check"></i><b>2.1.0.14</b> Líneas</a></li>
+<li class="chapter" data-level="2.1.0.15" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#histograma"><i class="fa fa-check"></i><b>2.1.0.15</b> Histograma</a></li>
+<li class="chapter" data-level="2.1.0.16" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#dumbell"><i class="fa fa-check"></i><b>2.1.0.16</b> Dumbell</a></li>
+<li class="chapter" data-level="2.1.0.17" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#mapas-de-calor"><i class="fa fa-check"></i><b>2.1.0.17</b> Mapas de calor</a></li>
+<li class="chapter" data-level="2.1.0.18" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#splom-scatterplot-matrix"><i class="fa fa-check"></i><b>2.1.0.18</b> Splom (scatterplot matrix)</a></li>
+<li class="chapter" data-level="2.1.0.19" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#matriz-de-correlación"><i class="fa fa-check"></i><b>2.1.0.19</b> Matriz de correlación</a></li>
+<li class="chapter" data-level="2.1.0.20" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#coordenadas-paralelas"><i class="fa fa-check"></i><b>2.1.0.20</b> Coordenadas paralelas</a></li>
+<li class="chapter" data-level="2.1.0.21" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#mapas"><i class="fa fa-check"></i><b>2.1.0.21</b> Mapas</a></li>
+<li class="chapter" data-level="2.1.0.22" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#mapa-de-densidad"><i class="fa fa-check"></i><b>2.1.0.22</b> Mapa de densidad</a></li>
+<li class="chapter" data-level="2.1.0.23" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#scatter"><i class="fa fa-check"></i><b>2.1.0.23</b> Scatter</a></li>
+<li class="chapter" data-level="2.1.0.24" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#gráficos-con-iconos-o-logotipos"><i class="fa fa-check"></i><b>2.1.0.24</b> Gráficos con iconos o logotipos</a></li>
+<li class="chapter" data-level="2.1.0.25" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#waffle"><i class="fa fa-check"></i><b>2.1.0.25</b> Waffle</a></li>
+<li class="chapter" data-level="2.1.0.26" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#voronoi"><i class="fa fa-check"></i><b>2.1.0.26</b> Voronoi</a></li>
+<li class="chapter" data-level="2.1.0.27" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#densidad-2d"><i class="fa fa-check"></i><b>2.1.0.27</b> Densidad 2D</a></li>
+<li class="chapter" data-level="2.1.0.28" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#gráficos-animados"><i class="fa fa-check"></i><b>2.1.0.28</b> Gráficos animados</a></li>
+<li class="chapter" data-level="2.1.0.29" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#cortar-datos-en-intervalos"><i class="fa fa-check"></i><b>2.1.0.29</b> Cortar datos en intervalos</a></li>
+<li class="chapter" data-level="2.1.0.30" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#mapas-1"><i class="fa fa-check"></i><b>2.1.0.30</b> Mapas</a></li>
+</ul></li>
+<li class="chapter" data-level="2.2" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#figuras-y-capas"><i class="fa fa-check"></i><b>2.2</b> Figuras y capas</a><ul>
+<li class="chapter" data-level="2.2.0.1" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#agregar-capas-condicionales"><i class="fa fa-check"></i><b>2.2.0.1</b> Agregar capas condicionales</a></li>
+<li class="chapter" data-level="2.2.0.2" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#agregar-barras-de-brecha"><i class="fa fa-check"></i><b>2.2.0.2</b> Agregar barras de brecha:</a></li>
+<li class="chapter" data-level="2.2.0.3" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#líneas-verticales-grises"><i class="fa fa-check"></i><b>2.2.0.3</b> Líneas verticales grises</a></li>
+<li class="chapter" data-level="2.2.0.4" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#poner-logo-en-esquina-del-gráfico"><i class="fa fa-check"></i><b>2.2.0.4</b> Poner logo en esquina del gráfico</a></li>
+<li class="chapter" data-level="2.2.0.5" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#insertar-flechas-en-el-gráfico"><i class="fa fa-check"></i><b>2.2.0.5</b> Insertar flechas en el gráfico</a></li>
+<li class="chapter" data-level="2.2.0.6" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#agregar-línea-horizontal-de-promedio"><i class="fa fa-check"></i><b>2.2.0.6</b> Agregar línea horizontal de promedio</a></li>
+<li class="chapter" data-level="2.2.0.7" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#graficar-una-única-variable"><i class="fa fa-check"></i><b>2.2.0.7</b> Graficar una única variable</a></li>
+<li class="chapter" data-level="2.2.0.8" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#insertar-barras"><i class="fa fa-check"></i><b>2.2.0.8</b> Insertar barras</a></li>
+<li class="chapter" data-level="2.2.0.9" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#guardar-y-aplicar-capas"><i class="fa fa-check"></i><b>2.2.0.9</b> Guardar y aplicar capas</a></li>
+<li class="chapter" data-level="2.2.0.10" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#shapes"><i class="fa fa-check"></i><b>2.2.0.10</b> Shapes</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#texto"><i class="fa fa-check"></i><b>2.3</b> Texto</a><ul>
+<li class="chapter" data-level="2.3.0.1" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#insertar-texto-en-el-gráfico"><i class="fa fa-check"></i><b>2.3.0.1</b> Insertar texto en el gráfico</a></li>
+<li class="chapter" data-level="2.3.0.2" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#texto-en-barras"><i class="fa fa-check"></i><b>2.3.0.2</b> Texto en barras</a></li>
+<li class="chapter" data-level="2.3.0.3" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#mostrar-texto-en-el-gráfico-según-condición"><i class="fa fa-check"></i><b>2.3.0.3</b> Mostrar texto en el gráfico según condición</a></li>
+<li class="chapter" data-level="2.3.0.4" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#poner-valores-sobre-las-barras"><i class="fa fa-check"></i><b>2.3.0.4</b> Poner valores sobre las barras</a></li>
+<li class="chapter" data-level="2.3.0.5" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#repeler-etiquetas-de-los-puntos"><i class="fa fa-check"></i><b>2.3.0.5</b> Repeler etiquetas de los puntos</a></li>
+<li class="chapter" data-level="2.3.0.6" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#convertir-etiquetas-a-minúscula-mayúscula-titulares-o-frase"><i class="fa fa-check"></i><b>2.3.0.6</b> Convertir etiquetas a minúscula, mayúscula, titulares, o frase</a></li>
+<li class="chapter" data-level="2.3.0.7" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#poner-suma-de-los-factores-sobre-una-barra-stacked"><i class="fa fa-check"></i><b>2.3.0.7</b> Poner suma de los factores sobre una barra stacked</a></li>
+<li class="chapter" data-level="2.3.0.8" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#ajustar-cita-o-referencia"><i class="fa fa-check"></i><b>2.3.0.8</b> Ajustar cita o referencia</a></li>
+<li class="chapter" data-level="2.3.0.9" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#mover-título-y-subtítulo"><i class="fa fa-check"></i><b>2.3.0.9</b> Mover título y subtítulo</a></li>
+<li class="chapter" data-level="2.3.0.10" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#buscar-y-reemplazar-palabras-de-las-etiquetas"><i class="fa fa-check"></i><b>2.3.0.10</b> Buscar y reemplazar palabras de las etiquetas</a></li>
+<li class="chapter" data-level="2.3.0.11" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#redondear-cifras"><i class="fa fa-check"></i><b>2.3.0.11</b> Redondear cifras</a></li>
+<li class="chapter" data-level="2.3.0.12" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#pegar-signo-de-porcentaje"><i class="fa fa-check"></i><b>2.3.0.12</b> Pegar signo de porcentaje</a></li>
+<li class="chapter" data-level="2.3.0.13" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#cambiar-etiquetas-del-gráfico"><i class="fa fa-check"></i><b>2.3.0.13</b> Cambiar etiquetas del gráfico</a></li>
+<li class="chapter" data-level="2.3.0.14" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#poner-nombre-de-barras-dentro-de-las-barras"><i class="fa fa-check"></i><b>2.3.0.14</b> Poner nombre de barras dentro de las barras</a></li>
+<li class="chapter" data-level="2.3.0.15" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#calcular-porcentajes"><i class="fa fa-check"></i><b>2.3.0.15</b> Calcular porcentajes</a></li>
+<li class="chapter" data-level="2.3.0.16" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#poner-texto-al-final-del-gráfico-de-líneas"><i class="fa fa-check"></i><b>2.3.0.16</b> Poner texto al final del gráfico de líneas</a></li>
+<li class="chapter" data-level="2.3.0.17" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#formatear-números"><i class="fa fa-check"></i><b>2.3.0.17</b> Formatear números</a></li>
+<li class="chapter" data-level="2.3.0.18" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#añadir-texto-antes-o-después-del-nombre-de-la-variable"><i class="fa fa-check"></i><b>2.3.0.18</b> Añadir texto antes o después del nombre de la variable</a></li>
+<li class="chapter" data-level="2.3.0.19" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#formatear-una-fecha"><i class="fa fa-check"></i><b>2.3.0.19</b> Formatear una fecha</a></li>
+<li class="chapter" data-level="2.3.0.20" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#aumentar-el-tamaño-de-todo-el-texto"><i class="fa fa-check"></i><b>2.3.0.20</b> Aumentar el tamaño de todo el texto</a></li>
+<li class="chapter" data-level="2.3.0.21" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#cambiar-tipografía"><i class="fa fa-check"></i><b>2.3.0.21</b> Cambiar tipografía</a></li>
+<li class="chapter" data-level="2.3.0.22" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#cambiar-color-de-un-texto-según-condición"><i class="fa fa-check"></i><b>2.3.0.22</b> Cambiar color de un texto según condición</a></li>
+<li class="chapter" data-level="2.3.0.23" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#añadir-valor-o-texto-a-las-etiquetas-del-eje-x"><i class="fa fa-check"></i><b>2.3.0.23</b> Añadir valor o texto a las etiquetas del eje x</a></li>
+<li class="chapter" data-level="2.3.0.24" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#ajustar-etiquetas-largas"><i class="fa fa-check"></i><b>2.3.0.24</b> Ajustar etiquetas largas</a></li>
+<li class="chapter" data-level="2.3.0.25" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#ggtext"><i class="fa fa-check"></i><b>2.3.0.25</b> ggtext</a></li>
+</ul></li>
+<li class="chapter" data-level="2.4" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#escalas"><i class="fa fa-check"></i><b>2.4</b> Escalas</a><ul>
+<li class="chapter" data-level="2.4.0.1" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#ordenar-grafico-de-barras"><i class="fa fa-check"></i><b>2.4.0.1</b> Ordenar grafico de barras</a></li>
+<li class="chapter" data-level="2.4.0.2" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#expandir-un-eje"><i class="fa fa-check"></i><b>2.4.0.2</b> Expandir un eje</a></li>
+<li class="chapter" data-level="2.4.0.3" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#poner-comas-en-los-ejes"><i class="fa fa-check"></i><b>2.4.0.3</b> Poner comas en los ejes</a></li>
+<li class="chapter" data-level="2.4.0.4" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#intercambiar-ejes"><i class="fa fa-check"></i><b>2.4.0.4</b> Intercambiar ejes</a></li>
+<li class="chapter" data-level="2.4.0.5" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#cambiar-orden-de-los-ejes"><i class="fa fa-check"></i><b>2.4.0.5</b> Cambiar orden de los ejes</a></li>
+<li class="chapter" data-level="2.4.0.6" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#girar-etiquetas-del-eje-x"><i class="fa fa-check"></i><b>2.4.0.6</b> Girar etiquetas del eje x</a></li>
+<li class="chapter" data-level="2.4.0.7" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#cambiar-márgenes-de-elementos"><i class="fa fa-check"></i><b>2.4.0.7</b> Cambiar márgenes de elementos</a></li>
+<li class="chapter" data-level="2.4.0.8" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#mostrar-todas-las-etiquetas-del-eje-x"><i class="fa fa-check"></i><b>2.4.0.8</b> Mostrar todas las etiquetas del eje x</a></li>
+<li class="chapter" data-level="2.4.0.9" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#definir-cortes-del-eje-y"><i class="fa fa-check"></i><b>2.4.0.9</b> Definir cortes del eje y</a></li>
+<li class="chapter" data-level="2.4.0.10" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#transformar-escalas-a-logaritmo"><i class="fa fa-check"></i><b>2.4.0.10</b> Transformar escalas a logaritmo</a></li>
+<li class="chapter" data-level="2.4.0.11" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#agregar-alfombra"><i class="fa fa-check"></i><b>2.4.0.11</b> Agregar alfombra</a></li>
+<li class="chapter" data-level="2.4.0.12" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#cambiar-eje-a-logaritmo"><i class="fa fa-check"></i><b>2.4.0.12</b> Cambiar eje a logaritmo</a></li>
+<li class="chapter" data-level="2.4.0.13" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#ampliar-eje"><i class="fa fa-check"></i><b>2.4.0.13</b> Ampliar eje</a></li>
+<li class="chapter" data-level="2.4.0.14" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#insertar-un-nivel-en-blanco-para-una-escala"><i class="fa fa-check"></i><b>2.4.0.14</b> Insertar un nivel en blanco para una escala</a></li>
+<li class="chapter" data-level="2.4.0.15" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#escalas-de-series-de-tiempo"><i class="fa fa-check"></i><b>2.4.0.15</b> Escalas de series de tiempo</a></li>
+<li class="chapter" data-level="2.4.0.16" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#cambiar-escalas-continuas"><i class="fa fa-check"></i><b>2.4.0.16</b> Cambiar escalas continuas</a></li>
+<li class="chapter" data-level="2.4.0.17" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#escalas-1"><i class="fa fa-check"></i><b>2.4.0.17</b> Escalas</a></li>
+<li class="chapter" data-level="2.4.0.18" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#escala-en-miles"><i class="fa fa-check"></i><b>2.4.0.18</b> Escala en miles</a></li>
+<li class="chapter" data-level="2.4.0.19" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#escala-en-porcentajes"><i class="fa fa-check"></i><b>2.4.0.19</b> Escala en porcentajes</a></li>
+</ul></li>
+<li class="chapter" data-level="2.5" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#colores"><i class="fa fa-check"></i><b>2.5</b> Colores</a><ul>
+<li class="chapter" data-level="2.5.0.1" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#agregar-más-de-una-escala-de-color"><i class="fa fa-check"></i><b>2.5.0.1</b> Agregar más de una escala de color</a></li>
+<li class="chapter" data-level="2.5.0.2" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#escalas-continuas-de-colores-degradado"><i class="fa fa-check"></i><b>2.5.0.2</b> Escalas continuas de colores (degradado)</a></li>
+<li class="chapter" data-level="2.5.0.3" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#aplicar-paleta-de-colores-específicas-a-determinadas-variables"><i class="fa fa-check"></i><b>2.5.0.3</b> Aplicar paleta de colores específicas a determinadas variables</a></li>
+<li class="chapter" data-level="2.5.0.4" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#aplicar-escala-de-color-automática"><i class="fa fa-check"></i><b>2.5.0.4</b> Aplicar escala de color automática</a></li>
+<li class="chapter" data-level="2.5.0.5" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#crear-escala-o-degradado-de-colores"><i class="fa fa-check"></i><b>2.5.0.5</b> Crear escala o degradado de colores</a></li>
+<li class="chapter" data-level="2.5.0.6" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#previsualizar-colores"><i class="fa fa-check"></i><b>2.5.0.6</b> Previsualizar colores</a></li>
+<li class="chapter" data-level="2.5.0.7" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#aclarar-u-oscurecer-colores"><i class="fa fa-check"></i><b>2.5.0.7</b> Aclarar u oscurecer colores</a></li>
+<li class="chapter" data-level="2.5.0.8" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#rcolorbrewer"><i class="fa fa-check"></i><b>2.5.0.8</b> RColorBrewer</a></li>
+<li class="chapter" data-level="2.5.0.9" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#crear-degradados-de-color"><i class="fa fa-check"></i><b>2.5.0.9</b> Crear degradados de color</a></li>
+<li class="chapter" data-level="2.5.0.10" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#extender-escalas-de-colores"><i class="fa fa-check"></i><b>2.5.0.10</b> Extender escalas de colores</a></li>
+<li class="chapter" data-level="2.5.0.11" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#determinar-colores-para-variable-categórica"><i class="fa fa-check"></i><b>2.5.0.11</b> Determinar colores para variable categórica</a></li>
+<li class="chapter" data-level="2.5.0.12" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#más-escalas-de-colores"><i class="fa fa-check"></i><b>2.5.0.12</b> Más escalas de colores</a></li>
+</ul></li>
+<li class="chapter" data-level="2.6" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#leyendas"><i class="fa fa-check"></i><b>2.6</b> Leyendas</a><ul>
+<li class="chapter" data-level="2.6.0.1" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#crear-gráfico-con-leyenda-manual"><i class="fa fa-check"></i><b>2.6.0.1</b> Crear gráfico con leyenda manual</a></li>
+<li class="chapter" data-level="2.6.0.2" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#invertir-orden-de-leyenda"><i class="fa fa-check"></i><b>2.6.0.2</b> Invertir orden de leyenda</a></li>
+<li class="chapter" data-level="2.6.0.3" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#orientación-y-ubicación-de-la-leyenda"><i class="fa fa-check"></i><b>2.6.0.3</b> Orientación y ubicación de la leyenda</a></li>
+<li class="chapter" data-level="2.6.0.4" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#textos-de-leyenda"><i class="fa fa-check"></i><b>2.6.0.4</b> Textos de leyenda</a></li>
+<li class="chapter" data-level="2.6.0.5" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#elementos-de-la-leyenda"><i class="fa fa-check"></i><b>2.6.0.5</b> Elementos de la leyenda</a></li>
+<li class="chapter" data-level="2.6.0.6" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#margen-de-la-leyenda"><i class="fa fa-check"></i><b>2.6.0.6</b> Margen de la leyenda</a></li>
+<li class="chapter" data-level="2.6.0.7" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#leyendas-redondas"><i class="fa fa-check"></i><b>2.6.0.7</b> Leyendas redondas</a></li>
+</ul></li>
+<li class="chapter" data-level="2.7" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#temas-y-espaciado"><i class="fa fa-check"></i><b>2.7</b> Temas y espaciado</a><ul>
+<li class="chapter" data-level="2.7.0.1" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#espaciado-entre-facetas"><i class="fa fa-check"></i><b>2.7.0.1</b> Espaciado entre facetas</a></li>
+<li class="chapter" data-level="2.7.0.2" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#reducir-margen-de-gráficos"><i class="fa fa-check"></i><b>2.7.0.2</b> Reducir margen de gráficos</a></li>
+<li class="chapter" data-level="2.7.0.3" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#múltiples-gráficos"><i class="fa fa-check"></i><b>2.7.0.3</b> Múltiples gráficos</a></li>
+<li class="chapter" data-level="2.7.0.4" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#elementos-y-temas"><i class="fa fa-check"></i><b>2.7.0.4</b> Elementos y temas</a></li>
+<li class="chapter" data-level="2.7.0.5" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#combinar-múltiples-gráficos"><i class="fa fa-check"></i><b>2.7.0.5</b> Combinar múltiples gráficos</a></li>
+<li class="chapter" data-level="2.7.0.6" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#ajustar-espacio-entre-etiquetas-de-ejes-y-gráfico"><i class="fa fa-check"></i><b>2.7.0.6</b> Ajustar espacio entre etiquetas de ejes y gráfico</a></li>
+<li class="chapter" data-level="2.7.0.7" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#acercar-leyenda-al-gráfico"><i class="fa fa-check"></i><b>2.7.0.7</b> Acercar leyenda al gráfico</a></li>
+<li class="chapter" data-level="2.7.0.8" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#cambiar-tamaño-y-hacer-zoom-en-los-datos"><i class="fa fa-check"></i><b>2.7.0.8</b> Cambiar tamaño y hacer zoom en los datos</a></li>
+<li class="chapter" data-level="2.7.0.9" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#guardar-y-aplicar-temas"><i class="fa fa-check"></i><b>2.7.0.9</b> Guardar y aplicar temas</a></li>
+</ul></li>
+<li class="chapter" data-level="2.8" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#exportar-gráficos"><i class="fa fa-check"></i><b>2.8</b> Exportar gráficos</a></li>
+</ul></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Manual básico de R</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="header">
+<h1 class="title">Manual básico de R</h1>
+<p class="author"><em>Bastián Olea Herrera</em></p>
+</div>
+<div id="manejo-de-datos-con-r" class="section level1">
+<h1><span class="header-section-number">1</span> Manejo de datos con R</h1>
+<div id="importación-de-datos" class="section level2">
+<h2><span class="header-section-number">1.1</span> Importación de datos</h2>
+<p>Esta sección contiene instrucciones y ejemplos para importar datos a R, ya sea desde Excel, creando tus propias tablas de datos, importar desde PDF en R, u otros.</p>
+<div id="importar-archivos-desde-internet" class="section level4">
+<h4><span class="header-section-number">1.1.0.1</span> Importar archivos desde internet</h4>
+<pre><code>library(readxl)
+library(gdata)</code></pre>
+<p>Archivo Excel:</p>
+<pre><code>url_xls &lt;- &quot;http://s3.amazonaws.com/assets.datacamp.com/production/course_1478/datasets/latitude.xls&quot;
+
+## Import the .xls file with gdata: excel_gdata
+excel_gdata &lt;- read.xls(url_xls)
+
+## Download file behind URL, name it local_latitude.xls
+download.file(url_xls, destfile = &quot;local_latitude.xls&quot;)
+
+## Import the local .xls file with readxl: excel_readxl
+excel_readxl &lt;- read_excel(&quot;local_latitude.xls&quot;)</code></pre>
+<p>Cualquier archivo:</p>
+<pre><code>## https URL to the wine RData file.
+url_rdata &lt;- &quot;https://s3.amazonaws.com/assets.datacamp.com/production/course_1478/datasets/wine.RData&quot;
+
+## Download the wine file to your working directory
+download.file(url_rdata, destfile = &quot;wine_local.RData&quot;)
+
+## Load the wine data into your workspace using load()
+load(&quot;wine_local.RData&quot;)
+
+## Print out the summary of the wine data
+summary(wine)</code></pre>
+</div>
+<div id="importar-archivos-csv" class="section level4">
+<h4><span class="header-section-number">1.1.0.2</span> Importar archivos csv</h4>
+<pre><code>read.csv(”myfile”, sep = &quot;;&quot;)</code></pre>
+<ul>
+<li>Por defecto importa la primera fila como nombres de variables, y usa coma como separador.</li>
+<li>Para importar variables como caracteres y no factores:
+<code>read.csv('csvsoundsystem.com/soundsystem.csv', stringsAsFactors = FALSE)</code></li>
+<li>Para importar datos donde los decimales sean <em>comas</em> y no puntos, y los separadores sean <code>;</code>, usar <code>read.csv2</code>.</li>
+</ul>
+<p>Importar csv: <code>read_csv</code></p>
+<pre><code>bakeoff &lt;- read_csv(&quot;bakeoff.csv&quot;)</code></pre>
+<p>Agregar <code>skip=TRUE</code> para saltarse la primera fila.
+Para definir datos missing, agregar argumento: <code>na = c("", "NA", "UNKNOWN", "0")'</code></p>
+<p>Importar archivos separados por tabulación: <code>read_tsv</code></p>
+<p>Importar archivos con formato de tabla: <code>read_delim</code></p>
+<pre><code>potatoes&lt;-read_delim(&quot;potatoes.txt&quot;, delim=&quot;\t&quot;, col_names=properties)</code></pre>
+<p>Determinar colectores para importar los datos con los tipos y categorías correctos:</p>
+<pre><code>fac &lt;- col_factor(levels = c(&quot;Beef&quot;, &quot;Meat&quot;, &quot;Poultry&quot;))
+int &lt;- col_integer()
+
+## Edit the col_types argument to import the data correctly: hotdogs_factor
+hotdogs_factor &lt;- read_tsv(&quot;hotdogs.txt&quot;,
+                           col_names = c(&quot;type&quot;, &quot;calories&quot;, &quot;sodium&quot;),
+                           col_types = list(fac, int, int))</code></pre>
+<div id="importar-csv-con-fread" class="section level6">
+<h6><span class="header-section-number">1.1.0.2.0.1</span> Importar csv con <code>fread</code></h6>
+<p>Importa tablas en formato <code>data.table</code> y <code>data.frame</code>.</p>
+<pre><code>library(data.table)
+potatoes &lt;- fread(&quot;potatoes.csv&quot;)</code></pre>
+<p>Argumentos para botar o seleccionar variables:</p>
+<pre><code>fread(&quot;path/to/file.txt&quot;, drop = 2:4) ##botar variables 2 a 4
+fread(&quot;path/to/file.txt&quot;, select = c(1, 5)) ##importar variables 1  y 5
+fread(&quot;path/to/file.txt&quot;, drop = c(&quot;b&quot;, &quot;c&quot;, &quot;d&quot;))
+fread(&quot;path/to/file.txt&quot;, select = c(&quot;a&quot;, &quot;e&quot;))</code></pre>
+</div>
+<div id="importar-archivos-separados-por-tabulación" class="section level6">
+<h6><span class="header-section-number">1.1.0.2.0.2</span> Importar archivos separados por tabulación:</h6>
+<pre><code>hotdogs&lt;-read.delim(&quot;hotdogs.txt&quot;, header=T)</code></pre>
+<ul>
+<li>Por defecto importa la primera fila como nombres de variables, y usa tabulación <code>\t</code> como separador.</li>
+<li><code>header</code> indica que al primera fila son los nombres de variables.</li>
+<li>Para importar datos donde los decimales sean <em>comas</em> y no puntos, y los separadores sean <code>;</code>, usar <code>read.csv2</code>.</li>
+</ul>
+</div>
+</div>
+<div id="importar-datos-desde-excel" class="section level4">
+<h4><span class="header-section-number">1.1.0.3</span> Importar datos desde Excel</h4>
+<p>Usando <code>readxl</code></p>
+<pre><code>library(readxl)</code></pre>
+<pre><code>encuesta &lt;- readxl::read_excel(&quot;clase_25-6/Encuesta.xlsx&quot;)</code></pre>
+<p>Importar una hoja específica:</p>
+<pre><code>diccionario &lt;- readxl::read_excel(&quot;clase_25-6/Encuesta.xlsx&quot;,
+                                  sheet=&quot;Diccionario&quot;)</code></pre>
+<p>Nombres de hojas:</p>
+<pre><code>excel_sheets(&quot;urbanpop.xlsx&quot;)</code></pre>
+<p>Importar hojas de Excel: <code>sheet= 1</code></p>
+<p>Definir nombres de columnas manualmente:</p>
+<pre><code>cols &lt;- c(&quot;country&quot;, paste0(&quot;year_&quot;, 1960:1966))
+pop_b&lt;- read_excel(&quot;urbanpop_nonames.xlsx&quot;, col_names=cols)</code></pre>
+<p>Saltarse casos: <code>skip=4</code></p>
+<p>Ver las hojas del documento:</p>
+<pre><code>readxl::excel_sheets()</code></pre>
+<p>Para importar todas las hojas en un archivo:</p>
+<pre><code>archivo &lt;- &quot;clase_25-6/Encuesta.xlsx&quot;
+
+lista &lt;- lapply(readxl::excel_sheets(archivo), readxl::read_excel, path = archivo)
+
+lista[[1]]
+lista[[2]]</code></pre>
+<div id="importar-y-editar-datos-desde-excel-con-xlconnect" class="section level6">
+<h6><span class="header-section-number">1.1.0.3.0.1</span> Importar y editar datos desde Excel con <code>XLConnect </code></h6>
+<pre><code>library(XLConnect)</code></pre>
+<pre><code>my_book&lt;-loadWorkbook(&quot;urbanpop.xlsx&quot;)</code></pre>
+<pre><code>## List the sheets in my_book
+getSheets(my_book)
+
+## Import the second sheet in my_book
+readWorksheet(my_book, sheet = 2)</code></pre>
+<pre><code>## Import columns 3, 4, and 5 from second sheet in my_book: urbanpop_sel
+urbanpop_sel &lt;- readWorksheet(my_book, sheet = 2, startCol = 3, endCol = 5)
+
+## Import first column from second sheet in my_book: countries
+countries &lt;- readWorksheet(my_book, sheet = 2, startCol = 1, endCol = 1)
+
+## cbind() urbanpop_sel and countries together: selection
+selection &lt;- cbind(countries, urbanpop_sel)</code></pre>
+<pre><code>## Build connection to urbanpop.xlsx
+my_book &lt;- loadWorkbook(&quot;urbanpop.xlsx&quot;)
+
+## Add a worksheet to my_book, named &quot;data_summary&quot;
+createSheet(my_book, &quot;data_summary&quot;)
+
+## Use getSheets() on my_book
+getSheets(my_book)</code></pre>
+<pre><code>
+## Rename &quot;data_summary&quot; sheet to &quot;summary&quot;
+renameSheet(my_book, &quot;data_summary&quot;, &quot;summary&quot;)
+
+## Print out sheets of my_book
+getSheets(my_book)
+
+## Save workbook to &quot;renamed.xlsx&quot;
+saveWorkbook(my_book, &quot;renamed.xlsx&quot;)</code></pre>
+<pre><code>## Remove the fourth sheet
+removeSheet(my_book, &quot;summary&quot;)
+
+## Save workbook to &quot;clean.xlsx&quot;
+saveWorkbook(my_book, &quot;clean.xlsx&quot;)</code></pre>
+</div>
+</div>
+<div id="importar-tabla-pivotada-de-excel" class="section level4">
+<h4><span class="header-section-number">1.1.0.4</span> Importar tabla pivotada de Excel</h4>
+<p>Cuando las tablas no vienen en formato tidy, sino con varios headers e incluso headers al lado izquierdo, se usan los paquetes <code>tidyxl</code> y <code>unpivotr</code></p>
+<p>Importar usando <code>readxl</code></p>
+<pre><code>alojo &lt;- readxl::read_xlsx(&quot;Datos/3 Establecimientos de alojamiento turístico 2017-2019.xlsx&quot;,
+                           sheet=2+1,
+                           skip=4)</code></pre>
+<p>Luego se transforma para que cada <em>celda</em> de Excel corresponda a una fila en R:</p>
+<pre><code>alojo2 &lt;- unpivotr::as_cells(alojo)</code></pre>
+<p>Luego se aplica <code>unpivotr::behead()</code> para indicar dónde están los headers y en qué dirección:</p>
+<pre><code>library(unpivotr)
+
+alojo3 &lt;- alojo2 %&gt;%
+  behead(&quot;up-left&quot;, &quot;fecha&quot;) %&gt;%
+  behead(&quot;up&quot;, &quot;nivel&quot;) %&gt;%
+  behead(&quot;left&quot;, &quot;region&quot;)</code></pre>
+<p><a href="https://github.com/nacnudus/tidyxl">https://github.com/nacnudus/tidyxl</a>
+<a href="https://github.com/nacnudus/unpivotr">https://github.com/nacnudus/unpivotr</a></p>
+<div id="importar-archivos-de-stata" class="section level6">
+<h6><span class="header-section-number">1.1.0.4.0.1</span> Importar archivos de Stata</h6>
+<pre><code>foreign::read.dta()</code></pre>
+<pre><code>casen &lt;- readstata13::read.dta13(&quot;~/Casen/Casen 2017.dta&quot;) %&gt;% as_tibble()</code></pre>
+</div>
+<div id="importar-archivos-de-spss" class="section level6">
+<h6><span class="header-section-number">1.1.0.4.0.2</span> Importar archivos de SPSS</h6>
+<pre><code>library(foreign)
+read.spss</code></pre>
+<p>Reads SPSS data file read.spss(“myfile”)</p>
+</div>
+<div id="importar-datos-con-readr" class="section level6">
+<h6><span class="header-section-number">1.1.0.4.0.3</span> Importar datos con <code>readr</code></h6>
+<p>Importa datos creando objetos de clase <code>tbl_df</code>, <code>tbl</code> y <code>data.frame</code>.</p>
+<ul>
+<li>Saltarse casos, y especificar la muestra: <code>skip = 6, n_max = 5</code></li>
+<li>Para definir los nombres de columnas: <code>col_names=c("area", "temp", "size", "storage", "method","texture", "flavor", "moistness")</code></li>
+<li>Para definir manualmente los tipos de cada columna: <code>col_types="cdil"</code> (character, double, integer, logical).
+<code>potatoes_char &lt;- read_tsv("potatoes.txt", col_types = "iiiiiddd", col_names = properties)</code></li>
+<li>El delimitador es <code>delim=""</code></li>
+</ul>
+</div>
+</div>
+<div id="importar-otros-archivos-con-formato-de-tabla" class="section level4">
+<h4><span class="header-section-number">1.1.0.5</span> Importar otros archivos con formato de tabla</h4>
+<pre><code>path &lt;- file.path(&quot;data&quot;, &quot;hotdogs.txt&quot;) ## directorio
+
+hotdogs &lt;- read.table(path, 
+                      sep = &quot;/t&quot;, ##tabulación
+                      head=FALSE, ##sin nombres de columna
+                      col.names = c(&quot;type&quot;, &quot;calories&quot;, &quot;sodium&quot;))</code></pre>
+<ul>
+<li><code>header</code> indica que al primera fila son los nombres de variables. En <code>read.table</code>, <code>FALSE</code> va por defecto. El separador se indica con <code>sep</code>.</li>
+<li>Para especificar los tipos de variables, agregar el argumento <code>colClasses = c("factor", "NULL", "numeric"))</code></li>
+</ul>
+</div>
+<div id="importar-tablas-desde-pdf" class="section level4">
+<h4><span class="header-section-number">1.1.0.6</span> Importar tablas desde PDF</h4>
+<p>Usando Tabulizer:</p>
+<pre><code>library(tabulizer)
+
+out &lt;- extract_tables(&quot;/Users/bastianolea/Documents/RStudio/Tarapacá\ R/Servel/Participación\ Municipales\ 2016\ comuna\ género.pdf&quot;,
+                      output = &quot;data.frame&quot;)
+
+out2 &lt;- as_tibble(out, .name_repair = &quot;minimal&quot;)
+
+View(out2)</code></pre>
+<pre><code>library(tabulizer)
+##Convertir PDF a data.frame
+##Sirvió recoratar el PDF para que no tuviera logo en al página 1
+mesas_2016 &lt;- extract_tables(&quot;~/Servel/Mesas Primarias 2016.pdf&quot;,
+                             pages = c(55:63), ##páginas 1 a 7
+                             output = &quot;data.frame&quot;)
+
+mesas_2016b &lt;- bind_rows(mesas_2016, .id = NULL) ##%&gt;% ##Combinar lista de dataframes en un solo dataframe
+</code></pre>
+<p>Instalación en Mac: <a href="https://gist.github.com/tomsing1/1da54d3f720ed96fbbb5a3f075bd2a56">https://gist.github.com/tomsing1/1da54d3f720ed96fbbb5a3f075bd2a56</a>
+Tutorial: <a href="https://datascienceplus.com/extracting-tables-from-pdfs-in-r-using-the-tabulizer-package/">https://datascienceplus.com/extracting-tables-from-pdfs-in-r-using-the-tabulizer-package/</a></p>
+</div>
+<div id="combinar-bases-de-datos" class="section level4">
+<h4><span class="header-section-number">1.1.0.7</span> Combinar bases de datos</h4>
+<p>Para combinar bases donde las columnas son las mismas (es decir, agregar casos)</p>
+<pre><code>bind_rows(datos1, datos2)</code></pre>
+<p>Par añadir columnas a una base</p>
+<pre><code>bind_cols</code></pre>
+<p>Unir a partir de una columna que coincida:</p>
+<pre><code>datos1 %&gt;% ##Unir datos con mapa
+    left_join(datos2)</code></pre>
+<p>Combinar en base a variables compartidas dentro de dos datasets:</p>
+<pre><code>## Print the votes_processed dataset
+votes_processed
+
+## Print the descriptions dataset
+descriptions
+
+## Join them together based on the &quot;rcid&quot; and &quot;session&quot; columns
+votes_joined &lt;- votes_processed %&gt;%
+  inner_join(descriptions, by = c(&quot;rcid&quot;, &quot;session&quot;))</code></pre>
+<p>Ejemplo:</p>
+<pre><code>ilo_data &lt;- ilo_hourly_compensation %&gt;%
+  inner_join(ilo_working_hours, by = c(&quot;country&quot;, &quot;year&quot;))</code></pre>
+</div>
+<div id="conectar-a-base-de-datos" class="section level4">
+<h4><span class="header-section-number">1.1.0.8</span> Conectar a base de datos</h4>
+<pre><code>library(DBI)</code></pre>
+<pre><code>## Connect to the MySQL database: con
+con &lt;- dbConnect(RMySQL::MySQL(), 
+                 dbname = &quot;tweater&quot;, 
+                 host = &quot;courses.csrrinzqubik.us-east-1.rds.amazonaws.com&quot;, 
+                 port = 3306,
+                 user = &quot;student&quot;,
+                 password = &quot;datacamp&quot;)
+
+## Build a vector of table names: tables
+tables &lt;- dbListTables(con)</code></pre>
+<p>Importar una tabla en específico:</p>
+<pre><code>## Import the users table from tweater: users
+users&lt;- dbReadTable(con, &quot;users&quot;)</code></pre>
+<p>Importar todas las tablas:</p>
+<pre><code>## Get table names
+table_names &lt;- dbListTables(con)
+table_names
+## Import all tables
+tables &lt;- lapply(table_names, dbReadTable, conn = con)</code></pre>
+</div>
+<div id="aplicar-factor-de-expansión" class="section level4">
+<h4><span class="header-section-number">1.1.0.9</span> Aplicar factor de expansión</h4>
+<p>Cuando los datos provienen de fuentes estadísticas que requieren expansión:</p>
+<pre><code>library(mefa)
+casen_w &lt;- rep(casen, times = casen$expc)</code></pre>
+<p>O con tidyr:</p>
+<pre><code>casen %&gt;% 
+    select(expr, sexo, pco1, oficio4) %&gt;%
+    slice(1:100) %&gt;%
+    tidyr::uncount(expr, .remove = F) %&gt;%
+    print(n=Inf)</code></pre>
+</div>
+</div>
+<div id="codificación" class="section level2">
+<h2><span class="header-section-number">1.2</span> Codificación</h2>
+<p>En esta sección encontrarás comandos para producir estructuras de dato de forma “manual”; es decir, imputando los datos caso por caso, o bien trabajando con ellos de forma personalizada.</p>
+<div id="importar-datos-desde-vectores" class="section level4">
+<h4><span class="header-section-number">1.2.0.1</span> Importar datos desde vectores</h4>
+<pre><code>Año = c(1997,1998,1999,2000,2001,2002,2003,2004,2005,2006,2007,2008)
+Nacimientos= c(4571,4782,4834,4701,4787,4467,4571,4583,4776,4761,5017,5287)
+Defunciones= c(889,946,946,916,991,1026,1040,1127,1092,1070,1156,1199)
+TasaNatalidad= c(20.8, 21.0, 20.4, 19.1, 19.0, 17.2, 17.2, 16.8, 17.1, 16.6, 17.1, 17.6)
+TasaMortalidad= c(4.0, 4.1, 4.0, 3.7, 3.9, 3.9, 3.9, 4.1, 3.9, 3.7, 3.9, 4.0)
+TasaFecundidad= c(2.61, 2.63, 2.58, 2.43, 2.42, 2.21, 2.22, 2.18, 2.23, 2.17, 2.23, 2.29)
+Tarapaca &lt;- data.frame(Año,Nacimientos,Defunciones,TasaFecundidad,TasaMortalidad,TasaNatalidad)</code></pre>
+</div>
+<div id="escribir-dataframe" class="section level4">
+<h4><span class="header-section-number">1.2.0.2</span> Escribir dataframe</h4>
+<p>Crear un dataframe escribiendo las columnas</p>
+<pre><code>sales &lt;- tibble::tribble(
+  ~quarter, ~year, ~sales,
+  &quot;Q1&quot;,    2000,    66013,
+  &quot;Q2&quot;,      NA,    69182,
+  &quot;Q3&quot;,      NA,    53175,
+  &quot;Q4&quot;,      NA,    21001,
+  &quot;Q1&quot;,    2001,    46036,
+  &quot;Q2&quot;,      NA,    58842,
+  &quot;Q3&quot;,      NA,    44568,
+  &quot;Q4&quot;,      NA,    50197,
+  &quot;Q1&quot;,    2002,    39113,
+  &quot;Q2&quot;,      NA,    41668,
+  &quot;Q3&quot;,      NA,    30144,
+  &quot;Q4&quot;,      NA,    52897,
+  &quot;Q1&quot;,    2004,    32129,
+  &quot;Q2&quot;,      NA,    67686,
+  &quot;Q3&quot;,      NA,    31768,
+  &quot;Q4&quot;,      NA,    49094
+)</code></pre>
+</div>
+<div id="crear-vector-y-matriz-de-datos" class="section level4">
+<h4><span class="header-section-number">1.2.0.3</span> Crear vector y matriz de datos</h4>
+<pre><code>linkedin &lt;- c(16, 9, 13, 5, 2, 17, 14)
+facebook &lt;- c(17, 7, 5, 16, 8, 13, 14)
+views &lt;- matrix(c(linkedin, facebook), nrow = 2, byrow = TRUE)</code></pre>
+</div>
+<div id="repetir-un-valor" class="section level4">
+<h4><span class="header-section-number">1.2.0.4</span> Repetir un valor</h4>
+<p>Repetir un 5 10 veces:</p>
+<pre><code>rep(5, times=10)</code></pre>
+<p>Repetir dos valores, uno cada x veces:</p>
+<pre><code>rep(c(&quot;a&quot;, &quot;b&quot;), each = 100)</code></pre>
+</div>
+<div id="crear-sequencia-de-números" class="section level4">
+<h4><span class="header-section-number">1.2.0.5</span> Crear sequencia de números</h4>
+<p>Generar del 1 al 10 de uno en uno</p>
+<pre><code>seq(from=1, to=10, by=1)</code></pre>
+<p>Generar 10 valores desde 1 a 100</p>
+<pre><code>seq(from=1, to=100, length.out=10)</code></pre>
+</div>
+<div id="crear-data-frame-a-partir-de-vectores" class="section level4">
+<h4><span class="header-section-number">1.2.0.6</span> Crear data frame a partir de vectores</h4>
+<pre><code>data &lt;- data.frame(llamados_ventas,
+                   planes_contratados)</code></pre>
+</div>
+<div id="crear-listas" class="section level4">
+<h4><span class="header-section-number">1.2.0.7</span> Crear listas</h4>
+<pre><code>my_list &lt;- list(my_vector, my_matrix, my_df)</code></pre>
+<pre><code>pop_list&lt;-list(pop_1, pop_2, pop_3)</code></pre>
+<p>Listas con nombres:</p>
+<pre><code>my_list &lt;- list(vec=my_vector, mat=my_matrix, df=my_df)
+shining_list &lt;- list(moviename = mov, actors=act, reviews=rev)</code></pre>
+<p>Seleccionar desde listas:</p>
+<pre><code>shining_list[[&quot;reviews&quot;]]
+shining_list$reviews
+
+## Print out the vector representing the actors
+shining_list[[2]]
+
+## Print the second element of the vector representing the actors
+shining_list[[2]][2]</code></pre>
+<p>Expandir una lista:</p>
+<pre><code>## We forgot something; add the year to shining_list
+shining_list_full &lt;- c(shining_list, year = 1980)
+
+## Have a look at shining_list_full
+str(shining_list_full)</code></pre>
+</div>
+<div id="añadir-casos-manualmente" class="section level4">
+<h4><span class="header-section-number">1.2.0.8</span> Añadir casos manualmente</h4>
+<pre><code>datos %&gt;%
+    add_row(x = 4, y = 0, Nombre = &quot;Mapache&quot;)</code></pre>
+</div>
+<div id="crear-vector-de-nombres" class="section level4">
+<h4><span class="header-section-number">1.2.0.9</span> Crear vector de nombres</h4>
+<p>Útil para selectores Shiny donde las alternativas son largas.
+El segundo argumento son los nombres. En el ejemplo, se crea un vector de números donde los nombres son el vector, cosa que en Shiny aparezcan las alternativas con el contenido del vector pero internamente se retorne un número.</p>
+<pre><code>vector_nombrado &lt;- setNames(c(1:33), vector)</code></pre>
+</div>
+<div id="añadir-vector-a-una-matriz" class="section level4">
+<h4><span class="header-section-number">1.2.0.10</span> Añadir vector a una matriz</h4>
+<pre><code>all_wars_matrix &lt;- cbind(star_wars_matrix, worldwide_vector)</code></pre>
+</div>
+<div id="contar-hacia-abajo" class="section level4">
+<h4><span class="header-section-number">1.2.0.11</span> Contar hacia abajo</h4>
+<p>Hacer una columna o variable que contenga números del 1 hasta el máximo de filas de la base:</p>
+<pre><code>mutate(fila = 1:n())</code></pre>
+<pre><code>e %&gt;%
+    mutate(fila = 1:nrow(e))</code></pre>
+</div>
+<div id="usar-output-como-texto-de-vector" class="section level4">
+<h4><span class="header-section-number">1.2.0.12</span> Usar output como texto de vector</h4>
+<p>Retorna el output como el texto necesario para reproducir un vector</p>
+<pre><code>dput()</code></pre>
+</div>
+</div>
+<div id="limpieza-de-datos" class="section level2">
+<h2><span class="header-section-number">1.3</span> Limpieza de datos</h2>
+<p>Esta sección contiene instrucciones y ejemplos para limpiar datos en R, con operaciones que cambian los nombres de las variables, eliminan observaciones, tratan los datos perdidos de distintas maneras, etc.</p>
+<div id="seleccionar-variables" class="section level4">
+<h4><span class="header-section-number">1.3.0.1</span> Seleccionar variables</h4>
+<p>El verbo <code>select</code> permite mantener, botar, y reordenar variables.</p>
+<p>Seleccionar variables que contengan un término:</p>
+<pre><code>datos %&gt;%
+select(contains(&quot;término&quot;))</code></pre>
+<p>Filtrar datos para dejar o eliminar ciertas variables en la base de datos.</p>
+<pre><code>select(datos, var1, var2, var3)
+select(datos, var1:var9)</code></pre>
+<p>Se puede usar <code>-var4</code> para ignorar una columna y <code>-(var1:var5)</code> para ignorar varias seguidas.</p>
+<p>Ejemplo:</p>
+<pre><code>ratings %&gt;% 
+  select(series, channel, bbc, viewer_growth)</code></pre>
+<p>Acá no es necesario poner la base de datos como primer argumento.</p>
+<p>Poner una variable antes que todas:</p>
+<pre><code>datos %&gt;% 
+  select(var1, everything())</code></pre>
+<p>El argumento <code>everything()</code> pone el resto de las variables al final.</p>
+<div id="des-seleccionar-variables" class="section level6">
+<h6><span class="header-section-number">1.3.0.1.0.1</span> Des-seleccionar variables</h6>
+<p>El signo menos sirve para indicar que se seleccionan todas menos lo especificado:</p>
+<pre><code>ratings %&gt;% 
+  select(-ends_with(&quot;day&quot;))</code></pre>
+<p>Combinar comandos de selección:</p>
+<pre><code>ratings %&gt;% 
+  select(channel, everything(), -ends_with(&quot;day&quot;))</code></pre>
+<p>La variable especificada al frente, luego todas las demás, menos las que terminan con “day”.</p>
+</div>
+</div>
+<div id="reordenar-columnas" class="section level4">
+<h4><span class="header-section-number">1.3.0.2</span> Reordenar columnas</h4>
+<pre><code>library(dplyr)
+weather5 &lt;- select(weather4, date, Events, CloudCover:WindDirDegrees)</code></pre>
+</div>
+<div id="ordenar-datos" class="section level4">
+<h4><span class="header-section-number">1.3.0.3</span> Ordenar datos</h4>
+<pre><code>arrange(cran2, ip_id) ## ascendente
+arrange(cran2, desc(ip_id)) ## descendente</code></pre>
+<p>Ordenar por una variable, y luego por la otra:</p>
+<pre><code>arrange(datos, var1, var2)</code></pre>
+<p>Ejemplos:</p>
+<pre><code>arrange(top_counts, desc(count))</code></pre>
+<pre><code>arrange(series, episode) %&gt;% </code></pre>
+<pre><code>bakers_mini %&gt;% 
+  arrange(age) %&gt;% 
+  glimpse()</code></pre>
+<div id="ordenar-datos-con-base" class="section level6">
+<h6><span class="header-section-number">1.3.0.3.0.1</span> Ordenar datos con base</h6>
+<pre><code>sort(datos$var1)
+order(datos$var1)</code></pre>
+<pre><code>## Use order() to create positions
+positions &lt;-  order(planets_df$diameter)
+
+## Use positions to sort planets_df
+planets_df[positions, ]</code></pre>
+</div>
+</div>
+<div id="cambiar-tipo-de-datos" class="section level4">
+<h4><span class="header-section-number">1.3.0.4</span> Cambiar tipo de datos</h4>
+<p>Convertir a carácter:</p>
+<pre><code>students$Grades &lt;- as.character(students$Grades)
+</code></pre>
+<p>Convertir a factor:</p>
+<pre><code>mutate(var1 = as.factor(skill))</code></pre>
+<pre><code>students$Fedu &lt;- as.factor(students$Fedu)</code></pre>
+<pre><code>weather6 &lt;- mutate_at(weather5, vars(CloudCover:WindDirDegrees), funs(as.numeric))</code></pre>
+</div>
+<div id="filtrar-datos" class="section level4">
+<h4><span class="header-section-number">1.3.0.5</span> Filtrar datos</h4>
+<pre><code>filter(datos, var1==&quot;Peq&quot;)
+filter(pack_sum, count&gt;679)</code></pre>
+<p>Filtrar datos de acuerdo a ciertas condiciones de los casos.</p>
+<pre><code>filter(datos, var2==&quot;categoría&quot;)
+filter(datos, var2==&quot;categoría&quot;, var3==&quot;mapache&quot;)
+filter(cran, r_version &lt;= &quot;3.0.2&quot;, country == &quot;IN&quot;)
+filter(cran, country==&quot;US&quot; | country == &quot;IN&quot;)</code></pre>
+<pre><code>filter(episode == 1 | episode == max(episode))</code></pre>
+<pre><code>filter(star_baker==0 &amp; technical_winner == 0)</code></pre>
+<div id="con-subset" class="section level6">
+<h6><span class="header-section-number">1.3.0.5.0.1</span> Con subset</h6>
+<pre><code>nombredefiltro&lt;-subset(datos,var1==&quot;categoria&quot;)</code></pre>
+<p>Ejemplo:</p>
+<pre><code>west&lt;-subset(pollution,region==&quot;west&quot;)
+
+## Select planets with diameter &lt; 1
+subset(planets_df, diameter &lt;1 )</code></pre>
+</div>
+<div id="con-base" class="section level6">
+<h6><span class="header-section-number">1.3.0.5.0.2</span> Con base</h6>
+<p>Otra forma:</p>
+<pre><code>nuevodataframe &lt;- datos[datos$var1==&quot;categoria&quot;,]</code></pre>
+<pre><code>nuevodataframe &lt;- datos[datos$var1==&quot;categoria&quot; &amp; datos$var2==&quot;categoria&quot;,]</code></pre>
+<p>Filtrar datos específicos de una variable:</p>
+<pre><code>common_cyl &lt;- filter(cars, ncyl %in% c(4, 6, 8))</code></pre>
+<pre><code>## Select the non-US revenue for first two movies
+non_us_some &lt;- all_wars_matrix[1:2,2]</code></pre>
+</div>
+</div>
+<div id="convertir-datos-a-tibble" class="section level4">
+<h4><span class="header-section-number">1.3.0.6</span> Convertir datos a tibble</h4>
+<p>Convertir una tabla de datos a el formato tibble, más moderno, ordenado, y usado en el <em>tidyverse.</em></p>
+<pre><code>datos_tibble &lt;- tibble::as_tibble(datos)</code></pre>
+</div>
+<div id="cortar-datos-o-eliminar-filas" class="section level4">
+<h4><span class="header-section-number">1.3.0.7</span> Cortar datos o eliminar filas</h4>
+<p>Permite recortar un dataframe por las filas, para separar por ejemplo las primeras 200 filas:</p>
+<pre><code>datos %&gt;%
+    slice(1:200)</code></pre>
+<p>Si se necesita eliminar algunas filas:</p>
+<pre><code>datos %&gt;%
+    slice(-1, -2, -3)</code></pre>
+</div>
+<div id="eliminar-más-de-una-palabra-a-la-vez" class="section level4">
+<h4><span class="header-section-number">1.3.0.8</span> Eliminar más de una palabra a la vez</h4>
+<pre><code>datos %&gt;%
+mutate(ambito = stringr::str_remove_all(ambito, &quot;\\r|\\n&quot;))</code></pre>
+</div>
+<div id="reemplazar-más-de-una-palabra-a-la-vez" class="section level4">
+<h4><span class="header-section-number">1.3.0.9</span> Reemplazar más de una palabra a la vez</h4>
+<pre><code>datos %&gt;%
+mutate(ambito = stringi::stri_replace_all_fixed(ambito, 
+                                                  c(&quot;gnero&quot;, &quot;indicgena&quot;, &quot;plotica&quot;, &quot;oiriginarios&quot;), 
+                                                  c(&quot;genero&quot;, &quot;indigena&quot;, &quot;politica&quot;, &quot;originarios&quot;),
+                                                  vectorize_all = FALSE))</code></pre>
+</div>
+<div id="eliminar-caracteres-especiales-de-un-texto" class="section level4">
+<h4><span class="header-section-number">1.3.0.10</span> Eliminar caracteres especiales de un texto</h4>
+<p>Para eliminar acentos y eñes de los textos:</p>
+<pre><code>iconv(tolower(comuna), from = &#39;UTF-8&#39;, to = &#39;ASCII//TRANSLIT&#39;)</code></pre>
+</div>
+<div id="filtrar-columnas-en-base-a-condición" class="section level4">
+<h4><span class="header-section-number">1.3.0.11</span> Filtrar columnas en base a condición</h4>
+<pre><code>datos %&gt;%
+    select(which(nlevels(.) == 0))</code></pre>
+</div>
+<div id="limpiar-números" class="section level4">
+<h4><span class="header-section-number">1.3.0.12</span> Limpiar números</h4>
+<p>Elimina cualquier texto y deja sólo el número</p>
+<pre><code>library(readr)
+parse_number(datos)</code></pre>
+<p>Cuando un número viene en formato caracter pero también con símbolos, espacios o letras. También sirve para eliminar los caracteres y dejar sólo números:</p>
+<pre><code>mutate(var1 = readr::parse_number(var1))</code></pre>
+</div>
+<div id="reemplazar-datos-perdidos" class="section level4">
+<h4><span class="header-section-number">1.3.0.13</span> Reemplazar datos perdidos</h4>
+<p>Reemplazar casos missing o NA con 0</p>
+<pre><code>mutate(filtro_calculado = tidyr::replace_na(filtro_calculado, 0))</code></pre>
+<p>Convertir los missing en un valor:</p>
+<pre><code>mutate(cantidad3 = ifelse(is.na(cantidad3), 0, cantidad3)) %&gt;%</code></pre>
+<p>Para convertir un texto o símbolo en missing:</p>
+<pre><code>mutate(variable = na_if(variable, &quot;símbolo&quot;))</code></pre>
+<pre><code>na_if() to replace specified values with a NA.</code></pre>
+<pre><code>coalesce() to replace missing values with a specified value.</code></pre>
+<pre><code>tidyr::replace_na() to replace NA with a value</code></pre>
+</div>
+<div id="convertir-texto-vacío-a-missing" class="section level4">
+<h4><span class="header-section-number">1.3.0.14</span> Convertir texto vacío a missing</h4>
+<pre><code>mutate(nombres = replace(nombres, !str_detect(nombres, &quot;&quot;), NA))</code></pre>
+</div>
+<div id="recodificar-a-missing" class="section level4">
+<h4><span class="header-section-number">1.3.0.15</span> Recodificar a missing</h4>
+<p>Usando <code>na_if()</code></p>
+<pre><code>datos %&gt;% mutate(d11 = na_if(d11, &quot;No sabe&quot;)) </code></pre>
+<p>Usando <code>replace()</code></p>
+<pre><code>datos %&gt;% mutate(d11 = replace(d11,&quot;No sabe&quot;, NA)) </code></pre>
+<p>na_if() to replace specified values with a NA.</p>
+<p>coalesce() to replace missing values with a specified value.</p>
+<p>tidyrreplace_na() to replace NA with a value</p>
+</div>
+<div id="datos-perdidos" class="section level4">
+<h4><span class="header-section-number">1.3.0.16</span> Datos perdidos</h4>
+<pre><code>sum(is.na(datos))</code></pre>
+<p>Retorna cantidad de datos missing. También se logra con <code>summary(datos)</code> o con <code>datos %&gt;% filter(is.na(variable))</code></p>
+<pre><code>which(is.na(datos))</code></pre>
+<p>Entrega la ubicación de los datos missing.</p>
+<pre><code>## Replace all empty strings in status with NA
+social_df$status[social_df$status == &quot;&quot;] &lt;- NA
+
+## Print social_df to the console
+social_df
+
+## Use complete.cases() to see which rows have no missing values
+complete.cases(social_df)
+
+## Use na.omit() to remove all rows with any missing values
+social_df&lt;-na.omit(social_df)</code></pre>
+<p>Definir valores missing al importar un archivo:</p>
+<pre><code>
+## Edit to add list of missing values
+bakeoff &lt;- read_csv(&quot;bakeoff.csv&quot;, skip = 1,
+                    na = c(&quot;&quot;, &quot;NA&quot;, &quot;UNKNOWN&quot;))</code></pre>
+</div>
+<div id="filtrar-datos-perdidos" class="section level4">
+<h4><span class="header-section-number">1.3.0.17</span> Filtrar datos perdidos</h4>
+<pre><code>datos %&gt;%
+  filter(!is.na(var1) &amp; !is.na(var2)) </code></pre>
+<pre><code>datos %&gt;%
+select(User_Score, Critic_Score) %&gt;%
+   na.omit() %&gt;%</code></pre>
+</div>
+<div id="filtrar-datos-perdidos-en-varias-columnas" class="section level4">
+<h4><span class="header-section-number">1.3.0.18</span> Filtrar datos perdidos en varias columnas</h4>
+<p>Filtrar observaciones donde sean missing en varias columnas</p>
+<pre><code>datos %&gt;%
+filter_at(vars(eval_act_pol_1_a:eval_act_pol_1_ad), any_vars(!is.na(.)))</code></pre>
+</div>
+<div id="limpiar-nombres-de-variables" class="section level4">
+<h4><span class="header-section-number">1.3.0.19</span> Limpiar nombres de variables</h4>
+<p>Elimina símbolos de las variables y las estandariza:</p>
+<pre><code>library(janitor)
+ratings &lt;- messy_ratings %&gt;%  
+  clean_names(&quot;lower_camel&quot;)</code></pre>
+<p>En el argumento de <code>clean_names</code> determina el tipo de nombre:</p>
+<pre><code>&quot;snake&quot; produces snake_case
+
+&quot;lower_camel&quot; or &quot;small_camel&quot; produces lowerCamel
+
+&quot;upper_camel&quot; or &quot;big_camel&quot; produces UpperCamel
+
+&quot;screaming_snake&quot; or &quot;all_caps&quot; produces ALL_CAPS
+
+&quot;lower_upper&quot; produces lowerUPPER
+
+&quot;upper_lower&quot; produces UPPERlower</code></pre>
+<p>Para convertir los nombres de las categorías de una variable factor:</p>
+<pre><code>library(stringr)
+levels(eme2$nacionalidad) &lt;- str_to_title(eme2$nacionalidad)</code></pre>
+</div>
+<div id="ordenar-columnas-alfabéticamente" class="section level4">
+<h4><span class="header-section-number">1.3.0.20</span> Ordenar columnas alfabéticamente</h4>
+<pre><code>datos %&gt;%
+select(sort(names(.)))</code></pre>
+</div>
+<div id="renombrar-todas-las-columnas" class="section level4">
+<h4><span class="header-section-number">1.3.0.21</span> Renombrar todas las columnas</h4>
+<p>Reemplazar un texto en lo nombres de variables</p>
+<pre><code>datos %&gt;%
+  rename_all(funs(str_replace(., &quot;pregunta&quot;, &quot;p&quot;)))</code></pre>
+<p>Renombrar columnas específicas</p>
+<pre><code>rename_at(vars(starts_with(&quot;b&quot;)), funs(str_replace(., &quot;b&quot;, &quot;agua&quot;)))</code></pre>
+</div>
+<div id="renombrar-columnas-con-base" class="section level4">
+<h4><span class="header-section-number">1.3.0.22</span> Renombrar columnas con base</h4>
+<pre><code>nombres &lt;- gsub(&quot;Pregunta &quot;, &quot;p&quot;, names(encuesta))</code></pre>
+</div>
+<div id="renombrar-variables-o-columnas" class="section level4">
+<h4><span class="header-section-number">1.3.0.23</span> Renombrar variables o columnas</h4>
+<pre><code>rename(nombrenuevo = nombreviejo) %&gt;%</code></pre>
+<p>Cambiar nombre de variables:</p>
+<pre><code>view(datos)
+col(datos)
+names(datos)[1]&lt;-&quot;Campo&quot;
+names(datos)[2]&lt;-&quot;Ciudad&quot;</code></pre>
+<p>El número 1 significa que es el primer elemento o primera columna. Entre comillas va el nombre.</p>
+</div>
+<div id="añadir-sufijo-a-nombres-de-columnas" class="section level4">
+<h4><span class="header-section-number">1.3.0.24</span> Añadir sufijo a nombres de columnas</h4>
+<pre><code>rename_at(vars(c(30:53)),function(x) paste0(x,&quot;_x&quot;))</code></pre>
+</div>
+<div id="eliminar-un-término-en-el-título-de-variables" class="section level4">
+<h4><span class="header-section-number">1.3.0.25</span> Eliminar un término en el título de variables</h4>
+<p>Seleccionar variables que contengan un término:</p>
+<pre><code>datos %&gt;%
+select(contains(&quot;término&quot;)) %&gt;%
+gather(variable, frequency) %&gt;%
+mutate(variable = str_remove(variable, &quot;término&quot;))</code></pre>
+<p>Eliminar todas las palabras anteriores a un término, incluyendo al término:</p>
+<pre><code>gathered_data %&gt;%
+    mutate(response_var = str_remove(response_var, &#39;.*rude to &#39;))</code></pre>
+<p>Ejemplo:</p>
+<pre><code>learning_platform_usefulness &lt;- multiple_choice_responses %&gt;%
+  ## select columns with LearningPlatformUsefulness in title
+  select(contains(&quot;LearningPlatformUsefulness&quot;)) %&gt;%
+  ## change data from wide to long
+  gather(learning_platform, usefulness) %&gt;%
+  ## remove rows where usefulness is NA
+  filter(!is.na(usefulness)) %&gt;%
+  ## remove &quot;LearningPlatformUsefulness&quot; from each string in learning_platform 
+  mutate(learning_platform = str_remove(learning_platform, &quot;LearningPlatformUsefulness&quot;))</code></pre>
+</div>
+<div id="rellenar-casos" class="section level4">
+<h4><span class="header-section-number">1.3.0.26</span> Rellenar casos</h4>
+<p>Cuando una columna sólo tiene valores cuando éstos cambian, y lo que se quiere es llenar de repeticiones entre cada cambio de los valores,
+cosa que <code>1 NA NA 2 NA NA 3 NA NA</code> se vuelva <code>1 1 1 2 2 2 3 3 3</code></p>
+<pre><code>datos %&gt;%
+fill(columna)</code></pre>
+</div>
+<div id="convertir-fechas-de-excel" class="section level4">
+<h4><span class="header-section-number">1.3.0.27</span> Convertir fechas de Excel</h4>
+<pre><code>as.Date(42736, origin = &quot;1899-12-30&quot;)</code></pre>
+<pre><code>library(tibble)
+library(janitor)
+
+excel_numeric_to_date(as.numeric(as.character(42736)), date_system = &quot;modern&quot;)</code></pre>
+</div>
+<div id="eliminar-una-categoría" class="section level4">
+<h4><span class="header-section-number">1.3.0.28</span> Eliminar una categoría</h4>
+<pre><code>comics_filtered &lt;- comics %&gt;%
+  filter(align != &quot;Reformed Criminals&quot;) %&gt;%
+  droplevels()</code></pre>
+</div>
+<div id="añadir-identificadores-o-folio" class="section level4">
+<h4><span class="header-section-number">1.3.0.29</span> Añadir identificadores o folio</h4>
+<pre><code>iris$Flower &lt;- 1:nrow(iris)</code></pre>
+</div>
+<div id="remover-texto-de-una-categoría" class="section level4">
+<h4><span class="header-section-number">1.3.0.30</span> Remover texto de una categoría</h4>
+<pre><code>mutate(tipo = str_remove(tipo, &quot;texto a borrar&quot;))</code></pre>
+</div>
+<div id="borrar-espacios-antes-y-después" class="section level4">
+<h4><span class="header-section-number">1.3.0.31</span> Borrar espacios antes y después</h4>
+<pre><code>stringr::desaparecidos$Región &lt;- str_trim(desaparecidos$Región)</code></pre>
+</div>
+<div id="agregar-caracteres-antes-o-después" class="section level4">
+<h4><span class="header-section-number">1.3.0.32</span> Agregar caracteres antes o después</h4>
+<pre><code>stringr::str_pad(c(&quot;23485W&quot;, &quot;8823453Q&quot;, &quot;994Z&quot;), width=9, side=&quot;left&quot;, pad=&quot;0&quot;)</code></pre>
+</div>
+<div id="detectar-patrones-en-texto" class="section level4">
+<h4><span class="header-section-number">1.3.0.33</span> Detectar patrones en texto</h4>
+<pre><code>stringr::str_detect(students3$dob, &quot;1997&quot;)</code></pre>
+</div>
+<div id="buscar-y-reemplazar-valores" class="section level4">
+<h4><span class="header-section-number">1.3.0.34</span> Buscar y reemplazar valores</h4>
+<pre><code>stringr::str_replace(students3$sex, &quot;M&quot;, &quot;Male&quot;)
+weather3$day &lt;- stringr::str_replace(weather3$day, &quot;X&quot;, &quot;&quot;)</code></pre>
+<p>También sirve para eliminar caracteres o patrones.</p>
+<p>Ejemplo:</p>
+<pre><code>bakers &lt;- bakers %&gt;% 
+  mutate(position_reached = stringr::str_replace(position_reached, &quot;-&quot;, &quot; &quot;),
+         position_reached = stringr::str_replace(position_reached, &quot;THIRD PLACE&quot;, &quot;RUNNER UP&quot;))</code></pre>
+<pre><code>mutate(tipo = stringr::str_replace(tipo, &quot;mal escrito&quot;, &quot;bien escrito&quot;))</code></pre>
+</div>
+<div id="filtrar-outliers" class="section level4">
+<h4><span class="header-section-number">1.3.0.35</span> Filtrar outliers</h4>
+<p>Se crea una variable que especifique si son o no outliers, y luego se filtra la base según esa variable.</p>
+<pre><code>## Filter for Asia, add column indicating outliers
+gap2007 &lt;- gap2007 %&gt;%
+  mutate(is_outlier = lifeExp &lt; 50)
+
+## Remove outliers, create box plot of lifeExp
+gap2007 %&gt;%
+  filter(!is_outlier) %&gt;%
+  ggplot(aes(x = 1, y = lifeExp)) +
+  geom_boxplot()</code></pre>
+</div>
+<div id="convertir-valores-a-mayúsculas-o-minúsculas" class="section level4">
+<h4><span class="header-section-number">1.3.0.36</span> Convertir valores a mayúsculas o minúsculas:</h4>
+<p>Convertir a minúsculas:</p>
+<pre><code>tolower(&quot;AAAA&quot;)</code></pre>
+<p>Convertir a mayúsculas:</p>
+<pre><code>toupper(&quot;aaaa&quot;)
+states_upper &lt;- toupper(states)</code></pre>
+<p>Ejemplo:</p>
+<pre><code>bakers &lt;- bakers %&gt;% 
+  mutate(position_reached = str_to_upper(position_reached))</code></pre>
+</div>
+<div id="borrar-prefijo-de-variables" class="section level4">
+<h4><span class="header-section-number">1.3.0.37</span> Borrar prefijo de variables</h4>
+<p>Borra el prefijo de los años, dejando solo caracteres entre ubicaciones 2 y 5</p>
+<pre><code>names(datos) &lt;- substring(names(datos),2,5)</code></pre>
+</div>
+<div id="rellenar-las-fechas-en-una-serie-de-tiempo" class="section level4">
+<h4><span class="header-section-number">1.3.0.38</span> Rellenar las fechas en una serie de tiempo</h4>
+<pre><code>##inicio y final de la serie parcial
+min(conceptos$date)
+max(conceptos$date)
+
+##crear serie completa
+ts &lt;- seq.POSIXt(as.POSIXct(min(conceptos$date),
+as.POSIXct(max(conceptos$date)), 
+by=&quot;day&quot;)
+
+df &lt;- data.frame(date=ts)
+
+left_join(df, conceptos)
+##unir la serie completa con la serie parcial</code></pre>
+</div>
+<div id="ejemplos-de-regex-en-r" class="section level4">
+<h4><span class="header-section-number">1.3.0.39</span> Ejemplos de Regex en R</h4>
+<p><code>"."</code> equivale a cualquier dato.
+<code>"ha."</code> retorna <code>TRUE</code> para <code>"happy"</code></p>
+<p><code>".*"</code> cualquier carácter antes o después del texto
+<code>.</code> cualquier carácter
+<code>$</code> final de palabra</p>
+<p><code>\\d</code> es cualquier dígito único
+<code>\\d+ </code> es cualquier cantidad de dígitos</p>
+<p><code>\\w+</code> es cualquier palabra</p>
+<p><code>\\.</code> es un punto</p>
+<p>Ejemplo:</p>
+<pre><code>&quot;\\d\\d\\. \\w+ - &quot;</code></pre>
+<p>…va a hacer match a “06. VI -”</p>
+<p>Dejar sólo el último caracter:</p>
+<pre><code>^(.*)(?=.$)</code></pre>
+<p>Borrar todo hasta un caracter:</p>
+<pre><code>^[^\\)]*\\) ##hasta &quot;)&quot;</code></pre>
+<p>Borrar todo dentro de paréntesis</p>
+<pre><code>([^()]*)</code></pre>
+<p>Borrar todo desde “POB.”</p>
+<pre><code>POB\\..*$</code></pre>
+<p>Borrar todo después de una palabra pero mantener la palabra:</p>
+<pre><code>(?&lt;=caleta).*</code></pre>
+<p><a href="https://help.relativity.com/9.3/Content/Relativity/Regular_expressions/Regular_expression_metacharacters.htm">https://help.relativity.com/9.3/Content/Relativity/Regular_expressions/Regular_expression_metacharacters.htm</a></p>
+</div>
+<div id="fechas" class="section level4">
+<h4><span class="header-section-number">1.3.0.40</span> Fechas</h4>
+<pre><code>library(lubridate)</code></pre>
+<p>La fecha se pone como argumento entre comillas, y se utiliza la función correspondiente:</p>
+<pre><code>dmy(&quot;17 August 2010&quot;)
+mdy(&quot;August 17 2010&quot;)
+ymd(&quot;2010 August 17&quot;)</code></pre>
+<p>Luego de definir las fechas con <code>lubridate</code>, se pueden realizar operaciones, por ejemplo, con <code>mutate</code>.</p>
+<ul>
+<li><code>interval</code>: intervalo temporal entre dos fechas.</li>
+<li><code>duration</code>: número de segundos en un intervalo.</li>
+<li><code>period</code>: cambio de tiempo en un intervalo.</li>
+</ul>
+<p>Crear variables a partir de fechas:</p>
+<pre><code>datos %&gt;%
+mutate(fecha= dmy(variableoriginal))</code></pre>
+<p>Calcular diferencias entre fechas:</p>
+<pre><code>datos %&gt;%
+mutate(intervalo = interval(var1, var2)</code></pre>
+<p>Luego se pueden convertir estos intervalos a otras unidades de tiempo:</p>
+<pre><code>datos %&gt;%
+mutate(años_decimal = intervalo / years(1),
+    años_enteros = intervalo %/% years(1))</code></pre>
+<p>En vez de <code>years</code> pueden usarse <code>months</code>, <code>hours</code>, etc.</p>
+<p>Obtener el mes de una fecha:</p>
+<pre><code>mutate(month(last_date_appeared_us, label = TRUE))</code></pre>
+<p>Ejemplos:</p>
+<pre><code>baker_time &lt;- baker_time  %&gt;% 
+  mutate(time_on_air = interval(first_date_appeared_uk, last_date_appeared_uk),
+         weeks_on_air = time_on_air / weeks(1),
+         months_on_air = time_on_air %/% months(1))</code></pre>
+</div>
+<div id="agrupar-datos" class="section level4">
+<h4><span class="header-section-number">1.3.0.41</span> Agrupar datos</h4>
+<p>Permite que los cálculos posteriores se apliquen a todas las categorías de una variable por separado.</p>
+<pre><code>grupodedatos&lt;-group_by(datos, var1)</code></pre>
+<p>Ejemplos:</p>
+<pre><code>grupodedatos&lt;-group_by(datos, var1)
+summarize(grupodedatos, mean(var2))</code></pre>
+<p>Retorna el promedio de la variable dos para cada categoría de la variable 1.</p>
+<pre><code>bakeoff %&gt;% 
+  filter(!is.na(us_season)) %&gt;% 
+  group_by(us_season)  %&gt;% 
+  skim()</code></pre>
+<p>Para desagrupar: <code>ungroup()</code></p>
+</div>
+<div id="crear-variables" class="section level4">
+<h4><span class="header-section-number">1.3.0.42</span> Crear variables</h4>
+<pre><code>mutate(cran3, size_mb = size / 2^20)
+mutate(cran3, correct_size = size + 1000)</code></pre>
+<p>Crear una nueva variable que indique el promedio de una variable:</p>
+<pre><code>summarize(cran, avg_bytes = mean(size))</code></pre>
+<p>Esto se puede usar para obtener puntos promedios de una variable para una serie temporal:</p>
+<pre><code>datos2 &lt;- datos %&gt;%
+group_by(year) %&gt;%
+summarize(var_promedio
+= mean(var1))</code></pre>
+<p>Y luego usar la nueva variable <code>var_promedio</code> como eje y de un gráfico.</p>
+<p>Este código crea nuevas variables a partir de operaciones realizadas sobre un conjunto de datos agrupados (con <code>group_by</code>):</p>
+<pre><code>pack_sum &lt;- summarize(by_package,
+                      count = n(),
+                      unique = n_distinct(ip_id),
+                      countries = n_distinct(country),
+                      avg_bytes = mean(size))
+## The &#39;count&#39; column, created with n(), contains the total number of rows (i.e. downloads) for each package. The &#39;unique&#39; column, created with n_distinct(ip_id), gives the total number of unique downloads for each package, as measured by the number of distinct ip_id&#39;s. The &#39;countries&#39; column, created with n_distinct(country), provides the number of countries in which each package was downloaded. And finally, the &#39;avg_bytes&#39; column, created with mean(size), contains the mean download size (in bytes) for each package.</code></pre>
+<p>Crear variable para todo el data frame:</p>
+<pre><code>mutate(datos, var9=&quot;si&quot;)</code></pre>
+</div>
+<div id="crear-variable-categórica" class="section level4">
+<h4><span class="header-section-number">1.3.0.43</span> Crear variable categórica</h4>
+<p>Variable nominal:</p>
+<pre><code>## Sex vector
+sex_vector &lt;- c(&quot;Male&quot;, &quot;Female&quot;, &quot;Female&quot;, &quot;Male&quot;, &quot;Male&quot;)
+
+## Convert sex_vector to a factor
+factor_sex_vector &lt;- factor(sex_vector)
+
+## Print out factor_sex_vector
+factor_sex_vector</code></pre>
+<p>Variable ordinal:</p>
+<pre><code>temperature_vector &lt;- c(&quot;High&quot;, &quot;Low&quot;, &quot;High&quot;,&quot;Low&quot;, &quot;Medium&quot;)
+factor_temperature_vector &lt;- factor(temperature_vector, order = TRUE, levels = c(&quot;Low&quot;, &quot;Medium&quot;, &quot;High&quot;))
+factor_temperature_vector</code></pre>
+<pre><code>## Create speed_vector
+speed_vector &lt;- c(&quot;medium&quot;, &quot;slow&quot;, &quot;slow&quot;, &quot;medium&quot;, &quot;fast&quot;)
+
+## Convert speed_vector to ordered factor vector
+factor_speed_vector &lt;- factor(speed_vector, ordered=TRUE, levels=c(&quot;slow&quot;, &quot;medium&quot;, &quot;fast&quot;))</code></pre>
+<p>Cambiar nombre de niveles:</p>
+<pre><code>## Specify the levels of factor_survey_vector
+levels(factor_survey_vector) &lt;- c(&quot;Female&quot;,&quot;Male&quot;)</code></pre>
+<p>Desagregar variable categórica:</p>
+<pre><code>## Male
+male &lt;- factor_survey_vector[1]
+
+## Female
+female &lt;- factor_survey_vector[2]</code></pre>
+</div>
+</div>
+<div id="recodificación-de-datos" class="section level2">
+<h2><span class="header-section-number">1.4</span> Recodificación de datos</h2>
+<p>Esta sección cubre instrucciones y ejemplos sobre recodificación de datos; es decir, operaciones que alteran el contenido de las variables o crean nuevas variables en base a condiciones o instrucciones.</p>
+<div id="recodificar-variables" class="section level4">
+<h4><span class="header-section-number">1.4.0.1</span> Recodificar variables</h4>
+<p>Recodificar variables:</p>
+<pre><code>gapminder %&gt;%
+mutate(gdp = gdpPercap*pop)</code></pre>
+<p>El primer argumento de <code>mutate</code> es el nombre de la nueva variable.</p>
+<pre><code>datos2 &lt;- datos %&gt;% 
+  mutate(categorianueva = recode(categoria, &quot;var_antigua&quot; = &quot;var_nueva&quot;, 
+    &quot;missing&quot; = NA_character_))</code></pre>
+<p>Si la variable missing es numérica, <code>NA_integer_</code></p>
+<p>Para recodificar todos los demás valores en una sola variable, usar <code>.default</code>:</p>
+<pre><code>mutate(tech_win = recode(technical, `1` = 1,
+    .default = 0))</code></pre>
+<pre><code>email %&gt;%
+  mutate(has_image = recode(image, `0` = FALSE, .default = TRUE))</code></pre>
+<p>Si la variable a crear es un factor (por ejemplo, dummy), usar <code>recode_factor</code> en vez de <code>recode</code>.</p>
+<pre><code>mutate(episode = recode(episode, `1` = &quot;first&quot;, .default = &quot;last&quot;))</code></pre>
+<p>Ejemplos:</p>
+<pre><code>ratings &lt;- ratings %&gt;% 
+  mutate(bbc = recode_factor(channel, 
+    &quot;Channel 4&quot; = 0,
+    .default = 1))</code></pre>
+<pre><code>mutate(bump = (last - first) / first)</code></pre>
+</div>
+<div id="crear-una-variable-a-partir-de-operaciones" class="section level4">
+<h4><span class="header-section-number">1.4.0.2</span> Crear una variable a partir de operaciones</h4>
+<pre><code>mutate(cran3, size_mb = size / 2^20)
+mutate(cran3, correct_size = size + 1000)</code></pre>
+<pre><code>summarize(cran, avg_bytes = mean(size))</code></pre>
+<pre><code>datos %&gt;% mutate(variable = recode(
+student, `0` ) NA_character_,
+</code></pre>
+<p>Con <code>.default</code> cualquier valor que no es 0 es recodificado por esta variable.</p>
+<p>Este código crea nuevas variables a partir de operaciones realizadas sobre un conjunto de datos agrupados (con <code>group_by</code>):</p>
+<pre><code>pack_sum &lt;- summarize(by_package,
+                      count = n(),
+                      unique = n_distinct(ip_id),
+                      countries = n_distinct(country),
+                      avg_bytes = mean(size))</code></pre>
+</div>
+<div id="recodificar-con-base" class="section level4">
+<h4><span class="header-section-number">1.4.0.3</span> Recodificar con base</h4>
+<pre><code>library(car)
+datos$nuevavariable&lt;-recode(datos$variableoriginal,&quot;
+            25:34.9=&#39;Pequeño&#39;;
+            35:54.9=&#39;Mediano&#39;;
+            55:65=&#39;Grande&#39;&quot;,as.factor=TRUE)</code></pre>
+<p>Se rectifica en “datos” la variable titulada <code>nuevavariable</code>, basada en <code>variableoriginal</code>, y luego se especifican sus categorías.</p>
+<pre><code>datos$nuevavariable&lt;-recode(datos$variableoriginal, &quot;
+    &#39;hombre&#39;=0;
+    &#39;mujer&#39;=1,
+                as.integer=TRUE)</code></pre>
+<p>Cortar el rango de los datos de una variable:</p>
+<pre><code>adult &lt;- adult[adult$SRAGE_P &lt;= 84, ]</code></pre>
+</div>
+<div id="crear-variable-desde-condicional" class="section level4">
+<h4><span class="header-section-number">1.4.0.4</span> Crear variable desde condicional</h4>
+<pre><code>datos %&gt;%
+mutate(has_image = image &gt; 0)</code></pre>
+<pre><code>datos %&gt;%
+mutate(zero = variable == 0)</code></pre>
+<p>Revisar niveles: <code>levels(datos$variable)</code>
+Convertir los niveles a factor:</p>
+<pre><code>datos$variable &lt;- factor(datos$variable, levels=c(&quot;TRUE&quot;, &quot;FALSE&quot;))</code></pre>
+</div>
+<div id="recodificación-según-condiciones" class="section level4">
+<h4><span class="header-section-number">1.4.0.5</span> Recodificación según condiciones</h4>
+<p>Funciona como un <em>if true, then.</em></p>
+<div id="condicional-simple" class="section level6">
+<h6><span class="header-section-number">1.4.0.5.0.1</span> Condicional simple</h6>
+<pre><code>datos %&gt;%
+mutate(gen = if_else(
+    between(birth_year, 1981, 1996), &quot;millenial&quot;, &quot;not_millenial&quot;))</code></pre>
+<p>La segunda categoría es para los casos que no cumplen la condición.</p>
+<pre><code>mutate(Valor = ifelse(Delito==&quot;Otras causas&quot;, Valor/4, Valor)) %&gt;% ##Si el delito es &quot;otros&quot;, dividir por la cantidad de categorías colapsadas por fct_lump (22-n) para sacar el promedio</code></pre>
+<pre><code> mutate(pobreza2 = case_when(pobreza == &quot;Pobres extremos&quot; ~ &quot;Condición de pobreza&quot;,
+                                 pobreza == &quot;Pobres no extremos&quot; ~ &quot;Condición de pobreza&quot;,
+                                 pobreza == &quot;No pobres&quot; ~ &quot;Fuera de condición de pobreza&quot;))
+</code></pre>
+</div>
+<div id="múltiples-condiciones" class="section level6">
+<h6><span class="header-section-number">1.4.0.5.0.2</span> Múltiples condiciones</h6>
+<pre><code>datos %&gt;%
+mutate(gen = case_when(
+    between(birth_year, 1965, 1980) ~ &quot;gen_x&quot;,
+    between(birth_year, 1981, 1996) ~ &quot;millenial&quot;))</code></pre>
+<pre><code>case_when(x %% 15 ==0 ~ &quot;fizz buzz&quot;,
+          x %% 3 == 0 ~ &quot;fizz&quot;,
+          x %% 5 == 0 ~ &quot;buzz&quot;,
+          TRUE ~as.character(x) )</code></pre>
+<p>Agregar <code>TRUE ~ "asdas"</code> para crear una variable para los casos que no cumplen. De lo contrario, serán missing.</p>
+<p>Ejemplos:</p>
+<pre><code>bakers_skill &lt;- bakers %&gt;% 
+  mutate(skill = case_when(
+    star_baker &gt; technical_winner ~ &quot;super_star&quot;,
+    star_baker &lt; technical_winner ~ &quot;high_tech&quot;,
+    TRUE ~ &quot;well_rounded&quot;
+  ))</code></pre>
+<pre><code>bakers_skill &lt;- bakers %&gt;% 
+  mutate(skill = case_when(
+    star_baker &gt; technical_winner ~ &quot;super_star&quot;,
+    star_baker &lt; technical_winner ~ &quot;high_tech&quot;,
+    star_baker == 0 &amp; technical_winner == 0 ~ NA_character_,
+    star_baker == technical_winner  ~ &quot;well_rounded&quot;
+  ))</code></pre>
+<p>Ojo que para recodificar a missing, <code>NA_character_</code> va sin comillas.</p>
+</div>
+</div>
+<div id="convertir-caracter-a-factor" class="section level4">
+<h4><span class="header-section-number">1.4.0.6</span> Convertir caracter a factor</h4>
+<pre><code>is.character(datos$variable)
+datos %&gt;%
+mutate_if(is.character, as.factor)</code></pre>
+</div>
+<div id="etiquetar-variables" class="section level4">
+<h4><span class="header-section-number">1.4.0.7</span> Etiquetar variables</h4>
+<p>Utilizando base</p>
+<pre><code>Etiqueta &lt;- c(&quot;Año&quot;,&quot;Nacimientos&quot;,&quot;Defunciones&quot;,&quot;Tasa de fecundidad&quot;,&quot;Tasa de mortalidad&quot;,&quot;Tasa de natalidad&quot;)
+
+library(sjlabelled)
+Datos &lt;- set_label(Datos, label = Etiqueta)</code></pre>
+<pre><code>adult$RBMI &lt;- factor(adult$RBMI, labels = c(&quot;Under-weight&quot;, &quot;Normal-weight&quot;, &quot;Over-weight&quot;, &quot;Obese&quot;))</code></pre>
+</div>
+<div id="manipulación-de-objetos-con-base" class="section level4">
+<h4><span class="header-section-number">1.4.0.8</span> Manipulación de objetos con base</h4>
+<p>Buscar el atributo en cierto objeto, reportando las filas donde se puede encontrar</p>
+<pre><code>grep(atributo, objeto)
+posicion_valpo &lt;-  grep(&quot;Valparaíso&quot;, encuesta$`Pregunta 3`)</code></pre>
+<p>Reemplazar un valor inicial por uno final en cierto objeto.</p>
+<pre><code>gsub(inicial, final, objeto)
+df$region &lt;- gsub(&quot;Región&quot;, &quot;R.&quot;, encuesta$`Pregunta 3`)</code></pre>
+<p>Substraer de un objeto un carácter entre la posiciones inicial y final.</p>
+<pre><code>substr(objeto, inicial, final)</code></pre>
+<p>Permite unir uno o más objetos, en formato carácter.</p>
+<pre><code>paste(objeto1,..., sep=“ ”)</code></pre>
+</div>
+<div id="crear-variable-de-interacción" class="section level4">
+<h4><span class="header-section-number">1.4.0.9</span> Crear variable de interacción</h4>
+<p>Crea una nueva variable que tiene por categorías a las combinaciones de todos los factores de dos variables.</p>
+<pre><code>mutate(interacción = fct_cross(var1, var2, sep = &quot; + &quot;))</code></pre>
+</div>
+<div id="recodificar-meses-a-texto" class="section level4">
+<h4><span class="header-section-number">1.4.0.10</span> Recodificar meses a texto</h4>
+<p>Para pasar desde el número del mes a el mes con nombre:</p>
+<pre><code>data %&gt;%
+    mutate(Month = lubridate::month(Month, label = T, abbr= F, locale = &quot;es_ES&quot;))</code></pre>
+</div>
+<div id="calcular-promedio-móvil" class="section level4">
+<h4><span class="header-section-number">1.4.0.11</span> Calcular promedio móvil</h4>
+<p>Rolling average, media móvil</p>
+<pre><code>mutate(hits_rm = zoo::rollmean(hits, k = 7, 
+                                        fill = 0, align=&quot;left&quot;)) %&gt;%</code></pre>
+<p>Donde <code>k</code> representa las filas para atrás que va a promediar</p>
+</div>
+<div id="aplicar-mutate-a-varias-columnas" class="section level4">
+<h4><span class="header-section-number">1.4.0.12</span> Aplicar mutate a varias columnas</h4>
+<pre><code>datos %&gt;%
+mutate(across(c(col1, col2), ~ round(.x*100, 1)))</code></pre>
+<p>Otros ejemplos:</p>
+<pre><code>mutate(across(g2_1:g2_6, as.numeric)) %&gt;% ##convertir a numéricos</code></pre>
+<pre><code>mutate(across(g2_1:g2_6, ~replace(.x, is.na(.x), 0))) %&gt;% ##poner ceros en vez de NA</code></pre>
+<pre><code>cep_r %&gt;%
+  mutate(across(c(percepcion_2, percepcion_3), 
+         ~forcats::fct_relevel(.x, &quot;No sabe + No contesta&quot;, after=0))) %&gt;%
+  count(percepcion_2)</code></pre>
+<p>O también:</p>
+<pre><code>mutate_at(vars(4:length(notas)), list(as.character))</code></pre>
+</div>
+<div id="convertir-a-logaritmos" class="section level4">
+<h4><span class="header-section-number">1.4.0.13</span> Convertir a logaritmos</h4>
+<p>Convertir variable a logaritmo:</p>
+<pre><code>gap2007 &lt;- gap2007 %&gt;%
+  mutate(log_pop = log(pop))</code></pre>
+</div>
+<div id="crear-categoría-otros" class="section level4">
+<h4><span class="header-section-number">1.4.0.14</span> Crear categoría “otros”</h4>
+<p>Agrupar automáticamente los factores menos comunes en una categoría “Otras”:</p>
+<pre><code>datos %&gt;%
+mutate(variable = fct_lump(variable, prop = .08, other_level = &quot;Otras&quot;))</code></pre>
+<p>Las variables que sean menores al 8% se agrupan en “otras”.</p>
+<p>Mantener sólo las de mayor frecuencia:</p>
+<pre><code>datos %&gt;%
+mutate(variable = fct_lump(variable, n = 3, other_level = &quot;Otras&quot;))</code></pre>
+<p>El <code>n</code> especifica la cantidad de variables superiores que se mantienen.</p>
+<p>Para nombrar categorías como “otros”, se seleccionan las que se desean mantener:</p>
+<pre><code>datos %&gt;%
+mutate(variable = fct_other(variable, keep = c(&quot;antigua1&quot;, &quot;antigua2&quot;), other_level = &quot;Otras&quot;))</code></pre>
+<p>El resto de las variables no elegidas se vuelven “otras”.</p>
+<p>El argumento <code>other_level = "other method"</code> determina el nombre de la categoría “otros”.</p>
+<p>Seleccionar las que se desean transformar en “otros”:</p>
+<pre><code>datos %&gt;%
+mutate(variable = fct_other(variable, drop = c(&quot;antigua1&quot;, &quot;antigua2&quot;)))</code></pre>
+<p>De este modo, las variables especificadas pasan a formar parte de una variable “otras”.</p>
+</div>
+<div id="combinar-categorías" class="section level4">
+<h4><span class="header-section-number">1.4.0.15</span> Combinar categorías</h4>
+<p>Combinar o agrupar múltiples categorías de una variable categórica en una cantidad menor.</p>
+<pre><code>datos %&gt;%
+mutate(variable = fct_collapse(variable,
+nueva = c(&quot;antigua1&quot;, &quot;antigua2&quot;),
+nueva 2 = c(&quot;antigua3&quot;, &quot;antigua4&quot;)))</code></pre>
+</div>
+<div id="dicotomizar-la-variable-de-respuesta" class="section level4">
+<h4><span class="header-section-number">1.4.0.16</span> Dicotomizar la variable de respuesta:</h4>
+<p>Hacer variable dummy:</p>
+<pre><code>datos %&gt;%
+filter(!is.na(variable)) %&gt;%
+    mutate(variable = if_else(
+        variable %in% c(&quot;categoria&quot;, &quot;otra categoria&quot;),
+        1,
+        0))</code></pre>
+</div>
+<div id="recodificar-categoría-si-coincide-con-texto" class="section level4">
+<h4><span class="header-section-number">1.4.0.17</span> Recodificar categoría si coincide con texto</h4>
+<p>Sirve, por ejemplo, para corregir errores ortográficos</p>
+<pre><code>mutate(variable = stringr::str_replace(variable, &quot;texto incorrecto&quot;, &quot;Nuevo nombre de la categoría que contiene ese texto&quot;)) %&gt;%</code></pre>
+<p>Para coincidir texto ignorando mayúsculas o minúsculas:</p>
+<pre><code>mutate(variable = stringr::str_replace(variable, regex(&#39;texto&#39;, ignore_case = T), &quot;Nuevo nombre de la categoría que contiene ese texto&quot;)) %&gt;%</code></pre>
+</div>
+<div id="reemplazar-un-valor-por-otro" class="section level4">
+<h4><span class="header-section-number">1.4.0.18</span> Reemplazar un valor por otro</h4>
+<p>Sirve para cambiar algún valor que esté malo por otro, o recodificar un valor a missing (NA)</p>
+<pre><code>mutate(Casos = replace(Casos, Fecha == ymd(&quot;2020-04-15&quot;), valornuevo))</code></pre>
+<p>Reemplazar para imputar un valor missing:</p>
+<pre><code>mutate(Casos = replace(Casos, Casos == 0, NA))</code></pre>
+<p>Reemplazar un missing por otro valor:</p>
+<pre><code>mutate(nacionalidad = replace(nacionalidad, is.na(nacionalidad), &quot;missing&quot;))</code></pre>
+</div>
+<div id="crear-columna-que-sea-la-diferencia-entre-los-valores-de-otra" class="section level4">
+<h4><span class="header-section-number">1.4.0.19</span> Crear columna que sea la diferencia entre los valores de otra</h4>
+<p>Para calcular brechas en columnas con categorías en formato long:</p>
+<pre><code>mutate(diferencia = porcentaje[sexo == &quot;Mujer&quot;] - porcentaje) %&gt;%</code></pre>
+</div>
+<div id="renombrar-categorías" class="section level4">
+<h4><span class="header-section-number">1.4.0.20</span> Renombrar categorías</h4>
+<pre><code>mutate(variable = recode(variable, &quot;antigua&quot; = &quot;nueva&quot;))</code></pre>
+</div>
+<div id="añadir-columna-con-porcentaje" class="section level4">
+<h4><span class="header-section-number">1.4.0.21</span> Añadir columna con porcentaje</h4>
+<pre><code>library(janitor)</code></pre>
+<p>Agregar fila con suma de totales:</p>
+<pre><code>adorn_totals(&quot;row&quot;) %&gt;%</code></pre>
+<p>Agregar columna con suma de totales:</p>
+<pre><code>adorn_totals(&quot;col&quot;) %&gt;%</code></pre>
+<pre><code>perc_useful_platform &lt;- learning_platform_usefulness %&gt;%
+  ## change dataset to one row per learning_platform usefulness pair with number of entries for each
+  count(learning_platform, usefulness) %&gt;%
+  ## use add_count to create column with total number of answers for that learning_platform
+  add_count(learning_platform, wt = n) %&gt;%
+  ## create a new column, perc, that is the percentage of people giving that response for that learning_platform
+  mutate(perc = n / nn)</code></pre>
+</div>
+<div id="añadir-columna-con-promedio" class="section level4">
+<h4><span class="header-section-number">1.4.0.22</span> Añadir columna con promedio</h4>
+<pre><code>usefulness_by_platform &lt;- learning_platform_usefulness %&gt;%
+    ## If usefulness is &quot;Not Useful&quot;, make 0, else 1 
+    mutate(usefulness = if_else(usefulness == &quot;Not Useful&quot;, 0, 1)) %&gt;%
+    ## Group by learning platform 
+    group_by(learning_platform) %&gt;%
+    ## Summarize the mean usefulness for each platform
+    summarize(avg_usefulness = mean(usefulness))</code></pre>
+</div>
+<div id="calcular-tasa" class="section level4">
+<h4><span class="header-section-number">1.4.0.23</span> Calcular tasa</h4>
+<pre><code>  mutate(Tasa = (Casos/Poblacion)*100000) %&gt;%</code></pre>
+</div>
+<div id="dicotomizar-variables" class="section level4">
+<h4><span class="header-section-number">1.4.0.24</span> Dicotomizar variables</h4>
+<p>Crear variable dicotómica:</p>
+<pre><code>learning_platform_usefulness %&gt;%
+    ## If usefulness is &quot;Not Useful&quot;, make 0, else 1 
+    mutate(usefulness = if_else(usefulness == &quot;Not Useful&quot;, 0, 1))</code></pre>
+<pre><code>## Dichotomize the value variable to make a new variable, rude
+    mutate(rude = if_else(value %in% c(&#39;No, not rude at all&#39;, &#39;No, not at all rude&#39;), 0, 1))</code></pre>
+<p>Ejemplo:</p>
+<pre><code>mutate(extranjeros = case_when(nacionalidad == &quot;Chile&quot; ~ &quot;Chilena&quot;, TRUE ~ &quot;Extranjera&quot;)) %&gt;%</code></pre>
+</div>
+<div id="cortar-una-variable-continua-a-factores" class="section level4">
+<h4><span class="header-section-number">1.4.0.25</span> Cortar una variable continua a factores</h4>
+<p>Para cortar la variable en intervalos discretos con el límite izquierdo abierto y el límite derecho cerrado (de 0 a 5, de 6 a 10):</p>
+<pre><code>cut(datos$variable, c(0,5,10,15,20,25,30))</code></pre>
+<p>Cortar datos en una secuencia fija:</p>
+<pre><code>cut(datos$variable, seq(0, 30, 5))</code></pre>
+<p>Indica que empieza en 0 y termina en 30 en intervalos de 5 en 5.</p>
+</div>
+<div id="reordenar-factores" class="section level4">
+<h4><span class="header-section-number">1.4.0.26</span> Reordenar factores</h4>
+<pre><code>mutate(ocupación_CIUO = forcats::fct_relevel(ocupación_CIUO, c(&quot;Estudiantes&quot;, &quot;Sin empleo&quot;, &quot;Sin información&quot;, &quot;Jubilados/as&quot;, &quot;Otras&quot;), after = Inf)) %&gt;%</code></pre>
+<pre><code>datos &lt;- datos %&gt;%
+mutate(variable = forcats::fct_relevel(variable, &quot;categoria1&quot;, &quot;categoria2&quot;, &quot;categoria3&quot;))</code></pre>
+<div id="reordenar-factor-según-otra-variable" class="section level6">
+<h6><span class="header-section-number">1.4.0.26.0.1</span> Reordenar factor según otra variable</h6>
+<p>Por ejemplo, reordenar una variable categórica a partir de los valores de una variable numérica:</p>
+<pre><code>ggplot(datos, aes(x = forcats::fct_reorder(variable, referencia), y=...</code></pre>
+<p>Según otra pero en descendiente:</p>
+<pre><code>mutate(Genre = forcats::fct_reorder(Genre, n, .desc = TRUE))</code></pre>
+</div>
+<div id="invertir-el-orden-de-un-factor" class="section level6">
+<h6><span class="header-section-number">1.4.0.26.0.2</span> Invertir el orden de un factor</h6>
+<pre><code>iris$Species &lt;- factor(iris$Species, levels = rev(levels(iris$Species)))</code></pre>
+<pre><code>datos %&gt;%
+    mutate(variable = forcats::fct_rev(variable))</code></pre>
+</div>
+<div id="especificar-un-orden-a-un-facyor" class="section level6">
+<h6><span class="header-section-number">1.4.0.26.0.3</span> Especificar un orden a un facyor</h6>
+<p>Obtener los niveles primero: <code>levels(var)</code></p>
+<pre><code>datos1 &lt;- datos %&gt;%
+    mutate(variable1 = forcats::fct_relevel(variable1,
+                 &quot;Entirely internal&quot;, 
+                 &quot;More internal than external&quot;,
+                 &quot;Approximately half internal&quot;,
+                 &quot;More external than internal&quot;, 
+                 &quot;Entirely external&quot;))</code></pre>
+<pre><code>eme2&lt;- eme2 %&gt;%
+    mutate(tramo_ingresos = forcats::fct_relevel(tramo_ingresos, &quot;Entre 0 y $193.000&quot;,&quot;Entre $193.001 y $ 375.000&quot;,&quot;Entre $ 375.001 y $600.000&quot;,&quot;Entre $600.001 y $1.125.000&quot;,&quot;Entre $1.125.001 y $2.500.000&quot;,&quot;Entre $ 2.500.001 y $ 4.500.000&quot;,&quot;Entre $4.500.001 y $10.000.000&quot;,&quot;Entre $10.000.001 y $20.000.000&quot;,&quot;Entre $20.000.001 y $50.000.000&quot;,&quot;Entre $50.000.001 y $200.000.000&quot;))</code></pre>
+<p>Mover un nivel al final:</p>
+<pre><code>multiple_choice_responses %&gt;%
+    mutate(FormalEducation = forcats::fct_relevel(FormalEducation, &quot;I prefer not to answer&quot;, after = Inf)) %&gt;%
+</code></pre>
+<p>Mover un nivel a una posición:</p>
+<pre><code>multiple_choice_responses %&gt;%
+    mutate(FormalEducation = forcats::fct_relevel(FormalEducation, &quot;Doctoral degree&quot;, after = 5))</code></pre>
+</div>
+</div>
+<div id="crear-columna-que-tenga-los-valores-de-una-categoría-de-una-columna-en-formato-long" class="section level4">
+<h4><span class="header-section-number">1.4.0.27</span> Crear columna que tenga los valores de una categoría de una columna en formato long</h4>
+<p>Para repetir en una columna un dato específico a una categoría de agrupación (por ejemplo, el género en una variable “género”:</p>
+<pre><code>mutate(mujer = porcentaje[sexo == &quot;Mujer&quot;]) %&gt;%</code></pre>
+<p>Por ejemplo, para añadir barras de brecha:</p>
+<pre><code>casen %&gt;%
+    filter(region==&quot;Región de Tarapacá&quot;) %&gt;%
+    rename(trabajan=o1) %&gt;%
+    group_by(sexo, comuna, trabajan) %&gt;%
+    summarise(cantidad=n()) %&gt;%
+    mutate(porcentaje = cantidad/sum(cantidad)) %&gt;%
+    group_by(comuna) %&gt;%
+    mutate(diferencia = porcentaje[sexo == &quot;Mujer&quot;] - porcentaje) %&gt;%
+    group_by(comuna, trabajan) %&gt;%
+    mutate(mujer = porcentaje[sexo == &quot;Mujer&quot;]) %&gt;%
+    mutate(hombre = porcentaje[sexo == &quot;Hombre&quot;]) %&gt;%
+    filter(trabajan==&quot;Sí&quot;) %&gt;%
+    ##filter(!is.na(trabajan)) %&gt;%
+    ##graficar
+    ggplot(aes(fct_reorder(str_wrap(comuna, 4), diferencia), porcentaje, fill=sexo)) +
+    ##facet_wrap(~comuna, strip.position = &quot;bottom&quot;) +
+    geom_col(position=&quot;dodge&quot;, width=0.8) +
+    geom_text(aes(label = percent(porcentaje)), position = position_dodge2(width=0.8), 
+              hjust = 1.2, vjust=0.5, size=3.5, angle=90, color=&quot;white&quot;) +
+    geom_linerange(aes(ymin = mujer, ymax = hombre, linetype=&quot;Brecha\nde género&quot;), size=3, col=&quot;##DF1A57&quot;)</code></pre>
+</div>
+</div>
+<div id="estructura-de-datos" class="section level2">
+<h2><span class="header-section-number">1.5</span> Estructura de datos</h2>
+<p>Instrucciones y ejemplos para realizar transformaciones de la estructura de los datos.</p>
+<div id="desordenar-una-base" class="section level4">
+<h4><span class="header-section-number">1.5.0.1</span> Desordenar una base</h4>
+<pre><code>datos %&gt;%
+    mutate(desorden = sample(1:nrow(datos))) %&gt;%
+    arrange(desorden)</code></pre>
+</div>
+<div id="convertir-a-tidy" class="section level4">
+<h4><span class="header-section-number">1.5.0.2</span> Convertir a tidy</h4>
+<p>Los datos <em>tidy</em> cumplen lo siguiente:
+- Las observaciones son filas
+- Las variables son columnas
+- Existe una sola unidad observacional por tabla
+- La primera fila corresponde a nombres de variables, no valores
+Para convertis a tidy se usa <code>gather</code>:</p>
+<pre><code>datos_untidy %&gt;%
+gather(key=&quot;columna_key&quot;, value=&quot;valores&quot;, columna_1:columna_3)</code></pre>
+<p><img src="DraggedImage.jpeg" />
+<img src="DraggedImage-1.jpeg" />
+<img src="DraggedImage-2.jpeg" /></p>
+<pre><code>datos_long &lt;- gather(datos, key, value, -year)</code></pre>
+<ul>
+<li><code>data: data set</code>- <code>key</code>: nueva columna que contiene folios o valores</li>
+<li><code>value</code>: nueva columna que expresa el valor</li>
+<li><code>-…</code>: nombre de las columnas a ignorar (que se va a mantener)</li>
+<li><code>na.rm=TRUE</code> eliminar casos missing.</li>
+</ul>
+<p>Ejemplos:</p>
+<pre><code>weather2 &lt;- gather(weather, day, value, X1:X31, na.rm = TRUE)</code></pre>
+<pre><code>tidy_ratings &lt;- ratings %&gt;%
+    ## Gather and convert episode to factor
+    gather(key = &quot;episode&quot;, value = &quot;viewers_7day&quot;, -series, 
+           factor_key = TRUE, na.rm = TRUE)</code></pre>
+<pre><code>## Add column with unique ids (don&#39;t need to change)
+iris$Flower &lt;- 1:nrow(iris)
+
+## Fill in the ___ to produce to the correct iris.wide dataset
+iris.wide &lt;- iris %&gt;%
+  gather(key, value, -Species, -Flower) %&gt;%
+  separate(key, c(&quot;Part&quot;, &quot;Measure&quot;), &quot;\\.&quot;) %&gt;%
+  spread(&quot;Measure&quot;, value)</code></pre>
+<p>Use <code>gather()</code> to move from <code>fish.species</code> to a tidy data frame, <code>fish.tidy</code>. This data frame should have three columns: Year (int), Species (factor) and Capture (int).
+<code>gather()</code> takes four arguments: the <em>original data frame</em> (fish.species), the name of the <em>key column</em> (Species), the name of the <em>value column</em> (Capture) and the name of the <em>grouping variable,</em> with a minus in front (-Year). They can all be specified as object names (i.e. no " "):</p>
+<pre><code>fish.tidy &lt;- gather(fish.species, Species, Capture, -Year)</code></pre>
+</div>
+<div id="tidyr-1.0" class="section level4">
+<h4><span class="header-section-number">1.5.0.3</span> Tidyr 1.0</h4>
+<p>Los siguientes son equivalentes:</p>
+<pre><code>gather(key=&quot;título&quot;, value=&quot;cantidad&quot;, ingresos_2016:gastos_2017) %&gt;%
+
+pivot_longer(ingresos_2016:gastos_2017, names_to = &quot;título&quot;, values_to = &quot;cantidad&quot;)</code></pre>
+<p>Otro ejemplo:</p>
+<pre><code>  pivot_longer(cols = starts_with(&quot;total&quot;), names_to = &quot;tipo&quot;, values_to = &quot;cantidad&quot;) %&gt;%</code></pre>
+</div>
+<div id="trasponer-data-frame" class="section level4">
+<h4><span class="header-section-number">1.5.0.4</span> Trasponer data frame</h4>
+<p>Transponer, para que las fila sean columnas y las columnas filas</p>
+<pre><code>library(reshape)
+matricula2 &lt;- t(matricula)</code></pre>
+<pre><code>indicadores %&gt;%
+gather(key = indicador, value = value, 2:ncol(indicadores)) %&gt;% 
+    spread_(key = names(indicadores)[1],value = &#39;value&#39;)</code></pre>
+</div>
+<div id="unir-dos-columnas" class="section level4">
+<h4><span class="header-section-number">1.5.0.5</span> Unir dos columnas</h4>
+<pre><code>unite(datos, nuevacolumna, col1, col2)</code></pre>
+<p>Agregar el argumento <code>, sep = ", "</code> para determinar el separador para la nueva columna, que por defecto es guión bajo.
+El argumento <code>remove = TRUE</code> elimina las columnas originales luego de unirlas.</p>
+<p>Sirve para cuando una base de datos viene con una misma variable con cada categoría de respuestas en texto pero en columnas distintas. Así se unen las columnas en una sola.</p>
+</div>
+<div id="separar-dos-columnas" class="section level4">
+<h4><span class="header-section-number">1.5.0.6</span> Separar dos columnas</h4>
+<p>Separar una columna que contiene dos variables en dos columnas.</p>
+<pre><code>require(tidyr)
+separate(datos, variable_pegada, into=c(&quot;variable&quot;, &quot;pegada&quot;))</code></pre>
+<p>Separa automáticamente en símbolos, de lo contrario hay que especificarle.</p>
+<p>Se puede agregar un <code>sep</code> para determinar el separador.</p>
+<pre><code>separate(census_long3, yr_month, c(&quot;year&quot;, &quot;month&quot;))</code></pre>
+<pre><code>datos_untidy %&gt;%
+separate(col=spice, into=c(&quot;spice&quot;,&quot;order&quot;))</code></pre>
+<p>Agregar <code>convert=TRUE</code>…</p>
+<p>Se pueden botar el resto de las columnas:</p>
+<pre><code>separate(episode, into = &quot;episode&quot;, extra = &quot;drop&quot;</code></pre>
+<p>Separar celdas que contengan varios casos en filas distintas:</p>
+<pre><code>separate_rows(MESAS, sep = &quot;-&quot;, convert = FALSE)</code></pre>
+</div>
+<div id="convertir-a-wide" class="section level4">
+<h4><span class="header-section-number">1.5.0.7</span> Convertir a wide</h4>
+<pre><code>spread(datos, var1, var2)</code></pre>
+<p>En caso de que hayan dos valores de una variable que se correspondan con un solo valor de otra variable (por ejemplo, dos pruebas en un solo curso).</p>
+<p>Although it may not be immediately obvious, if we treat the values in the type column as variables and create a separate column for each of them, we can set things straight. To do this, we use the spread() function. Run the following code to see for yourself:</p>
+<pre><code>spread(pets, type, num)</code></pre>
+<p>The result shows the exact same information in a much clearer way! Notice that the spread() function took in three arguments. The first argument takes the name of your messy dataset (pets), the second argument takes the name of the column to spread into new columns (type), and the third argument takes the column that contains the value with which to fill in the newly spread out columns (num).</p>
+</div>
+<div id="anidar-datos" class="section level4">
+<h4><span class="header-section-number">1.5.0.8</span> Anidar datos</h4>
+<p>Cambia el data frame a una sola columna, produciendo una lista que contiene un data frame para cada caso.</p>
+<pre><code>datos %&gt;%
+    nest(-country)</code></pre>
+<p>La variable indicada es la que va a quedar en el data frame, mientras que el resto se anidan.</p>
+<p>Obtener un dato de la lista:</p>
+<pre><code>## All countries are nested besides country
+nested &lt;- by_year_country %&gt;%
+  nest(-country)
+
+## Print the nested data for Brazil
+nested$data[[7]]</code></pre>
+<p>Para desanidar:</p>
+<pre><code>## All countries are nested besides country
+nested &lt;- by_year_country %&gt;%
+  nest(-country)
+
+## Unnest the data column to return it to its original form
+nested %&gt;%
+unnest(data)</code></pre>
+<div id="aplicar-una-función-a-todos-los-elementos-de-una-lista" class="section level6">
+<h6><span class="header-section-number">1.5.0.8.0.1</span> Aplicar una función a todos los elementos de una lista</h6>
+<pre><code>map()</code></pre>
+<p>Se usa <code>.</code> para representar cada uno de los ítems en la columna data.</p>
+</div>
+</div>
+</div>
+<div id="exportación-de-datos" class="section level2">
+<h2><span class="header-section-number">1.6</span> Exportación de datos</h2>
+<p>Exportar datos</p>
+<div id="exportar-tablas" class="section level4">
+<h4><span class="header-section-number">1.6.0.1</span> Exportar tablas</h4>
+<pre><code>library(htmlTable)
+
+tabla &lt;- comunas %&gt;%
+  mutate(n_pueblos_originarios = pueblos_originarios * poblacion) %&gt;%
+  mutate(n_pueblos_originarios = round(n_pueblos_originarios, digits= 0)) %&gt;%
+  group_by(comuna) %&gt;%
+  select(poblacion, pueblos_originarios, n_pueblos_originarios)
+
+htmlTable(tabla)</code></pre>
+<p>Luego copiar y pegar en Pages y formatearlo</p>
+</div>
+<div id="exportar-a-excel" class="section level4">
+<h4><span class="header-section-number">1.6.0.2</span> Exportar a Excel</h4>
+<pre><code>writexl::write_xl(datos, file = &quot;ruta/archivo.xlsx&quot;)</code></pre>
+</div>
+<div id="exportar-data-frame" class="section level4">
+<h4><span class="header-section-number">1.6.0.3</span> Exportar data frame</h4>
+<pre><code>save(objeto, file=&quot;objeto.Rdata&quot;)</code></pre>
+<hr />
+</div>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+
+<a href="visualización-de-datos-con-r-y-ggplot2.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>
