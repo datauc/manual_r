@@ -3,14 +3,20 @@ title: Manual básico de R
 author: "Bastián Olea Herrera"
 site: bookdown::bookdown_site
 documentclass: book
-output:
-  #bookdown::gitbook: default
-  bookdown::gitbook:
-    toc_depth: 4
-    collapse: none
+# output:
+#   bookdown::gitbook: default
+##     highlight: tango
 
   #bookdown::pdf_book: default
 ---
+
+# Introducción 
+
+Este “manual” es una colección de fragmentos de código, ejemplos e instrucciones que he ido recolectando, poco a poco, para recordar cómo realizar operaciones que comúnmente realizo en mi trabajo como analista de datos. En este sentido, no es un manual exhaustivo, sino una mera referencia. Su objetivo es que futuros usuarios de R puedan encontrar pistas y soluciones que les ayuden en su flujo de trabajo.
+
+
+
+# (PART\*) Datos {-}
 
 # Manejo de datos con R
 
@@ -18,7 +24,7 @@ output:
 
 Esta sección contiene instrucciones y ejemplos para importar datos a R, ya sea desde Excel, creando tus propias tablas de datos, importar desde PDF en R, u otros.
 
-#### Importar archivos desde internet
+### Importar archivos desde internet
 
 ```
 library(readxl)
@@ -53,7 +59,7 @@ load("wine_local.RData")
 ## Print out the summary of the wine data
 summary(wine)
 ```
-#### Importar archivos csv
+### Importar archivos csv
 ```
 read.csv(”myfile”, sep = ";")
 ```
@@ -90,7 +96,7 @@ hotdogs_factor <- read_tsv("hotdogs.txt",
 ```
 
 
-###### Importar csv con `fread`
+#### Importar csv con `fread`
 Importa tablas en formato `data.table` y `data.frame`. 
 
 ```
@@ -108,7 +114,7 @@ fread("path/to/file.txt", select = c("a", "e"))
 
 
 
-###### Importar archivos separados por tabulación:
+#### Importar archivos separados por tabulación:
 ```
 hotdogs<-read.delim("hotdogs.txt", header=T)
 ```
@@ -116,7 +122,7 @@ hotdogs<-read.delim("hotdogs.txt", header=T)
 - `header` indica que al primera fila son los nombres de variables. 
 - Para importar datos donde los decimales sean _comas_ y no puntos, y los separadores sean `;`, usar `read.csv2`.
 
-#### Importar datos desde Excel 
+### Importar datos desde Excel 
 Usando `readxl`
 ```
 library(readxl)
@@ -164,7 +170,7 @@ lista[[2]]
 ```
 
 
-###### Importar y editar datos desde Excel con `XLConnect `
+#### Importar y editar datos desde Excel con `XLConnect `
 
 ```
 library(XLConnect)
@@ -223,7 +229,7 @@ removeSheet(my_book, "summary")
 ## Save workbook to "clean.xlsx"
 saveWorkbook(my_book, "clean.xlsx")
 ```
-#### Importar tabla pivotada de Excel
+### Importar tabla pivotada de Excel
 
 Cuando las tablas no vienen en formato tidy, sino con varios headers e incluso headers al lado izquierdo, se usan los paquetes `tidyxl` y `unpivotr`
 
@@ -252,7 +258,7 @@ alojo3 <- alojo2 %>%
 [https://github.com/nacnudus/tidyxl](https://github.com/nacnudus/tidyxl)
 [https://github.com/nacnudus/unpivotr](https://github.com/nacnudus/unpivotr)
 
-###### Importar archivos de Stata
+#### Importar archivos de Stata
 ```
 foreign::read.dta()
 ```
@@ -261,14 +267,14 @@ foreign::read.dta()
 ```
 casen <- readstata13::read.dta13("~/Casen/Casen 2017.dta") %>% as_tibble()
 ```
-###### Importar archivos de SPSS
+#### Importar archivos de SPSS
 ```
 library(foreign)
 read.spss
 ```
 Reads SPSS data file	read.spss(“myfile”)
 
-###### Importar datos con `readr`
+#### Importar datos con `readr`
 Importa datos creando objetos de clase `tbl_df`, `tbl` y `data.frame`.
 
 - Saltarse casos, y especificar la muestra: `skip = 6, n_max = 5`
@@ -279,7 +285,7 @@ Importa datos creando objetos de clase `tbl_df`, `tbl` y `data.frame`.
 	```
 - El delimitador es `delim=""`
 
-#### Importar otros archivos con formato de tabla
+### Importar otros archivos con formato de tabla
 ```
 path <- file.path("data", "hotdogs.txt") ## directorio
 
@@ -292,7 +298,7 @@ hotdogs <- read.table(path,
 - Para especificar los tipos de variables, agregar el argumento `colClasses = c("factor", "NULL", "numeric"))`
 
 
-#### Importar tablas desde PDF
+### Importar tablas desde PDF
 
 Usando Tabulizer:
 ```
@@ -322,7 +328,7 @@ mesas_2016b <- bind_rows(mesas_2016, .id = NULL) ##%>% ##Combinar lista de dataf
 Instalación en Mac: [https://gist.github.com/tomsing1/1da54d3f720ed96fbbb5a3f075bd2a56](https://gist.github.com/tomsing1/1da54d3f720ed96fbbb5a3f075bd2a56)
 Tutorial: [https://datascienceplus.com/extracting-tables-from-pdfs-in-r-using-the-tabulizer-package/](https://datascienceplus.com/extracting-tables-from-pdfs-in-r-using-the-tabulizer-package/)
 
-#### Combinar bases de datos
+### Combinar bases de datos
   
 Para combinar bases donde las columnas son las mismas (es decir, agregar casos)
 ```
@@ -358,7 +364,7 @@ Ejemplo:
 ilo_data <- ilo_hourly_compensation %>%
   inner_join(ilo_working_hours, by = c("country", "year"))
 ```
-#### Conectar a base de datos
+### Conectar a base de datos
 
 ```
 library(DBI)
@@ -392,7 +398,7 @@ table_names
 ## Import all tables
 tables <- lapply(table_names, dbReadTable, conn = con)
 ```
-#### Aplicar factor de expansión
+### Aplicar factor de expansión
 Cuando los datos provienen de fuentes estadísticas que requieren expansión:
 
 ```
@@ -413,7 +419,7 @@ casen %>%
 
 En esta sección encontrarás comandos para producir estructuras de dato de forma “manual”; es decir, imputando los datos caso por caso, o bien trabajando con ellos de forma personalizada.
 
-#### Importar datos desde vectores
+### Importar datos desde vectores
 ```
 Año = c(1997,1998,1999,2000,2001,2002,2003,2004,2005,2006,2007,2008)
 Nacimientos= c(4571,4782,4834,4701,4787,4467,4571,4583,4776,4761,5017,5287)
@@ -423,7 +429,7 @@ TasaMortalidad= c(4.0, 4.1, 4.0, 3.7, 3.9, 3.9, 3.9, 4.1, 3.9, 3.7, 3.9, 4.0)
 TasaFecundidad= c(2.61, 2.63, 2.58, 2.43, 2.42, 2.21, 2.22, 2.18, 2.23, 2.17, 2.23, 2.29)
 Tarapaca <- data.frame(Año,Nacimientos,Defunciones,TasaFecundidad,TasaMortalidad,TasaNatalidad)
 ```
-#### Escribir dataframe
+### Escribir dataframe
 Crear un dataframe escribiendo las columnas
 
 ```
@@ -447,13 +453,13 @@ sales <- tibble::tribble(
   "Q4",      NA,    49094
 )
 ```
-#### Crear vector y matriz de datos
+### Crear vector y matriz de datos
 ```
 linkedin <- c(16, 9, 13, 5, 2, 17, 14)
 facebook <- c(17, 7, 5, 16, 8, 13, 14)
 views <- matrix(c(linkedin, facebook), nrow = 2, byrow = TRUE)
 ```
-#### Repetir un valor
+### Repetir un valor
 
 Repetir un 5 10 veces:
 ```
@@ -464,7 +470,7 @@ Repetir dos valores, uno cada x veces:
 ```
 rep(c("a", "b"), each = 100)
 ```
-#### Crear sequencia de números
+### Crear sequencia de números
 
 Generar del 1 al 10 de uno en uno
 ```
@@ -475,13 +481,13 @@ Generar 10 valores desde 1 a 100
 ```
 seq(from=1, to=100, length.out=10)
 ```
-#### Crear data frame a partir de vectores
+### Crear data frame a partir de vectores
 
 ```
 data <- data.frame(llamados_ventas,
                    planes_contratados)
 ```
-#### Crear listas
+### Crear listas
 
 ```
 my_list <- list(my_vector, my_matrix, my_df)
@@ -517,13 +523,13 @@ shining_list_full <- c(shining_list, year = 1980)
 ## Have a look at shining_list_full
 str(shining_list_full)
 ```
-#### Añadir casos manualmente
+### Añadir casos manualmente
 
 ```
 datos %>%
 	add_row(x = 4, y = 0, Nombre = "Mapache")
 ```
-#### Crear vector de nombres
+### Crear vector de nombres
 
 Útil para selectores Shiny donde las alternativas son largas.
 El segundo argumento son los nombres. En el ejemplo, se crea un vector de números donde los nombres son el vector, cosa que en Shiny aparezcan las alternativas con el contenido del vector pero internamente se retorne un número.
@@ -531,12 +537,12 @@ El segundo argumento son los nombres. En el ejemplo, se crea un vector de númer
 ```
 vector_nombrado <- setNames(c(1:33), vector)
 ```
-#### Añadir vector a una matriz
+### Añadir vector a una matriz
 
 ```
 all_wars_matrix <- cbind(star_wars_matrix, worldwide_vector)
 ```
-#### Contar hacia abajo
+### Contar hacia abajo
 
 Hacer una columna o variable que contenga números del 1 hasta el máximo de filas de la base:
 
@@ -548,7 +554,7 @@ mutate(fila = 1:n())
 e %>%
     mutate(fila = 1:nrow(e))
 ```
-#### Usar output como texto de vector
+### Usar output como texto de vector
 Retorna el output como el texto necesario para reproducir un vector
 
 ```
@@ -557,7 +563,7 @@ dput()
 ## Limpieza de datos
 Esta sección contiene instrucciones y ejemplos para limpiar datos en R, con operaciones que cambian los nombres de las variables, eliminan observaciones, tratan los datos perdidos de distintas maneras, etc.
 
-#### Seleccionar variables
+### Seleccionar variables
 El verbo `select` permite mantener, botar, y reordenar variables.
 
 Seleccionar variables que contengan un término:
@@ -587,7 +593,7 @@ datos %>%
 ```
 El argumento `everything()` pone el resto de las variables al final.
 
-###### Des-seleccionar variables
+#### Des-seleccionar variables
 El signo menos sirve para indicar que se seleccionan todas menos lo especificado:
 ```
 ratings %>% 
@@ -602,13 +608,13 @@ ratings %>%
 ```
 La variable especificada al frente, luego todas las demás, menos las que terminan con "day".
 
-#### Reordenar columnas
+### Reordenar columnas
 
 ```
 library(dplyr)
 weather5 <- select(weather4, date, Events, CloudCover:WindDirDegrees)
 ```
-#### Ordenar datos
+### Ordenar datos
 
 ```
 arrange(cran2, ip_id) ## ascendente
@@ -635,7 +641,7 @@ bakers_mini %>%
   glimpse()
 ```
 
-###### Ordenar datos con base
+#### Ordenar datos con base
 
 ```
 sort(datos$var1)
@@ -649,7 +655,7 @@ positions <-  order(planets_df$diameter)
 ## Use positions to sort planets_df
 planets_df[positions, ]
 ```
-#### Cambiar tipo de datos
+### Cambiar tipo de datos
 
 Convertir a carácter:
 ```
@@ -669,7 +675,7 @@ students$Fedu <- as.factor(students$Fedu)
 ```
 weather6 <- mutate_at(weather5, vars(CloudCover:WindDirDegrees), funs(as.numeric))
 ```
-#### Filtrar datos
+### Filtrar datos
 
 ```
 filter(datos, var1=="Peq")
@@ -693,7 +699,7 @@ filter(episode == 1 | episode == max(episode))
 filter(star_baker==0 & technical_winner == 0)
 ```
 
-###### Con subset
+#### Con subset
 ```
 nombredefiltro<-subset(datos,var1=="categoria")
 ```
@@ -705,7 +711,7 @@ west<-subset(pollution,region=="west")
 subset(planets_df, diameter <1 )
 ```
 
-###### Con base
+#### Con base
 
 Otra forma:
 ```
@@ -725,12 +731,12 @@ common_cyl <- filter(cars, ncyl %in% c(4, 6, 8))
 ## Select the non-US revenue for first two movies
 non_us_some <- all_wars_matrix[1:2,2]
 ```
-#### Convertir datos a tibble
+### Convertir datos a tibble
 Convertir una tabla de datos a el formato tibble, más moderno, ordenado, y usado en el _tidyverse._
 ```
 datos_tibble <- tibble::as_tibble(datos)
 ```
-#### Cortar datos o eliminar filas
+### Cortar datos o eliminar filas
 
 Permite recortar un dataframe por las filas, para separar por ejemplo las primeras 200 filas:
 ```
@@ -743,13 +749,13 @@ Si se necesita eliminar algunas filas:
 datos %>%
 	slice(-1, -2, -3)
 ```
-#### Eliminar más de una palabra a la vez
+### Eliminar más de una palabra a la vez
 
 ```
 datos %>%
 mutate(ambito = stringr::str_remove_all(ambito, "\\r|\\n"))
 ```
-#### Reemplazar más de una palabra a la vez
+### Reemplazar más de una palabra a la vez
 
 ```
 datos %>%
@@ -758,18 +764,18 @@ mutate(ambito = stringi::stri_replace_all_fixed(ambito,
                                                   c("genero", "indigena", "politica", "originarios"),
                                                   vectorize_all = FALSE))
 ```
-#### Eliminar caracteres especiales de un texto
+### Eliminar caracteres especiales de un texto
 
 Para eliminar acentos y eñes de los textos:
 ```
 iconv(tolower(comuna), from = 'UTF-8', to = 'ASCII//TRANSLIT')
 ```
-#### Filtrar columnas en base a condición
+### Filtrar columnas en base a condición
 ```
 datos %>%
 	select(which(nlevels(.) == 0))
 ```
-#### Limpiar números
+### Limpiar números
 
 Elimina cualquier texto y deja sólo el número
 ```
@@ -781,7 +787,7 @@ Cuando un número viene en formato caracter pero también con símbolos, espacio
 ```
 mutate(var1 = readr::parse_number(var1))
 ```
-#### Reemplazar datos perdidos
+### Reemplazar datos perdidos
 Reemplazar casos missing o NA con 0
 ```
 mutate(filtro_calculado = tidyr::replace_na(filtro_calculado, 0))
@@ -808,12 +814,12 @@ coalesce() to replace missing values with a specified value.
 ```
 tidyr::replace_na() to replace NA with a value
 ```
-#### Convertir texto vacío a missing
+### Convertir texto vacío a missing
 
 ```
 mutate(nombres = replace(nombres, !str_detect(nombres, ""), NA))
 ```
-#### Recodificar a missing
+### Recodificar a missing
 
 Usando `na_if()`
 ```
@@ -832,7 +838,7 @@ coalesce() to replace missing values with a specified value.
 
 tidyrreplace_na() to replace NA with a value
 
-#### Datos perdidos
+### Datos perdidos
 
 ```
 sum(is.na(datos))
@@ -865,7 +871,7 @@ Definir valores missing al importar un archivo:
 bakeoff <- read_csv("bakeoff.csv", skip = 1,
                     na = c("", "NA", "UNKNOWN"))
 ```
-#### Filtrar datos perdidos
+### Filtrar datos perdidos
 ```
 datos %>%
   filter(!is.na(var1) & !is.na(var2)) 
@@ -876,14 +882,14 @@ datos %>%
 select(User_Score, Critic_Score) %>%
    na.omit() %>%
 ```
-#### Filtrar datos perdidos en varias columnas
+### Filtrar datos perdidos en varias columnas
 Filtrar observaciones donde sean missing en varias columnas
 
 ```
 datos %>%
 filter_at(vars(eval_act_pol_1_a:eval_act_pol_1_ad), any_vars(!is.na(.)))
 ```
-#### Limpiar nombres de variables
+### Limpiar nombres de variables
 
 Elimina símbolos de las variables y las estandariza:
 ```
@@ -912,13 +918,13 @@ Para convertir los nombres de las categorías de una variable factor:
 library(stringr)
 levels(eme2$nacionalidad) <- str_to_title(eme2$nacionalidad)
 ```
-#### Ordenar columnas alfabéticamente
+### Ordenar columnas alfabéticamente
 
 ```
 datos %>%
 select(sort(names(.)))
 ```
-#### Renombrar todas las columnas
+### Renombrar todas las columnas
 
 Reemplazar un texto en lo nombres de variables
 ```
@@ -930,12 +936,12 @@ Renombrar columnas específicas
 ```
 rename_at(vars(starts_with("b")), funs(str_replace(., "b", "agua")))
 ```
-#### Renombrar columnas con base
+### Renombrar columnas con base
 
 ```
 nombres <- gsub("Pregunta ", "p", names(encuesta))
 ```
-#### Renombrar variables o columnas
+### Renombrar variables o columnas
 
 
 ```
@@ -951,12 +957,12 @@ names(datos)[2]<-"Ciudad"
 ```
 El número 1 significa que es el primer elemento o primera columna. Entre comillas va el nombre.
 
-#### Añadir sufijo a nombres de columnas
+### Añadir sufijo a nombres de columnas
 
 ```
 rename_at(vars(c(30:53)),function(x) paste0(x,"_x"))
 ```
-#### Eliminar un término en el título de variables
+### Eliminar un término en el título de variables
 
 Seleccionar variables que contengan un término:
 ```
@@ -984,7 +990,7 @@ learning_platform_usefulness <- multiple_choice_responses %>%
   ## remove "LearningPlatformUsefulness" from each string in learning_platform 
   mutate(learning_platform = str_remove(learning_platform, "LearningPlatformUsefulness"))
 ```
-#### Rellenar casos
+### Rellenar casos
 
 Cuando una columna sólo tiene valores cuando éstos cambian, y lo que se quiere es llenar de repeticiones entre cada cambio de los valores,
 cosa que `1 NA NA 2 NA NA 3 NA NA` se vuelva `1 1 1 2 2 2 3 3 3`
@@ -993,7 +999,7 @@ cosa que `1 NA NA 2 NA NA 3 NA NA` se vuelva `1 1 1 2 2 2 3 3 3`
 datos %>%
 fill(columna)
 ```
-#### Convertir fechas de Excel
+### Convertir fechas de Excel
 
 ```
 as.Date(42736, origin = "1899-12-30")
@@ -1006,36 +1012,36 @@ library(janitor)
 
 excel_numeric_to_date(as.numeric(as.character(42736)), date_system = "modern")
 ```
-#### Eliminar una categoría
+### Eliminar una categoría
 
 ```
 comics_filtered <- comics %>%
   filter(align != "Reformed Criminals") %>%
   droplevels()
 ```
-#### Añadir identificadores o folio
+### Añadir identificadores o folio
 
 ```
 iris$Flower <- 1:nrow(iris)
 ```
-#### Remover texto de una categoría
+### Remover texto de una categoría
 
 ```
 mutate(tipo = str_remove(tipo, "texto a borrar"))
 ```
-#### Borrar espacios antes y después
+### Borrar espacios antes y después
 ```
 stringr::desaparecidos$Región <- str_trim(desaparecidos$Región)
 ```
-#### Agregar caracteres antes o después
+### Agregar caracteres antes o después
 ```
 stringr::str_pad(c("23485W", "8823453Q", "994Z"), width=9, side="left", pad="0")
 ```
-#### Detectar patrones en texto
+### Detectar patrones en texto
 ```
 stringr::str_detect(students3$dob, "1997")
 ```
-#### Buscar y reemplazar valores
+### Buscar y reemplazar valores
 ```
 stringr::str_replace(students3$sex, "M", "Male")
 weather3$day <- stringr::str_replace(weather3$day, "X", "")
@@ -1053,7 +1059,7 @@ bakers <- bakers %>%
 ```
 mutate(tipo = stringr::str_replace(tipo, "mal escrito", "bien escrito"))
 ```
-#### Filtrar outliers
+### Filtrar outliers
 
 Se crea una variable que especifique si son o no outliers, y luego se filtra la base según esa variable.
 
@@ -1069,7 +1075,7 @@ gap2007 %>%
   ggplot(aes(x = 1, y = lifeExp)) +
   geom_boxplot()
 ```
-#### Convertir valores a mayúsculas o minúsculas:
+### Convertir valores a mayúsculas o minúsculas:
 Convertir a minúsculas:
 ```
 tolower("AAAA")
@@ -1086,13 +1092,13 @@ Ejemplo:
 bakers <- bakers %>% 
   mutate(position_reached = str_to_upper(position_reached))
 ```
-#### Borrar prefijo de variables
+### Borrar prefijo de variables
 
 Borra el prefijo de los años, dejando solo caracteres entre ubicaciones 2 y 5
 ```
 names(datos) <- substring(names(datos),2,5)
 ```
-#### Rellenar las fechas en una serie de tiempo
+### Rellenar las fechas en una serie de tiempo
 
 ```
 ##inicio y final de la serie parcial
@@ -1109,7 +1115,7 @@ df <- data.frame(date=ts)
 left_join(df, conceptos)
 ##unir la serie completa con la serie parcial
 ```
-#### Ejemplos de Regex en R
+### Ejemplos de Regex en R
 
 `"."` equivale a cualquier dato.
 `"ha."` retorna `TRUE` para `"happy"`
@@ -1159,7 +1165,7 @@ Borrar todo después de una palabra pero mantener la palabra:
 
 [https://help.relativity.com/9.3/Content/Relativity/Regular\_expressions/Regular\_expression\_metacharacters.htm](https://help.relativity.com/9.3/Content/Relativity/Regular_expressions/Regular_expression_metacharacters.htm)
 
-#### Fechas
+### Fechas
 
 ```
 library(lubridate)
@@ -1210,7 +1216,7 @@ baker_time <- baker_time  %>%
          weeks_on_air = time_on_air / weeks(1),
          months_on_air = time_on_air %/% months(1))
 ```
-#### Agrupar datos
+### Agrupar datos
 Permite que los cálculos posteriores se apliquen a todas las categorías de una variable por separado.
 
 ```
@@ -1233,7 +1239,7 @@ bakeoff %>%
 
  Para desagrupar: `ungroup()`
 
-#### Crear variables
+### Crear variables
 
 ```
 mutate(cran3, size_mb = size / 2^20)
@@ -1267,7 +1273,7 @@ Crear variable para todo el data frame:
 ```
 mutate(datos, var9="si")
 ```
-#### Crear variable categórica
+### Crear variable categórica
 
 Variable nominal:
 ```
@@ -1315,7 +1321,7 @@ female <- factor_survey_vector[2]
 ## Recodificación de datos
 Esta sección cubre instrucciones y ejemplos sobre recodificación de datos; es decir, operaciones que alteran el contenido de las variables o crean nuevas variables en base a condiciones o instrucciones.
 
-#### Recodificar variables
+### Recodificar variables
 
 Recodificar variables:
 ```
@@ -1359,7 +1365,7 @@ ratings <- ratings %>%
 ```
 mutate(bump = (last - first) / first)
 ```
-#### Crear una variable a partir de operaciones
+### Crear una variable a partir de operaciones
 ```
 mutate(cran3, size_mb = size / 2^20)
 mutate(cran3, correct_size = size + 1000)
@@ -1384,7 +1390,7 @@ pack_sum <- summarize(by_package,
                       countries = n_distinct(country),
                       avg_bytes = mean(size))
 ```
-#### Recodificar con base
+### Recodificar con base
 ```
 library(car)
 datos$nuevavariable<-recode(datos$variableoriginal,"
@@ -1405,7 +1411,7 @@ Cortar el rango de los datos de una variable:
 ```
 adult <- adult[adult$SRAGE_P <= 84, ]
 ```
-#### Crear variable desde condicional
+### Crear variable desde condicional
 
 ```
 datos %>%
@@ -1422,10 +1428,10 @@ Convertir los niveles a factor:
 ```
 datos$variable <- factor(datos$variable, levels=c("TRUE", "FALSE"))
 ```
-#### Recodificación según condiciones
+### Recodificación según condiciones
 Funciona como un _if true, then._
 
-###### Condicional simple
+#### Condicional simple
 ```
 datos %>%
 mutate(gen = if_else(
@@ -1445,7 +1451,7 @@ mutate(Valor = ifelse(Delito=="Otras causas", Valor/4, Valor)) %>% ##Si el delit
 
 ```
 
-###### Múltiples condiciones
+#### Múltiples condiciones
 ```
 datos %>%
 mutate(gen = case_when(
@@ -1485,14 +1491,14 @@ bakers_skill <- bakers %>%
 
 Ojo que para recodificar a missing, `NA_character_` va sin comillas.
 
-#### Convertir caracter a factor
+### Convertir caracter a factor
 
 ```
 is.character(datos$variable)
 datos %>%
 mutate_if(is.character, as.factor)
 ```
-#### Etiquetar variables
+### Etiquetar variables
 Utilizando base
 ```
 Etiqueta <- c("Año","Nacimientos","Defunciones","Tasa de fecundidad","Tasa de mortalidad","Tasa de natalidad")
@@ -1504,7 +1510,7 @@ Datos <- set_label(Datos, label = Etiqueta)
 ```
 adult$RBMI <- factor(adult$RBMI, labels = c("Under-weight", "Normal-weight", "Over-weight", "Obese"))
 ```
-#### Manipulación de objetos con base
+### Manipulación de objetos con base
 
 Buscar el atributo en cierto objeto, reportando las filas donde se puede encontrar
 ```
@@ -1527,21 +1533,21 @@ Permite unir uno o más objetos, en formato carácter.
 ```
 paste(objeto1,..., sep=“ ”)
 ```
-#### Crear variable de interacción
+### Crear variable de interacción
 
 Crea una nueva variable que tiene por categorías a las combinaciones de todos los factores de dos variables.
 
 ```
 mutate(interacción = fct_cross(var1, var2, sep = " + "))
 ```
-#### Recodificar meses a texto
+### Recodificar meses a texto
 Para pasar desde el número del mes a el mes con nombre:
 
 ```
 data %>%
     mutate(Month = lubridate::month(Month, label = T, abbr= F, locale = "es_ES"))
 ```
-#### Calcular promedio móvil
+### Calcular promedio móvil
 
 Rolling average, media móvil
 
@@ -1552,7 +1558,7 @@ mutate(hits_rm = zoo::rollmean(hits, k = 7,
 
 Donde `k` representa las filas para atrás que va a promediar
 
-#### Aplicar mutate a varias columnas
+### Aplicar mutate a varias columnas
 
 ```
 datos %>%
@@ -1580,14 +1586,14 @@ O también:
 ```
 mutate_at(vars(4:length(notas)), list(as.character))
 ```
-#### Convertir a logaritmos
+### Convertir a logaritmos
 
 Convertir variable a logaritmo:
 ```
 gap2007 <- gap2007 %>%
   mutate(log_pop = log(pop))
 ```
-#### Crear categoría "otros"
+### Crear categoría "otros"
 
 Agrupar automáticamente los factores menos comunes en una categoría "Otras":
 ```
@@ -1620,7 +1626,7 @@ mutate(variable = fct_other(variable, drop = c("antigua1", "antigua2")))
 De este modo, las variables especificadas pasan a formar parte de una variable "otras".
 
 
-#### Combinar categorías
+### Combinar categorías
 Combinar o agrupar múltiples categorías de una variable categórica en una cantidad menor.
 
 ```
@@ -1629,7 +1635,7 @@ mutate(variable = fct_collapse(variable,
 nueva = c("antigua1", "antigua2"),
 nueva 2 = c("antigua3", "antigua4")))
 ```
-#### Dicotomizar la variable de respuesta:
+### Dicotomizar la variable de respuesta:
 
 Hacer variable dummy:
 ```
@@ -1640,7 +1646,7 @@ filter(!is.na(variable)) %>%
 		1,
 		0))
 ```
-#### Recodificar categoría si coincide con texto
+### Recodificar categoría si coincide con texto
 Sirve, por ejemplo, para corregir errores ortográficos
 
 ```
@@ -1652,7 +1658,7 @@ Para coincidir texto ignorando mayúsculas o minúsculas:
 ```
 mutate(variable = stringr::str_replace(variable, regex('texto', ignore_case = T), "Nuevo nombre de la categoría que contiene ese texto")) %>%
 ```
-#### Reemplazar un valor por otro
+### Reemplazar un valor por otro
 
 Sirve para cambiar algún valor que esté malo por otro, o recodificar un valor a missing (NA)
 
@@ -1669,18 +1675,18 @@ Reemplazar un missing por otro valor:
 ```
 mutate(nacionalidad = replace(nacionalidad, is.na(nacionalidad), "missing"))
 ```
-#### Crear columna que sea la diferencia entre los valores de otra
+### Crear columna que sea la diferencia entre los valores de otra
 
 Para calcular brechas en columnas con categorías en formato long:
 ```
 mutate(diferencia = porcentaje[sexo == "Mujer"] - porcentaje) %>%
 ```
-#### Renombrar categorías
+### Renombrar categorías
 
 ```
 mutate(variable = recode(variable, "antigua" = "nueva"))
 ```
-#### Añadir columna con porcentaje
+### Añadir columna con porcentaje
 
 ```
 library(janitor)
@@ -1706,7 +1712,7 @@ perc_useful_platform <- learning_platform_usefulness %>%
   ## create a new column, perc, that is the percentage of people giving that response for that learning_platform
   mutate(perc = n / nn)
 ```
-#### Añadir columna con promedio
+### Añadir columna con promedio
 ```
 usefulness_by_platform <- learning_platform_usefulness %>%
     ## If usefulness is "Not Useful", make 0, else 1 
@@ -1716,12 +1722,12 @@ usefulness_by_platform <- learning_platform_usefulness %>%
     ## Summarize the mean usefulness for each platform
     summarize(avg_usefulness = mean(usefulness))
 ```
-#### Calcular tasa
+### Calcular tasa
 
 ```
   mutate(Tasa = (Casos/Poblacion)*100000) %>%
 ```
-#### Dicotomizar variables
+### Dicotomizar variables
 Crear variable dicotómica:
 ```
 learning_platform_usefulness %>%
@@ -1738,7 +1744,7 @@ Ejemplo:
 ```
 mutate(extranjeros = case_when(nacionalidad == "Chile" ~ "Chilena", TRUE ~ "Extranjera")) %>%
 ```
-#### Cortar una variable continua a factores
+### Cortar una variable continua a factores
 
 Para cortar la variable en intervalos discretos con el límite izquierdo abierto y el límite derecho cerrado (de 0 a 5, de 6 a 10):
 ```
@@ -1751,7 +1757,7 @@ cut(datos$variable, seq(0, 30, 5))
 ```
 Indica que empieza en 0 y termina en 30 en intervalos de 5 en 5.
 
-#### Reordenar factores
+### Reordenar factores
 
 ```
 mutate(ocupación_CIUO = forcats::fct_relevel(ocupación_CIUO, c("Estudiantes", "Sin empleo", "Sin información", "Jubilados/as", "Otras"), after = Inf)) %>%
@@ -1761,7 +1767,7 @@ mutate(ocupación_CIUO = forcats::fct_relevel(ocupación_CIUO, c("Estudiantes", 
 datos <- datos %>%
 mutate(variable = forcats::fct_relevel(variable, "categoria1", "categoria2", "categoria3"))
 ```
-###### Reordenar factor según otra variable
+#### Reordenar factor según otra variable
 Por ejemplo, reordenar una variable categórica a partir de los valores de una variable numérica:
 ```
 ggplot(datos, aes(x = forcats::fct_reorder(variable, referencia), y=...
@@ -1772,7 +1778,7 @@ mutate(Genre = forcats::fct_reorder(Genre, n, .desc = TRUE))
 ```
 
 
-###### Invertir el orden de un factor
+#### Invertir el orden de un factor
 ```
 iris$Species <- factor(iris$Species, levels = rev(levels(iris$Species)))
 ```
@@ -1781,7 +1787,7 @@ iris$Species <- factor(iris$Species, levels = rev(levels(iris$Species)))
 datos %>%
 	mutate(variable = forcats::fct_rev(variable))
 ```
-###### Especificar un orden a un facyor
+#### Especificar un orden a un facyor
 Obtener los niveles primero: `levels(var)`
 
 ```
@@ -1811,7 +1817,7 @@ Mover un nivel a una posición:
 multiple_choice_responses %>%
     mutate(FormalEducation = forcats::fct_relevel(FormalEducation, "Doctoral degree", after = 5))
 ```
-#### Crear columna que tenga los valores de una categoría de una columna en formato long
+### Crear columna que tenga los valores de una categoría de una columna en formato long
 
 Para repetir en una columna un dato específico a una categoría de agrupación (por ejemplo, el género en una variable “género”:
 ```
@@ -1844,13 +1850,13 @@ casen %>%
 ## Estructura de datos
 Instrucciones y ejemplos para realizar transformaciones de la estructura de los datos.
 
-#### Desordenar una base
+### Desordenar una base
 ```
 datos %>%
     mutate(desorden = sample(1:nrow(datos))) %>%
     arrange(desorden)
 ```
-#### Convertir a tidy
+### Convertir a tidy
 Los datos _tidy_ cumplen lo siguiente:
 - Las observaciones son filas
 - Las variables son columnas
@@ -1904,7 +1910,7 @@ fish.tidy <- gather(fish.species, Species, Capture, -Year)
 ```
 
 
-#### Tidyr 1.0
+### Tidyr 1.0
 
 Los siguientes son equivalentes:
 ```
@@ -1917,7 +1923,7 @@ Otro ejemplo:
 ```
   pivot_longer(cols = starts_with("total"), names_to = "tipo", values_to = "cantidad") %>%
 ```
-#### Trasponer data frame
+### Trasponer data frame
 
 Transponer, para que las fila sean columnas y las columnas filas
 ```
@@ -1931,7 +1937,7 @@ indicadores %>%
 gather(key = indicador, value = value, 2:ncol(indicadores)) %>% 
     spread_(key = names(indicadores)[1],value = 'value')
 ```
-#### Unir dos columnas
+### Unir dos columnas
 
 ```
 unite(datos, nuevacolumna, col1, col2)
@@ -1941,7 +1947,7 @@ El argumento `remove = TRUE` elimina las columnas originales luego de unirlas.
 
 Sirve para cuando una base de datos viene con una misma variable con cada categoría de respuestas en texto pero en columnas distintas. Así se unen las columnas en una sola.
 
-#### Separar dos columnas
+### Separar dos columnas
 Separar una columna que contiene dos variables en dos columnas.
 ```
 require(tidyr)
@@ -1973,7 +1979,7 @@ Separar celdas que contengan varios casos en filas distintas:
 ```
 separate_rows(MESAS, sep = "-", convert = FALSE)
 ```
-#### Convertir a wide
+### Convertir a wide
 ```
 spread(datos, var1, var2)
 ```
@@ -1986,7 +1992,7 @@ spread(pets, type, num)
 ```
 The result shows the exact same information in a much clearer way! Notice that the spread() function took in three arguments. The first argument takes the name of your messy dataset (pets), the second argument takes the name of the column to spread into new columns (type), and the third argument takes the column that contains the value with which to fill in the newly spread out columns (num).
 
-#### Anidar datos
+### Anidar datos
 Cambia el data frame a una sola columna, produciendo una lista que contiene un data frame para cada caso.
 
 ```
@@ -2017,7 +2023,7 @@ unnest(data)
 ```
 
 
-###### Aplicar una función a todos los elementos de una lista
+#### Aplicar una función a todos los elementos de una lista
 ```
 map()
 ```
@@ -2026,7 +2032,7 @@ Se usa `.` para representar cada uno de los ítems en la columna data.
 ## Exportación de datos
 Exportar datos
 
-#### Exportar tablas
+### Exportar tablas
 
 ```
 library(htmlTable)
@@ -2041,18 +2047,20 @@ htmlTable(tabla)
 ```
 Luego copiar y pegar en Pages y formatearlo
 
-#### Exportar a Excel
+### Exportar a Excel
 
 ```
 writexl::write_xl(datos, file = "ruta/archivo.xlsx")
 ```
-#### Exportar data frame
+### Exportar data frame
 
 ```
 save(objeto, file="objeto.Rdata")
 ```
 
 ----
+
+# (PART\*) Visualización {-}
 
 # Visualización de datos con R y ggplot2
 
@@ -2097,7 +2105,7 @@ g+geom_point(aes(color=drv))+theme_bw(base_family="Times")
 
 Graficar variable como factor (para que sólo aparezcan en el eje los valores presentes): `factor(variable)`
 
-###### Gráfico con múltiples instancias según variable
+#### Gráfico con múltiples instancias según variable
 Se usa la capa `facet`:
 ```
 ggplot(iris.tidy, aes(x = Species, y = Value, col = Part)) +
@@ -2107,7 +2115,7 @@ ggplot(iris.tidy, aes(x = Species, y = Value, col = Part)) +
 ## Tipos de gráfico
 Ejemplos de los distintos tipos de gráficos que se pueden hacer en R
 
-#### Barras
+### Barras
 ```
 geom_bar
 ```
@@ -2179,7 +2187,7 @@ ggplot(eme2, aes(x = sexo)) +
                 color="white")
 ```
 
-###### Barra "dinamita" (con marcas de error)
+#### Barra "dinamita" (con marcas de error)
 ```
 ## Base layers
 m <- ggplot(mtcars, aes(x = cyl, y = wt))
@@ -2209,14 +2217,14 @@ ggplot(email, aes(x= number)) +
   geom_bar() +
   facet_wrap(.~spam)
 ```
-#### Dispersión
+### Dispersión
 Útil para agregar sobre boxplots.
 
 ```
 + geom_jitter(color="steelblue", alpha=0.3) +
     geom_boxplot(alpha=0)
 ```
-#### Torta
+### Torta
 Representa la distribución de categorías dentro de un todo.
 
 Gráfico de torta:
@@ -2311,7 +2319,7 @@ extranjeros_verano <- turismo %>%
     geom_text(aes(label = percent(cantidad/sum(cantidad), accuracy=1)), position = position_stack(vjust = 0.5)) +
     labs(subtitle="Verano")
 ```
-#### Densidad
+### Densidad
 
 ```
 geom_density
@@ -2346,7 +2354,7 @@ Parámetros:
 	- "c" = cosine
 	- "o" = optcosine
 
-#### Boxplot
+### Boxplot
 
 ```
 ggplot(aes(x = 1, y = city_mpg)) +
@@ -2359,7 +2367,7 @@ El ancho de cada caja puede depender de la cantidad de casos:
 ```
 geom_boxplot(varwidth=TRUE)
 ```
-#### Curvas y modelos lineales
+### Curvas y modelos lineales
 Agregar líneas de regresión al gráfico
 
 ```
@@ -2401,7 +2409,7 @@ ggplot(mtcars, aes(x = wt, y = mpg, col = factor(cyl))) +
               se = FALSE, span = 0.7) +
   scale_color_manual("Cylinders", values=myColors)
 ```
-#### Barras redondeadas
+### Barras redondeadas
 
 
 ```
@@ -2411,17 +2419,17 @@ ggplot(count(mtcars, cyl), aes(x = cyl, y = n)) +
   geom_chicklet(radius = grid::unit(15, 'mm'), fill = 'skyblue') +
   theme_minimal()
 ```
-#### Nubes de palabras
+### Nubes de palabras
 
 [https://medium.com/@rohitnair\_94843/analysis-of-twitter-data-using-r-part-2-word-cloud-dd423af1b2c6](https://medium.com/@rohitnair_94843/analysis-of-twitter-data-using-r-part-2-word-cloud-dd423af1b2c6)
 
 [https://www.r-bloggers.com/awesome-twitter-word-clouds-in-r/](https://www.r-bloggers.com/awesome-twitter-word-clouds-in-r/)
 
-#### Convertir a 3D
+### Convertir a 3D
 
 [https://www.rayshader.com](https://www.rayshader.com)
 
-#### Estadísticas en gráficos
+### Estadísticas en gráficos
 
 Curva normal:
 ```
@@ -2447,7 +2455,7 @@ wt.cyl.am +
   stat_summary(geom = "errorbar", fun.data = mean_sdl,
                position = posn.d, fun.args = list(mult = 1), width = 0.1)
 ```
-#### Crestas
+### Crestas
 ```
 library(ggridges)
 p + geom_density_ridges()
@@ -2465,7 +2473,7 @@ md_speeding %>%
     ## remove y axis ticks
     theme(axis.ticks.y=element_blank())
 ```
-#### Enjambre
+### Enjambre
 Alternativa al boxplot. Agrega dispersión de forma inteligente, con los puntos lo más cercanos al eje. 
 
 ```
@@ -2480,7 +2488,7 @@ Cambiar el tamaño de los puntos:
 ```
 geom_beeswarm(cex=0.5) +
 ```
-#### Violín
+### Violín
 Alternativa al boxplot. Muestra la distirbución de forma simétrica. 
 
 ```
@@ -2493,7 +2501,7 @@ Funciona bien con muchos datos, pero no muestra cada dato individualmente.
 ```
 geom_violin(bw = 2.5) +
 ```
-#### Líneas
+### Líneas
 ```
 geom_line
 ```
@@ -2527,7 +2535,7 @@ ggplot(barley, aes(year, yield, col= site, group=site, fill=site)) +
 stat_summary(fun.y=mean, geom="line") +
 stat_summary(fun.data=mean_sdl, fun.args=list(mult=1), geom="ribbon", col=NA, alpha=0.1)
 ```
-#### Histograma
+### Histograma
 
 ```
 geom_histogram
@@ -2571,7 +2579,7 @@ Alfombra de casos:
 ```
 + geom_rug
 ```
-#### Dumbell
+### Dumbell
 
 ```
 ggplot(first_last, aes(x = series, y = viewers, color = episode)) +
@@ -2579,7 +2587,7 @@ ggplot(first_last, aes(x = series, y = viewers, color = episode)) +
   geom_line(aes(group = series)) + ## keep
   coord_flip() ## keep
 ```
-#### Mapas de calor
+### Mapas de calor
 
 ```
 geom_tile
@@ -2595,7 +2603,7 @@ ggplot(barley, aes(x = year, y = variety, fill = yield)) +
   facet_wrap( ~ site, ncol = 1) + ## Facet layer
   scale_fill_gradientn(colors = myColors) ## Adjust colors
 ```
-#### Splom (scatterplot matrix)
+### Splom (scatterplot matrix)
 ```
 pairs(datos)
 ```
@@ -2610,13 +2618,13 @@ library(GGAlly)
 ggpairs(datos[1:9])
 ```
 
-#### Matriz de correlación
+### Matriz de correlación
 
-#### Coordenadas paralelas
+### Coordenadas paralelas
 ```
 ggparcoord(datos, columns =1:4, groupColumn=5, scale="globalminmax", order="anyClass", alphaLines=0.4)
 ```
-#### Mapas
+### Mapas
 
 Mapoteca congreso nacional:
 [https://www.bcn.cl/siit/mapas\_vectoriales/index\_html](https://www.bcn.cl/siit/mapas_vectoriales/index_html)
@@ -2633,7 +2641,7 @@ Mapoteca congreso nacional:
 
 [https://eriqande.github.io/rep-res-web/lectures/making-maps-with-R.html](https://eriqande.github.io/rep-res-web/lectures/making-maps-with-R.html)
 
-#### Mapa de densidad
+### Mapa de densidad
 Mapa lineal de densidad, como un mapa topográfico:
 ```
 geom_density_2d()
@@ -2656,7 +2664,7 @@ Agregar línea de medianas:
 p+geom_vline(data=mu, aes(xintercept=grp.mean, color=sex),
              linetype="dashed")
 ```
-#### Scatter
+### Scatter
 Permiten explorar preguntas e hipótesis iniciales, sugerir estrategias para siguientes pasos, y resumir los datos gráficamente para destacar características generales.
 
 ```
@@ -2743,7 +2751,7 @@ Ejemplo de qplot:
 ```
 qplot(wt, mpg, data = mtcars)
 ```
-#### Gráficos con iconos o logotipos
+### Gráficos con iconos o logotipos
 
 Instalar iconos de símbolos como FontAwesome o IonIcons
 
@@ -2751,7 +2759,7 @@ Luego graficar con `geom_text` usando el código del glifo a utilizar:
 ```
 geom_text(label="\uF236", size = 14, family = 'FontAwesome', col="##1C2366") +
 ```
-#### Waffle
+### Waffle
 
 ```
 disease_counts <- who_disease %>%
@@ -2835,11 +2843,11 @@ pueblos_originarios_waffle_gg <- pueblos_originarios_waffle +
 
 pueblos_originarios_waffle_gg
 ```
-#### Voronoi
+### Voronoi
 
 [https://rspatial\_es.gitlab.io/blog/2020-08-02-diagrama-voronoi-r-ggplot/](https://rspatial_es.gitlab.io/blog/2020-08-02-diagrama-voronoi-r-ggplot/)
 
-#### Densidad 2D
+### Densidad 2D
 
 Densidad con líneas concéntricas:
 ```
@@ -2870,7 +2878,7 @@ ggplot(faithful, aes(x = waiting, y = eruptions)) +
   scale_fill_viridis()
 
 ```
-#### Gráficos animados
+### Gráficos animados
 
 ```
 library(gganimate)
@@ -2878,7 +2886,7 @@ library(tween)
 library(ggplot2)
 ```
 
-###### Animar según otra variable
+#### Animar según otra variable
 ```
 p<- ggplot(iris, aes(x = Petal.Width, y = Petal.Length)) +
 	geom_point() + ##Gráfico de dispersión común
@@ -2892,7 +2900,7 @@ p<- ggplot(iris, aes(x = Petal.Width, y = Petal.Length)) +
 `transition_states()` splits up plot data by a discrete variable and animates between the different states.
 `ease_aes()` defines the velocity with which aesthetics change during an animation.
 
-###### Animar transiciones de entrada y salida:
+#### Animar transiciones de entrada y salida:
 ```
 anim <- ggplot(iris, aes(x = Petal.Width, y = Petal.Length)) + 
   geom_point(aes(colour = Species), size = 2) + 
@@ -2905,7 +2913,7 @@ anim +
 ```
 `enter` and `exit` functions are used to modify the aesthetics of appearing and disappearing data so that their entrance or exit may be animated.
 
-###### Agregar título
+#### Agregar título
 Si es `transition_reveal`:
 ```
 labs(x = "Años", y = "Nacimientos", title="Año {as.integer(frame_along)}") +
@@ -2920,7 +2928,7 @@ labs(x = "Años", y = "Nacimientos", title="Año {closest_state}") +
 ggtitle('Año {closest_state}') ##título de años
 ```
 
-###### Exportar:
+#### Exportar:
 ```
 animate(gA_anim, nframes=300, fps=24, width=750, height=675, res=150, end_pause = 30)
 anim_save("Animación2.gif", animation = last_animation())
@@ -2954,7 +2962,7 @@ Regresión:
 
 
 
-###### Gráficos de países que se van adelantando
+#### Gráficos de países que se van adelantando
 - [https://towardsdatascience.com/create-animated-bar-charts-using-r-31d09e5841da](https://towardsdatascience.com/create-animated-bar-charts-using-r-31d09e5841da)
 - [https://stackoverflow.com/questions/53162821/animated-sorted-bar-chart-with-bars-overtaking-each-other?source=post\_page---------------------------](https://stackoverflow.com/questions/53162821/animated-sorted-bar-chart-with-bars-overtaking-each-other?source=post_page---------------------------)
 
@@ -2986,9 +2994,9 @@ library(janitor)
 library(scales)
 
 
-#### Aplicar guía a mis datos
+### Aplicar guía a mis datos
             
-#### Cambiar formato de base de datos a "long format"
+### Cambiar formato de base de datos a "long format"
 nata_tidy <- nata %>% 
       mutate_at(vars(contains("20")),as.numeric) %>% ##selecionar los años 
       gather(year,value,2:18) %>% ##elegir las columnas de los años
@@ -2999,7 +3007,7 @@ write_csv(nata_tidy,"nata_tidy.csv")
 View(nata_tidy)
 View(nata)
 
-#### We’re going to filter our dataset to retain only the top 10 countries for every given year
+### We’re going to filter our dataset to retain only the top 10 countries for every given year
 
 nata_tidy <- read_csv("nata_tidy.csv")
 nata_formatted <- nata_tidy %>%
@@ -3014,7 +3022,7 @@ nata_formatted <- nata_tidy %>%
 
 View(nata_formatted)
 
-#### Gráfico seguido de animación
+### Gráfico seguido de animación
 
 staticplot = ggplot(nata_formatted, aes(rank, group = region, 
                                        fill = as.factor(region), 
@@ -3051,7 +3059,7 @@ animacion = staticplot + transition_states(year, transition_length = 2, state_le
 animate(animacion, nframes=640, fps=30, width=400, height=400, res=100, detail=2)
 anim_save("Natalidad regiones.gif", animation = last_animation())
 ```
-#### Cortar datos en intervalos
+### Cortar datos en intervalos
 ![](DraggedImage.jpeg)![](DraggedImage-1.jpeg)
 
 ```
@@ -3067,21 +3075,21 @@ p + geom_boxplot(aes(group = cut_number(carat, n=10)))
 ## Use cut_width
 p + geom_boxplot(aes(group = cut_width(carat, width=0.25)))
 ```
-#### Mapas
+### Mapas
 Graficar mapas en ggplot2
 
-###### Graficar mapas de Chile
+#### Graficar mapas de Chile
 Paquete Chilemapas
 [https://github.com/pachamaltese/chilemapas](https://github.com/pachamaltese/chilemapas)
 
-###### Recortar mapa
+#### Recortar mapa
 
 ```
 mapa_cortado <- st_crop(mapa, 
 	xmin = -20, xmax = 45,
 	ymin = 30, ymax = 73)
 ```
-###### Cambiar formato de coordenadas
+#### Cambiar formato de coordenadas
 Necesario cuando se usan dos mapas distintos en un solo gráfico y sus sistemas de coordenadas difieren.
 
 Revisar el formato de coordenadas de los dos mapas:
@@ -3095,13 +3103,13 @@ Cambiar uno por el del otro:
 mapa2$geometry <- st_transform(mapa2$geometry, 
 	crs = 32719)
 ```
-###### Acercarse a un mapa
+#### Acercarse a un mapa
 ```
 mapa +
 coord_sf(ylim=c(-30, -10),
 		 xlim=c(-80, -60))
 ```
-###### Importar shape
+#### Importar shape
 
 El archivo .shp tiene que estar dentro de la carpeta con el resto de archivos necesarios.
 
@@ -3109,14 +3117,14 @@ El archivo .shp tiene que estar dentro de la carpeta con el resto de archivos ne
 mapa <- sf::st_read("Catastro_Campamentos_2019/Catastro_Campamentos_2019/Catastro_Campamentos_2019.shp")    
 
 ```
-###### Geocodificar
+#### Geocodificar
 
 [https://www.jessesadler.com/post/geocoding-with-r/](https://www.jessesadler.com/post/geocoding-with-r/)
 
 ## Figuras y capas
 Agregar figuras o capas extra a un gráfico
 
-#### Agregar capas condicionales
+### Agregar capas condicionales
 
 ```
 switch=TRUE
@@ -3136,7 +3144,7 @@ geom_line(data = subset(afp_cotizantes2, región!="Iquique"), size=0.5, show.leg
 
 [https://gist.github.com/jcheng5/3971908](https://gist.github.com/jcheng5/3971908)
 
-#### Agregar barras de brecha:
+### Agregar barras de brecha:
 
 ```
 casen %>%
@@ -3160,7 +3168,7 @@ casen %>%
               hjust = 1.2, vjust=0.5, size=3.5, angle=90, color="white") +
     geom_linerange(aes(ymin = mujer, ymax = hombre, linetype="Brecha\nde género"), size=3, col="##DF1A57")
 ```
-#### Líneas verticales grises
+### Líneas verticales grises
 Agregar linea
 
 Verticales:
@@ -3172,7 +3180,7 @@ Horizontales:
 ```
 theme(panel.grid.major.y = element_line(color="gray90"))
 ```
-#### Poner logo en esquina del gráfico
+### Poner logo en esquina del gráfico
 
 Importar logo: 
 ```
@@ -3189,7 +3197,7 @@ Si el gráfico está horizontal:
 ```
 coord_flip(clip="off") +
 ```
-#### Insertar flechas en el gráfico
+### Insertar flechas en el gráfico
 
 ```
 library(gridExtra)
@@ -3213,12 +3221,12 @@ scale_y_continuous(expand=c(0,0)) +
 coord_cartesian(ylim = c(0, 700), clip="off") +
 theme(plot.margin = unit(c(1,1,3,1), "lines"))
 ```
-#### Agregar línea horizontal de promedio
+### Agregar línea horizontal de promedio
 
 ```
 geom_hline(yintercept = mean(Indcatotvalue), color="blue")
 ```
-#### Graficar una única variable
+### Graficar una única variable
 
 ```
 ggplot(mammals[mammals$vore == "Insectivore", ], aes(x = sleep_total, fill = vore)) +
@@ -3226,7 +3234,7 @@ ggplot(mammals[mammals$vore == "Insectivore", ], aes(x = sleep_total, fill = vor
   scale_x_continuous(limits = c(0, 24)) +
   coord_cartesian(ylim = c(0, 0.3))
 ```
-#### Insertar barras
+### Insertar barras
 
 ```
 geom_vline
@@ -3243,7 +3251,7 @@ geom_rect(data = recess,
 ```
 + geom_vline(xintercept=0)
 ```
-#### Guardar y aplicar capas
+### Guardar y aplicar capas
 
 ```
 BMI_fill <- scale_fill_brewer("BMI Category", palette = "Reds")
@@ -3258,14 +3266,14 @@ fix_strips <- theme(strip.text.y = element_text(angle = 0, hjust = 0, vjust = 0.
 
 ggplot(...) + fix_strips
 ```
-#### Shapes
+### Shapes
 
 Las figuras `shape` de 21 a 25 tienen borde y relleno independientes.
 
 ## Texto
 Operaciones que se pueden realizar sobre el texto de los gráficos
 
-#### Insertar texto en el gráfico
+### Insertar texto en el gráfico
 
 ```
 annotate("text", x=2.8, y=-0.025, hjust=1, col="black", label="Menores ingresos") +
@@ -3278,7 +3286,7 @@ Para ponerlas fuera del gráfico:
     coord_cartesian(clip = 'off') +
     theme(plot.margin = unit(c(1,1,3,1), "lines")) + ##extender área hacia abajo
 ```
-#### Texto en barras
+### Texto en barras
 
 Crear variable que calcule el porcentaje:
 ```
@@ -3342,7 +3350,7 @@ Para permitir que el texto se salga del margen del gráfico hay que poner `clip 
 coord_cartesian(clip = 'off') +
 theme(plot.margin = unit(c(1,1,1,1),"cm")) ##top right bottom left
 ```
-#### Mostrar texto en el gráfico según condición
+### Mostrar texto en el gráfico según condición
 
 Mostrar etiquetas sólo para puntos o segmentos superiores a una cantidad.
 Usando `mutate`, las etiquetas que no cumplan la función quedan en blanco, manteniendo su posición:
@@ -3379,7 +3387,7 @@ Para un texto más complejo (con paste, porcentaje y frecuencia)
 ```
 
 
-#### Poner valores sobre las barras
+### Poner valores sobre las barras
 
 ```
 geom_text(aes(label=variabley), vjust=1.5, hjust=0.5, col="white")
@@ -3397,7 +3405,7 @@ Si se trata de un factor:
 ```
 geom_text(stat='count', aes(label=..count..), vjust=0.5) +
 ```
-#### Repeler etiquetas de los puntos
+### Repeler etiquetas de los puntos
 
 ```
 library(ggplot2)
@@ -3432,7 +3440,7 @@ ggplot(dt,
   coord_cartesian(xlim = c(-5, 5), ylim = c(-5, 5)) +
   theme_bw()
 ```
-#### Convertir etiquetas a minúscula, mayúscula, titulares, o frase
+### Convertir etiquetas a minúscula, mayúscula, titulares, o frase
 
 ```
 stringr::str_to_upper(string, locale = "es")
@@ -3443,27 +3451,27 @@ stringr::str_to_title(string, locale = "es")
 
 stringr::str_to_sentence(string, locale = "es")
 ```
-#### Poner suma de los factores sobre una barra stacked
+### Poner suma de los factores sobre una barra stacked
 
 ```
 stat_summary(fun.y = sum,                          ##pone como texto la suma de los factores en cada barra
                aes(label = ..y.., group = Año), 
                geom = "text", vjust=-0.5, size=3, col="gray25") + 
 ```
-#### Ajustar cita o referencia
+### Ajustar cita o referencia
 
 Horizontalmente:
 ```
 plot.caption = element_text(hjust = 1.4)) +
 ```
-#### Mover título y subtítulo
+### Mover título y subtítulo
 
 Horizontalmente:
 ```
 plot.title = element_text(hjust = 0.3),
 plot.subtitle = element_text(hjust = 0.3),
 ```
-#### Buscar y reemplazar palabras de las etiquetas
+### Buscar y reemplazar palabras de las etiquetas
 
 ```
 ## buscar y reemplazar palabras para borrarlas de las etiquetas
@@ -3471,7 +3479,7 @@ eme2 <- eme2 %>%
   mutate(tramo_ingresos = str_replace(tramo_ingresos, "Entre ", "")) %>%
   mutate(tramo_ingresos = str_replace(tramo_ingresos, "y", "a"))
 ```
-#### Redondear cifras
+### Redondear cifras
 ```
 round(variable, digits=1)
 ```
@@ -3484,7 +3492,7 @@ geom_text(aes(label =
                             "%")), 
               color="white", size=3.5, position=position_stack(vjust = 0.5)) +
 ```
-#### Pegar signo de porcentaje
+### Pegar signo de porcentaje
 ```
 paste0(Porcentaje,"%")
 ```
@@ -3497,7 +3505,7 @@ geom_text(aes(label =
                             "%")), 
               color="white", size=3.5, position=position_stack(vjust = 0.5)) +
 ```
-#### Cambiar etiquetas del gráfico
+### Cambiar etiquetas del gráfico
 Cambiar títulos de los ejes
 ```
 + labs(x="Título del eje x", y="Título del eje y")
@@ -3511,7 +3519,7 @@ titled_plot <- initial_plot +
          x = "", 
          y = "") 
 ```
-#### Poner nombre de barras dentro de las barras
+### Poner nombre de barras dentro de las barras
 
 Para que el texto o etiqueta del eje `y` o `x` aparezca dentro de la barra:
 
@@ -3526,7 +3534,7 @@ Sin `coord_flip`:
 geom_text(aes(label = str_to_title(variable), y=0.02), angle=90, hjust=0, size = 3.2, col="white") +
 theme(axis.text.x = element_blank())
 ```
-#### Calcular porcentajes
+### Calcular porcentajes
 
 Calcular porcentaje por categorías:
 ```
@@ -3554,7 +3562,7 @@ Agregar columna con suma de totales:
 ```
 adorn_totals("col", name = "Total") %>%
 ```
-#### Poner texto al final del gráfico de líneas
+### Poner texto al final del gráfico de líneas
 
 ```
     geom_text(aes(label = ifelse(Año==2018, 
@@ -3567,12 +3575,12 @@ Puede que sea necesario mover la leyenda hacia la derecha:
 ```
 theme(legend.box.margin=margin(c(0,0,0,10))) +
 ```
-#### Formatear números
+### Formatear números
 Quitar decimales a un número que por ejemplo es una media:
 ```
 round(Toneladas, digits = 2)
 ```
-#### Añadir texto antes o después del nombre de la variable
+### Añadir texto antes o después del nombre de la variable
 
 ```
 ggplot(aes(x = paste("texto", variable)))
@@ -3581,7 +3589,7 @@ ggplot(aes(x = paste("texto", variable)))
 ```
 scale_x_continuous(labels = function(x) paste(x, "años"),
 ```
-#### Formatear una fecha
+### Formatear una fecha
 Hay que tener instalado el `locale` necesario, en este caso el de español. Activar el `locale`:
 ```
 Sys.setlocale(category = "LC_TIME", locale="es_ES.UTF-8") ##Meses en español
@@ -3591,12 +3599,12 @@ Luego las fechas usarán meses en castellano:
 ```
 format(max(covid_comuna$Fecha), "%d de %B")
 ```
-#### Aumentar el tamaño de todo el texto
+### Aumentar el tamaño de todo el texto
 
 ```
 theme(text = element_text(size=16))
 ```
-#### Cambiar tipografía
+### Cambiar tipografía
 ```
 library(extrafont)
 
@@ -3614,7 +3622,7 @@ Ver tipografías instaladas:
 ```
 extrafont::fonts()
 ```
-#### Cambiar color de un texto según condición
+### Cambiar color de un texto según condición
 
 Crear la condición necesaria y poner como categorías de la variable los colores a elegir:
 
@@ -3630,12 +3638,12 @@ Luego agregar en el geom:
 geom_text(aes(x=Comuna, y=-50, label = Region),
 	color = datos$Region2)
 ```
-#### Añadir valor o texto a las etiquetas del eje x
+### Añadir valor o texto a las etiquetas del eje x
 
 ```
 scale_x_discrete(labels = paste0(Region, "\n", Poblacion))
 ```
-#### Ajustar etiquetas largas
+### Ajustar etiquetas largas
 
 Para cortar la categorías largas, por ejemplo, en la leyenda de un gráfico o las etiquetas de un eje:
 ```
@@ -3666,14 +3674,14 @@ mutate(ocupación_CIUO = str_trunc(as.character(ocupación_CIUO), 30, side="righ
 ```
 Luego volver a convertir a factor.
 
-#### ggtext
+### ggtext
 
 [Enhance Your ggplot2 Data Visualizations with ggtext](https://thomasadventure.blog/posts/enhance-ggplot2-with-ggtext/)
 
 ## Escalas
 Manipulación de las escalas de los gráficos, que son los elementos que controlan la disposición espacial de las observaciones en el plano.
 
-#### Ordenar grafico de barras
+### Ordenar grafico de barras
 Ordenar las barras para que una categoría del stack vaya de mayor a menor: crear una variable con `case_when` que sea un valor numérico, luego sumar esos valores numéricos en `summarize` según los grupos.
 
 ```
@@ -3694,19 +3702,19 @@ group_by(Region) %>%
   ggplot(aes(fct_reorder(Region, Orden), 
              Valor, fill = Grupo)) +
 ```
-#### Expandir un eje
+### Expandir un eje
 
 Por ejemplo, si una línea queda muy corta en la parte superior de un gráfico de densidad. Similar a `coord_cartesian`
 
 ```
 scale_y_discrete(expand = expand_scale(add = c(0.3, 5.5))) +
 ```
-#### Poner comas en los ejes
+### Poner comas en los ejes
 
 ```
 scale_x_continuous(labels = scales::comma)
 ```
-#### Intercambiar ejes
+### Intercambiar ejes
 
 ```
 + coord_flip()
@@ -3716,7 +3724,7 @@ Intercambiar y cortar o extender:
 ```
 coord_flip(xlim=c(0, 800)) + 
 ```
-#### Cambiar orden de los ejes
+### Cambiar orden de los ejes
 
 ```
 ggplot(aes(x = logFoldChange, y = reorder(variable, variable_de_ordenamiento)) +
@@ -3758,7 +3766,7 @@ Reordenar según suma de los valores del eje:
 ```
 Util cuando son barras stacked y hay que ordenar por la suma de los factores
 
-#### Girar etiquetas del eje x
+### Girar etiquetas del eje x
 Girar etiquetas del eje, dándole ángulo o poniéndola horizontal, por ejemplo
 
 ```
@@ -3770,14 +3778,14 @@ Girar a la derecha y justificar:
 ```
 theme(axis.text.x = element_text(hjust=0, vjust=0.5, angle = -90)
 ```
-#### Cambiar márgenes de elementos
+### Cambiar márgenes de elementos
 
 ```
 theme(axis.text.x = element_text(margin = margin(t = 0)),
 	axis.text.y = element_text(margin = margin(r = -5)),
     plot.subtitle = element_text(margin = margin(b = 15)))
 ```
-#### Mostrar todas las etiquetas del eje x
+### Mostrar todas las etiquetas del eje x
 
 Mostrar todas las etiquetas del eje x
 ```
@@ -3787,14 +3795,14 @@ scale_x_continuous("ID", labels = as.character(ID), breaks = ID)
 ```
 scale_x_continuous(breaks = c(1973:1980))
 ```
-#### Definir cortes del eje y
+### Definir cortes del eje y
 ```
 scale_y_continuous(breaks = c(10, 50, 100, 150, 200)) +
 ```
 También sirve para eliminar el 0 del eje. Para combinar con logaritmo: `, trans="log10"`
 
 
-#### Transformar escalas a logaritmo
+### Transformar escalas a logaritmo
 
 ```
 ## Transform the scale
@@ -3806,17 +3814,17 @@ d + scale_y_log10()
 ## Transform the coordinates
 d + coord_trans(y="log10")
 ```
-#### Agregar alfombra
+### Agregar alfombra
 Muestra los puntos exactos donde existen datos.
 
 `+ geom_rug()`
 
-#### Cambiar eje a logaritmo 
+### Cambiar eje a logaritmo 
 Para cambiar una escala a logarítmica: 
 ```
 + scale_x_log10()
 ```
-#### Ampliar eje
+### Ampliar eje
 
 Para que un eje empiece desde cero y así se elimine el margen o espaciado por defecto de ggplot:
 ```
@@ -3834,7 +3842,7 @@ scale_x_discrete(expand = c(0, 0)) +
 ```
 scale_x_continuous(expand = c(0, 0)) + scale_y_continuous(expand = c(0, 0))
 ```
-#### Insertar un nivel en blanco para una escala
+### Insertar un nivel en blanco para una escala
 
 Para que en la leyenda aparezca un espacio vacío entremedio.
 
@@ -3850,7 +3858,7 @@ scale_fill_manual(values = c(degradado1(4), "gray70",
                                  degradado4(3), "gray70"),
                        drop = FALSE) + ##Determinar que el nivel en blanco no se salte
 ```
-#### Escalas de series de tiempo
+### Escalas de series de tiempo
 
 [https://www.statworx.com/at/blog/customizing-time-and-date-scales-in-ggplot2/](https://www.statworx.com/at/blog/customizing-time-and-date-scales-in-ggplot2/)
 
@@ -3864,7 +3872,7 @@ scale_x_date(breaks = seq(from = ymd('2020-03-30'), to = max(covid_comuna$Fecha)
 
 La opción `by=1` pone un break por fecha, y `length.out` pone la cantidad de breaks definidos, dispersados entre el menos y el mayor.
 
-#### Cambiar escalas continuas
+### Cambiar escalas continuas
 ```
     scale_fill_viridis(option="magma", ##color
                        name = "Porcentaje \nde votantes", 
@@ -3872,7 +3880,7 @@ La opción `by=1` pone un break por fecha, y `length.out` pone la cantidad de br
                        labels=c("0%", "25%", "50%", "75%", "100%"),
                        limits=c(20,80)) +
 ```
-#### Escalas
+### Escalas
 Cambiar el rango de tamaños de los puntos
 ```
 + scale_size(range = c(1, 10))
@@ -3893,7 +3901,7 @@ Secuencia de breaks en la escala:
 ```
 scale_y_continuous(limits = c(0, 12000), breaks = seq(0,12000,by = 2000)
 ```
-#### Escala en miles
+### Escala en miles
 
 Puntos de miles en la escala:
 ```
@@ -3905,7 +3913,7 @@ O bien:
 ```
 scale_size_continuous(labels = scales::number) +
 ```
-#### Escala en porcentajes
+### Escala en porcentajes
 
 ```
 library(scales)
@@ -3920,11 +3928,11 @@ scale_y_continuous(labels = function(x) paste0(x, "%")) +
 ## Colores
 Operaciones que permiten controlar y modificar los colores utilizados en los gráficos.
 
-#### Agregar más de una escala de color
+### Agregar más de una escala de color
 
 [https://eliocamp.github.io/ggnewscale/](https://eliocamp.github.io/ggnewscale/)
 
-#### Escalas continuas de colores (degradado)
+### Escalas continuas de colores (degradado)
 
 Definir color del mínimo y máximo:
 ```
@@ -3941,7 +3949,7 @@ scale_color_gradient2(low = colorspace::darken(color_verde, 0.2),
 ```
 Opcionalmente, definir en `midpoint` el punto que equivale al intermedio.
 
-#### Aplicar paleta de colores específicas a determinadas variables
+### Aplicar paleta de colores específicas a determinadas variables
 
 ```
 cyl <- sort(unique(mpg$cyl))
@@ -3967,7 +3975,7 @@ gg_dd %>%
         coord_flip() +
         scale_fill_identity() 
 ```
-#### Aplicar escala de color automática
+### Aplicar escala de color automática
 
 Primero crear la escala de color con tantos colores como se necesiten:
 ```
@@ -3979,7 +3987,7 @@ Luego aplicar la escala al gráfico, determinando el número de colores a usar:
 scale_color_manual(values = degradado(7),
 aesthetics = c("fill", "col")) +
 ```
-#### Crear escala o degradado de colores
+### Crear escala o degradado de colores
 
 ```
 degradado <- colorRampPalette(c("##DF1A57", "##c444c4", "##6739b2", "##1D3284"), bias=0.9)
@@ -3987,7 +3995,7 @@ degradado <- colorRampPalette(c("##DF1A57", "##c444c4", "##6739b2", "##1D3284"),
 
 Bias es la separación de los colores en los extremos de la escala. Un bias alto (mayor a 1) hace que los colores cambien más rápido y uno bajo (cercano a 0) distribuye los colores más suavemente.
 
-#### Previsualizar colores
+### Previsualizar colores
 
 Para ver un color o vector de colores:
 
@@ -3998,7 +4006,7 @@ scales::show_col(c("##DF1A57", "##c444c4", "##6739b2", "##1D3284"))
 
 scales::show_col(degradado7b(7))
 ```
-#### Aclarar u oscurecer colores
+### Aclarar u oscurecer colores
 
 ```
 colorspace::lighten("red", amount = 0.5)
@@ -4007,7 +4015,7 @@ colorspace::lighten("red", amount = 0.5)
 ```
 scales::show_col(colorspace::lighten(color_naranjo, amount = 0.6))
 ```
-#### RColorBrewer
+### RColorBrewer
 ```
 scale_fill_brewer(palette = "Dark2") +
 ```
@@ -4030,7 +4038,7 @@ scale_fill_gradientn(colours = colores_presidencial, ##crear gradiente de colore
 ```
 
 
-#### Crear degradados de color
+### Crear degradados de color
 Crear escala de colores entre colores específicos:
 ```
 degradado1 <- colorRampPalette(c("##DF1A57", "##AF87EB", "##1D3284"))
@@ -4041,7 +4049,7 @@ scale_color_manual(values = degradado1(5)) +
 ```
 Donde el número es la cantidad de colores
 
-#### Extender escalas de colores
+### Extender escalas de colores
 ```
 ## Definition of a set of blue colors
 blues <- brewer.pal(9, "Blues") ## from the RColorBrewer package
@@ -4054,7 +4062,7 @@ ggplot(Vocab, aes(x = education, fill = vocabulary)) +
   geom_bar(position = "fill") +
   scale_fill_manual(values=blue_range(11))
 ```
-#### Determinar colores para variable categórica
+### Determinar colores para variable categórica
 ```
 colores_redes<- c("Facebook"="##1877f2","WhatsApp y similares"="##25d366","Instagram"="##c32aa3","Skype"="##00aff0","Twitter"="##1da1f2","Tinder y similares"="##FF5864","Snapchat"="##fffc00","LinkedIn"="##007bb5")
 ```
@@ -4065,10 +4073,10 @@ scale_color_manual(values = colores_redes) +
 ```
 
 
-#### Más escalas de colores
+### Más escalas de colores
 
 
-###### Viridis
+#### Viridis
 ```
 scale_color_viridis() +
 ```
@@ -4088,7 +4096,7 @@ Más paletas:
 
 
 
-###### CartoColor
+#### CartoColor
 [https://github.com/Nowosad/rcartocolor](https://github.com/Nowosad/rcartocolor)
 Ver colores:
 ```
@@ -4102,7 +4110,7 @@ scale_fill_carto_c(name = "Life expectancy: ", type = "diverging", palette = "Ea
 
 
 
-###### Scico
+#### Scico
 Ver colores:
 ```
 scico::scico_palette_show()
@@ -4121,7 +4129,7 @@ ggplot(volcano, aes(x = x, y = y, fill = height)) +
 ```
 
 
-###### Fishualize
+#### Fishualize
 ```
 devtools::install_github("nschiett/fishualize", force = TRUE)
 library(fishualize)
@@ -4162,14 +4170,14 @@ scale_color_fish(option = "Coris_gaimard", discrete = TRUE)
 ```
 
 
-###### Ghibli
+#### Ghibli
 [https://ewenme.github.io/ghibli/index.html](https://ewenme.github.io/ghibli/index.html)![](https://ewenme.github.io/ghibli/reference/figures/README-palettes-1.png)
 ```
 library(ghibli)
 scale_colour_ghibli_d("LaputaMedium", direction = -1)
 ```
 
-###### PaletteR
+#### PaletteR
 ```
 devtools::install_github("AndreaCirilloAC/paletter")
 
@@ -4188,7 +4196,7 @@ ggplot(data = mtcars, aes(x = rownames(mtcars),y = hp,color = rownames(mtcars),
 ```
 
 
-###### Pirate palette
+#### Pirate palette
 
 ```
 yarrr::piratepal(palette = "all")
@@ -4200,7 +4208,7 @@ yarrr::piratepal(palette = "all")
 ## Leyendas
 Manipular la leyenda, o la sección del gráfico que contiene los colores y/o etiquetas de los elementos gráficos que lo componen.
 
-#### Crear gráfico con leyenda manual
+### Crear gráfico con leyenda manual
 
 Cuando los elementos el gráfico se hacen por capas separadas y por lo tanto no aparecen con leyenda:
 ```
@@ -4236,12 +4244,12 @@ Alternativa más rápida:
 geom_hline(aes(yintercept = promedio, col="Arancel promedio")) +
 scale_colour_manual(name="Error Bars", values = c("Arancel promedio"="red")) + 
 ```
-#### Invertir orden de leyenda
+### Invertir orden de leyenda
 
 ```
 guides(fill = guide_legend(reverse = TRUE)) +
 ```
-#### Orientación y ubicación de la leyenda
+### Orientación y ubicación de la leyenda
 
 Ubicación de la leyenda: `theme(legend.position = c(0.85, 0.85))`
 
@@ -4282,7 +4290,7 @@ Cambiar ubicación de leyenda:
 ```
 
 
-#### Textos de leyenda
+### Textos de leyenda
 Cambiar título de leyenda:
 ```
 + scale_fill_discrete(name = "")
@@ -4305,7 +4313,7 @@ Ocultar una leyenda específica:
 O poner dentro del geom: `show.legend=FALSE`
 
 
-#### Elementos de la leyenda
+### Elementos de la leyenda
 Cambiar espaciado horizontal de leyenda:
 ```
 legend.spacing.x = unit(0.4, 'cm') ##NO SIRVE?
@@ -4356,11 +4364,11 @@ Cambiar color de la leyenda:
 ```
 guides(shape = guide_legend(override.aes = list(colour = "pink")))
 ```
-#### Margen de la leyenda
+### Margen de la leyenda
 ```
 theme(legend.margin = margin(20, 20, 20, 0)) + ##caja de la leyenda
 ```
-#### Leyendas redondas
+### Leyendas redondas
 
 Cambiar una leyenda redonda de `geom_line` o `geom_point` por una cuadrada como de `geom_col`
 ```
@@ -4399,12 +4407,12 @@ ggplot(aes(fecha, valor, col=parque, fill=parque)) +
 ```
 ## Temas y espaciado
 
-#### Espaciado entre facetas
+### Espaciado entre facetas
 El espacio horizontal entre dos facetas de un gráfico, cuando el gráfico se separa en facetas con `facet_wrap()`
 ```
 theme(panel.spacing.x=unit(2, "cm"))
 ```
-#### Reducir margen de gráficos
+### Reducir margen de gráficos
 
 Especialmente útil para gráficos de torta
 ```
@@ -4419,7 +4427,7 @@ plot.margin = margin(20, ##arriba
                                -50) ##izquierda
           )
 ```
-#### Múltiples gráficos
+### Múltiples gráficos
 Facetas
 
 ```
@@ -4499,7 +4507,7 @@ Cortar textos de faceta (sin modificar los factores):
 ```
 facet_wrap(~egreso, nrow=1, labeller = label_wrap_gen(width=10)) +
 ```
-#### Elementos y temas
+### Elementos y temas
 ```
 + theme()
 ```
@@ -4521,7 +4529,7 @@ theme(
 ```
 Para especificar el eje afectado, se pone un punto y el eje al final del nombre del elemento, por ejemplo: `axis.text.x`
 
-###### Elementos:
+#### Elementos:
 - `element_text()`
 - `element_rect()`
 - `element_line()`
@@ -4538,7 +4546,7 @@ Para especificar el eje afectado, se pone un punto y el eje al final del nombre 
 	- `panel.grid.major`
 	- `panel.grid.minor`
 
-###### Cambiar texto
+#### Cambiar texto
 - Texto de facetas: `strip.text`
 - Título de los ejes: `axis.title`
 - Números en los ejes: `axis.text`
@@ -4566,7 +4574,7 @@ labs(y="Cantidad de reclamos y consultas", x="Institución o vía de emisión")
 ```
 
 
-#### Combinar múltiples gráficos
+### Combinar múltiples gráficos
 Unir dos gráficos:
 
 Si usan los mismos datos:
@@ -4591,16 +4599,16 @@ empresas_combinado_cowplot <- plot_grid(empresas_tamaño_porc_gg,
           align = "v",
           rel_heights = c(3, 3, 1))  
 ```
-#### Ajustar espacio entre etiquetas de ejes y gráfico
+### Ajustar espacio entre etiquetas de ejes y gráfico
 Para acercar o alejar las etiquetas de las barras:
 ```
 theme(axis.text.y = element_text(margin = margin(r = -3, l = 5))) +
 ```
-#### Acercar leyenda al gráfico
+### Acercar leyenda al gráfico
 ```
 theme(legend.margin = margin(20, 20, 20, 0)) + ##caja de la leyenda
 ```
-#### Cambiar tamaño y hacer zoom en los datos
+### Cambiar tamaño y hacer zoom en los datos
 
 ```
 + coord_cartesian(xlim=c(3,6))
@@ -4611,7 +4619,7 @@ Graficar con la misma relación entre ejes (si las unidades de medida son iguale
 ```
 + coord_equal()
 ```
-#### Guardar y aplicar temas
+### Guardar y aplicar temas
 
 Guardar la configuración de elementos de la capa `theme` en un tema:
 ```
@@ -4664,7 +4672,7 @@ theme_set(old)
 z2
 ```
 
-######## Cargar temas con el paquete `ggthemes`
+##### Cargar temas con el paquete `ggthemes`
 ```
 library(ggthemes)
 ```

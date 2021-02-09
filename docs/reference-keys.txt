@@ -1,3 +1,4 @@
+introducción
 manejo-de-datos-con-r
 importación-de-datos
 importar-archivos-desde-internet
@@ -265,4 +266,5 @@ ajustar-espacio-entre-etiquetas-de-ejes-y-gráfico
 acercar-leyenda-al-gráfico
 cambiar-tamaño-y-hacer-zoom-en-los-datos
 guardar-y-aplicar-temas
+cargar-temas-con-el-paquete-ggthemes
 exportar-gráficos

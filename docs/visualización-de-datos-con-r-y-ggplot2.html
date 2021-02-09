@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>2 Visualización de datos con R y ggplot2 | Manual básico de R</title>
-  <meta name="description" content="2 Visualización de datos con R y ggplot2 | Manual básico de R" />
+  <title>3 Visualización de datos con R y ggplot2 | Manual básico de R</title>
+  <meta name="description" content="3 Visualización de datos con R y ggplot2 | Manual básico de R" />
   <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="2 Visualización de datos con R y ggplot2 | Manual básico de R" />
+  <meta property="og:title" content="3 Visualización de datos con R y ggplot2 | Manual básico de R" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="2 Visualización de datos con R y ggplot2 | Manual básico de R" />
+  <meta name="twitter:title" content="3 Visualización de datos con R y ggplot2 | Manual básico de R" />
   
   
   
@@ -30,7 +30,7 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="index.html"/>
+<link rel="prev" href="manejo-de-datos-con-r.html"/>
 
 <script src="libs/jquery-2.2.3/jquery.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -67,251 +67,259 @@
       <nav role="navigation">
 
 <ul class="summary">
-<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Manejo de datos con R</a><ul>
-<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#importación-de-datos"><i class="fa fa-check"></i><b>1.1</b> Importación de datos</a><ul>
-<li class="chapter" data-level="1.1.0.1" data-path="index.html"><a href="index.html#importar-archivos-desde-internet"><i class="fa fa-check"></i><b>1.1.0.1</b> Importar archivos desde internet</a></li>
-<li class="chapter" data-level="1.1.0.2" data-path="index.html"><a href="index.html#importar-archivos-csv"><i class="fa fa-check"></i><b>1.1.0.2</b> Importar archivos csv</a></li>
-<li class="chapter" data-level="1.1.0.3" data-path="index.html"><a href="index.html#importar-datos-desde-excel"><i class="fa fa-check"></i><b>1.1.0.3</b> Importar datos desde Excel</a></li>
-<li class="chapter" data-level="1.1.0.4" data-path="index.html"><a href="index.html#importar-tabla-pivotada-de-excel"><i class="fa fa-check"></i><b>1.1.0.4</b> Importar tabla pivotada de Excel</a></li>
-<li class="chapter" data-level="1.1.0.5" data-path="index.html"><a href="index.html#importar-otros-archivos-con-formato-de-tabla"><i class="fa fa-check"></i><b>1.1.0.5</b> Importar otros archivos con formato de tabla</a></li>
-<li class="chapter" data-level="1.1.0.6" data-path="index.html"><a href="index.html#importar-tablas-desde-pdf"><i class="fa fa-check"></i><b>1.1.0.6</b> Importar tablas desde PDF</a></li>
-<li class="chapter" data-level="1.1.0.7" data-path="index.html"><a href="index.html#combinar-bases-de-datos"><i class="fa fa-check"></i><b>1.1.0.7</b> Combinar bases de datos</a></li>
-<li class="chapter" data-level="1.1.0.8" data-path="index.html"><a href="index.html#conectar-a-base-de-datos"><i class="fa fa-check"></i><b>1.1.0.8</b> Conectar a base de datos</a></li>
-<li class="chapter" data-level="1.1.0.9" data-path="index.html"><a href="index.html#aplicar-factor-de-expansión"><i class="fa fa-check"></i><b>1.1.0.9</b> Aplicar factor de expansión</a></li>
+<li><a href="./">Manual de R. Bastián Olea</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introducción</a></li>
+<li class="part"><span><b>Datos</b></span></li>
+<li class="chapter" data-level="2" data-path="manejo-de-datos-con-r.html"><a href="manejo-de-datos-con-r.html"><i class="fa fa-check"></i><b>2</b> Manejo de datos con R</a><ul>
+<li class="chapter" data-level="2.1" data-path="manejo-de-datos-con-r.html"><a href="manejo-de-datos-con-r.html#importación-de-datos"><i class="fa fa-check"></i><b>2.1</b> Importación de datos</a><ul>
+<li class="chapter" data-level="2.1.1" data-path="manejo-de-datos-con-r.html"><a href="manejo-de-datos-con-r.html#importar-archivos-desde-internet"><i class="fa fa-check"></i><b>2.1.1</b> Importar archivos desde internet</a></li>
+<li class="chapter" data-level="2.1.2" data-path="manejo-de-datos-con-r.html"><a href="manejo-de-datos-con-r.html#importar-archivos-csv"><i class="fa fa-check"></i><b>2.1.2</b> Importar archivos csv</a></li>
+<li class="chapter" data-level="2.1.3" data-path="manejo-de-datos-con-r.html"><a href="manejo-de-datos-con-r.html#importar-datos-desde-excel"><i class="fa fa-check"></i><b>2.1.3</b> Importar datos desde Excel</a></li>
+<li class="chapter" data-level="2.1.4" data-path="manejo-de-datos-con-r.html"><a href="manejo-de-datos-con-r.html#importar-tabla-pivotada-de-excel"><i class="fa fa-check"></i><b>2.1.4</b> Importar tabla pivotada de Excel</a></li>
+<li class="chapter" data-level="2.1.5" data-path="manejo-de-datos-con-r.html"><a href="manejo-de-datos-con-r.html#importar-otros-archivos-con-formato-de-tabla"><i class="fa fa-check"></i><b>2.1.5</b> Importar otros archivos con formato de tabla</a></li>
+<li class="chapter" data-level="2.1.6" data-path="manejo-de-datos-con-r.html"><a href="manejo-de-datos-con-r.html#importar-tablas-desde-pdf"><i class="fa fa-check"></i><b>2.1.6</b> Importar tablas desde PDF</a></li>
+<li class="chapter" data-level="2.1.7" data-path="manejo-de-datos-con-r.html"><a href="manejo-de-datos-con-r.html#combinar-bases-de-datos"><i class="fa fa-check"></i><b>2.1.7</b> Combinar bases de datos</a></li>
+<li class="chapter" data-level="2.1.8" data-path="manejo-de-datos-con-r.html"><a href="manejo-de-datos-con-r.html#conectar-a-base-de-datos"><i class="fa fa-check"></i><b>2.1.8</b> Conectar a base de datos</a></li>
+<li class="chapter" data-level="2.1.9" data-path="manejo-de-datos-con-r.html"><a href="manejo-de-datos-con-r.html#aplicar-factor-de-expansión"><i class="fa fa-check"></i><b>2.1.9</b> Aplicar factor de expansión</a></li>
 </ul></li>
-<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#codificación"><i class="fa fa-check"></i><b>1.2</b> Codificación</a><ul>
-<li class="chapter" data-level="1.2.0.1" data-path="index.html"><a href="index.html#importar-datos-desde-vectores"><i class="fa fa-check"></i><b>1.2.0.1</b> Importar datos desde vectores</a></li>
-<li class="chapter" data-level="1.2.0.2" data-path="index.html"><a href="index.html#escribir-dataframe"><i class="fa fa-check"></i><b>1.2.0.2</b> Escribir dataframe</a></li>
-<li class="chapter" data-level="1.2.0.3" data-path="index.html"><a href="index.html#crear-vector-y-matriz-de-datos"><i class="fa fa-check"></i><b>1.2.0.3</b> Crear vector y matriz de datos</a></li>
-<li class="chapter" data-level="1.2.0.4" data-path="index.html"><a href="index.html#repetir-un-valor"><i class="fa fa-check"></i><b>1.2.0.4</b> Repetir un valor</a></li>
-<li class="chapter" data-level="1.2.0.5" data-path="index.html"><a href="index.html#crear-sequencia-de-números"><i class="fa fa-check"></i><b>1.2.0.5</b> Crear sequencia de números</a></li>
-<li class="chapter" data-level="1.2.0.6" data-path="index.html"><a href="index.html#crear-data-frame-a-partir-de-vectores"><i class="fa fa-check"></i><b>1.2.0.6</b> Crear data frame a partir de vectores</a></li>
-<li class="chapter" data-level="1.2.0.7" data-path="index.html"><a href="index.html#crear-listas"><i class="fa fa-check"></i><b>1.2.0.7</b> Crear listas</a></li>
-<li class="chapter" data-level="1.2.0.8" data-path="index.html"><a href="index.html#añadir-casos-manualmente"><i class="fa fa-check"></i><b>1.2.0.8</b> Añadir casos manualmente</a></li>
-<li class="chapter" data-level="1.2.0.9" data-path="index.html"><a href="index.html#crear-vector-de-nombres"><i class="fa fa-check"></i><b>1.2.0.9</b> Crear vector de nombres</a></li>
-<li class="chapter" data-level="1.2.0.10" data-path="index.html"><a href="index.html#añadir-vector-a-una-matriz"><i class="fa fa-check"></i><b>1.2.0.10</b> Añadir vector a una matriz</a></li>
-<li class="chapter" data-level="1.2.0.11" data-path="index.html"><a href="index.html#contar-hacia-abajo"><i class="fa fa-check"></i><b>1.2.0.11</b> Contar hacia abajo</a></li>
-<li class="chapter" data-level="1.2.0.12" data-path="index.html"><a href="index.html#usar-output-como-texto-de-vector"><i class="fa fa-check"></i><b>1.2.0.12</b> Usar output como texto de vector</a></li>
+<li class="chapter" data-level="2.2" data-path="manejo-de-datos-con-r.html"><a href="manejo-de-datos-con-r.html#codificación"><i class="fa fa-check"></i><b>2.2</b> Codificación</a><ul>
+<li class="chapter" data-level="2.2.1" data-path="manejo-de-datos-con-r.html"><a href="manejo-de-datos-con-r.html#importar-datos-desde-vectores"><i class="fa fa-check"></i><b>2.2.1</b> Importar datos desde vectores</a></li>
+<li class="chapter" data-level="2.2.2" data-path="manejo-de-datos-con-r.html"><a href="manejo-de-datos-con-r.html#escribir-dataframe"><i class="fa fa-check"></i><b>2.2.2</b> Escribir dataframe</a></li>
+<li class="chapter" data-level="2.2.3" data-path="manejo-de-datos-con-r.html"><a href="manejo-de-datos-con-r.html#crear-vector-y-matriz-de-datos"><i class="fa fa-check"></i><b>2.2.3</b> Crear vector y matriz de datos</a></li>
+<li class="chapter" data-level="2.2.4" data-path="manejo-de-datos-con-r.html"><a href="manejo-de-datos-con-r.html#repetir-un-valor"><i class="fa fa-check"></i><b>2.2.4</b> Repetir un valor</a></li>
+<li class="chapter" data-level="2.2.5" data-path="manejo-de-datos-con-r.html"><a href="manejo-de-datos-con-r.html#crear-sequencia-de-números"><i class="fa fa-check"></i><b>2.2.5</b> Crear sequencia de números</a></li>
+<li class="chapter" data-level="2.2.6" data-path="manejo-de-datos-con-r.html"><a href="manejo-de-datos-con-r.html#crear-data-frame-a-partir-de-vectores"><i class="fa fa-check"></i><b>2.2.6</b> Crear data frame a partir de vectores</a></li>
+<li class="chapter" data-level="2.2.7" data-path="manejo-de-datos-con-r.html"><a href="manejo-de-datos-con-r.html#crear-listas"><i class="fa fa-check"></i><b>2.2.7</b> Crear listas</a></li>
+<li class="chapter" data-level="2.2.8" data-path="manejo-de-datos-con-r.html"><a href="manejo-de-datos-con-r.html#añadir-casos-manualmente"><i class="fa fa-check"></i><b>2.2.8</b> Añadir casos manualmente</a></li>
+<li class="chapter" data-level="2.2.9" data-path="manejo-de-datos-con-r.html"><a href="manejo-de-datos-con-r.html#crear-vector-de-nombres"><i class="fa fa-check"></i><b>2.2.9</b> Crear vector de nombres</a></li>
+<li class="chapter" data-level="2.2.10" data-path="manejo-de-datos-con-r.html"><a href="manejo-de-datos-con-r.html#añadir-vector-a-una-matriz"><i class="fa fa-check"></i><b>2.2.10</b> Añadir vector a una matriz</a></li>
+<li class="chapter" data-level="2.2.11" data-path="manejo-de-datos-con-r.html"><a href="manejo-de-datos-con-r.html#contar-hacia-abajo"><i class="fa fa-check"></i><b>2.2.11</b> Contar hacia abajo</a></li>
+<li class="chapter" data-level="2.2.12" data-path="manejo-de-datos-con-r.html"><a href="manejo-de-datos-con-r.html#usar-output-como-texto-de-vector"><i class="fa fa-check"></i><b>2.2.12</b> Usar output como texto de vector</a></li>
 </ul></li>
-<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#limpieza-de-datos"><i class="fa fa-check"></i><b>1.3</b> Limpieza de datos</a><ul>
-<li class="chapter" data-level="1.3.0.1" data-path="index.html"><a href="index.html#seleccionar-variables"><i class="fa fa-check"></i><b>1.3.0.1</b> Seleccionar variables</a></li>
-<li class="chapter" data-level="1.3.0.2" data-path="index.html"><a href="index.html#reordenar-columnas"><i class="fa fa-check"></i><b>1.3.0.2</b> Reordenar columnas</a></li>
-<li class="chapter" data-level="1.3.0.3" data-path="index.html"><a href="index.html#ordenar-datos"><i class="fa fa-check"></i><b>1.3.0.3</b> Ordenar datos</a></li>
-<li class="chapter" data-level="1.3.0.4" data-path="index.html"><a href="index.html#cambiar-tipo-de-datos"><i class="fa fa-check"></i><b>1.3.0.4</b> Cambiar tipo de datos</a></li>
-<li class="chapter" data-level="1.3.0.5" data-path="index.html"><a href="index.html#filtrar-datos"><i class="fa fa-check"></i><b>1.3.0.5</b> Filtrar datos</a></li>
-<li class="chapter" data-level="1.3.0.6" data-path="index.html"><a href="index.html#convertir-datos-a-tibble"><i class="fa fa-check"></i><b>1.3.0.6</b> Convertir datos a tibble</a></li>
-<li class="chapter" data-level="1.3.0.7" data-path="index.html"><a href="index.html#cortar-datos-o-eliminar-filas"><i class="fa fa-check"></i><b>1.3.0.7</b> Cortar datos o eliminar filas</a></li>
-<li class="chapter" data-level="1.3.0.8" data-path="index.html"><a href="index.html#eliminar-más-de-una-palabra-a-la-vez"><i class="fa fa-check"></i><b>1.3.0.8</b> Eliminar más de una palabra a la vez</a></li>
-<li class="chapter" data-level="1.3.0.9" data-path="index.html"><a href="index.html#reemplazar-más-de-una-palabra-a-la-vez"><i class="fa fa-check"></i><b>1.3.0.9</b> Reemplazar más de una palabra a la vez</a></li>
-<li class="chapter" data-level="1.3.0.10" data-path="index.html"><a href="index.html#eliminar-caracteres-especiales-de-un-texto"><i class="fa fa-check"></i><b>1.3.0.10</b> Eliminar caracteres especiales de un texto</a></li>
-<li class="chapter" data-level="1.3.0.11" data-path="index.html"><a href="index.html#filtrar-columnas-en-base-a-condición"><i class="fa fa-check"></i><b>1.3.0.11</b> Filtrar columnas en base a condición</a></li>
-<li class="chapter" data-level="1.3.0.12" data-path="index.html"><a href="index.html#limpiar-números"><i class="fa fa-check"></i><b>1.3.0.12</b> Limpiar números</a></li>
-<li class="chapter" data-level="1.3.0.13" data-path="index.html"><a href="index.html#reemplazar-datos-perdidos"><i class="fa fa-check"></i><b>1.3.0.13</b> Reemplazar datos perdidos</a></li>
-<li class="chapter" data-level="1.3.0.14" data-path="index.html"><a href="index.html#convertir-texto-vacío-a-missing"><i class="fa fa-check"></i><b>1.3.0.14</b> Convertir texto vacío a missing</a></li>
-<li class="chapter" data-level="1.3.0.15" data-path="index.html"><a href="index.html#recodificar-a-missing"><i class="fa fa-check"></i><b>1.3.0.15</b> Recodificar a missing</a></li>
-<li class="chapter" data-level="1.3.0.16" data-path="index.html"><a href="index.html#datos-perdidos"><i class="fa fa-check"></i><b>1.3.0.16</b> Datos perdidos</a></li>
-<li class="chapter" data-level="1.3.0.17" data-path="index.html"><a href="index.html#filtrar-datos-perdidos"><i class="fa fa-check"></i><b>1.3.0.17</b> Filtrar datos perdidos</a></li>
-<li class="chapter" data-level="1.3.0.18" data-path="index.html"><a href="index.html#filtrar-datos-perdidos-en-varias-columnas"><i class="fa fa-check"></i><b>1.3.0.18</b> Filtrar datos perdidos en varias columnas</a></li>
-<li class="chapter" data-level="1.3.0.19" data-path="index.html"><a href="index.html#limpiar-nombres-de-variables"><i class="fa fa-check"></i><b>1.3.0.19</b> Limpiar nombres de variables</a></li>
-<li class="chapter" data-level="1.3.0.20" data-path="index.html"><a href="index.html#ordenar-columnas-alfabéticamente"><i class="fa fa-check"></i><b>1.3.0.20</b> Ordenar columnas alfabéticamente</a></li>
-<li class="chapter" data-level="1.3.0.21" data-path="index.html"><a href="index.html#renombrar-todas-las-columnas"><i class="fa fa-check"></i><b>1.3.0.21</b> Renombrar todas las columnas</a></li>
-<li class="chapter" data-level="1.3.0.22" data-path="index.html"><a href="index.html#renombrar-columnas-con-base"><i class="fa fa-check"></i><b>1.3.0.22</b> Renombrar columnas con base</a></li>
-<li class="chapter" data-level="1.3.0.23" data-path="index.html"><a href="index.html#renombrar-variables-o-columnas"><i class="fa fa-check"></i><b>1.3.0.23</b> Renombrar variables o columnas</a></li>
-<li class="chapter" data-level="1.3.0.24" data-path="index.html"><a href="index.html#añadir-sufijo-a-nombres-de-columnas"><i class="fa fa-check"></i><b>1.3.0.24</b> Añadir sufijo a nombres de columnas</a></li>
-<li class="chapter" data-level="1.3.0.25" data-path="index.html"><a href="index.html#eliminar-un-término-en-el-título-de-variables"><i class="fa fa-check"></i><b>1.3.0.25</b> Eliminar un término en el título de variables</a></li>
-<li class="chapter" data-level="1.3.0.26" data-path="index.html"><a href="index.html#rellenar-casos"><i class="fa fa-check"></i><b>1.3.0.26</b> Rellenar casos</a></li>
-<li class="chapter" data-level="1.3.0.27" data-path="index.html"><a href="index.html#convertir-fechas-de-excel"><i class="fa fa-check"></i><b>1.3.0.27</b> Convertir fechas de Excel</a></li>
-<li class="chapter" data-level="1.3.0.28" data-path="index.html"><a href="index.html#eliminar-una-categoría"><i class="fa fa-check"></i><b>1.3.0.28</b> Eliminar una categoría</a></li>
-<li class="chapter" data-level="1.3.0.29" data-path="index.html"><a href="index.html#añadir-identificadores-o-folio"><i class="fa fa-check"></i><b>1.3.0.29</b> Añadir identificadores o folio</a></li>
-<li class="chapter" data-level="1.3.0.30" data-path="index.html"><a href="index.html#remover-texto-de-una-categoría"><i class="fa fa-check"></i><b>1.3.0.30</b> Remover texto de una categoría</a></li>
-<li class="chapter" data-level="1.3.0.31" data-path="index.html"><a href="index.html#borrar-espacios-antes-y-después"><i class="fa fa-check"></i><b>1.3.0.31</b> Borrar espacios antes y después</a></li>
-<li class="chapter" data-level="1.3.0.32" data-path="index.html"><a href="index.html#agregar-caracteres-antes-o-después"><i class="fa fa-check"></i><b>1.3.0.32</b> Agregar caracteres antes o después</a></li>
-<li class="chapter" data-level="1.3.0.33" data-path="index.html"><a href="index.html#detectar-patrones-en-texto"><i class="fa fa-check"></i><b>1.3.0.33</b> Detectar patrones en texto</a></li>
-<li class="chapter" data-level="1.3.0.34" data-path="index.html"><a href="index.html#buscar-y-reemplazar-valores"><i class="fa fa-check"></i><b>1.3.0.34</b> Buscar y reemplazar valores</a></li>
-<li class="chapter" data-level="1.3.0.35" data-path="index.html"><a href="index.html#filtrar-outliers"><i class="fa fa-check"></i><b>1.3.0.35</b> Filtrar outliers</a></li>
-<li class="chapter" data-level="1.3.0.36" data-path="index.html"><a href="index.html#convertir-valores-a-mayúsculas-o-minúsculas"><i class="fa fa-check"></i><b>1.3.0.36</b> Convertir valores a mayúsculas o minúsculas:</a></li>
-<li class="chapter" data-level="1.3.0.37" data-path="index.html"><a href="index.html#borrar-prefijo-de-variables"><i class="fa fa-check"></i><b>1.3.0.37</b> Borrar prefijo de variables</a></li>
-<li class="chapter" data-level="1.3.0.38" data-path="index.html"><a href="index.html#rellenar-las-fechas-en-una-serie-de-tiempo"><i class="fa fa-check"></i><b>1.3.0.38</b> Rellenar las fechas en una serie de tiempo</a></li>
-<li class="chapter" data-level="1.3.0.39" data-path="index.html"><a href="index.html#ejemplos-de-regex-en-r"><i class="fa fa-check"></i><b>1.3.0.39</b> Ejemplos de Regex en R</a></li>
-<li class="chapter" data-level="1.3.0.40" data-path="index.html"><a href="index.html#fechas"><i class="fa fa-check"></i><b>1.3.0.40</b> Fechas</a></li>
-<li class="chapter" data-level="1.3.0.41" data-path="index.html"><a href="index.html#agrupar-datos"><i class="fa fa-check"></i><b>1.3.0.41</b> Agrupar datos</a></li>
-<li class="chapter" data-level="1.3.0.42" data-path="index.html"><a href="index.html#crear-variables"><i class="fa fa-check"></i><b>1.3.0.42</b> Crear variables</a></li>
-<li class="chapter" data-level="1.3.0.43" data-path="index.html"><a href="index.html#crear-variable-categórica"><i class="fa fa-check"></i><b>1.3.0.43</b> Crear variable categórica</a></li>
+<li class="chapter" data-level="2.3" data-path="manejo-de-datos-con-r.html"><a href="manejo-de-datos-con-r.html#limpieza-de-datos"><i class="fa fa-check"></i><b>2.3</b> Limpieza de datos</a><ul>
+<li class="chapter" data-level="2.3.1" data-path="manejo-de-datos-con-r.html"><a href="manejo-de-datos-con-r.html#seleccionar-variables"><i class="fa fa-check"></i><b>2.3.1</b> Seleccionar variables</a></li>
+<li class="chapter" data-level="2.3.2" data-path="manejo-de-datos-con-r.html"><a href="manejo-de-datos-con-r.html#reordenar-columnas"><i class="fa fa-check"></i><b>2.3.2</b> Reordenar columnas</a></li>
+<li class="chapter" data-level="2.3.3" data-path="manejo-de-datos-con-r.html"><a href="manejo-de-datos-con-r.html#ordenar-datos"><i class="fa fa-check"></i><b>2.3.3</b> Ordenar datos</a></li>
+<li class="chapter" data-level="2.3.4" data-path="manejo-de-datos-con-r.html"><a href="manejo-de-datos-con-r.html#cambiar-tipo-de-datos"><i class="fa fa-check"></i><b>2.3.4</b> Cambiar tipo de datos</a></li>
+<li class="chapter" data-level="2.3.5" data-path="manejo-de-datos-con-r.html"><a href="manejo-de-datos-con-r.html#filtrar-datos"><i class="fa fa-check"></i><b>2.3.5</b> Filtrar datos</a></li>
+<li class="chapter" data-level="2.3.6" data-path="manejo-de-datos-con-r.html"><a href="manejo-de-datos-con-r.html#convertir-datos-a-tibble"><i class="fa fa-check"></i><b>2.3.6</b> Convertir datos a tibble</a></li>
+<li class="chapter" data-level="2.3.7" data-path="manejo-de-datos-con-r.html"><a href="manejo-de-datos-con-r.html#cortar-datos-o-eliminar-filas"><i class="fa fa-check"></i><b>2.3.7</b> Cortar datos o eliminar filas</a></li>
+<li class="chapter" data-level="2.3.8" data-path="manejo-de-datos-con-r.html"><a href="manejo-de-datos-con-r.html#eliminar-más-de-una-palabra-a-la-vez"><i class="fa fa-check"></i><b>2.3.8</b> Eliminar más de una palabra a la vez</a></li>
+<li class="chapter" data-level="2.3.9" data-path="manejo-de-datos-con-r.html"><a href="manejo-de-datos-con-r.html#reemplazar-más-de-una-palabra-a-la-vez"><i class="fa fa-check"></i><b>2.3.9</b> Reemplazar más de una palabra a la vez</a></li>
+<li class="chapter" data-level="2.3.10" data-path="manejo-de-datos-con-r.html"><a href="manejo-de-datos-con-r.html#eliminar-caracteres-especiales-de-un-texto"><i class="fa fa-check"></i><b>2.3.10</b> Eliminar caracteres especiales de un texto</a></li>
+<li class="chapter" data-level="2.3.11" data-path="manejo-de-datos-con-r.html"><a href="manejo-de-datos-con-r.html#filtrar-columnas-en-base-a-condición"><i class="fa fa-check"></i><b>2.3.11</b> Filtrar columnas en base a condición</a></li>
+<li class="chapter" data-level="2.3.12" data-path="manejo-de-datos-con-r.html"><a href="manejo-de-datos-con-r.html#limpiar-números"><i class="fa fa-check"></i><b>2.3.12</b> Limpiar números</a></li>
+<li class="chapter" data-level="2.3.13" data-path="manejo-de-datos-con-r.html"><a href="manejo-de-datos-con-r.html#reemplazar-datos-perdidos"><i class="fa fa-check"></i><b>2.3.13</b> Reemplazar datos perdidos</a></li>
+<li class="chapter" data-level="2.3.14" data-path="manejo-de-datos-con-r.html"><a href="manejo-de-datos-con-r.html#convertir-texto-vacío-a-missing"><i class="fa fa-check"></i><b>2.3.14</b> Convertir texto vacío a missing</a></li>
+<li class="chapter" data-level="2.3.15" data-path="manejo-de-datos-con-r.html"><a href="manejo-de-datos-con-r.html#recodificar-a-missing"><i class="fa fa-check"></i><b>2.3.15</b> Recodificar a missing</a></li>
+<li class="chapter" data-level="2.3.16" data-path="manejo-de-datos-con-r.html"><a href="manejo-de-datos-con-r.html#datos-perdidos"><i class="fa fa-check"></i><b>2.3.16</b> Datos perdidos</a></li>
+<li class="chapter" data-level="2.3.17" data-path="manejo-de-datos-con-r.html"><a href="manejo-de-datos-con-r.html#filtrar-datos-perdidos"><i class="fa fa-check"></i><b>2.3.17</b> Filtrar datos perdidos</a></li>
+<li class="chapter" data-level="2.3.18" data-path="manejo-de-datos-con-r.html"><a href="manejo-de-datos-con-r.html#filtrar-datos-perdidos-en-varias-columnas"><i class="fa fa-check"></i><b>2.3.18</b> Filtrar datos perdidos en varias columnas</a></li>
+<li class="chapter" data-level="2.3.19" data-path="manejo-de-datos-con-r.html"><a href="manejo-de-datos-con-r.html#limpiar-nombres-de-variables"><i class="fa fa-check"></i><b>2.3.19</b> Limpiar nombres de variables</a></li>
+<li class="chapter" data-level="2.3.20" data-path="manejo-de-datos-con-r.html"><a href="manejo-de-datos-con-r.html#ordenar-columnas-alfabéticamente"><i class="fa fa-check"></i><b>2.3.20</b> Ordenar columnas alfabéticamente</a></li>
+<li class="chapter" data-level="2.3.21" data-path="manejo-de-datos-con-r.html"><a href="manejo-de-datos-con-r.html#renombrar-todas-las-columnas"><i class="fa fa-check"></i><b>2.3.21</b> Renombrar todas las columnas</a></li>
+<li class="chapter" data-level="2.3.22" data-path="manejo-de-datos-con-r.html"><a href="manejo-de-datos-con-r.html#renombrar-columnas-con-base"><i class="fa fa-check"></i><b>2.3.22</b> Renombrar columnas con base</a></li>
+<li class="chapter" data-level="2.3.23" data-path="manejo-de-datos-con-r.html"><a href="manejo-de-datos-con-r.html#renombrar-variables-o-columnas"><i class="fa fa-check"></i><b>2.3.23</b> Renombrar variables o columnas</a></li>
+<li class="chapter" data-level="2.3.24" data-path="manejo-de-datos-con-r.html"><a href="manejo-de-datos-con-r.html#añadir-sufijo-a-nombres-de-columnas"><i class="fa fa-check"></i><b>2.3.24</b> Añadir sufijo a nombres de columnas</a></li>
+<li class="chapter" data-level="2.3.25" data-path="manejo-de-datos-con-r.html"><a href="manejo-de-datos-con-r.html#eliminar-un-término-en-el-título-de-variables"><i class="fa fa-check"></i><b>2.3.25</b> Eliminar un término en el título de variables</a></li>
+<li class="chapter" data-level="2.3.26" data-path="manejo-de-datos-con-r.html"><a href="manejo-de-datos-con-r.html#rellenar-casos"><i class="fa fa-check"></i><b>2.3.26</b> Rellenar casos</a></li>
+<li class="chapter" data-level="2.3.27" data-path="manejo-de-datos-con-r.html"><a href="manejo-de-datos-con-r.html#convertir-fechas-de-excel"><i class="fa fa-check"></i><b>2.3.27</b> Convertir fechas de Excel</a></li>
+<li class="chapter" data-level="2.3.28" data-path="manejo-de-datos-con-r.html"><a href="manejo-de-datos-con-r.html#eliminar-una-categoría"><i class="fa fa-check"></i><b>2.3.28</b> Eliminar una categoría</a></li>
+<li class="chapter" data-level="2.3.29" data-path="manejo-de-datos-con-r.html"><a href="manejo-de-datos-con-r.html#añadir-identificadores-o-folio"><i class="fa fa-check"></i><b>2.3.29</b> Añadir identificadores o folio</a></li>
+<li class="chapter" data-level="2.3.30" data-path="manejo-de-datos-con-r.html"><a href="manejo-de-datos-con-r.html#remover-texto-de-una-categoría"><i class="fa fa-check"></i><b>2.3.30</b> Remover texto de una categoría</a></li>
+<li class="chapter" data-level="2.3.31" data-path="manejo-de-datos-con-r.html"><a href="manejo-de-datos-con-r.html#borrar-espacios-antes-y-después"><i class="fa fa-check"></i><b>2.3.31</b> Borrar espacios antes y después</a></li>
+<li class="chapter" data-level="2.3.32" data-path="manejo-de-datos-con-r.html"><a href="manejo-de-datos-con-r.html#agregar-caracteres-antes-o-después"><i class="fa fa-check"></i><b>2.3.32</b> Agregar caracteres antes o después</a></li>
+<li class="chapter" data-level="2.3.33" data-path="manejo-de-datos-con-r.html"><a href="manejo-de-datos-con-r.html#detectar-patrones-en-texto"><i class="fa fa-check"></i><b>2.3.33</b> Detectar patrones en texto</a></li>
+<li class="chapter" data-level="2.3.34" data-path="manejo-de-datos-con-r.html"><a href="manejo-de-datos-con-r.html#buscar-y-reemplazar-valores"><i class="fa fa-check"></i><b>2.3.34</b> Buscar y reemplazar valores</a></li>
+<li class="chapter" data-level="2.3.35" data-path="manejo-de-datos-con-r.html"><a href="manejo-de-datos-con-r.html#filtrar-outliers"><i class="fa fa-check"></i><b>2.3.35</b> Filtrar outliers</a></li>
+<li class="chapter" data-level="2.3.36" data-path="manejo-de-datos-con-r.html"><a href="manejo-de-datos-con-r.html#convertir-valores-a-mayúsculas-o-minúsculas"><i class="fa fa-check"></i><b>2.3.36</b> Convertir valores a mayúsculas o minúsculas:</a></li>
+<li class="chapter" data-level="2.3.37" data-path="manejo-de-datos-con-r.html"><a href="manejo-de-datos-con-r.html#borrar-prefijo-de-variables"><i class="fa fa-check"></i><b>2.3.37</b> Borrar prefijo de variables</a></li>
+<li class="chapter" data-level="2.3.38" data-path="manejo-de-datos-con-r.html"><a href="manejo-de-datos-con-r.html#rellenar-las-fechas-en-una-serie-de-tiempo"><i class="fa fa-check"></i><b>2.3.38</b> Rellenar las fechas en una serie de tiempo</a></li>
+<li class="chapter" data-level="2.3.39" data-path="manejo-de-datos-con-r.html"><a href="manejo-de-datos-con-r.html#ejemplos-de-regex-en-r"><i class="fa fa-check"></i><b>2.3.39</b> Ejemplos de Regex en R</a></li>
+<li class="chapter" data-level="2.3.40" data-path="manejo-de-datos-con-r.html"><a href="manejo-de-datos-con-r.html#fechas"><i class="fa fa-check"></i><b>2.3.40</b> Fechas</a></li>
+<li class="chapter" data-level="2.3.41" data-path="manejo-de-datos-con-r.html"><a href="manejo-de-datos-con-r.html#agrupar-datos"><i class="fa fa-check"></i><b>2.3.41</b> Agrupar datos</a></li>
+<li class="chapter" data-level="2.3.42" data-path="manejo-de-datos-con-r.html"><a href="manejo-de-datos-con-r.html#crear-variables"><i class="fa fa-check"></i><b>2.3.42</b> Crear variables</a></li>
+<li class="chapter" data-level="2.3.43" data-path="manejo-de-datos-con-r.html"><a href="manejo-de-datos-con-r.html#crear-variable-categórica"><i class="fa fa-check"></i><b>2.3.43</b> Crear variable categórica</a></li>
 </ul></li>
-<li class="chapter" data-level="1.4" data-path="index.html"><a href="index.html#recodificación-de-datos"><i class="fa fa-check"></i><b>1.4</b> Recodificación de datos</a><ul>
-<li class="chapter" data-level="1.4.0.1" data-path="index.html"><a href="index.html#recodificar-variables"><i class="fa fa-check"></i><b>1.4.0.1</b> Recodificar variables</a></li>
-<li class="chapter" data-level="1.4.0.2" data-path="index.html"><a href="index.html#crear-una-variable-a-partir-de-operaciones"><i class="fa fa-check"></i><b>1.4.0.2</b> Crear una variable a partir de operaciones</a></li>
-<li class="chapter" data-level="1.4.0.3" data-path="index.html"><a href="index.html#recodificar-con-base"><i class="fa fa-check"></i><b>1.4.0.3</b> Recodificar con base</a></li>
-<li class="chapter" data-level="1.4.0.4" data-path="index.html"><a href="index.html#crear-variable-desde-condicional"><i class="fa fa-check"></i><b>1.4.0.4</b> Crear variable desde condicional</a></li>
-<li class="chapter" data-level="1.4.0.5" data-path="index.html"><a href="index.html#recodificación-según-condiciones"><i class="fa fa-check"></i><b>1.4.0.5</b> Recodificación según condiciones</a></li>
-<li class="chapter" data-level="1.4.0.6" data-path="index.html"><a href="index.html#convertir-caracter-a-factor"><i class="fa fa-check"></i><b>1.4.0.6</b> Convertir caracter a factor</a></li>
-<li class="chapter" data-level="1.4.0.7" data-path="index.html"><a href="index.html#etiquetar-variables"><i class="fa fa-check"></i><b>1.4.0.7</b> Etiquetar variables</a></li>
-<li class="chapter" data-level="1.4.0.8" data-path="index.html"><a href="index.html#manipulación-de-objetos-con-base"><i class="fa fa-check"></i><b>1.4.0.8</b> Manipulación de objetos con base</a></li>
-<li class="chapter" data-level="1.4.0.9" data-path="index.html"><a href="index.html#crear-variable-de-interacción"><i class="fa fa-check"></i><b>1.4.0.9</b> Crear variable de interacción</a></li>
-<li class="chapter" data-level="1.4.0.10" data-path="index.html"><a href="index.html#recodificar-meses-a-texto"><i class="fa fa-check"></i><b>1.4.0.10</b> Recodificar meses a texto</a></li>
-<li class="chapter" data-level="1.4.0.11" data-path="index.html"><a href="index.html#calcular-promedio-móvil"><i class="fa fa-check"></i><b>1.4.0.11</b> Calcular promedio móvil</a></li>
-<li class="chapter" data-level="1.4.0.12" data-path="index.html"><a href="index.html#aplicar-mutate-a-varias-columnas"><i class="fa fa-check"></i><b>1.4.0.12</b> Aplicar mutate a varias columnas</a></li>
-<li class="chapter" data-level="1.4.0.13" data-path="index.html"><a href="index.html#convertir-a-logaritmos"><i class="fa fa-check"></i><b>1.4.0.13</b> Convertir a logaritmos</a></li>
-<li class="chapter" data-level="1.4.0.14" data-path="index.html"><a href="index.html#crear-categoría-otros"><i class="fa fa-check"></i><b>1.4.0.14</b> Crear categoría “otros”</a></li>
-<li class="chapter" data-level="1.4.0.15" data-path="index.html"><a href="index.html#combinar-categorías"><i class="fa fa-check"></i><b>1.4.0.15</b> Combinar categorías</a></li>
-<li class="chapter" data-level="1.4.0.16" data-path="index.html"><a href="index.html#dicotomizar-la-variable-de-respuesta"><i class="fa fa-check"></i><b>1.4.0.16</b> Dicotomizar la variable de respuesta:</a></li>
-<li class="chapter" data-level="1.4.0.17" data-path="index.html"><a href="index.html#recodificar-categoría-si-coincide-con-texto"><i class="fa fa-check"></i><b>1.4.0.17</b> Recodificar categoría si coincide con texto</a></li>
-<li class="chapter" data-level="1.4.0.18" data-path="index.html"><a href="index.html#reemplazar-un-valor-por-otro"><i class="fa fa-check"></i><b>1.4.0.18</b> Reemplazar un valor por otro</a></li>
-<li class="chapter" data-level="1.4.0.19" data-path="index.html"><a href="index.html#crear-columna-que-sea-la-diferencia-entre-los-valores-de-otra"><i class="fa fa-check"></i><b>1.4.0.19</b> Crear columna que sea la diferencia entre los valores de otra</a></li>
-<li class="chapter" data-level="1.4.0.20" data-path="index.html"><a href="index.html#renombrar-categorías"><i class="fa fa-check"></i><b>1.4.0.20</b> Renombrar categorías</a></li>
-<li class="chapter" data-level="1.4.0.21" data-path="index.html"><a href="index.html#añadir-columna-con-porcentaje"><i class="fa fa-check"></i><b>1.4.0.21</b> Añadir columna con porcentaje</a></li>
-<li class="chapter" data-level="1.4.0.22" data-path="index.html"><a href="index.html#añadir-columna-con-promedio"><i class="fa fa-check"></i><b>1.4.0.22</b> Añadir columna con promedio</a></li>
-<li class="chapter" data-level="1.4.0.23" data-path="index.html"><a href="index.html#calcular-tasa"><i class="fa fa-check"></i><b>1.4.0.23</b> Calcular tasa</a></li>
-<li class="chapter" data-level="1.4.0.24" data-path="index.html"><a href="index.html#dicotomizar-variables"><i class="fa fa-check"></i><b>1.4.0.24</b> Dicotomizar variables</a></li>
-<li class="chapter" data-level="1.4.0.25" data-path="index.html"><a href="index.html#cortar-una-variable-continua-a-factores"><i class="fa fa-check"></i><b>1.4.0.25</b> Cortar una variable continua a factores</a></li>
-<li class="chapter" data-level="1.4.0.26" data-path="index.html"><a href="index.html#reordenar-factores"><i class="fa fa-check"></i><b>1.4.0.26</b> Reordenar factores</a></li>
-<li class="chapter" data-level="1.4.0.27" data-path="index.html"><a href="index.html#crear-columna-que-tenga-los-valores-de-una-categoría-de-una-columna-en-formato-long"><i class="fa fa-check"></i><b>1.4.0.27</b> Crear columna que tenga los valores de una categoría de una columna en formato long</a></li>
+<li class="chapter" data-level="2.4" data-path="manejo-de-datos-con-r.html"><a href="manejo-de-datos-con-r.html#recodificación-de-datos"><i class="fa fa-check"></i><b>2.4</b> Recodificación de datos</a><ul>
+<li class="chapter" data-level="2.4.1" data-path="manejo-de-datos-con-r.html"><a href="manejo-de-datos-con-r.html#recodificar-variables"><i class="fa fa-check"></i><b>2.4.1</b> Recodificar variables</a></li>
+<li class="chapter" data-level="2.4.2" data-path="manejo-de-datos-con-r.html"><a href="manejo-de-datos-con-r.html#crear-una-variable-a-partir-de-operaciones"><i class="fa fa-check"></i><b>2.4.2</b> Crear una variable a partir de operaciones</a></li>
+<li class="chapter" data-level="2.4.3" data-path="manejo-de-datos-con-r.html"><a href="manejo-de-datos-con-r.html#recodificar-con-base"><i class="fa fa-check"></i><b>2.4.3</b> Recodificar con base</a></li>
+<li class="chapter" data-level="2.4.4" data-path="manejo-de-datos-con-r.html"><a href="manejo-de-datos-con-r.html#crear-variable-desde-condicional"><i class="fa fa-check"></i><b>2.4.4</b> Crear variable desde condicional</a></li>
+<li class="chapter" data-level="2.4.5" data-path="manejo-de-datos-con-r.html"><a href="manejo-de-datos-con-r.html#recodificación-según-condiciones"><i class="fa fa-check"></i><b>2.4.5</b> Recodificación según condiciones</a></li>
+<li class="chapter" data-level="2.4.6" data-path="manejo-de-datos-con-r.html"><a href="manejo-de-datos-con-r.html#convertir-caracter-a-factor"><i class="fa fa-check"></i><b>2.4.6</b> Convertir caracter a factor</a></li>
+<li class="chapter" data-level="2.4.7" data-path="manejo-de-datos-con-r.html"><a href="manejo-de-datos-con-r.html#etiquetar-variables"><i class="fa fa-check"></i><b>2.4.7</b> Etiquetar variables</a></li>
+<li class="chapter" data-level="2.4.8" data-path="manejo-de-datos-con-r.html"><a href="manejo-de-datos-con-r.html#manipulación-de-objetos-con-base"><i class="fa fa-check"></i><b>2.4.8</b> Manipulación de objetos con base</a></li>
+<li class="chapter" data-level="2.4.9" data-path="manejo-de-datos-con-r.html"><a href="manejo-de-datos-con-r.html#crear-variable-de-interacción"><i class="fa fa-check"></i><b>2.4.9</b> Crear variable de interacción</a></li>
+<li class="chapter" data-level="2.4.10" data-path="manejo-de-datos-con-r.html"><a href="manejo-de-datos-con-r.html#recodificar-meses-a-texto"><i class="fa fa-check"></i><b>2.4.10</b> Recodificar meses a texto</a></li>
+<li class="chapter" data-level="2.4.11" data-path="manejo-de-datos-con-r.html"><a href="manejo-de-datos-con-r.html#calcular-promedio-móvil"><i class="fa fa-check"></i><b>2.4.11</b> Calcular promedio móvil</a></li>
+<li class="chapter" data-level="2.4.12" data-path="manejo-de-datos-con-r.html"><a href="manejo-de-datos-con-r.html#aplicar-mutate-a-varias-columnas"><i class="fa fa-check"></i><b>2.4.12</b> Aplicar mutate a varias columnas</a></li>
+<li class="chapter" data-level="2.4.13" data-path="manejo-de-datos-con-r.html"><a href="manejo-de-datos-con-r.html#convertir-a-logaritmos"><i class="fa fa-check"></i><b>2.4.13</b> Convertir a logaritmos</a></li>
+<li class="chapter" data-level="2.4.14" data-path="manejo-de-datos-con-r.html"><a href="manejo-de-datos-con-r.html#crear-categoría-otros"><i class="fa fa-check"></i><b>2.4.14</b> Crear categoría “otros”</a></li>
+<li class="chapter" data-level="2.4.15" data-path="manejo-de-datos-con-r.html"><a href="manejo-de-datos-con-r.html#combinar-categorías"><i class="fa fa-check"></i><b>2.4.15</b> Combinar categorías</a></li>
+<li class="chapter" data-level="2.4.16" data-path="manejo-de-datos-con-r.html"><a href="manejo-de-datos-con-r.html#dicotomizar-la-variable-de-respuesta"><i class="fa fa-check"></i><b>2.4.16</b> Dicotomizar la variable de respuesta:</a></li>
+<li class="chapter" data-level="2.4.17" data-path="manejo-de-datos-con-r.html"><a href="manejo-de-datos-con-r.html#recodificar-categoría-si-coincide-con-texto"><i class="fa fa-check"></i><b>2.4.17</b> Recodificar categoría si coincide con texto</a></li>
+<li class="chapter" data-level="2.4.18" data-path="manejo-de-datos-con-r.html"><a href="manejo-de-datos-con-r.html#reemplazar-un-valor-por-otro"><i class="fa fa-check"></i><b>2.4.18</b> Reemplazar un valor por otro</a></li>
+<li class="chapter" data-level="2.4.19" data-path="manejo-de-datos-con-r.html"><a href="manejo-de-datos-con-r.html#crear-columna-que-sea-la-diferencia-entre-los-valores-de-otra"><i class="fa fa-check"></i><b>2.4.19</b> Crear columna que sea la diferencia entre los valores de otra</a></li>
+<li class="chapter" data-level="2.4.20" data-path="manejo-de-datos-con-r.html"><a href="manejo-de-datos-con-r.html#renombrar-categorías"><i class="fa fa-check"></i><b>2.4.20</b> Renombrar categorías</a></li>
+<li class="chapter" data-level="2.4.21" data-path="manejo-de-datos-con-r.html"><a href="manejo-de-datos-con-r.html#añadir-columna-con-porcentaje"><i class="fa fa-check"></i><b>2.4.21</b> Añadir columna con porcentaje</a></li>
+<li class="chapter" data-level="2.4.22" data-path="manejo-de-datos-con-r.html"><a href="manejo-de-datos-con-r.html#añadir-columna-con-promedio"><i class="fa fa-check"></i><b>2.4.22</b> Añadir columna con promedio</a></li>
+<li class="chapter" data-level="2.4.23" data-path="manejo-de-datos-con-r.html"><a href="manejo-de-datos-con-r.html#calcular-tasa"><i class="fa fa-check"></i><b>2.4.23</b> Calcular tasa</a></li>
+<li class="chapter" data-level="2.4.24" data-path="manejo-de-datos-con-r.html"><a href="manejo-de-datos-con-r.html#dicotomizar-variables"><i class="fa fa-check"></i><b>2.4.24</b> Dicotomizar variables</a></li>
+<li class="chapter" data-level="2.4.25" data-path="manejo-de-datos-con-r.html"><a href="manejo-de-datos-con-r.html#cortar-una-variable-continua-a-factores"><i class="fa fa-check"></i><b>2.4.25</b> Cortar una variable continua a factores</a></li>
+<li class="chapter" data-level="2.4.26" data-path="manejo-de-datos-con-r.html"><a href="manejo-de-datos-con-r.html#reordenar-factores"><i class="fa fa-check"></i><b>2.4.26</b> Reordenar factores</a></li>
+<li class="chapter" data-level="2.4.27" data-path="manejo-de-datos-con-r.html"><a href="manejo-de-datos-con-r.html#crear-columna-que-tenga-los-valores-de-una-categoría-de-una-columna-en-formato-long"><i class="fa fa-check"></i><b>2.4.27</b> Crear columna que tenga los valores de una categoría de una columna en formato long</a></li>
 </ul></li>
-<li class="chapter" data-level="1.5" data-path="index.html"><a href="index.html#estructura-de-datos"><i class="fa fa-check"></i><b>1.5</b> Estructura de datos</a><ul>
-<li class="chapter" data-level="1.5.0.1" data-path="index.html"><a href="index.html#desordenar-una-base"><i class="fa fa-check"></i><b>1.5.0.1</b> Desordenar una base</a></li>
-<li class="chapter" data-level="1.5.0.2" data-path="index.html"><a href="index.html#convertir-a-tidy"><i class="fa fa-check"></i><b>1.5.0.2</b> Convertir a tidy</a></li>
-<li class="chapter" data-level="1.5.0.3" data-path="index.html"><a href="index.html#tidyr-1.0"><i class="fa fa-check"></i><b>1.5.0.3</b> Tidyr 1.0</a></li>
-<li class="chapter" data-level="1.5.0.4" data-path="index.html"><a href="index.html#trasponer-data-frame"><i class="fa fa-check"></i><b>1.5.0.4</b> Trasponer data frame</a></li>
-<li class="chapter" data-level="1.5.0.5" data-path="index.html"><a href="index.html#unir-dos-columnas"><i class="fa fa-check"></i><b>1.5.0.5</b> Unir dos columnas</a></li>
-<li class="chapter" data-level="1.5.0.6" data-path="index.html"><a href="index.html#separar-dos-columnas"><i class="fa fa-check"></i><b>1.5.0.6</b> Separar dos columnas</a></li>
-<li class="chapter" data-level="1.5.0.7" data-path="index.html"><a href="index.html#convertir-a-wide"><i class="fa fa-check"></i><b>1.5.0.7</b> Convertir a wide</a></li>
-<li class="chapter" data-level="1.5.0.8" data-path="index.html"><a href="index.html#anidar-datos"><i class="fa fa-check"></i><b>1.5.0.8</b> Anidar datos</a></li>
+<li class="chapter" data-level="2.5" data-path="manejo-de-datos-con-r.html"><a href="manejo-de-datos-con-r.html#estructura-de-datos"><i class="fa fa-check"></i><b>2.5</b> Estructura de datos</a><ul>
+<li class="chapter" data-level="2.5.1" data-path="manejo-de-datos-con-r.html"><a href="manejo-de-datos-con-r.html#desordenar-una-base"><i class="fa fa-check"></i><b>2.5.1</b> Desordenar una base</a></li>
+<li class="chapter" data-level="2.5.2" data-path="manejo-de-datos-con-r.html"><a href="manejo-de-datos-con-r.html#convertir-a-tidy"><i class="fa fa-check"></i><b>2.5.2</b> Convertir a tidy</a></li>
+<li class="chapter" data-level="2.5.3" data-path="manejo-de-datos-con-r.html"><a href="manejo-de-datos-con-r.html#tidyr-1.0"><i class="fa fa-check"></i><b>2.5.3</b> Tidyr 1.0</a></li>
+<li class="chapter" data-level="2.5.4" data-path="manejo-de-datos-con-r.html"><a href="manejo-de-datos-con-r.html#trasponer-data-frame"><i class="fa fa-check"></i><b>2.5.4</b> Trasponer data frame</a></li>
+<li class="chapter" data-level="2.5.5" data-path="manejo-de-datos-con-r.html"><a href="manejo-de-datos-con-r.html#unir-dos-columnas"><i class="fa fa-check"></i><b>2.5.5</b> Unir dos columnas</a></li>
+<li class="chapter" data-level="2.5.6" data-path="manejo-de-datos-con-r.html"><a href="manejo-de-datos-con-r.html#separar-dos-columnas"><i class="fa fa-check"></i><b>2.5.6</b> Separar dos columnas</a></li>
+<li class="chapter" data-level="2.5.7" data-path="manejo-de-datos-con-r.html"><a href="manejo-de-datos-con-r.html#convertir-a-wide"><i class="fa fa-check"></i><b>2.5.7</b> Convertir a wide</a></li>
+<li class="chapter" data-level="2.5.8" data-path="manejo-de-datos-con-r.html"><a href="manejo-de-datos-con-r.html#anidar-datos"><i class="fa fa-check"></i><b>2.5.8</b> Anidar datos</a></li>
 </ul></li>
-<li class="chapter" data-level="1.6" data-path="index.html"><a href="index.html#exportación-de-datos"><i class="fa fa-check"></i><b>1.6</b> Exportación de datos</a><ul>
-<li class="chapter" data-level="1.6.0.1" data-path="index.html"><a href="index.html#exportar-tablas"><i class="fa fa-check"></i><b>1.6.0.1</b> Exportar tablas</a></li>
-<li class="chapter" data-level="1.6.0.2" data-path="index.html"><a href="index.html#exportar-a-excel"><i class="fa fa-check"></i><b>1.6.0.2</b> Exportar a Excel</a></li>
-<li class="chapter" data-level="1.6.0.3" data-path="index.html"><a href="index.html#exportar-data-frame"><i class="fa fa-check"></i><b>1.6.0.3</b> Exportar data frame</a></li>
+<li class="chapter" data-level="2.6" data-path="manejo-de-datos-con-r.html"><a href="manejo-de-datos-con-r.html#exportación-de-datos"><i class="fa fa-check"></i><b>2.6</b> Exportación de datos</a><ul>
+<li class="chapter" data-level="2.6.1" data-path="manejo-de-datos-con-r.html"><a href="manejo-de-datos-con-r.html#exportar-tablas"><i class="fa fa-check"></i><b>2.6.1</b> Exportar tablas</a></li>
+<li class="chapter" data-level="2.6.2" data-path="manejo-de-datos-con-r.html"><a href="manejo-de-datos-con-r.html#exportar-a-excel"><i class="fa fa-check"></i><b>2.6.2</b> Exportar a Excel</a></li>
+<li class="chapter" data-level="2.6.3" data-path="manejo-de-datos-con-r.html"><a href="manejo-de-datos-con-r.html#exportar-data-frame"><i class="fa fa-check"></i><b>2.6.3</b> Exportar data frame</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="2" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html"><i class="fa fa-check"></i><b>2</b> Visualización de datos con R y ggplot2</a><ul>
-<li class="chapter" data-level="2.1" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#tipos-de-gráfico"><i class="fa fa-check"></i><b>2.1</b> Tipos de gráfico</a><ul>
-<li class="chapter" data-level="2.1.0.1" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#barras"><i class="fa fa-check"></i><b>2.1.0.1</b> Barras</a></li>
-<li class="chapter" data-level="2.1.0.2" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#dispersión"><i class="fa fa-check"></i><b>2.1.0.2</b> Dispersión</a></li>
-<li class="chapter" data-level="2.1.0.3" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#torta"><i class="fa fa-check"></i><b>2.1.0.3</b> Torta</a></li>
-<li class="chapter" data-level="2.1.0.4" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#densidad"><i class="fa fa-check"></i><b>2.1.0.4</b> Densidad</a></li>
-<li class="chapter" data-level="2.1.0.5" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#boxplot"><i class="fa fa-check"></i><b>2.1.0.5</b> Boxplot</a></li>
-<li class="chapter" data-level="2.1.0.6" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#curvas-y-modelos-lineales"><i class="fa fa-check"></i><b>2.1.0.6</b> Curvas y modelos lineales</a></li>
-<li class="chapter" data-level="2.1.0.7" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#barras-redondeadas"><i class="fa fa-check"></i><b>2.1.0.7</b> Barras redondeadas</a></li>
-<li class="chapter" data-level="2.1.0.8" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#nubes-de-palabras"><i class="fa fa-check"></i><b>2.1.0.8</b> Nubes de palabras</a></li>
-<li class="chapter" data-level="2.1.0.9" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#convertir-a-3d"><i class="fa fa-check"></i><b>2.1.0.9</b> Convertir a 3D</a></li>
-<li class="chapter" data-level="2.1.0.10" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#estadísticas-en-gráficos"><i class="fa fa-check"></i><b>2.1.0.10</b> Estadísticas en gráficos</a></li>
-<li class="chapter" data-level="2.1.0.11" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#crestas"><i class="fa fa-check"></i><b>2.1.0.11</b> Crestas</a></li>
-<li class="chapter" data-level="2.1.0.12" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#enjambre"><i class="fa fa-check"></i><b>2.1.0.12</b> Enjambre</a></li>
-<li class="chapter" data-level="2.1.0.13" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#violín"><i class="fa fa-check"></i><b>2.1.0.13</b> Violín</a></li>
-<li class="chapter" data-level="2.1.0.14" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#líneas"><i class="fa fa-check"></i><b>2.1.0.14</b> Líneas</a></li>
-<li class="chapter" data-level="2.1.0.15" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#histograma"><i class="fa fa-check"></i><b>2.1.0.15</b> Histograma</a></li>
-<li class="chapter" data-level="2.1.0.16" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#dumbell"><i class="fa fa-check"></i><b>2.1.0.16</b> Dumbell</a></li>
-<li class="chapter" data-level="2.1.0.17" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#mapas-de-calor"><i class="fa fa-check"></i><b>2.1.0.17</b> Mapas de calor</a></li>
-<li class="chapter" data-level="2.1.0.18" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#splom-scatterplot-matrix"><i class="fa fa-check"></i><b>2.1.0.18</b> Splom (scatterplot matrix)</a></li>
-<li class="chapter" data-level="2.1.0.19" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#matriz-de-correlación"><i class="fa fa-check"></i><b>2.1.0.19</b> Matriz de correlación</a></li>
-<li class="chapter" data-level="2.1.0.20" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#coordenadas-paralelas"><i class="fa fa-check"></i><b>2.1.0.20</b> Coordenadas paralelas</a></li>
-<li class="chapter" data-level="2.1.0.21" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#mapas"><i class="fa fa-check"></i><b>2.1.0.21</b> Mapas</a></li>
-<li class="chapter" data-level="2.1.0.22" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#mapa-de-densidad"><i class="fa fa-check"></i><b>2.1.0.22</b> Mapa de densidad</a></li>
-<li class="chapter" data-level="2.1.0.23" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#scatter"><i class="fa fa-check"></i><b>2.1.0.23</b> Scatter</a></li>
-<li class="chapter" data-level="2.1.0.24" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#gráficos-con-iconos-o-logotipos"><i class="fa fa-check"></i><b>2.1.0.24</b> Gráficos con iconos o logotipos</a></li>
-<li class="chapter" data-level="2.1.0.25" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#waffle"><i class="fa fa-check"></i><b>2.1.0.25</b> Waffle</a></li>
-<li class="chapter" data-level="2.1.0.26" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#voronoi"><i class="fa fa-check"></i><b>2.1.0.26</b> Voronoi</a></li>
-<li class="chapter" data-level="2.1.0.27" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#densidad-2d"><i class="fa fa-check"></i><b>2.1.0.27</b> Densidad 2D</a></li>
-<li class="chapter" data-level="2.1.0.28" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#gráficos-animados"><i class="fa fa-check"></i><b>2.1.0.28</b> Gráficos animados</a></li>
-<li class="chapter" data-level="2.1.0.29" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#cortar-datos-en-intervalos"><i class="fa fa-check"></i><b>2.1.0.29</b> Cortar datos en intervalos</a></li>
-<li class="chapter" data-level="2.1.0.30" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#mapas-1"><i class="fa fa-check"></i><b>2.1.0.30</b> Mapas</a></li>
+<li class="part"><span><b>Visualización</b></span></li>
+<li class="chapter" data-level="3" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html"><i class="fa fa-check"></i><b>3</b> Visualización de datos con R y ggplot2</a><ul>
+<li class="chapter" data-level="3.1" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#tipos-de-gráfico"><i class="fa fa-check"></i><b>3.1</b> Tipos de gráfico</a><ul>
+<li class="chapter" data-level="3.1.1" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#barras"><i class="fa fa-check"></i><b>3.1.1</b> Barras</a></li>
+<li class="chapter" data-level="3.1.2" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#dispersión"><i class="fa fa-check"></i><b>3.1.2</b> Dispersión</a></li>
+<li class="chapter" data-level="3.1.3" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#torta"><i class="fa fa-check"></i><b>3.1.3</b> Torta</a></li>
+<li class="chapter" data-level="3.1.4" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#densidad"><i class="fa fa-check"></i><b>3.1.4</b> Densidad</a></li>
+<li class="chapter" data-level="3.1.5" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#boxplot"><i class="fa fa-check"></i><b>3.1.5</b> Boxplot</a></li>
+<li class="chapter" data-level="3.1.6" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#curvas-y-modelos-lineales"><i class="fa fa-check"></i><b>3.1.6</b> Curvas y modelos lineales</a></li>
+<li class="chapter" data-level="3.1.7" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#barras-redondeadas"><i class="fa fa-check"></i><b>3.1.7</b> Barras redondeadas</a></li>
+<li class="chapter" data-level="3.1.8" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#nubes-de-palabras"><i class="fa fa-check"></i><b>3.1.8</b> Nubes de palabras</a></li>
+<li class="chapter" data-level="3.1.9" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#convertir-a-3d"><i class="fa fa-check"></i><b>3.1.9</b> Convertir a 3D</a></li>
+<li class="chapter" data-level="3.1.10" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#estadísticas-en-gráficos"><i class="fa fa-check"></i><b>3.1.10</b> Estadísticas en gráficos</a></li>
+<li class="chapter" data-level="3.1.11" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#crestas"><i class="fa fa-check"></i><b>3.1.11</b> Crestas</a></li>
+<li class="chapter" data-level="3.1.12" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#enjambre"><i class="fa fa-check"></i><b>3.1.12</b> Enjambre</a></li>
+<li class="chapter" data-level="3.1.13" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#violín"><i class="fa fa-check"></i><b>3.1.13</b> Violín</a></li>
+<li class="chapter" data-level="3.1.14" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#líneas"><i class="fa fa-check"></i><b>3.1.14</b> Líneas</a></li>
+<li class="chapter" data-level="3.1.15" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#histograma"><i class="fa fa-check"></i><b>3.1.15</b> Histograma</a></li>
+<li class="chapter" data-level="3.1.16" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#dumbell"><i class="fa fa-check"></i><b>3.1.16</b> Dumbell</a></li>
+<li class="chapter" data-level="3.1.17" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#mapas-de-calor"><i class="fa fa-check"></i><b>3.1.17</b> Mapas de calor</a></li>
+<li class="chapter" data-level="3.1.18" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#splom-scatterplot-matrix"><i class="fa fa-check"></i><b>3.1.18</b> Splom (scatterplot matrix)</a></li>
+<li class="chapter" data-level="3.1.19" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#matriz-de-correlación"><i class="fa fa-check"></i><b>3.1.19</b> Matriz de correlación</a></li>
+<li class="chapter" data-level="3.1.20" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#coordenadas-paralelas"><i class="fa fa-check"></i><b>3.1.20</b> Coordenadas paralelas</a></li>
+<li class="chapter" data-level="3.1.21" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#mapas"><i class="fa fa-check"></i><b>3.1.21</b> Mapas</a></li>
+<li class="chapter" data-level="3.1.22" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#mapa-de-densidad"><i class="fa fa-check"></i><b>3.1.22</b> Mapa de densidad</a></li>
+<li class="chapter" data-level="3.1.23" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#scatter"><i class="fa fa-check"></i><b>3.1.23</b> Scatter</a></li>
+<li class="chapter" data-level="3.1.24" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#gráficos-con-iconos-o-logotipos"><i class="fa fa-check"></i><b>3.1.24</b> Gráficos con iconos o logotipos</a></li>
+<li class="chapter" data-level="3.1.25" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#waffle"><i class="fa fa-check"></i><b>3.1.25</b> Waffle</a></li>
+<li class="chapter" data-level="3.1.26" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#voronoi"><i class="fa fa-check"></i><b>3.1.26</b> Voronoi</a></li>
+<li class="chapter" data-level="3.1.27" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#densidad-2d"><i class="fa fa-check"></i><b>3.1.27</b> Densidad 2D</a></li>
+<li class="chapter" data-level="3.1.28" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#gráficos-animados"><i class="fa fa-check"></i><b>3.1.28</b> Gráficos animados</a></li>
+<li class="chapter" data-level="3.1.29" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#cortar-datos-en-intervalos"><i class="fa fa-check"></i><b>3.1.29</b> Cortar datos en intervalos</a></li>
+<li class="chapter" data-level="3.1.30" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#mapas-1"><i class="fa fa-check"></i><b>3.1.30</b> Mapas</a></li>
 </ul></li>
-<li class="chapter" data-level="2.2" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#figuras-y-capas"><i class="fa fa-check"></i><b>2.2</b> Figuras y capas</a><ul>
-<li class="chapter" data-level="2.2.0.1" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#agregar-capas-condicionales"><i class="fa fa-check"></i><b>2.2.0.1</b> Agregar capas condicionales</a></li>
-<li class="chapter" data-level="2.2.0.2" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#agregar-barras-de-brecha"><i class="fa fa-check"></i><b>2.2.0.2</b> Agregar barras de brecha:</a></li>
-<li class="chapter" data-level="2.2.0.3" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#líneas-verticales-grises"><i class="fa fa-check"></i><b>2.2.0.3</b> Líneas verticales grises</a></li>
-<li class="chapter" data-level="2.2.0.4" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#poner-logo-en-esquina-del-gráfico"><i class="fa fa-check"></i><b>2.2.0.4</b> Poner logo en esquina del gráfico</a></li>
-<li class="chapter" data-level="2.2.0.5" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#insertar-flechas-en-el-gráfico"><i class="fa fa-check"></i><b>2.2.0.5</b> Insertar flechas en el gráfico</a></li>
-<li class="chapter" data-level="2.2.0.6" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#agregar-línea-horizontal-de-promedio"><i class="fa fa-check"></i><b>2.2.0.6</b> Agregar línea horizontal de promedio</a></li>
-<li class="chapter" data-level="2.2.0.7" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#graficar-una-única-variable"><i class="fa fa-check"></i><b>2.2.0.7</b> Graficar una única variable</a></li>
-<li class="chapter" data-level="2.2.0.8" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#insertar-barras"><i class="fa fa-check"></i><b>2.2.0.8</b> Insertar barras</a></li>
-<li class="chapter" data-level="2.2.0.9" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#guardar-y-aplicar-capas"><i class="fa fa-check"></i><b>2.2.0.9</b> Guardar y aplicar capas</a></li>
-<li class="chapter" data-level="2.2.0.10" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#shapes"><i class="fa fa-check"></i><b>2.2.0.10</b> Shapes</a></li>
+<li class="chapter" data-level="3.2" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#figuras-y-capas"><i class="fa fa-check"></i><b>3.2</b> Figuras y capas</a><ul>
+<li class="chapter" data-level="3.2.1" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#agregar-capas-condicionales"><i class="fa fa-check"></i><b>3.2.1</b> Agregar capas condicionales</a></li>
+<li class="chapter" data-level="3.2.2" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#agregar-barras-de-brecha"><i class="fa fa-check"></i><b>3.2.2</b> Agregar barras de brecha:</a></li>
+<li class="chapter" data-level="3.2.3" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#líneas-verticales-grises"><i class="fa fa-check"></i><b>3.2.3</b> Líneas verticales grises</a></li>
+<li class="chapter" data-level="3.2.4" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#poner-logo-en-esquina-del-gráfico"><i class="fa fa-check"></i><b>3.2.4</b> Poner logo en esquina del gráfico</a></li>
+<li class="chapter" data-level="3.2.5" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#insertar-flechas-en-el-gráfico"><i class="fa fa-check"></i><b>3.2.5</b> Insertar flechas en el gráfico</a></li>
+<li class="chapter" data-level="3.2.6" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#agregar-línea-horizontal-de-promedio"><i class="fa fa-check"></i><b>3.2.6</b> Agregar línea horizontal de promedio</a></li>
+<li class="chapter" data-level="3.2.7" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#graficar-una-única-variable"><i class="fa fa-check"></i><b>3.2.7</b> Graficar una única variable</a></li>
+<li class="chapter" data-level="3.2.8" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#insertar-barras"><i class="fa fa-check"></i><b>3.2.8</b> Insertar barras</a></li>
+<li class="chapter" data-level="3.2.9" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#guardar-y-aplicar-capas"><i class="fa fa-check"></i><b>3.2.9</b> Guardar y aplicar capas</a></li>
+<li class="chapter" data-level="3.2.10" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#shapes"><i class="fa fa-check"></i><b>3.2.10</b> Shapes</a></li>
 </ul></li>
-<li class="chapter" data-level="2.3" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#texto"><i class="fa fa-check"></i><b>2.3</b> Texto</a><ul>
-<li class="chapter" data-level="2.3.0.1" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#insertar-texto-en-el-gráfico"><i class="fa fa-check"></i><b>2.3.0.1</b> Insertar texto en el gráfico</a></li>
-<li class="chapter" data-level="2.3.0.2" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#texto-en-barras"><i class="fa fa-check"></i><b>2.3.0.2</b> Texto en barras</a></li>
-<li class="chapter" data-level="2.3.0.3" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#mostrar-texto-en-el-gráfico-según-condición"><i class="fa fa-check"></i><b>2.3.0.3</b> Mostrar texto en el gráfico según condición</a></li>
-<li class="chapter" data-level="2.3.0.4" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#poner-valores-sobre-las-barras"><i class="fa fa-check"></i><b>2.3.0.4</b> Poner valores sobre las barras</a></li>
-<li class="chapter" data-level="2.3.0.5" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#repeler-etiquetas-de-los-puntos"><i class="fa fa-check"></i><b>2.3.0.5</b> Repeler etiquetas de los puntos</a></li>
-<li class="chapter" data-level="2.3.0.6" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#convertir-etiquetas-a-minúscula-mayúscula-titulares-o-frase"><i class="fa fa-check"></i><b>2.3.0.6</b> Convertir etiquetas a minúscula, mayúscula, titulares, o frase</a></li>
-<li class="chapter" data-level="2.3.0.7" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#poner-suma-de-los-factores-sobre-una-barra-stacked"><i class="fa fa-check"></i><b>2.3.0.7</b> Poner suma de los factores sobre una barra stacked</a></li>
-<li class="chapter" data-level="2.3.0.8" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#ajustar-cita-o-referencia"><i class="fa fa-check"></i><b>2.3.0.8</b> Ajustar cita o referencia</a></li>
-<li class="chapter" data-level="2.3.0.9" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#mover-título-y-subtítulo"><i class="fa fa-check"></i><b>2.3.0.9</b> Mover título y subtítulo</a></li>
-<li class="chapter" data-level="2.3.0.10" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#buscar-y-reemplazar-palabras-de-las-etiquetas"><i class="fa fa-check"></i><b>2.3.0.10</b> Buscar y reemplazar palabras de las etiquetas</a></li>
-<li class="chapter" data-level="2.3.0.11" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#redondear-cifras"><i class="fa fa-check"></i><b>2.3.0.11</b> Redondear cifras</a></li>
-<li class="chapter" data-level="2.3.0.12" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#pegar-signo-de-porcentaje"><i class="fa fa-check"></i><b>2.3.0.12</b> Pegar signo de porcentaje</a></li>
-<li class="chapter" data-level="2.3.0.13" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#cambiar-etiquetas-del-gráfico"><i class="fa fa-check"></i><b>2.3.0.13</b> Cambiar etiquetas del gráfico</a></li>
-<li class="chapter" data-level="2.3.0.14" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#poner-nombre-de-barras-dentro-de-las-barras"><i class="fa fa-check"></i><b>2.3.0.14</b> Poner nombre de barras dentro de las barras</a></li>
-<li class="chapter" data-level="2.3.0.15" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#calcular-porcentajes"><i class="fa fa-check"></i><b>2.3.0.15</b> Calcular porcentajes</a></li>
-<li class="chapter" data-level="2.3.0.16" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#poner-texto-al-final-del-gráfico-de-líneas"><i class="fa fa-check"></i><b>2.3.0.16</b> Poner texto al final del gráfico de líneas</a></li>
-<li class="chapter" data-level="2.3.0.17" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#formatear-números"><i class="fa fa-check"></i><b>2.3.0.17</b> Formatear números</a></li>
-<li class="chapter" data-level="2.3.0.18" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#añadir-texto-antes-o-después-del-nombre-de-la-variable"><i class="fa fa-check"></i><b>2.3.0.18</b> Añadir texto antes o después del nombre de la variable</a></li>
-<li class="chapter" data-level="2.3.0.19" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#formatear-una-fecha"><i class="fa fa-check"></i><b>2.3.0.19</b> Formatear una fecha</a></li>
-<li class="chapter" data-level="2.3.0.20" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#aumentar-el-tamaño-de-todo-el-texto"><i class="fa fa-check"></i><b>2.3.0.20</b> Aumentar el tamaño de todo el texto</a></li>
-<li class="chapter" data-level="2.3.0.21" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#cambiar-tipografía"><i class="fa fa-check"></i><b>2.3.0.21</b> Cambiar tipografía</a></li>
-<li class="chapter" data-level="2.3.0.22" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#cambiar-color-de-un-texto-según-condición"><i class="fa fa-check"></i><b>2.3.0.22</b> Cambiar color de un texto según condición</a></li>
-<li class="chapter" data-level="2.3.0.23" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#añadir-valor-o-texto-a-las-etiquetas-del-eje-x"><i class="fa fa-check"></i><b>2.3.0.23</b> Añadir valor o texto a las etiquetas del eje x</a></li>
-<li class="chapter" data-level="2.3.0.24" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#ajustar-etiquetas-largas"><i class="fa fa-check"></i><b>2.3.0.24</b> Ajustar etiquetas largas</a></li>
-<li class="chapter" data-level="2.3.0.25" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#ggtext"><i class="fa fa-check"></i><b>2.3.0.25</b> ggtext</a></li>
+<li class="chapter" data-level="3.3" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#texto"><i class="fa fa-check"></i><b>3.3</b> Texto</a><ul>
+<li class="chapter" data-level="3.3.1" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#insertar-texto-en-el-gráfico"><i class="fa fa-check"></i><b>3.3.1</b> Insertar texto en el gráfico</a></li>
+<li class="chapter" data-level="3.3.2" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#texto-en-barras"><i class="fa fa-check"></i><b>3.3.2</b> Texto en barras</a></li>
+<li class="chapter" data-level="3.3.3" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#mostrar-texto-en-el-gráfico-según-condición"><i class="fa fa-check"></i><b>3.3.3</b> Mostrar texto en el gráfico según condición</a></li>
+<li class="chapter" data-level="3.3.4" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#poner-valores-sobre-las-barras"><i class="fa fa-check"></i><b>3.3.4</b> Poner valores sobre las barras</a></li>
+<li class="chapter" data-level="3.3.5" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#repeler-etiquetas-de-los-puntos"><i class="fa fa-check"></i><b>3.3.5</b> Repeler etiquetas de los puntos</a></li>
+<li class="chapter" data-level="3.3.6" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#convertir-etiquetas-a-minúscula-mayúscula-titulares-o-frase"><i class="fa fa-check"></i><b>3.3.6</b> Convertir etiquetas a minúscula, mayúscula, titulares, o frase</a></li>
+<li class="chapter" data-level="3.3.7" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#poner-suma-de-los-factores-sobre-una-barra-stacked"><i class="fa fa-check"></i><b>3.3.7</b> Poner suma de los factores sobre una barra stacked</a></li>
+<li class="chapter" data-level="3.3.8" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#ajustar-cita-o-referencia"><i class="fa fa-check"></i><b>3.3.8</b> Ajustar cita o referencia</a></li>
+<li class="chapter" data-level="3.3.9" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#mover-título-y-subtítulo"><i class="fa fa-check"></i><b>3.3.9</b> Mover título y subtítulo</a></li>
+<li class="chapter" data-level="3.3.10" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#buscar-y-reemplazar-palabras-de-las-etiquetas"><i class="fa fa-check"></i><b>3.3.10</b> Buscar y reemplazar palabras de las etiquetas</a></li>
+<li class="chapter" data-level="3.3.11" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#redondear-cifras"><i class="fa fa-check"></i><b>3.3.11</b> Redondear cifras</a></li>
+<li class="chapter" data-level="3.3.12" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#pegar-signo-de-porcentaje"><i class="fa fa-check"></i><b>3.3.12</b> Pegar signo de porcentaje</a></li>
+<li class="chapter" data-level="3.3.13" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#cambiar-etiquetas-del-gráfico"><i class="fa fa-check"></i><b>3.3.13</b> Cambiar etiquetas del gráfico</a></li>
+<li class="chapter" data-level="3.3.14" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#poner-nombre-de-barras-dentro-de-las-barras"><i class="fa fa-check"></i><b>3.3.14</b> Poner nombre de barras dentro de las barras</a></li>
+<li class="chapter" data-level="3.3.15" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#calcular-porcentajes"><i class="fa fa-check"></i><b>3.3.15</b> Calcular porcentajes</a></li>
+<li class="chapter" data-level="3.3.16" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#poner-texto-al-final-del-gráfico-de-líneas"><i class="fa fa-check"></i><b>3.3.16</b> Poner texto al final del gráfico de líneas</a></li>
+<li class="chapter" data-level="3.3.17" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#formatear-números"><i class="fa fa-check"></i><b>3.3.17</b> Formatear números</a></li>
+<li class="chapter" data-level="3.3.18" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#añadir-texto-antes-o-después-del-nombre-de-la-variable"><i class="fa fa-check"></i><b>3.3.18</b> Añadir texto antes o después del nombre de la variable</a></li>
+<li class="chapter" data-level="3.3.19" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#formatear-una-fecha"><i class="fa fa-check"></i><b>3.3.19</b> Formatear una fecha</a></li>
+<li class="chapter" data-level="3.3.20" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#aumentar-el-tamaño-de-todo-el-texto"><i class="fa fa-check"></i><b>3.3.20</b> Aumentar el tamaño de todo el texto</a></li>
+<li class="chapter" data-level="3.3.21" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#cambiar-tipografía"><i class="fa fa-check"></i><b>3.3.21</b> Cambiar tipografía</a></li>
+<li class="chapter" data-level="3.3.22" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#cambiar-color-de-un-texto-según-condición"><i class="fa fa-check"></i><b>3.3.22</b> Cambiar color de un texto según condición</a></li>
+<li class="chapter" data-level="3.3.23" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#añadir-valor-o-texto-a-las-etiquetas-del-eje-x"><i class="fa fa-check"></i><b>3.3.23</b> Añadir valor o texto a las etiquetas del eje x</a></li>
+<li class="chapter" data-level="3.3.24" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#ajustar-etiquetas-largas"><i class="fa fa-check"></i><b>3.3.24</b> Ajustar etiquetas largas</a></li>
+<li class="chapter" data-level="3.3.25" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#ggtext"><i class="fa fa-check"></i><b>3.3.25</b> ggtext</a></li>
 </ul></li>
-<li class="chapter" data-level="2.4" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#escalas"><i class="fa fa-check"></i><b>2.4</b> Escalas</a><ul>
-<li class="chapter" data-level="2.4.0.1" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#ordenar-grafico-de-barras"><i class="fa fa-check"></i><b>2.4.0.1</b> Ordenar grafico de barras</a></li>
-<li class="chapter" data-level="2.4.0.2" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#expandir-un-eje"><i class="fa fa-check"></i><b>2.4.0.2</b> Expandir un eje</a></li>
-<li class="chapter" data-level="2.4.0.3" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#poner-comas-en-los-ejes"><i class="fa fa-check"></i><b>2.4.0.3</b> Poner comas en los ejes</a></li>
-<li class="chapter" data-level="2.4.0.4" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#intercambiar-ejes"><i class="fa fa-check"></i><b>2.4.0.4</b> Intercambiar ejes</a></li>
-<li class="chapter" data-level="2.4.0.5" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#cambiar-orden-de-los-ejes"><i class="fa fa-check"></i><b>2.4.0.5</b> Cambiar orden de los ejes</a></li>
-<li class="chapter" data-level="2.4.0.6" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#girar-etiquetas-del-eje-x"><i class="fa fa-check"></i><b>2.4.0.6</b> Girar etiquetas del eje x</a></li>
-<li class="chapter" data-level="2.4.0.7" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#cambiar-márgenes-de-elementos"><i class="fa fa-check"></i><b>2.4.0.7</b> Cambiar márgenes de elementos</a></li>
-<li class="chapter" data-level="2.4.0.8" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#mostrar-todas-las-etiquetas-del-eje-x"><i class="fa fa-check"></i><b>2.4.0.8</b> Mostrar todas las etiquetas del eje x</a></li>
-<li class="chapter" data-level="2.4.0.9" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#definir-cortes-del-eje-y"><i class="fa fa-check"></i><b>2.4.0.9</b> Definir cortes del eje y</a></li>
-<li class="chapter" data-level="2.4.0.10" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#transformar-escalas-a-logaritmo"><i class="fa fa-check"></i><b>2.4.0.10</b> Transformar escalas a logaritmo</a></li>
-<li class="chapter" data-level="2.4.0.11" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#agregar-alfombra"><i class="fa fa-check"></i><b>2.4.0.11</b> Agregar alfombra</a></li>
-<li class="chapter" data-level="2.4.0.12" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#cambiar-eje-a-logaritmo"><i class="fa fa-check"></i><b>2.4.0.12</b> Cambiar eje a logaritmo</a></li>
-<li class="chapter" data-level="2.4.0.13" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#ampliar-eje"><i class="fa fa-check"></i><b>2.4.0.13</b> Ampliar eje</a></li>
-<li class="chapter" data-level="2.4.0.14" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#insertar-un-nivel-en-blanco-para-una-escala"><i class="fa fa-check"></i><b>2.4.0.14</b> Insertar un nivel en blanco para una escala</a></li>
-<li class="chapter" data-level="2.4.0.15" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#escalas-de-series-de-tiempo"><i class="fa fa-check"></i><b>2.4.0.15</b> Escalas de series de tiempo</a></li>
-<li class="chapter" data-level="2.4.0.16" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#cambiar-escalas-continuas"><i class="fa fa-check"></i><b>2.4.0.16</b> Cambiar escalas continuas</a></li>
-<li class="chapter" data-level="2.4.0.17" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#escalas-1"><i class="fa fa-check"></i><b>2.4.0.17</b> Escalas</a></li>
-<li class="chapter" data-level="2.4.0.18" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#escala-en-miles"><i class="fa fa-check"></i><b>2.4.0.18</b> Escala en miles</a></li>
-<li class="chapter" data-level="2.4.0.19" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#escala-en-porcentajes"><i class="fa fa-check"></i><b>2.4.0.19</b> Escala en porcentajes</a></li>
+<li class="chapter" data-level="3.4" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#escalas"><i class="fa fa-check"></i><b>3.4</b> Escalas</a><ul>
+<li class="chapter" data-level="3.4.1" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#ordenar-grafico-de-barras"><i class="fa fa-check"></i><b>3.4.1</b> Ordenar grafico de barras</a></li>
+<li class="chapter" data-level="3.4.2" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#expandir-un-eje"><i class="fa fa-check"></i><b>3.4.2</b> Expandir un eje</a></li>
+<li class="chapter" data-level="3.4.3" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#poner-comas-en-los-ejes"><i class="fa fa-check"></i><b>3.4.3</b> Poner comas en los ejes</a></li>
+<li class="chapter" data-level="3.4.4" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#intercambiar-ejes"><i class="fa fa-check"></i><b>3.4.4</b> Intercambiar ejes</a></li>
+<li class="chapter" data-level="3.4.5" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#cambiar-orden-de-los-ejes"><i class="fa fa-check"></i><b>3.4.5</b> Cambiar orden de los ejes</a></li>
+<li class="chapter" data-level="3.4.6" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#girar-etiquetas-del-eje-x"><i class="fa fa-check"></i><b>3.4.6</b> Girar etiquetas del eje x</a></li>
+<li class="chapter" data-level="3.4.7" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#cambiar-márgenes-de-elementos"><i class="fa fa-check"></i><b>3.4.7</b> Cambiar márgenes de elementos</a></li>
+<li class="chapter" data-level="3.4.8" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#mostrar-todas-las-etiquetas-del-eje-x"><i class="fa fa-check"></i><b>3.4.8</b> Mostrar todas las etiquetas del eje x</a></li>
+<li class="chapter" data-level="3.4.9" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#definir-cortes-del-eje-y"><i class="fa fa-check"></i><b>3.4.9</b> Definir cortes del eje y</a></li>
+<li class="chapter" data-level="3.4.10" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#transformar-escalas-a-logaritmo"><i class="fa fa-check"></i><b>3.4.10</b> Transformar escalas a logaritmo</a></li>
+<li class="chapter" data-level="3.4.11" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#agregar-alfombra"><i class="fa fa-check"></i><b>3.4.11</b> Agregar alfombra</a></li>
+<li class="chapter" data-level="3.4.12" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#cambiar-eje-a-logaritmo"><i class="fa fa-check"></i><b>3.4.12</b> Cambiar eje a logaritmo</a></li>
+<li class="chapter" data-level="3.4.13" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#ampliar-eje"><i class="fa fa-check"></i><b>3.4.13</b> Ampliar eje</a></li>
+<li class="chapter" data-level="3.4.14" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#insertar-un-nivel-en-blanco-para-una-escala"><i class="fa fa-check"></i><b>3.4.14</b> Insertar un nivel en blanco para una escala</a></li>
+<li class="chapter" data-level="3.4.15" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#escalas-de-series-de-tiempo"><i class="fa fa-check"></i><b>3.4.15</b> Escalas de series de tiempo</a></li>
+<li class="chapter" data-level="3.4.16" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#cambiar-escalas-continuas"><i class="fa fa-check"></i><b>3.4.16</b> Cambiar escalas continuas</a></li>
+<li class="chapter" data-level="3.4.17" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#escalas-1"><i class="fa fa-check"></i><b>3.4.17</b> Escalas</a></li>
+<li class="chapter" data-level="3.4.18" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#escala-en-miles"><i class="fa fa-check"></i><b>3.4.18</b> Escala en miles</a></li>
+<li class="chapter" data-level="3.4.19" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#escala-en-porcentajes"><i class="fa fa-check"></i><b>3.4.19</b> Escala en porcentajes</a></li>
 </ul></li>
-<li class="chapter" data-level="2.5" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#colores"><i class="fa fa-check"></i><b>2.5</b> Colores</a><ul>
-<li class="chapter" data-level="2.5.0.1" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#agregar-más-de-una-escala-de-color"><i class="fa fa-check"></i><b>2.5.0.1</b> Agregar más de una escala de color</a></li>
-<li class="chapter" data-level="2.5.0.2" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#escalas-continuas-de-colores-degradado"><i class="fa fa-check"></i><b>2.5.0.2</b> Escalas continuas de colores (degradado)</a></li>
-<li class="chapter" data-level="2.5.0.3" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#aplicar-paleta-de-colores-específicas-a-determinadas-variables"><i class="fa fa-check"></i><b>2.5.0.3</b> Aplicar paleta de colores específicas a determinadas variables</a></li>
-<li class="chapter" data-level="2.5.0.4" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#aplicar-escala-de-color-automática"><i class="fa fa-check"></i><b>2.5.0.4</b> Aplicar escala de color automática</a></li>
-<li class="chapter" data-level="2.5.0.5" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#crear-escala-o-degradado-de-colores"><i class="fa fa-check"></i><b>2.5.0.5</b> Crear escala o degradado de colores</a></li>
-<li class="chapter" data-level="2.5.0.6" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#previsualizar-colores"><i class="fa fa-check"></i><b>2.5.0.6</b> Previsualizar colores</a></li>
-<li class="chapter" data-level="2.5.0.7" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#aclarar-u-oscurecer-colores"><i class="fa fa-check"></i><b>2.5.0.7</b> Aclarar u oscurecer colores</a></li>
-<li class="chapter" data-level="2.5.0.8" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#rcolorbrewer"><i class="fa fa-check"></i><b>2.5.0.8</b> RColorBrewer</a></li>
-<li class="chapter" data-level="2.5.0.9" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#crear-degradados-de-color"><i class="fa fa-check"></i><b>2.5.0.9</b> Crear degradados de color</a></li>
-<li class="chapter" data-level="2.5.0.10" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#extender-escalas-de-colores"><i class="fa fa-check"></i><b>2.5.0.10</b> Extender escalas de colores</a></li>
-<li class="chapter" data-level="2.5.0.11" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#determinar-colores-para-variable-categórica"><i class="fa fa-check"></i><b>2.5.0.11</b> Determinar colores para variable categórica</a></li>
-<li class="chapter" data-level="2.5.0.12" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#más-escalas-de-colores"><i class="fa fa-check"></i><b>2.5.0.12</b> Más escalas de colores</a></li>
+<li class="chapter" data-level="3.5" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#colores"><i class="fa fa-check"></i><b>3.5</b> Colores</a><ul>
+<li class="chapter" data-level="3.5.1" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#agregar-más-de-una-escala-de-color"><i class="fa fa-check"></i><b>3.5.1</b> Agregar más de una escala de color</a></li>
+<li class="chapter" data-level="3.5.2" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#escalas-continuas-de-colores-degradado"><i class="fa fa-check"></i><b>3.5.2</b> Escalas continuas de colores (degradado)</a></li>
+<li class="chapter" data-level="3.5.3" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#aplicar-paleta-de-colores-específicas-a-determinadas-variables"><i class="fa fa-check"></i><b>3.5.3</b> Aplicar paleta de colores específicas a determinadas variables</a></li>
+<li class="chapter" data-level="3.5.4" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#aplicar-escala-de-color-automática"><i class="fa fa-check"></i><b>3.5.4</b> Aplicar escala de color automática</a></li>
+<li class="chapter" data-level="3.5.5" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#crear-escala-o-degradado-de-colores"><i class="fa fa-check"></i><b>3.5.5</b> Crear escala o degradado de colores</a></li>
+<li class="chapter" data-level="3.5.6" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#previsualizar-colores"><i class="fa fa-check"></i><b>3.5.6</b> Previsualizar colores</a></li>
+<li class="chapter" data-level="3.5.7" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#aclarar-u-oscurecer-colores"><i class="fa fa-check"></i><b>3.5.7</b> Aclarar u oscurecer colores</a></li>
+<li class="chapter" data-level="3.5.8" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#rcolorbrewer"><i class="fa fa-check"></i><b>3.5.8</b> RColorBrewer</a></li>
+<li class="chapter" data-level="3.5.9" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#crear-degradados-de-color"><i class="fa fa-check"></i><b>3.5.9</b> Crear degradados de color</a></li>
+<li class="chapter" data-level="3.5.10" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#extender-escalas-de-colores"><i class="fa fa-check"></i><b>3.5.10</b> Extender escalas de colores</a></li>
+<li class="chapter" data-level="3.5.11" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#determinar-colores-para-variable-categórica"><i class="fa fa-check"></i><b>3.5.11</b> Determinar colores para variable categórica</a></li>
+<li class="chapter" data-level="3.5.12" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#más-escalas-de-colores"><i class="fa fa-check"></i><b>3.5.12</b> Más escalas de colores</a></li>
 </ul></li>
-<li class="chapter" data-level="2.6" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#leyendas"><i class="fa fa-check"></i><b>2.6</b> Leyendas</a><ul>
-<li class="chapter" data-level="2.6.0.1" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#crear-gráfico-con-leyenda-manual"><i class="fa fa-check"></i><b>2.6.0.1</b> Crear gráfico con leyenda manual</a></li>
-<li class="chapter" data-level="2.6.0.2" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#invertir-orden-de-leyenda"><i class="fa fa-check"></i><b>2.6.0.2</b> Invertir orden de leyenda</a></li>
-<li class="chapter" data-level="2.6.0.3" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#orientación-y-ubicación-de-la-leyenda"><i class="fa fa-check"></i><b>2.6.0.3</b> Orientación y ubicación de la leyenda</a></li>
-<li class="chapter" data-level="2.6.0.4" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#textos-de-leyenda"><i class="fa fa-check"></i><b>2.6.0.4</b> Textos de leyenda</a></li>
-<li class="chapter" data-level="2.6.0.5" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#elementos-de-la-leyenda"><i class="fa fa-check"></i><b>2.6.0.5</b> Elementos de la leyenda</a></li>
-<li class="chapter" data-level="2.6.0.6" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#margen-de-la-leyenda"><i class="fa fa-check"></i><b>2.6.0.6</b> Margen de la leyenda</a></li>
-<li class="chapter" data-level="2.6.0.7" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#leyendas-redondas"><i class="fa fa-check"></i><b>2.6.0.7</b> Leyendas redondas</a></li>
+<li class="chapter" data-level="3.6" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#leyendas"><i class="fa fa-check"></i><b>3.6</b> Leyendas</a><ul>
+<li class="chapter" data-level="3.6.1" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#crear-gráfico-con-leyenda-manual"><i class="fa fa-check"></i><b>3.6.1</b> Crear gráfico con leyenda manual</a></li>
+<li class="chapter" data-level="3.6.2" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#invertir-orden-de-leyenda"><i class="fa fa-check"></i><b>3.6.2</b> Invertir orden de leyenda</a></li>
+<li class="chapter" data-level="3.6.3" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#orientación-y-ubicación-de-la-leyenda"><i class="fa fa-check"></i><b>3.6.3</b> Orientación y ubicación de la leyenda</a></li>
+<li class="chapter" data-level="3.6.4" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#textos-de-leyenda"><i class="fa fa-check"></i><b>3.6.4</b> Textos de leyenda</a></li>
+<li class="chapter" data-level="3.6.5" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#elementos-de-la-leyenda"><i class="fa fa-check"></i><b>3.6.5</b> Elementos de la leyenda</a></li>
+<li class="chapter" data-level="3.6.6" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#margen-de-la-leyenda"><i class="fa fa-check"></i><b>3.6.6</b> Margen de la leyenda</a></li>
+<li class="chapter" data-level="3.6.7" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#leyendas-redondas"><i class="fa fa-check"></i><b>3.6.7</b> Leyendas redondas</a></li>
 </ul></li>
-<li class="chapter" data-level="2.7" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#temas-y-espaciado"><i class="fa fa-check"></i><b>2.7</b> Temas y espaciado</a><ul>
-<li class="chapter" data-level="2.7.0.1" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#espaciado-entre-facetas"><i class="fa fa-check"></i><b>2.7.0.1</b> Espaciado entre facetas</a></li>
-<li class="chapter" data-level="2.7.0.2" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#reducir-margen-de-gráficos"><i class="fa fa-check"></i><b>2.7.0.2</b> Reducir margen de gráficos</a></li>
-<li class="chapter" data-level="2.7.0.3" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#múltiples-gráficos"><i class="fa fa-check"></i><b>2.7.0.3</b> Múltiples gráficos</a></li>
-<li class="chapter" data-level="2.7.0.4" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#elementos-y-temas"><i class="fa fa-check"></i><b>2.7.0.4</b> Elementos y temas</a></li>
-<li class="chapter" data-level="2.7.0.5" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#combinar-múltiples-gráficos"><i class="fa fa-check"></i><b>2.7.0.5</b> Combinar múltiples gráficos</a></li>
-<li class="chapter" data-level="2.7.0.6" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#ajustar-espacio-entre-etiquetas-de-ejes-y-gráfico"><i class="fa fa-check"></i><b>2.7.0.6</b> Ajustar espacio entre etiquetas de ejes y gráfico</a></li>
-<li class="chapter" data-level="2.7.0.7" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#acercar-leyenda-al-gráfico"><i class="fa fa-check"></i><b>2.7.0.7</b> Acercar leyenda al gráfico</a></li>
-<li class="chapter" data-level="2.7.0.8" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#cambiar-tamaño-y-hacer-zoom-en-los-datos"><i class="fa fa-check"></i><b>2.7.0.8</b> Cambiar tamaño y hacer zoom en los datos</a></li>
-<li class="chapter" data-level="2.7.0.9" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#guardar-y-aplicar-temas"><i class="fa fa-check"></i><b>2.7.0.9</b> Guardar y aplicar temas</a></li>
+<li class="chapter" data-level="3.7" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#temas-y-espaciado"><i class="fa fa-check"></i><b>3.7</b> Temas y espaciado</a><ul>
+<li class="chapter" data-level="3.7.1" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#espaciado-entre-facetas"><i class="fa fa-check"></i><b>3.7.1</b> Espaciado entre facetas</a></li>
+<li class="chapter" data-level="3.7.2" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#reducir-margen-de-gráficos"><i class="fa fa-check"></i><b>3.7.2</b> Reducir margen de gráficos</a></li>
+<li class="chapter" data-level="3.7.3" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#múltiples-gráficos"><i class="fa fa-check"></i><b>3.7.3</b> Múltiples gráficos</a></li>
+<li class="chapter" data-level="3.7.4" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#elementos-y-temas"><i class="fa fa-check"></i><b>3.7.4</b> Elementos y temas</a></li>
+<li class="chapter" data-level="3.7.5" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#combinar-múltiples-gráficos"><i class="fa fa-check"></i><b>3.7.5</b> Combinar múltiples gráficos</a></li>
+<li class="chapter" data-level="3.7.6" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#ajustar-espacio-entre-etiquetas-de-ejes-y-gráfico"><i class="fa fa-check"></i><b>3.7.6</b> Ajustar espacio entre etiquetas de ejes y gráfico</a></li>
+<li class="chapter" data-level="3.7.7" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#acercar-leyenda-al-gráfico"><i class="fa fa-check"></i><b>3.7.7</b> Acercar leyenda al gráfico</a></li>
+<li class="chapter" data-level="3.7.8" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#cambiar-tamaño-y-hacer-zoom-en-los-datos"><i class="fa fa-check"></i><b>3.7.8</b> Cambiar tamaño y hacer zoom en los datos</a></li>
+<li class="chapter" data-level="3.7.9" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#guardar-y-aplicar-temas"><i class="fa fa-check"></i><b>3.7.9</b> Guardar y aplicar temas</a></li>
 </ul></li>
-<li class="chapter" data-level="2.8" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#exportar-gráficos"><i class="fa fa-check"></i><b>2.8</b> Exportar gráficos</a></li>
+<li class="chapter" data-level="3.8" data-path="visualización-de-datos-con-r-y-ggplot2.html"><a href="visualización-de-datos-con-r-y-ggplot2.html#exportar-gráficos"><i class="fa fa-check"></i><b>3.8</b> Exportar gráficos</a></li>
 </ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
 </ul>
 
       </nav>
@@ -330,7 +338,7 @@
 
             <section class="normal" id="section-">
 <div id="visualización-de-datos-con-r-y-ggplot2" class="section level1">
-<h1><span class="header-section-number">2</span> Visualización de datos con R y ggplot2</h1>
+<h1><span class="header-section-number">3</span> Visualización de datos con R y ggplot2</h1>
 <p>Se basa en siete componentes principales:
 - DATA FRAME which contains the data you’re trying to plot.
 - AESTHETIC MAPPINGS determine how data are mapped to color, size, etc.
@@ -355,18 +363,18 @@ Otros elementos, como títulos <code>ggtitle</code> y etiquetas <code>ylab</code
 <code>se</code> elimina el intervalo de confianza.</p>
 <pre><code>g+geom_point(aes(color=drv))+theme_bw(base_family=&quot;Times&quot;)</code></pre>
 <p>Graficar variable como factor (para que sólo aparezcan en el eje los valores presentes): <code>factor(variable)</code></p>
-<div id="gráfico-con-múltiples-instancias-según-variable" class="section level6">
-<h6><span class="header-section-number">2.0.0.0.0.1</span> Gráfico con múltiples instancias según variable</h6>
+<div id="gráfico-con-múltiples-instancias-según-variable" class="section level4">
+<h4><span class="header-section-number">3.0.0.1</span> Gráfico con múltiples instancias según variable</h4>
 <p>Se usa la capa <code>facet</code>:</p>
 <pre><code>ggplot(iris.tidy, aes(x = Species, y = Value, col = Part)) +
   geom_jitter() +
   facet_grid(. ~ Measure)</code></pre>
 </div>
 <div id="tipos-de-gráfico" class="section level2">
-<h2><span class="header-section-number">2.1</span> Tipos de gráfico</h2>
+<h2><span class="header-section-number">3.1</span> Tipos de gráfico</h2>
 <p>Ejemplos de los distintos tipos de gráficos que se pueden hacer en R</p>
-<div id="barras" class="section level4">
-<h4><span class="header-section-number">2.1.0.1</span> Barras</h4>
+<div id="barras" class="section level3">
+<h3><span class="header-section-number">3.1.1</span> Barras</h3>
 <pre><code>geom_bar</code></pre>
 <pre><code>ggplot(Tarapaca, aes(y=Nacimientos, x=Año)) + geom_bar(stat=&quot;identity&quot;)</code></pre>
 <pre><code>ggplot(df2, aes(measurements, value)) + 
@@ -411,8 +419,8 @@ ggplot(mtcars, aes(x = cyl, fill = am)) +
                 stat = &quot;count&quot;, 
                 vjust = 4,
                 color=&quot;white&quot;)</code></pre>
-<div id="barra-dinamita-con-marcas-de-error" class="section level6">
-<h6><span class="header-section-number">2.1.0.1.0.1</span> Barra “dinamita” (con marcas de error)</h6>
+<div id="barra-dinamita-con-marcas-de-error" class="section level4">
+<h4><span class="header-section-number">3.1.1.1</span> Barra “dinamita” (con marcas de error)</h4>
 <pre><code>## Base layers
 m &lt;- ggplot(mtcars, aes(x = cyl, y = wt))
 
@@ -436,14 +444,14 @@ m +
   facet_wrap(.~spam)</code></pre>
 </div>
 </div>
-<div id="dispersión" class="section level4">
-<h4><span class="header-section-number">2.1.0.2</span> Dispersión</h4>
+<div id="dispersión" class="section level3">
+<h3><span class="header-section-number">3.1.2</span> Dispersión</h3>
 <p>Útil para agregar sobre boxplots.</p>
 <pre><code>+ geom_jitter(color=&quot;steelblue&quot;, alpha=0.3) +
     geom_boxplot(alpha=0)</code></pre>
 </div>
-<div id="torta" class="section level4">
-<h4><span class="header-section-number">2.1.0.3</span> Torta</h4>
+<div id="torta" class="section level3">
+<h3><span class="header-section-number">3.1.3</span> Torta</h3>
 <p>Representa la distribución de categorías dentro de un todo.</p>
 <p>Gráfico de torta:</p>
 <pre><code>## Create a stacked bar plot: wide.bar
@@ -520,8 +528,8 @@ eme_genero_gg
     geom_text(aes(label = percent(cantidad/sum(cantidad), accuracy=1)), position = position_stack(vjust = 0.5)) +
     labs(subtitle=&quot;Verano&quot;)</code></pre>
 </div>
-<div id="densidad" class="section level4">
-<h4><span class="header-section-number">2.1.0.4</span> Densidad</h4>
+<div id="densidad" class="section level3">
+<h3><span class="header-section-number">3.1.4</span> Densidad</h3>
 <pre><code>geom_density</code></pre>
 <p>El gráfico de densidad es una línea curva de la silueta del histograma:</p>
 <pre><code>ggplot(common_cyl, aes(x = city_mpg, fill = as.factor(ncyl))) +
@@ -544,16 +552,16 @@ eme_genero_gg
 - “c” = cosine
 - “o” = optcosine</p>
 </div>
-<div id="boxplot" class="section level4">
-<h4><span class="header-section-number">2.1.0.5</span> Boxplot</h4>
+<div id="boxplot" class="section level3">
+<h3><span class="header-section-number">3.1.5</span> Boxplot</h3>
 <pre><code>ggplot(aes(x = 1, y = city_mpg)) +
   geom_boxplot()</code></pre>
 <p>Se puede poner 1 en el eje x para mostrar solo un boxplot.</p>
 <p>El ancho de cada caja puede depender de la cantidad de casos:</p>
 <pre><code>geom_boxplot(varwidth=TRUE)</code></pre>
 </div>
-<div id="curvas-y-modelos-lineales" class="section level4">
-<h4><span class="header-section-number">2.1.0.6</span> Curvas y modelos lineales</h4>
+<div id="curvas-y-modelos-lineales" class="section level3">
+<h3><span class="header-section-number">3.1.6</span> Curvas y modelos lineales</h3>
 <p>Agregar líneas de regresión al gráfico</p>
 <pre><code>geom_smooth</code></pre>
 <p>Curva Loess:</p>
@@ -580,25 +588,25 @@ ggplot(mtcars, aes(x = wt, y = mpg, col = factor(cyl))) +
               se = FALSE, span = 0.7) +
   scale_color_manual(&quot;Cylinders&quot;, values=myColors)</code></pre>
 </div>
-<div id="barras-redondeadas" class="section level4">
-<h4><span class="header-section-number">2.1.0.7</span> Barras redondeadas</h4>
+<div id="barras-redondeadas" class="section level3">
+<h3><span class="header-section-number">3.1.7</span> Barras redondeadas</h3>
 <pre><code>library(ggchicklet)
 
 ggplot(count(mtcars, cyl), aes(x = cyl, y = n)) +
   geom_chicklet(radius = grid::unit(15, &#39;mm&#39;), fill = &#39;skyblue&#39;) +
   theme_minimal()</code></pre>
 </div>
-<div id="nubes-de-palabras" class="section level4">
-<h4><span class="header-section-number">2.1.0.8</span> Nubes de palabras</h4>
+<div id="nubes-de-palabras" class="section level3">
+<h3><span class="header-section-number">3.1.8</span> Nubes de palabras</h3>
 <p><a href="https://medium.com/@rohitnair_94843/analysis-of-twitter-data-using-r-part-2-word-cloud-dd423af1b2c6">https://medium.com/<span class="citation">@rohitnair</span>_94843/analysis-of-twitter-data-using-r-part-2-word-cloud-dd423af1b2c6</a></p>
 <p><a href="https://www.r-bloggers.com/awesome-twitter-word-clouds-in-r/">https://www.r-bloggers.com/awesome-twitter-word-clouds-in-r/</a></p>
 </div>
-<div id="convertir-a-3d" class="section level4">
-<h4><span class="header-section-number">2.1.0.9</span> Convertir a 3D</h4>
+<div id="convertir-a-3d" class="section level3">
+<h3><span class="header-section-number">3.1.9</span> Convertir a 3D</h3>
 <p><a href="https://www.rayshader.com">https://www.rayshader.com</a></p>
 </div>
-<div id="estadísticas-en-gráficos" class="section level4">
-<h4><span class="header-section-number">2.1.0.10</span> Estadísticas en gráficos</h4>
+<div id="estadísticas-en-gráficos" class="section level3">
+<h3><span class="header-section-number">3.1.10</span> Estadísticas en gráficos</h3>
 <p>Curva normal:</p>
 <pre><code>+ stat_function</code></pre>
 <pre><code>## Plot 2: Mean and SD - the easy way
@@ -618,8 +626,8 @@ wt.cyl.am +
   stat_summary(geom = &quot;errorbar&quot;, fun.data = mean_sdl,
                position = posn.d, fun.args = list(mult = 1), width = 0.1)</code></pre>
 </div>
-<div id="crestas" class="section level4">
-<h4><span class="header-section-number">2.1.0.11</span> Crestas</h4>
+<div id="crestas" class="section level3">
+<h3><span class="header-section-number">3.1.11</span> Crestas</h3>
 <pre><code>library(ggridges)
 p + geom_density_ridges()</code></pre>
 <pre><code>md_speeding %&gt;% 
@@ -633,8 +641,8 @@ p + geom_density_ridges()</code></pre>
     ## remove y axis ticks
     theme(axis.ticks.y=element_blank())</code></pre>
 </div>
-<div id="enjambre" class="section level4">
-<h4><span class="header-section-number">2.1.0.12</span> Enjambre</h4>
+<div id="enjambre" class="section level3">
+<h3><span class="header-section-number">3.1.12</span> Enjambre</h3>
 <p>Alternativa al boxplot. Agrega dispersión de forma inteligente, con los puntos lo más cercanos al eje.</p>
 <pre><code>library(ggbeeswarm)
 p + geom_beeswarm()</code></pre>
@@ -643,15 +651,15 @@ Funciona mal con demasiados datos.</p>
 <p>Cambiar el tamaño de los puntos:</p>
 <pre><code>geom_beeswarm(cex=0.5) +</code></pre>
 </div>
-<div id="violín" class="section level4">
-<h4><span class="header-section-number">2.1.0.13</span> Violín</h4>
+<div id="violín" class="section level3">
+<h3><span class="header-section-number">3.1.13</span> Violín</h3>
 <p>Alternativa al boxplot. Muestra la distirbución de forma simétrica.</p>
 <pre><code>geom_violin()</code></pre>
 <p>Funciona bien con muchos datos, pero no muestra cada dato individualmente.</p>
 <pre><code>geom_violin(bw = 2.5) +</code></pre>
 </div>
-<div id="líneas" class="section level4">
-<h4><span class="header-section-number">2.1.0.14</span> Líneas</h4>
+<div id="líneas" class="section level3">
+<h3><span class="header-section-number">3.1.14</span> Líneas</h3>
 <pre><code>geom_line</code></pre>
 <pre><code>ggplot(economics, aes(x = date, y = unemploy/pop)) +
 geom_line()</code></pre>
@@ -669,8 +677,8 @@ ggplot(barley, aes(year, yield, col= site, group=site, fill=site)) +
 stat_summary(fun.y=mean, geom=&quot;line&quot;) +
 stat_summary(fun.data=mean_sdl, fun.args=list(mult=1), geom=&quot;ribbon&quot;, col=NA, alpha=0.1)</code></pre>
 </div>
-<div id="histograma" class="section level4">
-<h4><span class="header-section-number">2.1.0.15</span> Histograma</h4>
+<div id="histograma" class="section level3">
+<h3><span class="header-section-number">3.1.15</span> Histograma</h3>
 <pre><code>geom_histogram</code></pre>
 <p>A mayor <code>binwidth</code>, más gruesas las líneas.
 <code>bins</code> es el número de barras.
@@ -690,15 +698,15 @@ stat_summary(fun.data=mean_sdl, fun.args=list(mult=1), geom=&quot;ribbon&quot;, 
 <p>Alfombra de casos:</p>
 <pre><code>+ geom_rug</code></pre>
 </div>
-<div id="dumbell" class="section level4">
-<h4><span class="header-section-number">2.1.0.16</span> Dumbell</h4>
+<div id="dumbell" class="section level3">
+<h3><span class="header-section-number">3.1.16</span> Dumbell</h3>
 <pre><code>ggplot(first_last, aes(x = series, y = viewers, color = episode)) +
   geom_point() + ## keep
   geom_line(aes(group = series)) + ## keep
   coord_flip() ## keep</code></pre>
 </div>
-<div id="mapas-de-calor" class="section level4">
-<h4><span class="header-section-number">2.1.0.17</span> Mapas de calor</h4>
+<div id="mapas-de-calor" class="section level3">
+<h3><span class="header-section-number">3.1.17</span> Mapas de calor</h3>
 <pre><code>geom_tile</code></pre>
 <pre><code>## Create color palette
 myColors &lt;- brewer.pal(9, &quot;Reds&quot;)
@@ -709,23 +717,23 @@ ggplot(barley, aes(x = year, y = variety, fill = yield)) +
   facet_wrap( ~ site, ncol = 1) + ## Facet layer
   scale_fill_gradientn(colors = myColors) ## Adjust colors</code></pre>
 </div>
-<div id="splom-scatterplot-matrix" class="section level4">
-<h4><span class="header-section-number">2.1.0.18</span> Splom (scatterplot matrix)</h4>
+<div id="splom-scatterplot-matrix" class="section level3">
+<h3><span class="header-section-number">3.1.18</span> Splom (scatterplot matrix)</h3>
 <pre><code>pairs(datos)</code></pre>
 <pre><code>library(PerformanceAnalytics)
 chart.Correlation(iris[1:4])</code></pre>
 <pre><code>library(GGAlly)
 ggpairs(datos[1:9])</code></pre>
 </div>
-<div id="matriz-de-correlación" class="section level4">
-<h4><span class="header-section-number">2.1.0.19</span> Matriz de correlación</h4>
+<div id="matriz-de-correlación" class="section level3">
+<h3><span class="header-section-number">3.1.19</span> Matriz de correlación</h3>
 </div>
-<div id="coordenadas-paralelas" class="section level4">
-<h4><span class="header-section-number">2.1.0.20</span> Coordenadas paralelas</h4>
+<div id="coordenadas-paralelas" class="section level3">
+<h3><span class="header-section-number">3.1.20</span> Coordenadas paralelas</h3>
 <pre><code>ggparcoord(datos, columns =1:4, groupColumn=5, scale=&quot;globalminmax&quot;, order=&quot;anyClass&quot;, alphaLines=0.4)</code></pre>
 </div>
-<div id="mapas" class="section level4">
-<h4><span class="header-section-number">2.1.0.21</span> Mapas</h4>
+<div id="mapas" class="section level3">
+<h3><span class="header-section-number">3.1.21</span> Mapas</h3>
 <p>Mapoteca congreso nacional:
 <a href="https://www.bcn.cl/siit/mapas_vectoriales/index_html">https://www.bcn.cl/siit/mapas_vectoriales/index_html</a></p>
 <p><a href="http://guillermoacuna.blogspot.com/2017/02/como-hacer-un-mapa-de-chile-en-r.html">http://guillermoacuna.blogspot.com/2017/02/como-hacer-un-mapa-de-chile-en-r.html</a></p>
@@ -734,8 +742,8 @@ ggpairs(datos[1:9])</code></pre>
   tm_borders() </code></pre>
 <p><a href="https://eriqande.github.io/rep-res-web/lectures/making-maps-with-R.html">https://eriqande.github.io/rep-res-web/lectures/making-maps-with-R.html</a></p>
 </div>
-<div id="mapa-de-densidad" class="section level4">
-<h4><span class="header-section-number">2.1.0.22</span> Mapa de densidad</h4>
+<div id="mapa-de-densidad" class="section level3">
+<h3><span class="header-section-number">3.1.22</span> Mapa de densidad</h3>
 <p>Mapa lineal de densidad, como un mapa topográfico:</p>
 <pre><code>geom_density_2d()</code></pre>
 <p>Mapa con degradado de calor:</p>
@@ -747,8 +755,8 @@ scale_size(range=c(0,9))</code></pre>
 <pre><code>p+geom_vline(data=mu, aes(xintercept=grp.mean, color=sex),
              linetype=&quot;dashed&quot;)</code></pre>
 </div>
-<div id="scatter" class="section level4">
-<h4><span class="header-section-number">2.1.0.23</span> Scatter</h4>
+<div id="scatter" class="section level3">
+<h3><span class="header-section-number">3.1.23</span> Scatter</h3>
 <p>Permiten explorar preguntas e hipótesis iniciales, sugerir estrategias para siguientes pasos, y resumir los datos gráficamente para destacar características generales.</p>
 <pre><code>geom_point</code></pre>
 <p>Requiere especificar x e y.</p>
@@ -799,14 +807,14 @@ gX + geom_point(aes(y=Nacimientos , x=Año, size=TasaNatalidad, colour=TasaFecun
 <p>Ejemplo de qplot:</p>
 <pre><code>qplot(wt, mpg, data = mtcars)</code></pre>
 </div>
-<div id="gráficos-con-iconos-o-logotipos" class="section level4">
-<h4><span class="header-section-number">2.1.0.24</span> Gráficos con iconos o logotipos</h4>
+<div id="gráficos-con-iconos-o-logotipos" class="section level3">
+<h3><span class="header-section-number">3.1.24</span> Gráficos con iconos o logotipos</h3>
 <p>Instalar iconos de símbolos como FontAwesome o IonIcons</p>
 <p>Luego graficar con <code>geom_text</code> usando el código del glifo a utilizar:</p>
 <pre><code>geom_text(label=&quot;\uF236&quot;, size = 14, family = &#39;FontAwesome&#39;, col=&quot;##1C2366&quot;) +</code></pre>
 </div>
-<div id="waffle" class="section level4">
-<h4><span class="header-section-number">2.1.0.25</span> Waffle</h4>
+<div id="waffle" class="section level3">
+<h3><span class="header-section-number">3.1.25</span> Waffle</h3>
 <pre><code>disease_counts &lt;- who_disease %&gt;%
     group_by(disease) %&gt;%
     summarise(total_cases = sum(cases)) %&gt;% 
@@ -878,12 +886,12 @@ pueblos_originarios_waffle_gg &lt;- pueblos_originarios_waffle +
 
 pueblos_originarios_waffle_gg</code></pre>
 </div>
-<div id="voronoi" class="section level4">
-<h4><span class="header-section-number">2.1.0.26</span> Voronoi</h4>
+<div id="voronoi" class="section level3">
+<h3><span class="header-section-number">3.1.26</span> Voronoi</h3>
 <p><a href="https://rspatial_es.gitlab.io/blog/2020-08-02-diagrama-voronoi-r-ggplot/">https://rspatial_es.gitlab.io/blog/2020-08-02-diagrama-voronoi-r-ggplot/</a></p>
 </div>
-<div id="densidad-2d" class="section level4">
-<h4><span class="header-section-number">2.1.0.27</span> Densidad 2D</h4>
+<div id="densidad-2d" class="section level3">
+<h3><span class="header-section-number">3.1.27</span> Densidad 2D</h3>
 <p>Densidad con líneas concéntricas:</p>
 <pre><code>## Base layers
 p &lt;- ggplot(faithful, aes(x = waiting, y = eruptions)) +
@@ -909,13 +917,13 @@ ggplot(faithful, aes(x = waiting, y = eruptions)) +
   scale_fill_viridis()
 </code></pre>
 </div>
-<div id="gráficos-animados" class="section level4">
-<h4><span class="header-section-number">2.1.0.28</span> Gráficos animados</h4>
+<div id="gráficos-animados" class="section level3">
+<h3><span class="header-section-number">3.1.28</span> Gráficos animados</h3>
 <pre><code>library(gganimate)
 library(tween)
 library(ggplot2)</code></pre>
-<div id="animar-según-otra-variable" class="section level6">
-<h6><span class="header-section-number">2.1.0.28.0.1</span> Animar según otra variable</h6>
+<div id="animar-según-otra-variable" class="section level4">
+<h4><span class="header-section-number">3.1.28.1</span> Animar según otra variable</h4>
 <pre><code>p&lt;- ggplot(iris, aes(x = Petal.Width, y = Petal.Length)) +
     geom_point() + ##Gráfico de dispersión común
     transition_states(Species, ##Anima los puntos según variable
@@ -927,8 +935,8 @@ library(ggplot2)</code></pre>
 <p><code>transition_states()</code> splits up plot data by a discrete variable and animates between the different states.
 <code>ease_aes()</code> defines the velocity with which aesthetics change during an animation.</p>
 </div>
-<div id="animar-transiciones-de-entrada-y-salida" class="section level6">
-<h6><span class="header-section-number">2.1.0.28.0.2</span> Animar transiciones de entrada y salida:</h6>
+<div id="animar-transiciones-de-entrada-y-salida" class="section level4">
+<h4><span class="header-section-number">3.1.28.2</span> Animar transiciones de entrada y salida:</h4>
 <pre><code>anim &lt;- ggplot(iris, aes(x = Petal.Width, y = Petal.Length)) + 
   geom_point(aes(colour = Species), size = 2) + 
   transition_states(Species,
@@ -939,16 +947,16 @@ anim +
   exit_shrink()</code></pre>
 <p><code>enter</code> and <code>exit</code> functions are used to modify the aesthetics of appearing and disappearing data so that their entrance or exit may be animated.</p>
 </div>
-<div id="agregar-título" class="section level6">
-<h6><span class="header-section-number">2.1.0.28.0.3</span> Agregar título</h6>
+<div id="agregar-título" class="section level4">
+<h4><span class="header-section-number">3.1.28.3</span> Agregar título</h4>
 <p>Si es <code>transition_reveal</code>:</p>
 <pre><code>labs(x = &quot;Años&quot;, y = &quot;Nacimientos&quot;, title=&quot;Año {as.integer(frame_along)}&quot;) +</code></pre>
 <p>Si es <code>transition_states</code>:</p>
 <pre><code>labs(x = &quot;Años&quot;, y = &quot;Nacimientos&quot;, title=&quot;Año {closest_state}&quot;) +</code></pre>
 <pre><code>ggtitle(&#39;Año {closest_state}&#39;) ##título de años</code></pre>
 </div>
-<div id="exportar" class="section level6">
-<h6><span class="header-section-number">2.1.0.28.0.4</span> Exportar:</h6>
+<div id="exportar" class="section level4">
+<h4><span class="header-section-number">3.1.28.4</span> Exportar:</h4>
 <pre><code>animate(gA_anim, nframes=300, fps=24, width=750, height=675, res=150, end_pause = 30)
 anim_save(&quot;Animación2.gif&quot;, animation = last_animation())</code></pre>
 <p><code>nframes</code> es la cantidad total de cuadros de la animación
@@ -972,8 +980,8 @@ anim_save(&quot;Animación2.gif&quot;, animation = last_animation())</code></pre
 <p>Regresión:
 <a href="http://varianceexplained.org/files/loess.html">http://varianceexplained.org/files/loess.html</a></p>
 </div>
-<div id="gráficos-de-países-que-se-van-adelantando" class="section level6">
-<h6><span class="header-section-number">2.1.0.28.0.5</span> Gráficos de países que se van adelantando</h6>
+<div id="gráficos-de-países-que-se-van-adelantando" class="section level4">
+<h4><span class="header-section-number">3.1.28.5</span> Gráficos de países que se van adelantando</h4>
 <ul>
 <li><a href="https://towardsdatascience.com/create-animated-bar-charts-using-r-31d09e5841da">https://towardsdatascience.com/create-animated-bar-charts-using-r-31d09e5841da</a></li>
 <li><a href="https://stackoverflow.com/questions/53162821/animated-sorted-bar-chart-with-bars-overtaking-each-other?source=post_page---------------------------">https://stackoverflow.com/questions/53162821/animated-sorted-bar-chart-with-bars-overtaking-each-other?source=post_page—————————</a></li>
@@ -1005,9 +1013,9 @@ library(janitor)
 library(scales)
 
 
-#### Aplicar guía a mis datos
+### Aplicar guía a mis datos
             
-#### Cambiar formato de base de datos a &quot;long format&quot;
+### Cambiar formato de base de datos a &quot;long format&quot;
 nata_tidy &lt;- nata %&gt;% 
       mutate_at(vars(contains(&quot;20&quot;)),as.numeric) %&gt;% ##selecionar los años 
       gather(year,value,2:18) %&gt;% ##elegir las columnas de los años
@@ -1018,7 +1026,7 @@ write_csv(nata_tidy,&quot;nata_tidy.csv&quot;)
 View(nata_tidy)
 View(nata)
 
-#### We’re going to filter our dataset to retain only the top 10 countries for every given year
+### We’re going to filter our dataset to retain only the top 10 countries for every given year
 
 nata_tidy &lt;- read_csv(&quot;nata_tidy.csv&quot;)
 nata_formatted &lt;- nata_tidy %&gt;%
@@ -1033,7 +1041,7 @@ nata_formatted &lt;- nata_tidy %&gt;%
 
 View(nata_formatted)
 
-#### Gráfico seguido de animación
+### Gráfico seguido de animación
 
 staticplot = ggplot(nata_formatted, aes(rank, group = region, 
                                        fill = as.factor(region), 
@@ -1071,8 +1079,8 @@ animate(animacion, nframes=640, fps=30, width=400, height=400, res=100, detail=2
 anim_save(&quot;Natalidad regiones.gif&quot;, animation = last_animation())</code></pre>
 </div>
 </div>
-<div id="cortar-datos-en-intervalos" class="section level4">
-<h4><span class="header-section-number">2.1.0.29</span> Cortar datos en intervalos</h4>
+<div id="cortar-datos-en-intervalos" class="section level3">
+<h3><span class="header-section-number">3.1.29</span> Cortar datos en intervalos</h3>
 <p><img src="DraggedImage.jpeg" /><img src="DraggedImage-1.jpeg" /></p>
 <pre><code>## Plot object p
 p &lt;- ggplot(diamonds, aes(x = carat, y = price))
@@ -1086,22 +1094,22 @@ p + geom_boxplot(aes(group = cut_number(carat, n=10)))
 ## Use cut_width
 p + geom_boxplot(aes(group = cut_width(carat, width=0.25)))</code></pre>
 </div>
-<div id="mapas-1" class="section level4">
-<h4><span class="header-section-number">2.1.0.30</span> Mapas</h4>
+<div id="mapas-1" class="section level3">
+<h3><span class="header-section-number">3.1.30</span> Mapas</h3>
 <p>Graficar mapas en ggplot2</p>
-<div id="graficar-mapas-de-chile" class="section level6">
-<h6><span class="header-section-number">2.1.0.30.0.1</span> Graficar mapas de Chile</h6>
+<div id="graficar-mapas-de-chile" class="section level4">
+<h4><span class="header-section-number">3.1.30.1</span> Graficar mapas de Chile</h4>
 <p>Paquete Chilemapas
 <a href="https://github.com/pachamaltese/chilemapas">https://github.com/pachamaltese/chilemapas</a></p>
 </div>
-<div id="recortar-mapa" class="section level6">
-<h6><span class="header-section-number">2.1.0.30.0.2</span> Recortar mapa</h6>
+<div id="recortar-mapa" class="section level4">
+<h4><span class="header-section-number">3.1.30.2</span> Recortar mapa</h4>
 <pre><code>mapa_cortado &lt;- st_crop(mapa, 
     xmin = -20, xmax = 45,
     ymin = 30, ymax = 73)</code></pre>
 </div>
-<div id="cambiar-formato-de-coordenadas" class="section level6">
-<h6><span class="header-section-number">2.1.0.30.0.3</span> Cambiar formato de coordenadas</h6>
+<div id="cambiar-formato-de-coordenadas" class="section level4">
+<h4><span class="header-section-number">3.1.30.3</span> Cambiar formato de coordenadas</h4>
 <p>Necesario cuando se usan dos mapas distintos en un solo gráfico y sus sistemas de coordenadas difieren.</p>
 <p>Revisar el formato de coordenadas de los dos mapas:</p>
 <pre><code>mapa1$geometry
@@ -1110,29 +1118,29 @@ mapa2$geometry</code></pre>
 <pre><code>mapa2$geometry &lt;- st_transform(mapa2$geometry, 
     crs = 32719)</code></pre>
 </div>
-<div id="acercarse-a-un-mapa" class="section level6">
-<h6><span class="header-section-number">2.1.0.30.0.4</span> Acercarse a un mapa</h6>
+<div id="acercarse-a-un-mapa" class="section level4">
+<h4><span class="header-section-number">3.1.30.4</span> Acercarse a un mapa</h4>
 <pre><code>mapa +
 coord_sf(ylim=c(-30, -10),
          xlim=c(-80, -60))</code></pre>
 </div>
-<div id="importar-shape" class="section level6">
-<h6><span class="header-section-number">2.1.0.30.0.5</span> Importar shape</h6>
+<div id="importar-shape" class="section level4">
+<h4><span class="header-section-number">3.1.30.5</span> Importar shape</h4>
 <p>El archivo .shp tiene que estar dentro de la carpeta con el resto de archivos necesarios.</p>
 <pre><code>mapa &lt;- sf::st_read(&quot;Catastro_Campamentos_2019/Catastro_Campamentos_2019/Catastro_Campamentos_2019.shp&quot;)    
 </code></pre>
 </div>
-<div id="geocodificar" class="section level6">
-<h6><span class="header-section-number">2.1.0.30.0.6</span> Geocodificar</h6>
+<div id="geocodificar" class="section level4">
+<h4><span class="header-section-number">3.1.30.6</span> Geocodificar</h4>
 <p><a href="https://www.jessesadler.com/post/geocoding-with-r/">https://www.jessesadler.com/post/geocoding-with-r/</a></p>
 </div>
 </div>
 </div>
 <div id="figuras-y-capas" class="section level2">
-<h2><span class="header-section-number">2.2</span> Figuras y capas</h2>
+<h2><span class="header-section-number">3.2</span> Figuras y capas</h2>
 <p>Agregar figuras o capas extra a un gráfico</p>
-<div id="agregar-capas-condicionales" class="section level4">
-<h4><span class="header-section-number">2.2.0.1</span> Agregar capas condicionales</h4>
+<div id="agregar-capas-condicionales" class="section level3">
+<h3><span class="header-section-number">3.2.1</span> Agregar capas condicionales</h3>
 <pre><code>switch=TRUE
 
 datos %&gt;%
@@ -1143,8 +1151,8 @@ ggplot(aes(x, y)) +
 geom_line(data = subset(afp_cotizantes2, región!=&quot;Iquique&quot;), size=0.5, show.legend = FALSE) +</code></pre>
 <p><a href="https://gist.github.com/jcheng5/3971908">https://gist.github.com/jcheng5/3971908</a></p>
 </div>
-<div id="agregar-barras-de-brecha" class="section level4">
-<h4><span class="header-section-number">2.2.0.2</span> Agregar barras de brecha:</h4>
+<div id="agregar-barras-de-brecha" class="section level3">
+<h3><span class="header-section-number">3.2.2</span> Agregar barras de brecha:</h3>
 <pre><code>casen %&gt;%
     filter(region==&quot;Región de Tarapacá&quot;) %&gt;%
     rename(trabajan=o1) %&gt;%
@@ -1166,16 +1174,16 @@ geom_line(data = subset(afp_cotizantes2, región!=&quot;Iquique&quot;), size=0.5
               hjust = 1.2, vjust=0.5, size=3.5, angle=90, color=&quot;white&quot;) +
     geom_linerange(aes(ymin = mujer, ymax = hombre, linetype=&quot;Brecha\nde género&quot;), size=3, col=&quot;##DF1A57&quot;)</code></pre>
 </div>
-<div id="líneas-verticales-grises" class="section level4">
-<h4><span class="header-section-number">2.2.0.3</span> Líneas verticales grises</h4>
+<div id="líneas-verticales-grises" class="section level3">
+<h3><span class="header-section-number">3.2.3</span> Líneas verticales grises</h3>
 <p>Agregar linea</p>
 <p>Verticales:</p>
 <pre><code>theme(panel.grid.major.x = element_line(color=&quot;gray90&quot;))</code></pre>
 <p>Horizontales:</p>
 <pre><code>theme(panel.grid.major.y = element_line(color=&quot;gray90&quot;))</code></pre>
 </div>
-<div id="poner-logo-en-esquina-del-gráfico" class="section level4">
-<h4><span class="header-section-number">2.2.0.4</span> Poner logo en esquina del gráfico</h4>
+<div id="poner-logo-en-esquina-del-gráfico" class="section level3">
+<h3><span class="header-section-number">3.2.4</span> Poner logo en esquina del gráfico</h3>
 <p>Importar logo:</p>
 <pre><code>logo_tarapaca &lt;- readPNG(&quot;logo_tarapaca_2.png&quot;)</code></pre>
 <pre><code>coord_cartesian(clip=&quot;off&quot;) +
@@ -1184,8 +1192,8 @@ annotation_custom(grob = rasterGrob(logo_tarapaca_chico, width=unit(2,&#39;cm&#3
 <p>Si el gráfico está horizontal:</p>
 <pre><code>coord_flip(clip=&quot;off&quot;) +</code></pre>
 </div>
-<div id="insertar-flechas-en-el-gráfico" class="section level4">
-<h4><span class="header-section-number">2.2.0.5</span> Insertar flechas en el gráfico</h4>
+<div id="insertar-flechas-en-el-gráfico" class="section level3">
+<h3><span class="header-section-number">3.2.5</span> Insertar flechas en el gráfico</h3>
 <pre><code>library(gridExtra)
 
  annotate(
@@ -1203,19 +1211,19 @@ scale_y_continuous(expand=c(0,0)) +
 coord_cartesian(ylim = c(0, 700), clip=&quot;off&quot;) +
 theme(plot.margin = unit(c(1,1,3,1), &quot;lines&quot;))</code></pre>
 </div>
-<div id="agregar-línea-horizontal-de-promedio" class="section level4">
-<h4><span class="header-section-number">2.2.0.6</span> Agregar línea horizontal de promedio</h4>
+<div id="agregar-línea-horizontal-de-promedio" class="section level3">
+<h3><span class="header-section-number">3.2.6</span> Agregar línea horizontal de promedio</h3>
 <pre><code>geom_hline(yintercept = mean(Indcatotvalue), color=&quot;blue&quot;)</code></pre>
 </div>
-<div id="graficar-una-única-variable" class="section level4">
-<h4><span class="header-section-number">2.2.0.7</span> Graficar una única variable</h4>
+<div id="graficar-una-única-variable" class="section level3">
+<h3><span class="header-section-number">3.2.7</span> Graficar una única variable</h3>
 <pre><code>ggplot(mammals[mammals$vore == &quot;Insectivore&quot;, ], aes(x = sleep_total, fill = vore)) +
   geom_density(col = NA, alpha = 0.35) +
   scale_x_continuous(limits = c(0, 24)) +
   coord_cartesian(ylim = c(0, 0.3))</code></pre>
 </div>
-<div id="insertar-barras" class="section level4">
-<h4><span class="header-section-number">2.2.0.8</span> Insertar barras</h4>
+<div id="insertar-barras" class="section level3">
+<h3><span class="header-section-number">3.2.8</span> Insertar barras</h3>
 <pre><code>geom_vline
 geom_hline</code></pre>
 <pre><code>geom_rect(data = recess,
@@ -1223,8 +1231,8 @@ geom_hline</code></pre>
          inherit.aes = FALSE, fill = &quot;red&quot;, alpha = 0.2)</code></pre>
 <pre><code>+ geom_vline(xintercept=0)</code></pre>
 </div>
-<div id="guardar-y-aplicar-capas" class="section level4">
-<h4><span class="header-section-number">2.2.0.9</span> Guardar y aplicar capas</h4>
+<div id="guardar-y-aplicar-capas" class="section level3">
+<h3><span class="header-section-number">3.2.9</span> Guardar y aplicar capas</h3>
 <pre><code>BMI_fill &lt;- scale_fill_brewer(&quot;BMI Category&quot;, palette = &quot;Reds&quot;)</code></pre>
 <p>Luego esta capa puede aplicarse con <code>+ BMI_fill</code></p>
 <p>Otro ejemplo:</p>
@@ -1234,16 +1242,16 @@ geom_hline</code></pre>
 
 ggplot(...) + fix_strips</code></pre>
 </div>
-<div id="shapes" class="section level4">
-<h4><span class="header-section-number">2.2.0.10</span> Shapes</h4>
+<div id="shapes" class="section level3">
+<h3><span class="header-section-number">3.2.10</span> Shapes</h3>
 <p>Las figuras <code>shape</code> de 21 a 25 tienen borde y relleno independientes.</p>
 </div>
 </div>
 <div id="texto" class="section level2">
-<h2><span class="header-section-number">2.3</span> Texto</h2>
+<h2><span class="header-section-number">3.3</span> Texto</h2>
 <p>Operaciones que se pueden realizar sobre el texto de los gráficos</p>
-<div id="insertar-texto-en-el-gráfico" class="section level4">
-<h4><span class="header-section-number">2.3.0.1</span> Insertar texto en el gráfico</h4>
+<div id="insertar-texto-en-el-gráfico" class="section level3">
+<h3><span class="header-section-number">3.3.1</span> Insertar texto en el gráfico</h3>
 <pre><code>annotate(&quot;text&quot;, x=2.8, y=-0.025, hjust=1, col=&quot;black&quot;, label=&quot;Menores ingresos&quot;) +
 annotate(&quot;text&quot;, x=8.4, y=-0.025, hjust=0, col=&quot;black&quot;, label=&quot;Mayores ingresos&quot;) +</code></pre>
 <p><code>hjust = 1</code> significa que el texto se posiciona desde el borde derecho, <code>0</code> depende del borde izquierdo.</p>
@@ -1251,8 +1259,8 @@ annotate(&quot;text&quot;, x=8.4, y=-0.025, hjust=0, col=&quot;black&quot;, labe
 <pre><code>    coord_cartesian(clip = &#39;off&#39;) +
     theme(plot.margin = unit(c(1,1,3,1), &quot;lines&quot;)) + ##extender área hacia abajo</code></pre>
 </div>
-<div id="texto-en-barras" class="section level4">
-<h4><span class="header-section-number">2.3.0.2</span> Texto en barras</h4>
+<div id="texto-en-barras" class="section level3">
+<h3><span class="header-section-number">3.3.2</span> Texto en barras</h3>
 <p>Crear variable que calcule el porcentaje:</p>
 <pre><code>basura &lt;- basura %&gt;% ##crear variable que mide el porcenaje
     mutate(Porcentaje = (`Toneladas al año` / sum(`Toneladas al año`) * 100))</code></pre>
@@ -1289,8 +1297,8 @@ annotate(&quot;text&quot;, x=8.4, y=-0.025, hjust=0, col=&quot;black&quot;, labe
 <pre><code>coord_cartesian(clip = &#39;off&#39;) +
 theme(plot.margin = unit(c(1,1,1,1),&quot;cm&quot;)) ##top right bottom left</code></pre>
 </div>
-<div id="mostrar-texto-en-el-gráfico-según-condición" class="section level4">
-<h4><span class="header-section-number">2.3.0.3</span> Mostrar texto en el gráfico según condición</h4>
+<div id="mostrar-texto-en-el-gráfico-según-condición" class="section level3">
+<h3><span class="header-section-number">3.3.3</span> Mostrar texto en el gráfico según condición</h3>
 <p>Mostrar etiquetas sólo para puntos o segmentos superiores a una cantidad.
 Usando <code>mutate</code>, las etiquetas que no cumplan la función quedan en blanco, manteniendo su posición:</p>
 <pre><code>    ##Texto grande
@@ -1316,8 +1324,8 @@ Usando <code>mutate</code>, las etiquetas que no cumplan la función quedan en b
               position = position_dodge2(width=0.7), 
               size=3, color=&quot;green&quot;, hjust=-0.2) +</code></pre>
 </div>
-<div id="poner-valores-sobre-las-barras" class="section level4">
-<h4><span class="header-section-number">2.3.0.4</span> Poner valores sobre las barras</h4>
+<div id="poner-valores-sobre-las-barras" class="section level3">
+<h3><span class="header-section-number">3.3.4</span> Poner valores sobre las barras</h3>
 <pre><code>geom_text(aes(label=variabley), vjust=1.5, hjust=0.5, col=&quot;white&quot;)</code></pre>
 <p>Para dodge:</p>
 <pre><code>geom_text(aes(label = percent(var1), 
@@ -1327,8 +1335,8 @@ Usando <code>mutate</code>, las etiquetas que no cumplan la función quedan en b
 <p>Si se trata de un factor:</p>
 <pre><code>geom_text(stat=&#39;count&#39;, aes(label=..count..), vjust=0.5) +</code></pre>
 </div>
-<div id="repeler-etiquetas-de-los-puntos" class="section level4">
-<h4><span class="header-section-number">2.3.0.5</span> Repeler etiquetas de los puntos</h4>
+<div id="repeler-etiquetas-de-los-puntos" class="section level3">
+<h3><span class="header-section-number">3.3.5</span> Repeler etiquetas de los puntos</h3>
 <pre><code>library(ggplot2)
 library(ggrepel)
 
@@ -1357,8 +1365,8 @@ geom_point(colour = &quot;green&quot;, size = 3)</code></pre>
   coord_cartesian(xlim = c(-5, 5), ylim = c(-5, 5)) +
   theme_bw()</code></pre>
 </div>
-<div id="convertir-etiquetas-a-minúscula-mayúscula-titulares-o-frase" class="section level4">
-<h4><span class="header-section-number">2.3.0.6</span> Convertir etiquetas a minúscula, mayúscula, titulares, o frase</h4>
+<div id="convertir-etiquetas-a-minúscula-mayúscula-titulares-o-frase" class="section level3">
+<h3><span class="header-section-number">3.3.6</span> Convertir etiquetas a minúscula, mayúscula, titulares, o frase</h3>
 <pre><code>stringr::str_to_upper(string, locale = &quot;es&quot;)
 
 stringr::str_to_lower(string, locale = &quot;es&quot;)
@@ -1367,32 +1375,32 @@ stringr::str_to_title(string, locale = &quot;es&quot;)
 
 stringr::str_to_sentence(string, locale = &quot;es&quot;)</code></pre>
 </div>
-<div id="poner-suma-de-los-factores-sobre-una-barra-stacked" class="section level4">
-<h4><span class="header-section-number">2.3.0.7</span> Poner suma de los factores sobre una barra stacked</h4>
+<div id="poner-suma-de-los-factores-sobre-una-barra-stacked" class="section level3">
+<h3><span class="header-section-number">3.3.7</span> Poner suma de los factores sobre una barra stacked</h3>
 <pre><code>stat_summary(fun.y = sum,                          ##pone como texto la suma de los factores en cada barra
                aes(label = ..y.., group = Año), 
                geom = &quot;text&quot;, vjust=-0.5, size=3, col=&quot;gray25&quot;) + </code></pre>
 </div>
-<div id="ajustar-cita-o-referencia" class="section level4">
-<h4><span class="header-section-number">2.3.0.8</span> Ajustar cita o referencia</h4>
+<div id="ajustar-cita-o-referencia" class="section level3">
+<h3><span class="header-section-number">3.3.8</span> Ajustar cita o referencia</h3>
 <p>Horizontalmente:</p>
 <pre><code>plot.caption = element_text(hjust = 1.4)) +</code></pre>
 </div>
-<div id="mover-título-y-subtítulo" class="section level4">
-<h4><span class="header-section-number">2.3.0.9</span> Mover título y subtítulo</h4>
+<div id="mover-título-y-subtítulo" class="section level3">
+<h3><span class="header-section-number">3.3.9</span> Mover título y subtítulo</h3>
 <p>Horizontalmente:</p>
 <pre><code>plot.title = element_text(hjust = 0.3),
 plot.subtitle = element_text(hjust = 0.3),</code></pre>
 </div>
-<div id="buscar-y-reemplazar-palabras-de-las-etiquetas" class="section level4">
-<h4><span class="header-section-number">2.3.0.10</span> Buscar y reemplazar palabras de las etiquetas</h4>
+<div id="buscar-y-reemplazar-palabras-de-las-etiquetas" class="section level3">
+<h3><span class="header-section-number">3.3.10</span> Buscar y reemplazar palabras de las etiquetas</h3>
 <pre><code>## buscar y reemplazar palabras para borrarlas de las etiquetas
 eme2 &lt;- eme2 %&gt;% 
   mutate(tramo_ingresos = str_replace(tramo_ingresos, &quot;Entre &quot;, &quot;&quot;)) %&gt;%
   mutate(tramo_ingresos = str_replace(tramo_ingresos, &quot;y&quot;, &quot;a&quot;))</code></pre>
 </div>
-<div id="redondear-cifras" class="section level4">
-<h4><span class="header-section-number">2.3.0.11</span> Redondear cifras</h4>
+<div id="redondear-cifras" class="section level3">
+<h3><span class="header-section-number">3.3.11</span> Redondear cifras</h3>
 <pre><code>round(variable, digits=1)</code></pre>
 <p>Ejemplo:</p>
 <pre><code>geom_text(aes(label = 
@@ -1401,8 +1409,8 @@ eme2 &lt;- eme2 %&gt;%
                             &quot;%&quot;)), 
               color=&quot;white&quot;, size=3.5, position=position_stack(vjust = 0.5)) +</code></pre>
 </div>
-<div id="pegar-signo-de-porcentaje" class="section level4">
-<h4><span class="header-section-number">2.3.0.12</span> Pegar signo de porcentaje</h4>
+<div id="pegar-signo-de-porcentaje" class="section level3">
+<h3><span class="header-section-number">3.3.12</span> Pegar signo de porcentaje</h3>
 <pre><code>paste0(Porcentaje,&quot;%&quot;)</code></pre>
 <p>Ejemplo:</p>
 <pre><code>geom_text(aes(label = 
@@ -1411,8 +1419,8 @@ eme2 &lt;- eme2 %&gt;%
                             &quot;%&quot;)), 
               color=&quot;white&quot;, size=3.5, position=position_stack(vjust = 0.5)) +</code></pre>
 </div>
-<div id="cambiar-etiquetas-del-gráfico" class="section level4">
-<h4><span class="header-section-number">2.3.0.13</span> Cambiar etiquetas del gráfico</h4>
+<div id="cambiar-etiquetas-del-gráfico" class="section level3">
+<h3><span class="header-section-number">3.3.13</span> Cambiar etiquetas del gráfico</h3>
 <p>Cambiar títulos de los ejes</p>
 <pre><code>+ labs(x=&quot;Título del eje x&quot;, y=&quot;Título del eje y&quot;)</code></pre>
 <pre><code>titled_plot &lt;- initial_plot + 
@@ -1422,8 +1430,8 @@ eme2 &lt;- eme2 %&gt;%
          x = &quot;&quot;, 
          y = &quot;&quot;) </code></pre>
 </div>
-<div id="poner-nombre-de-barras-dentro-de-las-barras" class="section level4">
-<h4><span class="header-section-number">2.3.0.14</span> Poner nombre de barras dentro de las barras</h4>
+<div id="poner-nombre-de-barras-dentro-de-las-barras" class="section level3">
+<h3><span class="header-section-number">3.3.14</span> Poner nombre de barras dentro de las barras</h3>
 <p>Para que el texto o etiqueta del eje <code>y</code> o <code>x</code> aparezca dentro de la barra:</p>
 <p>En gráficos con <code>coord_flip</code>:</p>
 <pre><code>geom_text(aes(label = str_to_title(variable), y=0.02), hjust=0, size = 3.2, col=&quot;white&quot;) +
@@ -1432,8 +1440,8 @@ theme(axis.text.y = element_blank()) ##ocultar eje</code></pre>
 <pre><code>geom_text(aes(label = str_to_title(variable), y=0.02), angle=90, hjust=0, size = 3.2, col=&quot;white&quot;) +
 theme(axis.text.x = element_blank())</code></pre>
 </div>
-<div id="calcular-porcentajes" class="section level4">
-<h4><span class="header-section-number">2.3.0.15</span> Calcular porcentajes</h4>
+<div id="calcular-porcentajes" class="section level3">
+<h3><span class="header-section-number">3.3.15</span> Calcular porcentajes</h3>
 <p>Calcular porcentaje por categorías:</p>
 <pre><code>group_by(gastos_forma, periodo, extranjeros) %&gt;%
     summarise(cantidad = n()) %&gt;%
@@ -1449,8 +1457,8 @@ theme(axis.text.x = element_blank())</code></pre>
 <p>Agregar columna con suma de totales:</p>
 <pre><code>adorn_totals(&quot;col&quot;, name = &quot;Total&quot;) %&gt;%</code></pre>
 </div>
-<div id="poner-texto-al-final-del-gráfico-de-líneas" class="section level4">
-<h4><span class="header-section-number">2.3.0.16</span> Poner texto al final del gráfico de líneas</h4>
+<div id="poner-texto-al-final-del-gráfico-de-líneas" class="section level3">
+<h3><span class="header-section-number">3.3.16</span> Poner texto al final del gráfico de líneas</h3>
 <pre><code>    geom_text(aes(label = ifelse(Año==2018, 
                                  str_pad(number(media, accuracy = 1, big.mark=&quot;.&quot;), 20, side=&quot;right&quot;),
                                  &quot;&quot;)), 
@@ -1458,29 +1466,29 @@ theme(axis.text.x = element_blank())</code></pre>
 <p>Puede que sea necesario mover la leyenda hacia la derecha:</p>
 <pre><code>theme(legend.box.margin=margin(c(0,0,0,10))) +</code></pre>
 </div>
-<div id="formatear-números" class="section level4">
-<h4><span class="header-section-number">2.3.0.17</span> Formatear números</h4>
+<div id="formatear-números" class="section level3">
+<h3><span class="header-section-number">3.3.17</span> Formatear números</h3>
 <p>Quitar decimales a un número que por ejemplo es una media:</p>
 <pre><code>round(Toneladas, digits = 2)</code></pre>
 </div>
-<div id="añadir-texto-antes-o-después-del-nombre-de-la-variable" class="section level4">
-<h4><span class="header-section-number">2.3.0.18</span> Añadir texto antes o después del nombre de la variable</h4>
+<div id="añadir-texto-antes-o-después-del-nombre-de-la-variable" class="section level3">
+<h3><span class="header-section-number">3.3.18</span> Añadir texto antes o después del nombre de la variable</h3>
 <pre><code>ggplot(aes(x = paste(&quot;texto&quot;, variable)))</code></pre>
 <pre><code>scale_x_continuous(labels = function(x) paste(x, &quot;años&quot;),</code></pre>
 </div>
-<div id="formatear-una-fecha" class="section level4">
-<h4><span class="header-section-number">2.3.0.19</span> Formatear una fecha</h4>
+<div id="formatear-una-fecha" class="section level3">
+<h3><span class="header-section-number">3.3.19</span> Formatear una fecha</h3>
 <p>Hay que tener instalado el <code>locale</code> necesario, en este caso el de español. Activar el <code>locale</code>:</p>
 <pre><code>Sys.setlocale(category = &quot;LC_TIME&quot;, locale=&quot;es_ES.UTF-8&quot;) ##Meses en español</code></pre>
 <p>Luego las fechas usarán meses en castellano:</p>
 <pre><code>format(max(covid_comuna$Fecha), &quot;%d de %B&quot;)</code></pre>
 </div>
-<div id="aumentar-el-tamaño-de-todo-el-texto" class="section level4">
-<h4><span class="header-section-number">2.3.0.20</span> Aumentar el tamaño de todo el texto</h4>
+<div id="aumentar-el-tamaño-de-todo-el-texto" class="section level3">
+<h3><span class="header-section-number">3.3.20</span> Aumentar el tamaño de todo el texto</h3>
 <pre><code>theme(text = element_text(size=16))</code></pre>
 </div>
-<div id="cambiar-tipografía" class="section level4">
-<h4><span class="header-section-number">2.3.0.21</span> Cambiar tipografía</h4>
+<div id="cambiar-tipografía" class="section level3">
+<h3><span class="header-section-number">3.3.21</span> Cambiar tipografía</h3>
 <pre><code>library(extrafont)
 
 theme(plot.title = element_text(size=18, family=&quot;Bebas Kai&quot;, color=&quot;##1c2366&quot;),</code></pre>
@@ -1489,8 +1497,8 @@ theme(plot.title = element_text(size=18, family=&quot;Bebas Kai&quot;, color=&qu
 <p>Ver tipografías instaladas:</p>
 <pre><code>extrafont::fonts()</code></pre>
 </div>
-<div id="cambiar-color-de-un-texto-según-condición" class="section level4">
-<h4><span class="header-section-number">2.3.0.22</span> Cambiar color de un texto según condición</h4>
+<div id="cambiar-color-de-un-texto-según-condición" class="section level3">
+<h3><span class="header-section-number">3.3.22</span> Cambiar color de un texto según condición</h3>
 <p>Crear la condición necesaria y poner como categorías de la variable los colores a elegir:</p>
 <pre><code>datos %&gt;%
 mutate(Region2 = case_when(Region==&quot;Tarapacá&quot; ~ &quot;##red&quot;,
@@ -1499,12 +1507,12 @@ mutate(Region2 = case_when(Region==&quot;Tarapacá&quot; ~ &quot;##red&quot;,
 <pre><code>geom_text(aes(x=Comuna, y=-50, label = Region),
     color = datos$Region2)</code></pre>
 </div>
-<div id="añadir-valor-o-texto-a-las-etiquetas-del-eje-x" class="section level4">
-<h4><span class="header-section-number">2.3.0.23</span> Añadir valor o texto a las etiquetas del eje x</h4>
+<div id="añadir-valor-o-texto-a-las-etiquetas-del-eje-x" class="section level3">
+<h3><span class="header-section-number">3.3.23</span> Añadir valor o texto a las etiquetas del eje x</h3>
 <pre><code>scale_x_discrete(labels = paste0(Region, &quot;\n&quot;, Poblacion))</code></pre>
 </div>
-<div id="ajustar-etiquetas-largas" class="section level4">
-<h4><span class="header-section-number">2.3.0.24</span> Ajustar etiquetas largas</h4>
+<div id="ajustar-etiquetas-largas" class="section level3">
+<h3><span class="header-section-number">3.3.24</span> Ajustar etiquetas largas</h3>
 <p>Para cortar la categorías largas, por ejemplo, en la leyenda de un gráfico o las etiquetas de un eje:</p>
 <pre><code>datos %&gt;%
   ggplot(aes(variable, str_wrap(variable, width = 35))) +
@@ -1522,16 +1530,16 @@ mutate(Region2 = case_when(Region==&quot;Tarapacá&quot; ~ &quot;##red&quot;,
 <pre><code>mutate(ocupación_CIUO = str_trunc(as.character(ocupación_CIUO), 30, side=&quot;right&quot;)) %&gt;%</code></pre>
 <p>Luego volver a convertir a factor.</p>
 </div>
-<div id="ggtext" class="section level4">
-<h4><span class="header-section-number">2.3.0.25</span> ggtext</h4>
+<div id="ggtext" class="section level3">
+<h3><span class="header-section-number">3.3.25</span> ggtext</h3>
 <p><a href="https://thomasadventure.blog/posts/enhance-ggplot2-with-ggtext/">Enhance Your ggplot2 Data Visualizations with ggtext</a></p>
 </div>
 </div>
 <div id="escalas" class="section level2">
-<h2><span class="header-section-number">2.4</span> Escalas</h2>
+<h2><span class="header-section-number">3.4</span> Escalas</h2>
 <p>Manipulación de las escalas de los gráficos, que son los elementos que controlan la disposición espacial de las observaciones en el plano.</p>
-<div id="ordenar-grafico-de-barras" class="section level4">
-<h4><span class="header-section-number">2.4.0.1</span> Ordenar grafico de barras</h4>
+<div id="ordenar-grafico-de-barras" class="section level3">
+<h3><span class="header-section-number">3.4.1</span> Ordenar grafico de barras</h3>
 <p>Ordenar las barras para que una categoría del stack vaya de mayor a menor: crear una variable con <code>case_when</code> que sea un valor numérico, luego sumar esos valores numéricos en <code>summarize</code> según los grupos.</p>
 <pre><code>turismo2 %&gt;%
   mutate(orden = case_when(interés == &quot;Es de interes&quot; ~ &quot;1&quot;, TRUE ~ &quot;0&quot;)) %&gt;%
@@ -1546,23 +1554,23 @@ mutate(Region2 = case_when(Region==&quot;Tarapacá&quot; ~ &quot;##red&quot;,
   ggplot(aes(fct_reorder(Region, Orden), 
              Valor, fill = Grupo)) +</code></pre>
 </div>
-<div id="expandir-un-eje" class="section level4">
-<h4><span class="header-section-number">2.4.0.2</span> Expandir un eje</h4>
+<div id="expandir-un-eje" class="section level3">
+<h3><span class="header-section-number">3.4.2</span> Expandir un eje</h3>
 <p>Por ejemplo, si una línea queda muy corta en la parte superior de un gráfico de densidad. Similar a <code>coord_cartesian</code></p>
 <pre><code>scale_y_discrete(expand = expand_scale(add = c(0.3, 5.5))) +</code></pre>
 </div>
-<div id="poner-comas-en-los-ejes" class="section level4">
-<h4><span class="header-section-number">2.4.0.3</span> Poner comas en los ejes</h4>
+<div id="poner-comas-en-los-ejes" class="section level3">
+<h3><span class="header-section-number">3.4.3</span> Poner comas en los ejes</h3>
 <pre><code>scale_x_continuous(labels = scales::comma)</code></pre>
 </div>
-<div id="intercambiar-ejes" class="section level4">
-<h4><span class="header-section-number">2.4.0.4</span> Intercambiar ejes</h4>
+<div id="intercambiar-ejes" class="section level3">
+<h3><span class="header-section-number">3.4.4</span> Intercambiar ejes</h3>
 <pre><code>+ coord_flip()</code></pre>
 <p>Intercambiar y cortar o extender:</p>
 <pre><code>coord_flip(xlim=c(0, 800)) + </code></pre>
 </div>
-<div id="cambiar-orden-de-los-ejes" class="section level4">
-<h4><span class="header-section-number">2.4.0.5</span> Cambiar orden de los ejes</h4>
+<div id="cambiar-orden-de-los-ejes" class="section level3">
+<h3><span class="header-section-number">3.4.5</span> Cambiar orden de los ejes</h3>
 <pre><code>ggplot(aes(x = logFoldChange, y = reorder(variable, variable_de_ordenamiento)) +
     geom_point()</code></pre>
 <p>Invertir el orden:</p>
@@ -1581,59 +1589,59 @@ mutate(Region2 = case_when(Region==&quot;Tarapacá&quot; ~ &quot;##red&quot;,
 <pre><code>  ggplot(aes(x=fct_reorder(Comuna, Porcentaje, .fun=sum, .desc=TRUE)</code></pre>
 <p>Util cuando son barras stacked y hay que ordenar por la suma de los factores</p>
 </div>
-<div id="girar-etiquetas-del-eje-x" class="section level4">
-<h4><span class="header-section-number">2.4.0.6</span> Girar etiquetas del eje x</h4>
+<div id="girar-etiquetas-del-eje-x" class="section level3">
+<h3><span class="header-section-number">3.4.6</span> Girar etiquetas del eje x</h3>
 <p>Girar etiquetas del eje, dándole ángulo o poniéndola horizontal, por ejemplo</p>
 <pre><code>axis.text.x = element_text(angle = -90, hjust=0)) +</code></pre>
 <p><code>hjust</code> justifica el texto</p>
 <p>Girar a la derecha y justificar:</p>
 <pre><code>theme(axis.text.x = element_text(hjust=0, vjust=0.5, angle = -90)</code></pre>
 </div>
-<div id="cambiar-márgenes-de-elementos" class="section level4">
-<h4><span class="header-section-number">2.4.0.7</span> Cambiar márgenes de elementos</h4>
+<div id="cambiar-márgenes-de-elementos" class="section level3">
+<h3><span class="header-section-number">3.4.7</span> Cambiar márgenes de elementos</h3>
 <pre><code>theme(axis.text.x = element_text(margin = margin(t = 0)),
     axis.text.y = element_text(margin = margin(r = -5)),
     plot.subtitle = element_text(margin = margin(b = 15)))</code></pre>
 </div>
-<div id="mostrar-todas-las-etiquetas-del-eje-x" class="section level4">
-<h4><span class="header-section-number">2.4.0.8</span> Mostrar todas las etiquetas del eje x</h4>
+<div id="mostrar-todas-las-etiquetas-del-eje-x" class="section level3">
+<h3><span class="header-section-number">3.4.8</span> Mostrar todas las etiquetas del eje x</h3>
 <p>Mostrar todas las etiquetas del eje x</p>
 <pre><code>scale_x_continuous(&quot;ID&quot;, labels = as.character(ID), breaks = ID)</code></pre>
 <pre><code>scale_x_continuous(breaks = c(1973:1980))</code></pre>
 </div>
-<div id="definir-cortes-del-eje-y" class="section level4">
-<h4><span class="header-section-number">2.4.0.9</span> Definir cortes del eje y</h4>
+<div id="definir-cortes-del-eje-y" class="section level3">
+<h3><span class="header-section-number">3.4.9</span> Definir cortes del eje y</h3>
 <pre><code>scale_y_continuous(breaks = c(10, 50, 100, 150, 200)) +</code></pre>
 <p>También sirve para eliminar el 0 del eje. Para combinar con logaritmo: <code>, trans="log10"</code></p>
 </div>
-<div id="transformar-escalas-a-logaritmo" class="section level4">
-<h4><span class="header-section-number">2.4.0.10</span> Transformar escalas a logaritmo</h4>
+<div id="transformar-escalas-a-logaritmo" class="section level3">
+<h3><span class="header-section-number">3.4.10</span> Transformar escalas a logaritmo</h3>
 <pre><code>## Transform the scale
 d + scale_y_log10()
 </code></pre>
 <pre><code>## Transform the coordinates
 d + coord_trans(y=&quot;log10&quot;)</code></pre>
 </div>
-<div id="agregar-alfombra" class="section level4">
-<h4><span class="header-section-number">2.4.0.11</span> Agregar alfombra</h4>
+<div id="agregar-alfombra" class="section level3">
+<h3><span class="header-section-number">3.4.11</span> Agregar alfombra</h3>
 <p>Muestra los puntos exactos donde existen datos.</p>
 <p><code>+ geom_rug()</code></p>
 </div>
-<div id="cambiar-eje-a-logaritmo" class="section level4">
-<h4><span class="header-section-number">2.4.0.12</span> Cambiar eje a logaritmo</h4>
+<div id="cambiar-eje-a-logaritmo" class="section level3">
+<h3><span class="header-section-number">3.4.12</span> Cambiar eje a logaritmo</h3>
 <p>Para cambiar una escala a logarítmica:</p>
 <pre><code>+ scale_x_log10()</code></pre>
 </div>
-<div id="ampliar-eje" class="section level4">
-<h4><span class="header-section-number">2.4.0.13</span> Ampliar eje</h4>
+<div id="ampliar-eje" class="section level3">
+<h3><span class="header-section-number">3.4.13</span> Ampliar eje</h3>
 <p>Para que un eje empiece desde cero y así se elimine el margen o espaciado por defecto de ggplot:</p>
 <pre><code>expand_limits(y=0)</code></pre>
 <pre><code>coord_flip(expand=FALSE)</code></pre>
 <pre><code>scale_x_discrete(expand = c(0, 0)) +</code></pre>
 <pre><code>scale_x_continuous(expand = c(0, 0)) + scale_y_continuous(expand = c(0, 0))</code></pre>
 </div>
-<div id="insertar-un-nivel-en-blanco-para-una-escala" class="section level4">
-<h4><span class="header-section-number">2.4.0.14</span> Insertar un nivel en blanco para una escala</h4>
+<div id="insertar-un-nivel-en-blanco-para-una-escala" class="section level3">
+<h3><span class="header-section-number">3.4.14</span> Insertar un nivel en blanco para una escala</h3>
 <p>Para que en la leyenda aparezca un espacio vacío entremedio.</p>
 <p>Primero agregar el nivel blanco con <code>\n</code>:</p>
 <pre><code>previsión_t$previsión = factor(previsión_t$previsión, levels=c(&quot;Fonasa A&quot;, &quot;Fonasa B&quot;, &quot;Fonasa C&quot;, &quot;Fonasa D&quot;, &quot;Fonasa desconocido&quot;, &quot;\n\n&quot;,&quot;Isapre&quot;, &quot;FF.AA. y de Orden&quot;, &quot;Ninguno (Particular)&quot;, &quot;Otro sistema&quot;))  </code></pre>
@@ -1643,8 +1651,8 @@ d + coord_trans(y=&quot;log10&quot;)</code></pre>
                                  degradado4(3), &quot;gray70&quot;),
                        drop = FALSE) + ##Determinar que el nivel en blanco no se salte</code></pre>
 </div>
-<div id="escalas-de-series-de-tiempo" class="section level4">
-<h4><span class="header-section-number">2.4.0.15</span> Escalas de series de tiempo</h4>
+<div id="escalas-de-series-de-tiempo" class="section level3">
+<h3><span class="header-section-number">3.4.15</span> Escalas de series de tiempo</h3>
 <p><a href="https://www.statworx.com/at/blog/customizing-time-and-date-scales-in-ggplot2/">https://www.statworx.com/at/blog/customizing-time-and-date-scales-in-ggplot2/</a></p>
 <p>Configurar el eje x cuando es fecha:</p>
 <pre><code>scale_x_date(breaks = seq(from = ymd(&#39;2020-03-30&#39;), to = max(covid_comuna$Fecha), 
@@ -1653,16 +1661,16 @@ d + coord_trans(y=&quot;log10&quot;)</code></pre>
                date_labels = &quot;%d/%B&quot;) +</code></pre>
 <p>La opción <code>by=1</code> pone un break por fecha, y <code>length.out</code> pone la cantidad de breaks definidos, dispersados entre el menos y el mayor.</p>
 </div>
-<div id="cambiar-escalas-continuas" class="section level4">
-<h4><span class="header-section-number">2.4.0.16</span> Cambiar escalas continuas</h4>
+<div id="cambiar-escalas-continuas" class="section level3">
+<h3><span class="header-section-number">3.4.16</span> Cambiar escalas continuas</h3>
 <pre><code>    scale_fill_viridis(option=&quot;magma&quot;, ##color
                        name = &quot;Porcentaje \nde votantes&quot;, 
                        breaks = c(0, 25, 50, 75, 100),
                        labels=c(&quot;0%&quot;, &quot;25%&quot;, &quot;50%&quot;, &quot;75%&quot;, &quot;100%&quot;),
                        limits=c(20,80)) +</code></pre>
 </div>
-<div id="escalas-1" class="section level4">
-<h4><span class="header-section-number">2.4.0.17</span> Escalas</h4>
+<div id="escalas-1" class="section level3">
+<h3><span class="header-section-number">3.4.17</span> Escalas</h3>
 <p>Cambiar el rango de tamaños de los puntos</p>
 <pre><code>+ scale_size(range = c(1, 10))</code></pre>
 <p>Etiquetas en la escala manualmente:</p>
@@ -1673,16 +1681,16 @@ d + coord_trans(y=&quot;log10&quot;)</code></pre>
 <p>Secuencia de breaks en la escala:</p>
 <pre><code>scale_y_continuous(limits = c(0, 12000), breaks = seq(0,12000,by = 2000)</code></pre>
 </div>
-<div id="escala-en-miles" class="section level4">
-<h4><span class="header-section-number">2.4.0.18</span> Escala en miles</h4>
+<div id="escala-en-miles" class="section level3">
+<h3><span class="header-section-number">3.4.18</span> Escala en miles</h3>
 <p>Puntos de miles en la escala:</p>
 <pre><code>scale_y_continuous(labels = function(x) format(x, big.mark = &quot;.&quot;)) +</code></pre>
 <p>Escala de miles</p>
 <p>O bien:</p>
 <pre><code>scale_size_continuous(labels = scales::number) +</code></pre>
 </div>
-<div id="escala-en-porcentajes" class="section level4">
-<h4><span class="header-section-number">2.4.0.19</span> Escala en porcentajes</h4>
+<div id="escala-en-porcentajes" class="section level3">
+<h3><span class="header-section-number">3.4.19</span> Escala en porcentajes</h3>
 <pre><code>library(scales)
 
 scale_y_continuous(labels = scales::percent_format(accuracy = 1)) +</code></pre>
@@ -1691,14 +1699,14 @@ scale_y_continuous(labels = scales::percent_format(accuracy = 1)) +</code></pre>
 </div>
 </div>
 <div id="colores" class="section level2">
-<h2><span class="header-section-number">2.5</span> Colores</h2>
+<h2><span class="header-section-number">3.5</span> Colores</h2>
 <p>Operaciones que permiten controlar y modificar los colores utilizados en los gráficos.</p>
-<div id="agregar-más-de-una-escala-de-color" class="section level4">
-<h4><span class="header-section-number">2.5.0.1</span> Agregar más de una escala de color</h4>
+<div id="agregar-más-de-una-escala-de-color" class="section level3">
+<h3><span class="header-section-number">3.5.1</span> Agregar más de una escala de color</h3>
 <p><a href="https://eliocamp.github.io/ggnewscale/">https://eliocamp.github.io/ggnewscale/</a></p>
 </div>
-<div id="escalas-continuas-de-colores-degradado" class="section level4">
-<h4><span class="header-section-number">2.5.0.2</span> Escalas continuas de colores (degradado)</h4>
+<div id="escalas-continuas-de-colores-degradado" class="section level3">
+<h3><span class="header-section-number">3.5.2</span> Escalas continuas de colores (degradado)</h3>
 <p>Definir color del mínimo y máximo:</p>
 <pre><code>scale_fill_gradient(low = &quot;gray90&quot;, high = color_verde) +</code></pre>
 <p>Definir color del mínimo, intermedio y máximo:</p>
@@ -1708,8 +1716,8 @@ scale_y_continuous(labels = scales::percent_format(accuracy = 1)) +</code></pre>
                             midpoint = 3.8) +</code></pre>
 <p>Opcionalmente, definir en <code>midpoint</code> el punto que equivale al intermedio.</p>
 </div>
-<div id="aplicar-paleta-de-colores-específicas-a-determinadas-variables" class="section level4">
-<h4><span class="header-section-number">2.5.0.3</span> Aplicar paleta de colores específicas a determinadas variables</h4>
+<div id="aplicar-paleta-de-colores-específicas-a-determinadas-variables" class="section level3">
+<h3><span class="header-section-number">3.5.3</span> Aplicar paleta de colores específicas a determinadas variables</h3>
 <pre><code>cyl &lt;- sort(unique(mpg$cyl))
 ncat &lt;- length(cyl)          ## 4 types of cylinders
 
@@ -1733,21 +1741,21 @@ gg_dd %&gt;%
         coord_flip() +
         scale_fill_identity() </code></pre>
 </div>
-<div id="aplicar-escala-de-color-automática" class="section level4">
-<h4><span class="header-section-number">2.5.0.4</span> Aplicar escala de color automática</h4>
+<div id="aplicar-escala-de-color-automática" class="section level3">
+<h3><span class="header-section-number">3.5.4</span> Aplicar escala de color automática</h3>
 <p>Primero crear la escala de color con tantos colores como se necesiten:</p>
 <pre><code>degradado &lt;- colorRampPalette(c(&quot;##DF1A57&quot;, &quot;##AF87EB&quot;, &quot;##1D3284&quot;))</code></pre>
 <p>Luego aplicar la escala al gráfico, determinando el número de colores a usar:</p>
 <pre><code>scale_color_manual(values = degradado(7),
 aesthetics = c(&quot;fill&quot;, &quot;col&quot;)) +</code></pre>
 </div>
-<div id="crear-escala-o-degradado-de-colores" class="section level4">
-<h4><span class="header-section-number">2.5.0.5</span> Crear escala o degradado de colores</h4>
+<div id="crear-escala-o-degradado-de-colores" class="section level3">
+<h3><span class="header-section-number">3.5.5</span> Crear escala o degradado de colores</h3>
 <pre><code>degradado &lt;- colorRampPalette(c(&quot;##DF1A57&quot;, &quot;##c444c4&quot;, &quot;##6739b2&quot;, &quot;##1D3284&quot;), bias=0.9)</code></pre>
 <p>Bias es la separación de los colores en los extremos de la escala. Un bias alto (mayor a 1) hace que los colores cambien más rápido y uno bajo (cercano a 0) distribuye los colores más suavemente.</p>
 </div>
-<div id="previsualizar-colores" class="section level4">
-<h4><span class="header-section-number">2.5.0.6</span> Previsualizar colores</h4>
+<div id="previsualizar-colores" class="section level3">
+<h3><span class="header-section-number">3.5.6</span> Previsualizar colores</h3>
 <p>Para ver un color o vector de colores:</p>
 <pre><code>scales::show_col(&quot;##DF1A57&quot;)
 
@@ -1755,13 +1763,13 @@ scales::show_col(c(&quot;##DF1A57&quot;, &quot;##c444c4&quot;, &quot;##6739b2&qu
 
 scales::show_col(degradado7b(7))</code></pre>
 </div>
-<div id="aclarar-u-oscurecer-colores" class="section level4">
-<h4><span class="header-section-number">2.5.0.7</span> Aclarar u oscurecer colores</h4>
+<div id="aclarar-u-oscurecer-colores" class="section level3">
+<h3><span class="header-section-number">3.5.7</span> Aclarar u oscurecer colores</h3>
 <pre><code>colorspace::lighten(&quot;red&quot;, amount = 0.5)</code></pre>
 <pre><code>scales::show_col(colorspace::lighten(color_naranjo, amount = 0.6))</code></pre>
 </div>
-<div id="rcolorbrewer" class="section level4">
-<h4><span class="header-section-number">2.5.0.8</span> RColorBrewer</h4>
+<div id="rcolorbrewer" class="section level3">
+<h3><span class="header-section-number">3.5.8</span> RColorBrewer</h3>
 <pre><code>scale_fill_brewer(palette = &quot;Dark2&quot;) +</code></pre>
 <p>Para ver todas las paletas disponibles:</p>
 <pre><code>RColorBrewer::display.brewer.all()</code></pre>
@@ -1772,16 +1780,16 @@ scales::show_col(degradado7b(7))</code></pre>
                          name = &quot;Porcentaje \nde votantes&quot;, 
                          breaks = c(10, 30, 50, 70, 90)) + </code></pre>
 </div>
-<div id="crear-degradados-de-color" class="section level4">
-<h4><span class="header-section-number">2.5.0.9</span> Crear degradados de color</h4>
+<div id="crear-degradados-de-color" class="section level3">
+<h3><span class="header-section-number">3.5.9</span> Crear degradados de color</h3>
 <p>Crear escala de colores entre colores específicos:</p>
 <pre><code>degradado1 &lt;- colorRampPalette(c(&quot;##DF1A57&quot;, &quot;##AF87EB&quot;, &quot;##1D3284&quot;))</code></pre>
 <p>Luego aplicar así:</p>
 <pre><code>scale_color_manual(values = degradado1(5)) +</code></pre>
 <p>Donde el número es la cantidad de colores</p>
 </div>
-<div id="extender-escalas-de-colores" class="section level4">
-<h4><span class="header-section-number">2.5.0.10</span> Extender escalas de colores</h4>
+<div id="extender-escalas-de-colores" class="section level3">
+<h3><span class="header-section-number">3.5.10</span> Extender escalas de colores</h3>
 <pre><code>## Definition of a set of blue colors
 blues &lt;- brewer.pal(9, &quot;Blues&quot;) ## from the RColorBrewer package
 
@@ -1793,17 +1801,17 @@ ggplot(Vocab, aes(x = education, fill = vocabulary)) +
   geom_bar(position = &quot;fill&quot;) +
   scale_fill_manual(values=blue_range(11))</code></pre>
 </div>
-<div id="determinar-colores-para-variable-categórica" class="section level4">
-<h4><span class="header-section-number">2.5.0.11</span> Determinar colores para variable categórica</h4>
+<div id="determinar-colores-para-variable-categórica" class="section level3">
+<h3><span class="header-section-number">3.5.11</span> Determinar colores para variable categórica</h3>
 <pre><code>colores_redes&lt;- c(&quot;Facebook&quot;=&quot;##1877f2&quot;,&quot;WhatsApp y similares&quot;=&quot;##25d366&quot;,&quot;Instagram&quot;=&quot;##c32aa3&quot;,&quot;Skype&quot;=&quot;##00aff0&quot;,&quot;Twitter&quot;=&quot;##1da1f2&quot;,&quot;Tinder y similares&quot;=&quot;##FF5864&quot;,&quot;Snapchat&quot;=&quot;##fffc00&quot;,&quot;LinkedIn&quot;=&quot;##007bb5&quot;)</code></pre>
 <p>Luego, dependiendo del tipo del elemento:</p>
 <pre><code>scale_fill_manual(values = colores_redes) + 
 scale_color_manual(values = colores_redes) +</code></pre>
 </div>
-<div id="más-escalas-de-colores" class="section level4">
-<h4><span class="header-section-number">2.5.0.12</span> Más escalas de colores</h4>
-<div id="viridis" class="section level6">
-<h6><span class="header-section-number">2.5.0.12.0.1</span> Viridis</h6>
+<div id="más-escalas-de-colores" class="section level3">
+<h3><span class="header-section-number">3.5.12</span> Más escalas de colores</h3>
+<div id="viridis" class="section level4">
+<h4><span class="header-section-number">3.5.12.1</span> Viridis</h4>
 <pre><code>scale_color_viridis() +</code></pre>
 <pre><code>scale_fill_viridis(option=&quot;magma&quot;) +</code></pre>
 <p>“magma”, “plasma”, and “inferno.”</p>
@@ -1812,16 +1820,16 @@ scale_color_manual(values = colores_redes) +</code></pre>
 - <a href="https://twitter.com/wearerladies/status/1180545410974257152?s=12">https://twitter.com/wearerladies/status/1180545410974257152?s=12</a>
 - <a href="https://github.com/EmilHvitfeldt/r-color-palettes/blob/master/type-sorted-palettes.md##qualitative-color-palettes">https://github.com/EmilHvitfeldt/r-color-palettes/blob/master/type-sorted-palettes.md##qualitative-color-palettes</a></p>
 </div>
-<div id="cartocolor" class="section level6">
-<h6><span class="header-section-number">2.5.0.12.0.2</span> CartoColor</h6>
+<div id="cartocolor" class="section level4">
+<h4><span class="header-section-number">3.5.12.2</span> CartoColor</h4>
 <p><a href="https://github.com/Nowosad/rcartocolor">https://github.com/Nowosad/rcartocolor</a>
 Ver colores:</p>
 <pre><code>cartocolor::display_carto_all()</code></pre>
 <p>Usar:</p>
 <pre><code>scale_fill_carto_c(name = &quot;Life expectancy: &quot;, type = &quot;diverging&quot;, palette = &quot;Earth&quot;, direction = -1)</code></pre>
 </div>
-<div id="scico" class="section level6">
-<h6><span class="header-section-number">2.5.0.12.0.3</span> Scico</h6>
+<div id="scico" class="section level4">
+<h4><span class="header-section-number">3.5.12.3</span> Scico</h4>
 <p>Ver colores:</p>
 <pre><code>scico::scico_palette_show()</code></pre>
 <p>Generar paleta:</p>
@@ -1831,8 +1839,8 @@ Ver colores:</p>
   geom_raster() + 
   scale_fill_scico(palette = &#39;davos&#39;) </code></pre>
 </div>
-<div id="fishualize" class="section level6">
-<h6><span class="header-section-number">2.5.0.12.0.4</span> Fishualize</h6>
+<div id="fishualize" class="section level4">
+<h4><span class="header-section-number">3.5.12.4</span> Fishualize</h4>
 <pre><code>devtools::install_github(&quot;nschiett/fishualize&quot;, force = TRUE)
 library(fishualize)
 
@@ -1855,14 +1863,14 @@ scale_color_fishd(option = &quot;Hypsypops_rubicundus&quot;, direction = -1)
 
 scale_color_fish(option = &quot;Coris_gaimard&quot;, discrete = TRUE)</code></pre>
 </div>
-<div id="ghibli" class="section level6">
-<h6><span class="header-section-number">2.5.0.12.0.5</span> Ghibli</h6>
+<div id="ghibli" class="section level4">
+<h4><span class="header-section-number">3.5.12.5</span> Ghibli</h4>
 <p><a href="https://ewenme.github.io/ghibli/index.html">https://ewenme.github.io/ghibli/index.html</a><img src="https://ewenme.github.io/ghibli/reference/figures/README-palettes-1.png" /></p>
 <pre><code>library(ghibli)
 scale_colour_ghibli_d(&quot;LaputaMedium&quot;, direction = -1)</code></pre>
 </div>
-<div id="paletter" class="section level6">
-<h6><span class="header-section-number">2.5.0.12.0.6</span> PaletteR</h6>
+<div id="paletter" class="section level4">
+<h4><span class="header-section-number">3.5.12.6</span> PaletteR</h4>
 <pre><code>devtools::install_github(&quot;AndreaCirilloAC/paletter&quot;)
 
 library(paletter)
@@ -1878,17 +1886,17 @@ ggplot(data = mtcars, aes(x = rownames(mtcars),y = hp,color = rownames(mtcars),
   scale_color_manual(values = colours_vector) +
   scale_fill_manual(values=colours_vector)+</code></pre>
 </div>
-<div id="pirate-palette" class="section level6">
-<h6><span class="header-section-number">2.5.0.12.0.7</span> Pirate palette</h6>
+<div id="pirate-palette" class="section level4">
+<h4><span class="header-section-number">3.5.12.7</span> Pirate palette</h4>
 <pre><code>yarrr::piratepal(palette = &quot;all&quot;)</code></pre>
 </div>
 </div>
 </div>
 <div id="leyendas" class="section level2">
-<h2><span class="header-section-number">2.6</span> Leyendas</h2>
+<h2><span class="header-section-number">3.6</span> Leyendas</h2>
 <p>Manipular la leyenda, o la sección del gráfico que contiene los colores y/o etiquetas de los elementos gráficos que lo componen.</p>
-<div id="crear-gráfico-con-leyenda-manual" class="section level4">
-<h4><span class="header-section-number">2.6.0.1</span> Crear gráfico con leyenda manual</h4>
+<div id="crear-gráfico-con-leyenda-manual" class="section level3">
+<h3><span class="header-section-number">3.6.1</span> Crear gráfico con leyenda manual</h3>
 <p>Cuando los elementos el gráfico se hacen por capas separadas y por lo tanto no aparecen con leyenda:</p>
 <pre><code>cols &lt;- c(&quot;Investigadores\nhombres&quot;=&quot;##B077E5&quot;,
           &quot;Investigadoras\nmujeres&quot;=&quot;##DF1A57&quot;,
@@ -1917,12 +1925,12 @@ investigadores %&gt;%
 <pre><code>geom_hline(aes(yintercept = promedio, col=&quot;Arancel promedio&quot;)) +
 scale_colour_manual(name=&quot;Error Bars&quot;, values = c(&quot;Arancel promedio&quot;=&quot;red&quot;)) + </code></pre>
 </div>
-<div id="invertir-orden-de-leyenda" class="section level4">
-<h4><span class="header-section-number">2.6.0.2</span> Invertir orden de leyenda</h4>
+<div id="invertir-orden-de-leyenda" class="section level3">
+<h3><span class="header-section-number">3.6.2</span> Invertir orden de leyenda</h3>
 <pre><code>guides(fill = guide_legend(reverse = TRUE)) +</code></pre>
 </div>
-<div id="orientación-y-ubicación-de-la-leyenda" class="section level4">
-<h4><span class="header-section-number">2.6.0.3</span> Orientación y ubicación de la leyenda</h4>
+<div id="orientación-y-ubicación-de-la-leyenda" class="section level3">
+<h3><span class="header-section-number">3.6.3</span> Orientación y ubicación de la leyenda</h3>
 <p>Ubicación de la leyenda: <code>theme(legend.position = c(0.85, 0.85))</code></p>
 <p>Mover la leyenda en relación a su ubicación por defecto:</p>
 <pre><code>legend.box.margin=margin(c(0,0,0,-60)) ##moverla a la izquierda</code></pre>
@@ -1940,8 +1948,8 @@ scale_colour_manual(name=&quot;Error Bars&quot;, values = c(&quot;Arancel promed
 <pre><code>+ theme(legend.position = &quot;bottom&quot;,
           legend.box = &quot;vertical&quot;) </code></pre>
 </div>
-<div id="textos-de-leyenda" class="section level4">
-<h4><span class="header-section-number">2.6.0.4</span> Textos de leyenda</h4>
+<div id="textos-de-leyenda" class="section level3">
+<h3><span class="header-section-number">3.6.4</span> Textos de leyenda</h3>
 <p>Cambiar título de leyenda:</p>
 <pre><code>+ scale_fill_discrete(name = &quot;&quot;)</code></pre>
 <p>Si es una combinación de geoms:</p>
@@ -1952,8 +1960,8 @@ scale_colour_manual(name=&quot;Error Bars&quot;, values = c(&quot;Arancel promed
 <pre><code>+ guides(col = FALSE)</code></pre>
 <p>O poner dentro del geom: <code>show.legend=FALSE</code></p>
 </div>
-<div id="elementos-de-la-leyenda" class="section level4">
-<h4><span class="header-section-number">2.6.0.5</span> Elementos de la leyenda</h4>
+<div id="elementos-de-la-leyenda" class="section level3">
+<h3><span class="header-section-number">3.6.5</span> Elementos de la leyenda</h3>
 <p>Cambiar espaciado horizontal de leyenda:</p>
 <pre><code>legend.spacing.x = unit(0.4, &#39;cm&#39;) ##NO SIRVE?</code></pre>
 <p>Cambiar espaciado vertical de elementos de leyenda:</p>
@@ -1975,12 +1983,12 @@ scale_colour_manual(name=&quot;Error Bars&quot;, values = c(&quot;Arancel promed
 <p>Cambiar color de la leyenda:</p>
 <pre><code>guides(shape = guide_legend(override.aes = list(colour = &quot;pink&quot;)))</code></pre>
 </div>
-<div id="margen-de-la-leyenda" class="section level4">
-<h4><span class="header-section-number">2.6.0.6</span> Margen de la leyenda</h4>
+<div id="margen-de-la-leyenda" class="section level3">
+<h3><span class="header-section-number">3.6.6</span> Margen de la leyenda</h3>
 <pre><code>theme(legend.margin = margin(20, 20, 20, 0)) + ##caja de la leyenda</code></pre>
 </div>
-<div id="leyendas-redondas" class="section level4">
-<h4><span class="header-section-number">2.6.0.7</span> Leyendas redondas</h4>
+<div id="leyendas-redondas" class="section level3">
+<h3><span class="header-section-number">3.6.7</span> Leyendas redondas</h3>
 <p>Cambiar una leyenda redonda de <code>geom_line</code> o <code>geom_point</code> por una cuadrada como de <code>geom_col</code></p>
 <pre><code>guides(col = guide_legend(nrow = 3, override.aes = list(shape = 15, size=7))) +</code></pre>
 <p>Para que las barras tengan círculos en la leyenda:
@@ -2011,14 +2019,14 @@ scale_colour_manual(name=&quot;Error Bars&quot;, values = c(&quot;Arancel promed
 </div>
 </div>
 <div id="temas-y-espaciado" class="section level2">
-<h2><span class="header-section-number">2.7</span> Temas y espaciado</h2>
-<div id="espaciado-entre-facetas" class="section level4">
-<h4><span class="header-section-number">2.7.0.1</span> Espaciado entre facetas</h4>
+<h2><span class="header-section-number">3.7</span> Temas y espaciado</h2>
+<div id="espaciado-entre-facetas" class="section level3">
+<h3><span class="header-section-number">3.7.1</span> Espaciado entre facetas</h3>
 <p>El espacio horizontal entre dos facetas de un gráfico, cuando el gráfico se separa en facetas con <code>facet_wrap()</code></p>
 <pre><code>theme(panel.spacing.x=unit(2, &quot;cm&quot;))</code></pre>
 </div>
-<div id="reducir-margen-de-gráficos" class="section level4">
-<h4><span class="header-section-number">2.7.0.2</span> Reducir margen de gráficos</h4>
+<div id="reducir-margen-de-gráficos" class="section level3">
+<h3><span class="header-section-number">3.7.2</span> Reducir margen de gráficos</h3>
 <p>Especialmente útil para gráficos de torta</p>
 <pre><code>theme(plot.margin = margin(-20, 0, -20, -0)) +</code></pre>
 <p>Ejemplo:</p>
@@ -2028,8 +2036,8 @@ scale_colour_manual(name=&quot;Error Bars&quot;, values = c(&quot;Arancel promed
                                -50) ##izquierda
           )</code></pre>
 </div>
-<div id="múltiples-gráficos" class="section level4">
-<h4><span class="header-section-number">2.7.0.3</span> Múltiples gráficos</h4>
+<div id="múltiples-gráficos" class="section level3">
+<h3><span class="header-section-number">3.7.3</span> Múltiples gráficos</h3>
 <p>Facetas</p>
 <pre><code>ggplot(comics, aes(x = align)) + 
   geom_bar() +
@@ -2066,8 +2074,8 @@ z + theme(panel.spacing.x=unit(2, &quot;cm&quot;))</code></pre>
 <p>Cortar textos de faceta (sin modificar los factores):</p>
 <pre><code>facet_wrap(~egreso, nrow=1, labeller = label_wrap_gen(width=10)) +</code></pre>
 </div>
-<div id="elementos-y-temas" class="section level4">
-<h4><span class="header-section-number">2.7.0.4</span> Elementos y temas</h4>
+<div id="elementos-y-temas" class="section level3">
+<h3><span class="header-section-number">3.7.4</span> Elementos y temas</h3>
 <pre><code>+ theme()</code></pre>
 <p>Dentro de la capa <code>theme()</code>:</p>
 <p>Especificar líneas: <code>=element_line()</code></p>
@@ -2079,8 +2087,8 @@ z + theme(panel.spacing.x=unit(2, &quot;cm&quot;))</code></pre>
     panel.grid=element_blank()
 )</code></pre>
 <p>Para especificar el eje afectado, se pone un punto y el eje al final del nombre del elemento, por ejemplo: <code>axis.text.x</code></p>
-<div id="elementos" class="section level6">
-<h6><span class="header-section-number">2.7.0.4.0.1</span> Elementos:</h6>
+<div id="elementos" class="section level4">
+<h4><span class="header-section-number">3.7.4.1</span> Elementos:</h4>
 <ul>
 <li><p><code>element_text()</code></p></li>
 <li><p><code>element_rect()</code></p></li>
@@ -2103,8 +2111,8 @@ z + theme(panel.spacing.x=unit(2, &quot;cm&quot;))</code></pre>
 </ul></li>
 </ul>
 </div>
-<div id="cambiar-texto" class="section level6">
-<h6><span class="header-section-number">2.7.0.4.0.2</span> Cambiar texto</h6>
+<div id="cambiar-texto" class="section level4">
+<h4><span class="header-section-number">3.7.4.2</span> Cambiar texto</h4>
 <ul>
 <li>Texto de facetas: <code>strip.text</code></li>
 <li>Título de los ejes: <code>axis.title</code></li>
@@ -2126,8 +2134,8 @@ z + theme(panel.spacing.x=unit(2, &quot;cm&quot;))</code></pre>
 <pre><code>labs(y=&quot;Cantidad de reclamos y consultas&quot;, x=&quot;Institución o vía de emisión&quot;) </code></pre>
 </div>
 </div>
-<div id="combinar-múltiples-gráficos" class="section level4">
-<h4><span class="header-section-number">2.7.0.5</span> Combinar múltiples gráficos</h4>
+<div id="combinar-múltiples-gráficos" class="section level3">
+<h3><span class="header-section-number">3.7.5</span> Combinar múltiples gráficos</h3>
 <p>Unir dos gráficos:</p>
 <p>Si usan los mismos datos:</p>
 <pre><code>library(gridExtra)
@@ -2143,23 +2151,23 @@ empresas_combinado_cowplot &lt;- plot_grid(empresas_tamaño_porc_gg,
           align = &quot;v&quot;,
           rel_heights = c(3, 3, 1))  </code></pre>
 </div>
-<div id="ajustar-espacio-entre-etiquetas-de-ejes-y-gráfico" class="section level4">
-<h4><span class="header-section-number">2.7.0.6</span> Ajustar espacio entre etiquetas de ejes y gráfico</h4>
+<div id="ajustar-espacio-entre-etiquetas-de-ejes-y-gráfico" class="section level3">
+<h3><span class="header-section-number">3.7.6</span> Ajustar espacio entre etiquetas de ejes y gráfico</h3>
 <p>Para acercar o alejar las etiquetas de las barras:</p>
 <pre><code>theme(axis.text.y = element_text(margin = margin(r = -3, l = 5))) +</code></pre>
 </div>
-<div id="acercar-leyenda-al-gráfico" class="section level4">
-<h4><span class="header-section-number">2.7.0.7</span> Acercar leyenda al gráfico</h4>
+<div id="acercar-leyenda-al-gráfico" class="section level3">
+<h3><span class="header-section-number">3.7.7</span> Acercar leyenda al gráfico</h3>
 <pre><code>theme(legend.margin = margin(20, 20, 20, 0)) + ##caja de la leyenda</code></pre>
 </div>
-<div id="cambiar-tamaño-y-hacer-zoom-en-los-datos" class="section level4">
-<h4><span class="header-section-number">2.7.0.8</span> Cambiar tamaño y hacer zoom en los datos</h4>
+<div id="cambiar-tamaño-y-hacer-zoom-en-los-datos" class="section level3">
+<h3><span class="header-section-number">3.7.8</span> Cambiar tamaño y hacer zoom en los datos</h3>
 <pre><code>+ coord_cartesian(xlim=c(3,6))</code></pre>
 <p>Graficar con la misma relación entre ejes (si las unidades de medida son iguales)</p>
 <pre><code>+ coord_equal()</code></pre>
 </div>
-<div id="guardar-y-aplicar-temas" class="section level4">
-<h4><span class="header-section-number">2.7.0.9</span> Guardar y aplicar temas</h4>
+<div id="guardar-y-aplicar-temas" class="section level3">
+<h3><span class="header-section-number">3.7.9</span> Guardar y aplicar temas</h3>
 <p>Guardar la configuración de elementos de la capa <code>theme</code> en un tema:</p>
 <pre><code>mi_tema &lt;- theme(element.axis...)
 plot + mi_tema</code></pre>
@@ -2196,14 +2204,14 @@ theme_set(old)
 
 ## Display the plot z2 - old theme restored
 z2</code></pre>
-<div id="cargar-temas-con-el-paquete-ggthemes" class="section level8">
-<p class="heading"><span class="header-section-number">2.7.0.9.0.0.0.1</span> Cargar temas con el paquete <code>ggthemes</code></p>
+<div id="cargar-temas-con-el-paquete-ggthemes" class="section level5">
+<h5><span class="header-section-number">3.7.9.0.1</span> Cargar temas con el paquete <code>ggthemes</code></h5>
 <pre><code>library(ggthemes)</code></pre>
 </div>
 </div>
 </div>
 <div id="exportar-gráficos" class="section level2">
-<h2><span class="header-section-number">2.8</span> Exportar gráficos</h2>
+<h2><span class="header-section-number">3.8</span> Exportar gráficos</h2>
 <pre><code>ggsave(file=&quot;grafico7_7_2c.jpg&quot;, plot=basura_x2, dpi=&quot;retina&quot;)</code></pre>
 <p>Cambiar DPI para especificar resolución</p>
 <pre><code>ggsave(&quot;Gráfico.png&quot;, units=&quot;in&quot;, width=5, height=4, dpi=300)</code></pre>
@@ -2217,7 +2225,7 @@ z2</code></pre>
           </div>
         </div>
       </div>
-<a href="index.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="manejo-de-datos-con-r.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
 
     </div>
   </div>
@@ -2262,8 +2270,9 @@ gitbook.start({
 },
 "download": null,
 "toc": {
-"collapse": "subsection"
-}
+"collapse": "section"
+},
+"highlight": "tango"
 });
 });
 </script>
